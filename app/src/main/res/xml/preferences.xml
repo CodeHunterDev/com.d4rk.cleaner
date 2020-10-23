@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Settings"
+    android:key="settings">
+
+    <Preference android:title="@string/donate"
+        android:key="donate"
+        android:icon="@drawable/ic_contribute"
+        android:summary="@string/donate_sum">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="https://www.paypal.me/d4rkmichaeltutorials" />
+    </Preference>
+
+    <Preference android:title="@string/support_patreon"
+        android:key="patreonSupport"
+        android:icon="@drawable/ic_patreon"
+        android:summary="@string/patreon_sum">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="https://www.patreon.com/d4rk7355608" />
+    </Preference>
+
+    <Preference android:title="@string/whitelist"
+        android:key="whitelist"
+        android:icon="@drawable/ic_whitelist"
+        android:summary="@string/whitelist_sum">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.d4rk.cleaner"
+            android:targetClass="com.d4rk.cleaner.WhitelistActivity" />
+    </Preference>
+
+    <Preference android:title="@string/make_suggestion"
+        android:key="suggestion"
+        android:icon="@drawable/ic_github"
+        android:summary="@string/suggestion_sum">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.package.name"
+            android:targetClass="com.package.name.ActivityName" />
+    </Preference>
+
+    <Preference android:title="@string/d4rk_youtube"
+        android:key="patreonSupport"
+        android:icon="@drawable/ic_d4rk"
+        android:summary="@string/d4rk_youtube_sum">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="https://www.youtube.com/channel/UCLDi-rmSRry0pNL-oVvGJAw" />
+    </Preference>
+
+    <Preference android:title="@string/michael_tutorials_youtube"
+        android:key="patreonSupport"
+        android:icon="@drawable/ic_michael_tutorials"
+        android:summary="@string/michael_tutorials_youtube_sum">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="https://youtube.com/c/MichaelTutorials" />
+    </Preference>
+
+    <PreferenceCategory android:title="Filters">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="generic"
+            android:persistent="true"
+            android:summary="@string/generic_sum"
+            android:title="@string/enable_generic_filter" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="aggressive"
+            android:persistent="true"
+            android:summary="@string/aggressive_sum"
+            android:title="@string/aggressive_filter" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="empty"
+            android:persistent="true"
+            android:title="@string/delete_empty_folders" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="corpse"
+            android:persistent="true"
+            android:summary="@string/corpse_summary"
+            android:title="@string/corpse_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="apk"
+            android:persistent="true"
+            android:summary="@string/apk_sum"
+            android:title="@string/delete_apk_files" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="auto_white"
+            android:persistent="true"
+            android:summary="@string/autowhite_sum"
+            android:title="@string/auto_whitelist" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Miscellaneous">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="one_click"
+            android:persistent="true"
+            android:summary="@string/oneclick_sum"
+            android:title="@string/one_click_clean" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

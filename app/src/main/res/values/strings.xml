@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name" translatable="false">Cleaner</string>
+    <string name="no_files_found" translatable="false">No files found</string>
+    <string name="delete_empty_folders" translatable="false">Delete empty folders.</string>
+    <string name="aggressive_filter" translatable="false">Enable aggressive filter.</string>
+    <string name="Save" translatable="false">Save</string>
+    <string name="filter" translatable="false">Filter</string>
+    <string name="whitelist" translatable="false">Whitelist!</string>
+    <string name="support_patreon" translatable="false">Support on Patreon!</string>
+    <string name="add_to_whitelist" translatable="false">Add to whitelist</string>
+    <string name="add" translatable="false">Add</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="enter_file_name" translatable="false">Enter file/folder name to whitelist</string>
+    <string name="make_suggestion">Make a suggestion!</string>
+    <string name="select_task">Select a task:</string>
+    <string name="do_you_want_to">Do you want to delete (Clean) all found files, or only display (Analyze) them?</string>
+    <string name="clean">Clean</string>
+    <string name="analyze">Analyze</string>
+    <string name="enable_generic_filter">Enable generic filter.</string>
+    <string name="one_click_clean">One click clean.</string>
+    <string name="freed">Freed: </string>
+    <string name="found">Found: </string>
+    <string name="auto_whitelist">Auto Whitelist.</string>
+    <string name="reset_whitelist">Empty whitelist?</string>
+    <string name="are_you_reset_whitelist">Are you sure you want to clear the whitelist?</string>
+    <string name="reset">Clear</string>
+    <string name="delete_apk_files">Delete .apk files</string>
+    <string name="lte_threading">LTE Threading (Faster)</string>
+    <string name="default_whitelist">Default Whitelist</string>
+    <string name="add_defaults">Add Recommended Whitelists</string>
+    <string name="nothing_found">Nothing found</string>
+    <string name="status_idle">Status: Idle</string>
+    <string name="progress_0">0%</string>
+    <string name="status_running">Status: Running</string>
+    <string name="patreon_sum">If you want to more support me click here.</string>
+    <string name="whitelist_sum">Shows the paths to exclude from scans.</string>
+    <string name="suggestion_sum">Open an issue on GitHub from the app. No account needed.</string>
+    <string name="generic_sum">.tmp, .log, Logs, logs</string>
+    <string name="aggressive_sum">Too much to list here and too lazy to add staff here.</string>
+    <string name="apk_sum">Installer files for android.</string>
+    <string name="oneclick_sum">No dialog menu when clicking clean button.</string>
+    <string name="autowhite_sum">Detect folders that should be protected automatically.</string>
+    <string name="prompt_string">Please add file access permissions</string>
+    <string name="settings_string">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_prompt">PromptActivity</string>
+    <string name="corpse_summary">Files left over from uninstalled apps.</string>
+    <string name="corpse_title">Delete corpse files.</string>
+    <string name="donate">Donate!</string>
+    <string name="donate_sum">Buy me a Beer! Or choose how much to donate using PayPal so I can keep supporting this app development.</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="d4rk_youtube" translatable="false">D4rK!</string>
+    <string name="michael_tutorials_youtube" translatable="false">Michael Tutorials!</string>
+    <string name="d4rk_youtube_sum" translatable="false">Hello, I\'m D4rK, my real name is Michael or Mihai, because I\'m from Romania and I make 3D animations in Source Filmmaker and probably other programs soon. I have a secondary channel for tutorials &amp; more named Michael Tutorials. If you like my work leave a like, share and subscribe for more. If you need other information you can find here or you can ask me.</string>
+    <string name="michael_tutorials_youtube_sum" translatable="false">Hello, I\'m Michael and I make a lot of videos especially tutorials. If you need the Pro version of apps you can tell me and I make tutorials.</string>
+
+    <string-array name="generic_filter_files">
+        <item>.tmp</item>
+        <item>.log</item>
+    </string-array>
+    <string-array name="generic_filter_folders">
+        <item>Logs</item>
+        <item>logs</item>
+        <item>temp</item>
+        <item>Temporary</item>
+        <item>temporary</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="aggressive_filter_folders">
+        <item>supersonicads</item>
+        <item>Cache</item>
+        <item>Analytics</item>
+        <item>thumbnails?</item>
+        <item>mobvista</item>
+        <item>UnityAdsVideoCache</item>
+        <item>albumthumbs?</item>
+        <item>LOST.DIR</item>
+        <item>.Trash</item>
+        <item>desktop.ini</item>
+        <item>leakcanary</item>
+        <item>.DS_Store</item>
+        <item>.spotlight-V100</item>
+        <item>fseventsd</item>
+        <item>Bugreport</item>
+        <item>bugreports</item>
+        <item>.Trash</item>
+        <item>cache</item>
+    </string-array>
+    <string-array name="aggressive_filter_files">
+        <item>.exo</item>
+        <item>thumbs?.db</item>
+    </string-array>
+</resources>
