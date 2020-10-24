@@ -33,6 +33,6 @@ Upoming major features:
 - Shortcuts
 - Community made filters
 
-![screenshot](https://github.com/D4rK7355608/com.d4rk.cleaner/screenshots/screenshot_1.png)
+![screenshot](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/Screenshots/screenshot_1.png)
 
 __Privacy Policy:__ https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html
