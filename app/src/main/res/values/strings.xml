@@ -53,6 +53,17 @@
     <string name="michael_tutorials_youtube" translatable="false">Michael Tutorials!</string>
     <string name="d4rk_youtube_sum" translatable="false">Hello, I\'m D4rK, my real name is Michael or Mihai, because I\'m from Romania and I make 3D animations in Source Filmmaker and probably other programs soon. I have a secondary channel for tutorials &amp; more named Michael Tutorials. If you like my work leave a like, share and subscribe for more. If you need other information you can find here or you can ask me.</string>
     <string name="michael_tutorials_youtube_sum" translatable="false">Hello, I\'m Michael and I make a lot of videos especially tutorials. If you need the Pro version of apps you can tell me and I make tutorials.</string>
+    <string name="changelog" translatable="false">D4rK Cleaner - Changelog:\n
+<br> </br>
+        \n
+<br> </br>
+        <b>Version 1.0:\n</b>
+        <br> </br>
+        -Initial release.\n
+        <br> </br>
+    </string>
+    <string name="changelog_settings" translatable="false">Changelog!</string>
+    <string name="changelog_sum" translatable="false">All changes added over time to each versions!</string>
 
     <string-array name="generic_filter_files">
         <item>.tmp</item>

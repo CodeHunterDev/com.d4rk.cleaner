@@ -6,7 +6,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
     <application
@@ -18,18 +19,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".SplashScreenActivity" />
+        <activity android:name=".ChangelogActivity" />
+
         <activity
-            android:name="com.d4rk.cleaner.PromptActivity"
+            android:name=".PromptActivity"
             android:label="@string/title_activity_prompt"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.d4rk.cleaner.WhitelistActivity"
-            android:parentActivityName="com.d4rk.cleaner.SettingsActivity"
+            android:name=".WhitelistActivity"
+            android:parentActivityName=".SettingsActivity"
             android:screenOrientation="fullUser"
             android:theme="@style/SettingsTheme"
             tools:targetApi="jelly_bean" />
         <activity
-            android:name="com.d4rk.cleaner.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="fullUser">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,12 +42,13 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="android.app.shortcuts"
+        <meta-data
+            android:name="android.app.shortcuts"
             android:resource="@xml/shortcuts" />
 
         <activity
-            android:name="com.d4rk.cleaner.SettingsActivity"
-            android:parentActivityName="com.d4rk.cleaner.MainActivity"
+            android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="fullUser"
             android:theme="@style/SettingsTheme"
             tools:targetApi="jelly_bean" />

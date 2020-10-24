@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.drawerlayout:drawerlayout:1.0.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0904ca2e4081b3834f9bdba4ab1c4ece/drawerlayout-1.0.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d865dd584c8950fc727a31a08044a329/transformed/drawerlayout-1.0.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c1ade53cc4b20d7bc631ac17d3bfca4/drawerlayout-1.0.0/res" />
@@ -9,8 +9,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9c0eaac6bb268883172248f8151a4fa5/drawerlayout-1.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eba83e87141464b8d512b4d013659951/drawerlayout-1.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0904ca2e4081b3834f9bdba4ab1c4ece/drawerlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0904ca2e4081b3834f9bdba4ab1c4ece/drawerlayout-1.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0904ca2e4081b3834f9bdba4ab1c4ece/drawerlayout-1.0.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d865dd584c8950fc727a31a08044a329/transformed/drawerlayout-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d865dd584c8950fc727a31a08044a329/transformed/drawerlayout-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d865dd584c8950fc727a31a08044a329/transformed/drawerlayout-1.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

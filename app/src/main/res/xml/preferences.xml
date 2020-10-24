@@ -19,26 +19,6 @@
             android:data="https://www.patreon.com/d4rk7355608" />
     </Preference>
 
-    <Preference android:title="@string/whitelist"
-        android:key="whitelist"
-        android:icon="@drawable/ic_whitelist"
-        android:summary="@string/whitelist_sum">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.cleaner"
-            android:targetClass="com.d4rk.cleaner.WhitelistActivity" />
-    </Preference>
-
-    <Preference android:title="@string/make_suggestion"
-        android:key="suggestion"
-        android:icon="@drawable/ic_github"
-        android:summary="@string/suggestion_sum">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.package.name"
-            android:targetClass="com.package.name.ActivityName" />
-    </Preference>
-
     <Preference android:title="@string/d4rk_youtube"
         android:key="patreonSupport"
         android:icon="@drawable/ic_d4rk"
@@ -53,6 +33,36 @@
         android:summary="@string/michael_tutorials_youtube_sum">
         <intent android:action="android.intent.action.VIEW"
             android:data="https://youtube.com/c/MichaelTutorials" />
+    </Preference>
+
+    <Preference android:title="@string/make_suggestion"
+        android:key="suggestion"
+        android:icon="@drawable/ic_github"
+        android:summary="@string/suggestion_sum">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.package.name"
+            android:targetClass="com.package.name.ActivityName" />
+    </Preference>
+
+    <Preference android:title="@string/whitelist"
+        android:key="whitelist"
+        android:icon="@drawable/ic_whitelist"
+        android:summary="@string/whitelist_sum">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.d4rk.cleaner"
+            android:targetClass="com.d4rk.cleaner.WhitelistActivity" />
+    </Preference>
+
+    <Preference android:title="@string/changelog_settings"
+        android:key="changelog"
+        android:icon="@drawable/ic_changelog"
+        android:summary="@string/changelog_sum">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.d4rk.cleaner"
+            android:targetClass="com.d4rk.cleaner.ChangelogActivity" />
     </Preference>
 
     <PreferenceCategory android:title="Filters">
