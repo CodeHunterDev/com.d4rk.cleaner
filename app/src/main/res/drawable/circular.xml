@@ -13,6 +13,6 @@
             android:endColor="@color/colorAccent"
             android:startColor="@color/colorAccent"
             android:type="sweep"
-            android:useLevel="false" />
+            android:useLevel="true" />
     </shape>
 </rotate>

@@ -19,9 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SplashScreenActivity" />
         <activity android:name=".ChangelogActivity" />
-
         <activity
             android:name=".PromptActivity"
             android:label="@string/title_activity_prompt"
@@ -32,26 +30,24 @@
             android:screenOrientation="fullUser"
             android:theme="@style/SettingsTheme"
             tools:targetApi="jelly_bean" />
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="fullUser">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
         <meta-data
             android:name="android.app.shortcuts"
             android:resource="@xml/shortcuts" />
-
         <activity
             android:name=".SettingsActivity"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="fullUser"
             android:theme="@style/SettingsTheme"
             tools:targetApi="jelly_bean" />
+        <activity android:name="com.d4rk.cleaner.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.d4rk.cleaner.MainActivity">
+        </activity>
     </application>
 
 </manifest>
