@@ -98,10 +98,10 @@
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="6dp"
         android:onClick="clean"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,9 +112,16 @@
         fancy:fb_defaultColor="@color/colorPrimary"
         fancy:fb_focusColor="@color/colorAccent"
         fancy:fb_radius="6dp"
-        fancy:fb_text="Clean"
+        fancy:fb_text=""
         fancy:fb_textColor="@color/colorAccent"
-        tools:ignore="UsingOnClickInXml" />
+        tools:ignore="UsingOnClickInXml" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_text_clean" />
+    </mehdi.sakout.fancybuttons.FancyButton>
 
     <ProgressBar
         android:id="@+id/scanProgress"
@@ -151,17 +158,14 @@
         android:id="@+id/statusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginEnd="129dp"
         android:text="@string/status_idle"
         android:textColor="@color/colorAccent"
-        android:textSize="40sp"
+        android:textSize="36sp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32"
-        android:layout_marginLeft="136dp"
-        android:layout_marginRight="129dp" />
+        app:layout_constraintVertical_bias="0.36" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
