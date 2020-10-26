@@ -1,7 +1,7 @@
 # D4rK Cleaner 1.0
 ![logo](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/logo.png) 
 
-# The last Android cleaner you will ever need with Google material design!
+# The last Android Cleaner you will ever need with Google material design by D4rK!
 
 [<img src="https://f-droid.org/badge/get-it-on.png"
      alt="Get it on F-Droid"
@@ -20,18 +20,17 @@ D4rK Cleaner only aims to clean your phone by removing safe to delete files, whi
 __D4rK Cleaner is 100% free, open source, ad free, and deletes everything it claims to.__
 
 Cleans:
-- Empty folders
-- Logs
-- Temporary files
-- Caches
-- Advertisement folders
+- Empty folders;
+- Logs;
+- Temporary files;
+- Caches;
+- Advertisement folders.
 
-Upoming major features:
-- Daily cleans
-- Clean SD card
-- SAF file browser
-- Shortcuts
-- Community made filters
+Upcoming major features:
+- Daily cleans;
+- Clean SD card;
+- SAF file browser;
+- Community made filters.
 
 ![screenshot](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/screenshot_1.png)
 
