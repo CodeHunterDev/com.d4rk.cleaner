@@ -6,10 +6,13 @@ android {
         applicationId "com.d4rk.cleaner"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 5
-        versionName '1.0 (Developer-Beta Preview)'
+        versionCode 6
+        versionName '1.0 (Beta Preview)'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
+        multiDexEnabled false
+        testFunctionalTest true
+        testHandleProfiling true
     }
     buildTypes {
         release {

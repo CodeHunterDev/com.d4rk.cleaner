@@ -1,6 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -10,7 +9,6 @@
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
     </style>
 
-    <!-- Settings theme. -->
     <style name="SettingsTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -21,7 +19,6 @@
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
     </style>
 
-    <!-- Issue reporter theme -->
     <style name="CustomIssueReportTheme" parent="Theme.IssueReporter.Light">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -42,7 +39,6 @@
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
     </style>
 
-    <!-- Alert Dialog -->
     <style name="MyAlertDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
         <item name="alertDialogTheme">@style/Theme.AppCompat.DayNight.Dialog.Alert</item>
         <item name="android:textColor">@color/colorAccent</item>

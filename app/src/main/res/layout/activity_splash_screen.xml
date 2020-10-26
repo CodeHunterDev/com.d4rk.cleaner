@@ -5,9 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="169dp"
+        android:layout_height="169dp"
         android:layout_gravity="center"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/ic_splash_screen"
         tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="169dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|center"
+        android:src="@drawable/ic_splash_screen_d4rk"
+        tools:ignore="ContentDescription" />
+
 </FrameLayout>

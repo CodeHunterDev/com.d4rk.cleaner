@@ -3,16 +3,14 @@
     <shortcut
         android:enabled="true"
         android:icon="@drawable/ic_shortcut_settings"
-        android:shortcutId="@string/settings_string"
+        android:shortcutShortLabel="@string/settings_string"
+        android:shortcutLongLabel="@string/settings_string"
+        android:shortcutId="compose"
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.d4rk.cleaner"
             android:targetClass="com.d4rk.cleaner.SettingsActivity" />
-        <!-- If your shortcut is associated with multiple intents, include them
-             here. The last intent in the list determines what the user sees when
-             they launch this shortcut. -->
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
-    <!-- Specify more shortcuts here. -->
 </shortcuts>
