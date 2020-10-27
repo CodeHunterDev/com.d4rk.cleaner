@@ -1,29 +1,17 @@
 <shortcuts xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
+        android:shortcutId="compose"
         android:enabled="true"
-        android:icon="@drawable/ic_shortcut_settings"
+        android:icon="@mipmap/ic_shortcut_settings"
         android:shortcutShortLabel="@string/settings_string"
         android:shortcutLongLabel="@string/settings_string"
-        android:shortcutId="@string/settings_string"
+        android:shortcutDisabledMessage="@string/settings_string"
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.d4rk.cleaner"
             android:targetClass="com.d4rk.cleaner.SettingsActivity" />
-        <categories android:name="android.shortcut.conversation" />
-    </shortcut>
-    <shortcut
-        android:enabled="true"
-        android:icon="@drawable/ic_shortcut_whitelist"
-        android:shortcutShortLabel="@string/whitelist_app_shourtcut"
-        android:shortcutLongLabel="@string/whitelist_app_shourtcut"
-        android:shortcutId="@string/whitelist_app_shourtcut"
-        tools:targetApi="n_mr1">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.cleaner"
-            android:targetClass="com.d4rk.cleaner.WhitelistActivity" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
 </shortcuts>
