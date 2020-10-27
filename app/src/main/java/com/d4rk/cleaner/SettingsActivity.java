@@ -1,13 +1,3 @@
-/*
- *  Copyright 2019 TheRedSpy15
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
- */
-
 package com.d4rk.cleaner;
 
 import android.content.Context;
@@ -62,7 +52,7 @@ public class SettingsActivity extends AppCompatActivity {
          */
         final void reportIssue(Context context) {
 
-            IssueReporterLauncher.forTarget("TheRedSpy15", "LTECleanerFOSS")
+            IssueReporterLauncher.forTarget("D4rK7355608", "com.d4rk.cleaner")
                     .theme(R.style.CustomIssueReportTheme)
                     .guestEmailRequired(false)
                     .guestToken("194835cbf18259752d316f680ef4842aa7ca9dc5")

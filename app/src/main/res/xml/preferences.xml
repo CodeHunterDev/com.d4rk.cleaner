@@ -41,7 +41,7 @@
         android:summary="@string/suggestion_sum">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.package.name"
+            android:targetPackage="com.d4rk.cleaner"
             android:targetClass="com.package.name.ActivityName" />
     </Preference>
 
