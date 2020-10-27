@@ -19,6 +19,7 @@ import java.util.Objects;
 
 import static com.d4rk.cleaner.WhitelistActivity.getWhiteList;
 
+@SuppressWarnings("StatementWithEmptyBody")
 public class FileScanner {
 
     private final File path;
@@ -28,7 +29,7 @@ public class FileScanner {
     private long kilobytesTotal = 0;
     private boolean delete = false;
     private boolean emptyDir = false;
-    private boolean autoWhite = false;
+    private boolean autoWhite = true;
     private boolean corpse = false;
     private static final ArrayList<String> filters = new ArrayList<>();
     private static final String[] protectedFileList = {
@@ -185,7 +186,6 @@ public class FileScanner {
         if (apk) filters.add(getRegexForFile(".apk"));
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @SuppressLint("SetTextI18n")
     long startScan() {
         byte cycles = 0;

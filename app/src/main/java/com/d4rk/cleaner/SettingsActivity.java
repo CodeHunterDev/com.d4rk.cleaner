@@ -52,7 +52,7 @@ public class SettingsActivity extends AppCompatActivity {
          */
         final void reportIssue(Context context) {
 
-            IssueReporterLauncher.forTarget("D4rK7355608", "com.d4rk.cleaner")
+            IssueReporterLauncher.forTarget("TheRedSpy15", "LTECleanerFOSS")
                     .theme(R.style.CustomIssueReportTheme)
                     .guestEmailRequired(false)
                     .guestToken("194835cbf18259752d316f680ef4842aa7ca9dc5")

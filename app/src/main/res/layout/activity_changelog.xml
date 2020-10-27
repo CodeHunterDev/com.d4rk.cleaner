@@ -24,6 +24,13 @@
         android:gravity="center_horizontal" />
 
     <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_d4rk"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:rotation="@android:integer/config_longAnimTime"
@@ -54,13 +61,6 @@
         android:layout_marginTop="600dp"
         tools:ignore="ContentDescription"
         android:layout_marginLeft="6dp" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_d4rk"
-        tools:ignore="ContentDescription" />
 
     <ImageView
         android:layout_width="60dp"
@@ -160,6 +160,18 @@
         tools:ignore="ContentDescription" />
 
     <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="end"
+        android:rotation="@android:integer/status_bar_notification_info_maxnum"
+        android:layout_marginStart="300dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginTop="333dp"
+        android:layout_marginLeft="400dp"
+        android:src="@drawable/ic_line"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="top"
@@ -190,18 +202,6 @@
         android:layout_marginTop="666dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_triangle_blue"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="end"
-        android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:layout_marginStart="300dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginTop="333dp"
-        android:layout_marginLeft="400dp"
-        android:src="@drawable/ic_line"
         tools:ignore="ContentDescription" />
 
 </com.google.android.material.card.MaterialCardView>
