@@ -34,4 +34,6 @@ Upcoming major features:
 
 ![screenshot](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/screenshot_1.png)
 
+__Thanks TheRedSpy15 for LTECleaner:__ https://github.com/TheRedSpy15/LTECleanerFOSS
+
 __Privacy Policy:__ https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html
