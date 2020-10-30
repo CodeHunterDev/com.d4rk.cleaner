@@ -1,15 +1,17 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.activity:activity:1.2.0-alpha08@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ab3d1764da3331cb5e40b1d71f8e9876/transformed/jetified-activity-1.2.0-alpha08/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/80c20879c30ce3b9d716d9825d498985/transformed/jetified-activity-1.2.0-alpha08/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51619cced574f47ac031a28cee85dc4f/jetified-activity-1.2.0-alpha08/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58d3d38b466492d7c1aff301a434b6e0/jetified-activity-1.2.0-alpha08/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2ad84eebd22829069e9d148658f9f1ee/jetified-activity-1.2.0-alpha08/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ab3d1764da3331cb5e40b1d71f8e9876/transformed/jetified-activity-1.2.0-alpha08/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ab3d1764da3331cb5e40b1d71f8e9876/transformed/jetified-activity-1.2.0-alpha08/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ab3d1764da3331cb5e40b1d71f8e9876/transformed/jetified-activity-1.2.0-alpha08/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5ee0ceef9647a39eb2f35eb6332abac4/transformed/jetified-activity-1.2.0-alpha08/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/80c20879c30ce3b9d716d9825d498985/transformed/jetified-activity-1.2.0-alpha08/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/80c20879c30ce3b9d716d9825d498985/transformed/jetified-activity-1.2.0-alpha08/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/80c20879c30ce3b9d716d9825d498985/transformed/jetified-activity-1.2.0-alpha08/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
