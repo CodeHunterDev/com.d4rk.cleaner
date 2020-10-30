@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name" translatable="false">Cleaner</string>
-    <string name="no_files_found" translatable="false">No files found</string>
+    <string name="no_files_found" translatable="false">No files found! 😃</string>
     <string name="delete_empty_folders" translatable="false">Delete empty folders.</string>
     <string name="aggressive_filter" translatable="false">Enable aggressive filter.</string>
     <string name="Save" translatable="false">Save</string>
     <string name="filter" translatable="false">Filter</string>
     <string name="whitelist" translatable="false">Whitelist!</string>
     <string name="support_patreon" translatable="false">Support on Patreon!</string>
-    <string name="add_to_whitelist" translatable="false">Add to whitelist</string>
+    <string name="add_to_whitelist" translatable="false">Add to whitelist:</string>
     <string name="add" translatable="false">Add</string>
     <string name="cancel" translatable="false">Cancel</string>
-    <string name="enter_file_name" translatable="false">Enter file/folder name to whitelist</string>
+    <string name="enter_file_name" translatable="false">Enter file/folder name to whitelist.</string>
     <string name="make_suggestion">Make a suggestion!</string>
     <string name="select_task">Select a task:</string>
     <string name="do_you_want_to">Do you want to delete (Clean) all found files, or only display (Analyze) them?</string>
@@ -25,9 +25,8 @@
     <string name="are_you_reset_whitelist">Are you sure you want to clear the whitelist?</string>
     <string name="reset">Clear</string>
     <string name="delete_apk_files">Delete .apk files</string>
-    <string name="lte_threading">LTE Threading (Faster)</string>
     <string name="default_whitelist">Default Whitelist</string>
-    <string name="add_defaults">Add Recommended Whitelists</string>
+    <string name="add_defaults">Add D4rK recommended whitelists</string>
     <string name="nothing_found">Nothing found</string>
     <string name="status_idle">Status: Idle</string>
     <string name="progress_0">0%</string>
@@ -35,9 +34,9 @@
     <string name="patreon_sum">If you want to more support me click here.</string>
     <string name="whitelist_sum">Shows the paths to exclude from scans.</string>
     <string name="suggestion_sum">Open an issue on GitHub from the app. No account needed.</string>
-    <string name="generic_sum">.tmp, .log, Logs, logs</string>
+    <string name="generic_sum">Delete temp, log, logs, and other useless files.</string>
     <string name="aggressive_sum">Too much to list here and too lazy to add staff here.</string>
-    <string name="apk_sum">Installer files for android.</string>
+    <string name="apk_sum">Installer files (.apk) files for android.</string>
     <string name="oneclick_sum">No dialog menu when clicking clean button.</string>
     <string name="autowhite_sum">Detect folders that should be protected automatically.</string>
     <string name="prompt_string">Please add file access permissions</string>

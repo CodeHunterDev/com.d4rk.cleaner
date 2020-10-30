@@ -79,7 +79,7 @@
             android:summary="@string/aggressive_sum"
             android:title="@string/aggressive_filter" />
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="empty"
             android:persistent="true"
             android:title="@string/delete_empty_folders" />
