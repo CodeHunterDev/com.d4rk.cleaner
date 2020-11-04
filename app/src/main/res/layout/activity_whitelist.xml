@@ -16,7 +16,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:text="@string/whitelist"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorGoogleGreen"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,10 +116,10 @@
         app:layout_constraintStart_toStartOf="parent"
         fancy:fb_borderWidth="1dp"
         fancy:fb_defaultColor="@color/colorPrimaryDark"
-        fancy:fb_focusColor="@color/colorAccent"
-        fancy:fb_radius="30dp"
+        fancy:fb_focusColor="@color/colorAndroidGreen"
+        fancy:fb_radius="40dp"
         fancy:fb_text="@string/add_defaults"
-        fancy:fb_textColor="@color/colorAccent"
+        fancy:fb_textColor="@color/colorAndroidGreen"
         tools:ignore="UsingOnClickInXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

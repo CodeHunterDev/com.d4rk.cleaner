@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/prompt_string"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorGoogleYellow"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"

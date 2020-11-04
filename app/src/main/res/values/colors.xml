@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">@color/colorPrimary</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorGoogleRed">#DB4437</color>
+    <color name="colorGoogleYellow">#F4B400</color>
     <color name="colorGoogleGreen">#0F9D58</color>
     <color name="colorAndroidGreen">#3DDC84</color>
     <color name="colorAccent">#4285F4</color>
