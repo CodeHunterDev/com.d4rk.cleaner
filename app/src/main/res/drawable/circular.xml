@@ -7,9 +7,8 @@
         android:shape="ring"
         android:thickness="15px"
         android:useLevel="true">
-
         <gradient
-            android:angle="0"
+            android:angle="2.5"
             android:endColor="@color/colorAccent"
             android:startColor="@color/colorAccent"
             android:type="sweep"

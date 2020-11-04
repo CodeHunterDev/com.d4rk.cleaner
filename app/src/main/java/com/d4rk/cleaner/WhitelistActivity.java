@@ -1,5 +1,4 @@
 package com.d4rk.cleaner;
-
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -8,24 +7,17 @@ import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.fxn.stash.Stash;
-
 import java.io.File;
 import java.util.List;
-
 public class WhitelistActivity extends AppCompatActivity {
-
     ListView listView;
     BaseAdapter adapter;
     private static List<String> whiteList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_whitelist);
         listView = findViewById(R.id.whitelistView);
@@ -33,13 +25,11 @@ public class WhitelistActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<>(this, R.layout.custom_textview, getWhiteList());
         listView.setAdapter(adapter);
     }
-
     /**
      * Clears the whitelist, then sets it up again without loading saved one from stash
      * @param view the view that is clicked
      */
     public final void emptyWhitelist(View view) {
-
         new AlertDialog.Builder(WhitelistActivity.this,R.style.MyAlertDialogTheme)
                 .setTitle(R.string.reset_whitelist)
                 .setMessage(R.string.are_you_reset_whitelist)
@@ -50,10 +40,8 @@ public class WhitelistActivity extends AppCompatActivity {
                 })
                 .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
     }
-
     public void addRecommended(View view) {
         File externalDir = Environment.getExternalStorageDirectory();
-
         if (!whiteList.contains(new File(externalDir, "Music").getPath())) {
             whiteList.add(new File(externalDir, "Music").getPath());
             whiteList.add(new File(externalDir, "Podcasts").getPath());
@@ -67,12 +55,10 @@ public class WhitelistActivity extends AppCompatActivity {
             whiteList.add(new File(externalDir, "Documents").getPath());
             Stash.put("whiteList", whiteList);
             refreshListView();
-
         } else
             Toast.makeText(this, "Already added",
                     Toast.LENGTH_LONG).show();
     }
-
     /**
      * Creates a dialog asking for a file/folder name to add to the whitelist
      * @param view the view that is clicked
@@ -92,7 +78,6 @@ public class WhitelistActivity extends AppCompatActivity {
                 })
                 .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
     }
-
     public void refreshListView() {
         runOnUiThread(() -> {
             adapter.notifyDataSetChanged();
@@ -100,7 +85,6 @@ public class WhitelistActivity extends AppCompatActivity {
             listView.refreshDrawableState();
         });
     }
-
     public static synchronized List<String> getWhiteList() {
         if (whiteList == null)
             whiteList = Stash.getArrayList("whiteList", String.class);

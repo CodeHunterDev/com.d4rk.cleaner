@@ -13,23 +13,17 @@ package com.d4rk.cleaner;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Environment;
-
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
-
 import com.fxn.stash.Stash;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import java.io.File;
 import java.io.IOException;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-
 /**
  * Instrumented test, which will execute on an Android device.
  *
@@ -38,7 +32,6 @@ import static org.junit.Assert.assertTrue;
 @RunWith(AndroidJUnit4.class)
 public class InstrumentedTest {
     private FileScanner fs;
-
     @Before
     public void init() {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
@@ -50,14 +43,12 @@ public class InstrumentedTest {
         fs.setResources(res);
         fs.setDelete(true);
     }
-
     @Test
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.d4rk", appContext.getPackageName());
     }
-
     @Test
     public void checkLogFiles() {
         File logFile = createFile("testfile.loG");
@@ -65,11 +56,9 @@ public class InstrumentedTest {
         fs.setUpFilters(true,
                 false, false);
         fs.startScan();
-
         assertTrue(clogFile.exists());
         assertFalse(logFile.exists());
     }
-
     @Test
     public void checkTempFiles() {
         File tmpFile = createFile("testfile.tMp");
@@ -79,17 +68,14 @@ public class InstrumentedTest {
 
         assertFalse(tmpFile.exists());
     }
-
     @Test
     public void checkThumbFiles() {
         File thumbFile = createFile("thumbs.Db");
         fs.setUpFilters(false,
                 true, false);
         fs.startScan();
-
         assertFalse(thumbFile.exists());
     }
-
     @Test
     public void checkAPKFiles() {
         File thumbFile = createFile("chrome.aPk");
@@ -99,7 +85,6 @@ public class InstrumentedTest {
 
         assertFalse(thumbFile.exists());
     }
-
     @Test
     public void checkEmptyDir() {
         File emptyDir = createDir();
@@ -107,10 +92,8 @@ public class InstrumentedTest {
                 false, false);
         fs.setEmptyDir(true);
         fs.startScan();
-
         assertFalse(emptyDir.exists());
     }
-
     private File createFile(String name) {
         File file = new File(Environment.getExternalStorageDirectory().toString()
                 + "/" + name);
@@ -119,11 +102,9 @@ public class InstrumentedTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         assertTrue(file.exists());
         return file;
     }
-
     private File createDir() {
         File file = new File(Environment.getExternalStorageDirectory(), "testdir");
 

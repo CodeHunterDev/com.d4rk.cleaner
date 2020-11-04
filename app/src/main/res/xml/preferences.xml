@@ -14,7 +14,7 @@
     <Preference android:title="@string/support_patreon"
         android:key="patreonSupport"
         android:icon="@drawable/ic_patreon"
-        android:summary="@string/patreon_sum">
+        android:summary="@string/support_patreon_sum">
         <intent android:action="android.intent.action.VIEW"
             android:data="https://www.patreon.com/d4rk7355608" />
     </Preference>
@@ -100,7 +100,7 @@
             android:key="auto_white"
             android:persistent="true"
             android:summary="@string/autowhite_sum"
-            android:title="@string/auto_whitelist" />
+            android:title="@string/whitelist_auto" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Miscellaneous">
