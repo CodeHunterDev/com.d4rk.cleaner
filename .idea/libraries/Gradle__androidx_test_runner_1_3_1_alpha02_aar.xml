@@ -1,12 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.test:runner:1.3.1-alpha02@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/37b1cc688610f2538a41d6f565321591/runner-1.3.1-alpha02/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d30045ce623d90b200f0af86e7294b51/transformed/runner-1.3.1-alpha02/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/02f9a321350ec55686532d7af995b9e7/transformed/runner-1.3.1-alpha02/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4a926973c6ed5ecf09977cd592fa156a/transformed/runner-1.3.1-alpha02/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4a926973c6ed5ecf09977cd592fa156a/transformed/runner-1.3.1-alpha02/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4a926973c6ed5ecf09977cd592fa156a/transformed/runner-1.3.1-alpha02/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3d39d42458fa6a97e93913057b244703/transformed/runner-1.3.1-alpha02/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3d39d42458fa6a97e93913057b244703/transformed/runner-1.3.1-alpha02/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3d39d42458fa6a97e93913057b244703/transformed/runner-1.3.1-alpha02/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/runner/1.3.1-alpha02/aee6a62a26d9b413dadc1732e66cc4ef3bcf9d61/runner-1.3.1-alpha02-javadoc.jar!/" />

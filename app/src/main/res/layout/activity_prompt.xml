@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.d4rk.cleaner.PromptActivity"
-    android:background="@color/colorWhite">
+    tools:context="com.d4rk.cleaner.PromptActivity">
     <TextView
         android:id="@+id/prompttext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:gravity="center"
         android:text="@string/prompt_string"
         android:textColor="@color/colorGoogleYellow"
         android:textSize="20sp"
@@ -25,11 +25,19 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="30dp"
         android:text="@string/settings_string"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorGoogleRed"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/prompttext" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="222dp"
+        android:layout_height="222dp"
+        android:src="@drawable/ic_material_2"
+        android:layout_gravity="bottom|center"
+        tools:ignore="ContentDescription,MissingConstraints" />
+</com.google.android.material.card.MaterialCardView>
