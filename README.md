@@ -15,7 +15,7 @@ You're tired of the abundance of phone cleaners on the Google Play Store Tired o
 
 There are simply way too many apps out there that claim to speed up your device. In reality, they don't do anything. D4rK Cleaner only aims to clean your phone by removing safe to delete files, which not only frees up a lot of space, but also improve your privacy. Since D4rK Cleaner removes .log files, which well, log what you do.
 
-__D4rK Cleaner is 100% free, open source inspired by LTE Cleaner by TheRedSpy15, ad free, and deletes everything it claims to.
+__D4rK Cleaner is 100% free, open source inspired by LTE Cleaner by TheRedSpy15, ad free, and deletes everything it claims to.__
 
 Cleans
 -Empty folders;
