@@ -18,18 +18,17 @@ There are simply way too many apps out there that claim to speed up your device.
 __D4rK Cleaner is 100% free, open source inspired by LTE Cleaner by TheRedSpy15, ad free, and deletes everything it claims to.__
 
 Cleans:
--Empty folders;
--Logs;
--Temporary files;
--Caches;
--Advertisement folders.
+- Empty folders;
+- Logs;
+- Temporary files;
+- Caches;
+- Advertisement folders.
 
 Upcoming major features:
-
--Daily cleans;
--Clean SD card;
--SAF file browser;
--Community made filters.
+- Daily cleans;
+- Clean SD card;
+- SAF file browser;
+- Community made filters.
 
 ![screenshot](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/screenshot_1.png)
 
