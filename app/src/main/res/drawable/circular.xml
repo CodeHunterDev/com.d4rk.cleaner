@@ -11,7 +11,6 @@
             android:angle="2.5"
             android:endColor="@color/colorGoogleGreen"
             android:startColor="@color/colorGoogleGreen"
-            android:type="sweep"
             android:useLevel="true" />
     </shape>
 </rotate>
