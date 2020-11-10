@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     TextView progressText;
     TextView statusText;
     ConstraintLayout layout;
+    @RequiresApi(api = Build.VERSION_CODES.R)
     @SuppressLint("LogConditional")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,10 +183,11 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Request write permission
      */
+    @RequiresApi(api = Build.VERSION_CODES.R)
     public synchronized void requestWriteExternalPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE},
                     1);
         }
     }
