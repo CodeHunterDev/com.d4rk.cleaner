@@ -99,7 +99,6 @@
         android:layout_height="144dp"
         android:background="@drawable/circular_background"
         android:indeterminate="false"
-        android:max="1"
         android:progress="0"
         android:progressDrawable="@drawable/circular"
         app:layout_constraintBottom_toBottomOf="@+id/ScanTextView"
