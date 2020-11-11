@@ -2,9 +2,7 @@ package com.d4rk.cleaner;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-
 import androidx.annotation.RequiresApi;
-
 import java.util.Timer;
 import java.util.TimerTask;
 public class SplashScreenActivity extends MainActivity {
