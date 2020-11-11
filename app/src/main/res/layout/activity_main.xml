@@ -64,15 +64,7 @@
         android:id="@+id/cleanButton"
         android:layout_width="152dp"
         android:layout_height="50dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="6dp"
         android:onClick="clean"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,6 +78,12 @@
         fancy:fb_text=""
         fancy:fb_textColor="@color/colorGoogleYellow"
         tools:ignore="UsingOnClickInXml">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_text_clean"/>
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
