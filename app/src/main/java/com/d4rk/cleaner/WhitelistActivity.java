@@ -64,9 +64,7 @@ public class WhitelistActivity extends AppCompatActivity {
      * @param view the view that is clicked
      */
     public final void addToWhiteList(View view) {
-
         final EditText input = new EditText(WhitelistActivity.this);
-
         new AlertDialog.Builder(WhitelistActivity.this,R.style.MyAlertDialogTheme)
                 .setTitle(R.string.add_to_whitelist)
                 .setMessage(R.string.enter_file_name)
@@ -86,8 +84,8 @@ public class WhitelistActivity extends AppCompatActivity {
         });
     }
     public static synchronized List<String> getWhiteList() {
-        if (whiteList == null)
-            whiteList = Stash.getArrayList("whiteList", String.class);
+        if (whiteList==null)
+            whiteList=Stash.getArrayList("whiteList", String.class);
         return whiteList;
     }
 }
