@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 30
     defaultConfig {
         applicationId "com.d4rk.cleaner"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 14
+        versionCode 15
         versionName '1.0 (Beta Preview)'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
@@ -55,13 +54,10 @@ android {
         androidTestImplementation 'com.google.truth:truth:1.1'
         androidTestImplementation 'androidx.test:rules:1.3.1-alpha02'
         androidTestImplementation 'androidx.test.ext:junit:1.1.3-alpha02'
-
         //noinspection GradleCompatible
         implementation 'com.android.support:cardview-v7:28.0.0'
-
         //noinspection GradleCompatible
         implementation 'com.android.support:support-v4:28.0.0'
-
         //noinspection GradleCompatible
         implementation "com.android.support:appcompat-v7:28.0.0"
     }
