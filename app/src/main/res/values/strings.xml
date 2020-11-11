@@ -27,7 +27,7 @@
     <string name="found">Found: </string>
     <string name="are_you_reset_whitelist">Are you sure you want to clear the whitelist?</string>
     <string name="reset">Clear</string>
-    <string name="delete_apk_files">Delete .apk files</string>
+    <string name="delete_apk_files">Delete .apk files.</string>
     <string name="default_whitelist">Default Whitelist</string>
     <string name="add_defaults">Add D4rK recommended whitelists</string>
     <string name="nothing_found">Nothing found</string>
