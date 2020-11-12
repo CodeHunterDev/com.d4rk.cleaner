@@ -11,6 +11,5 @@
     <color name="colorAccent">#4285F4</color>
     <color name="inactiveAddButtonColor">#BB00FF</color>
     <color name="infoPageBackgroundColor">#FF00F2</color>
-    <color name="actionBarArrowColor">@color/colorAccent</color>
     <color name="colorTransparent">#66000000</color>
 </resources>

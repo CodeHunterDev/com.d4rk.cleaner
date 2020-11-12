@@ -40,6 +40,7 @@ public class WhitelistActivity extends AppCompatActivity {
                 })
                 .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
     }
+    @SuppressWarnings("unused")
     public void addRecommended(View view) {
         File externalDir = Environment.getExternalStorageDirectory();
         if (!whiteList.contains(new File(externalDir, "Music").getPath())) {

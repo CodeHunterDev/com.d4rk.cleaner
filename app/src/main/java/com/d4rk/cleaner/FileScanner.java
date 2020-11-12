@@ -15,7 +15,7 @@ import java.util.Locale;
 import java.util.Objects;
 import static com.d4rk.cleaner.WhitelistActivity.getWhiteList;
 @SuppressWarnings("StatementWithEmptyBody")
-public class FileScanner {
+public class FileScanner{
     private final File path;
     private Resources res;
     private MainActivity gui;
@@ -43,7 +43,6 @@ public class FileScanner {
     private synchronized List<File> getListFiles(File parentDirectory) {
         ArrayList<File> inFiles = new ArrayList<>();
         File[] files = parentDirectory.listFiles();
-
         if (files != null) {
             for (File file : files) {
                 if (!isWhiteListed(file)) {

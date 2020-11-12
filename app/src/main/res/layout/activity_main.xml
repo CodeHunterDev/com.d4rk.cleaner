@@ -46,7 +46,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         fancy:fb_borderWidth="10dp"
-        fancy:fb_defaultColor="@color/colorPrimaryDark"
+        fancy:fb_defaultColor="@color/colorPrimary"
         fancy:fb_focusColor="@color/colorAccent"
         fancy:fb_radius="100dp"
         fancy:fb_text=""
@@ -83,7 +83,6 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/todo"
             android:src="@drawable/ic_text_clean"/>
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

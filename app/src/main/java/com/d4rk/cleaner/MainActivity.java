@@ -26,8 +26,9 @@ import androidx.core.app.ActivityCompat;
 import com.fxn.stash.Stash;
 import java.io.File;
 import java.text.DecimalFormat;
+@SuppressWarnings("unused")
 public class MainActivity extends AppCompatActivity {
-    ConstraintSet constraintSet = new ConstraintSet();
+    final ConstraintSet constraintSet = new ConstraintSet();
     static boolean running = false;
     SharedPreferences prefs;
     LinearLayout fileListView;

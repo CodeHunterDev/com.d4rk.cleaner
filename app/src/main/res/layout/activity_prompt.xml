@@ -11,7 +11,7 @@
         android:layout_height="100dp"
         android:src="@drawable/ic_d4rk"
         android:layout_gravity="top|center"
-        tools:ignore="ContentDescription,MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints"/>
     <TextView
         android:id="@+id/prompttext"
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"/>
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
@@ -35,11 +35,11 @@
         android:text="@string/settings_string"
         android:layout_gravity="center"
         android:textColor="@color/colorGoogleRed"
-        app:layout_constraintTop_toTopOf="@id/prompttext" />
+        app:layout_constraintTop_toTopOf="@id/prompttext"/>
     <ImageView
         android:layout_width="222dp"
         android:layout_height="222dp"
         android:src="@drawable/ic_material_2"
         android:layout_gravity="bottom|center"
-        tools:ignore="ContentDescription,MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints"/>
 </com.google.android.material.card.MaterialCardView>

@@ -11,8 +11,8 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.d4rk.cleaner"
-            android:targetClass="com.d4rk.cleaner.SettingsActivity" />
-        <categories android:name="android.shortcut.conversation" />
+            android:targetClass="com.d4rk.cleaner.SettingsActivity"/>
+        <categories android:name="android.shortcut.conversation"/>
     </shortcut>
     <shortcut
         android:shortcutId="whitelist"
@@ -25,7 +25,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.d4rk.cleaner"
-            android:targetClass="com.d4rk.cleaner.WhitelistActivity" />
-        <categories android:name="android.shortcut.conversation" />
+            android:targetClass="com.d4rk.cleaner.WhitelistActivity"/>
+        <categories android:name="android.shortcut.conversation"/>
     </shortcut>
 </shortcuts>
