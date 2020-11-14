@@ -3,14 +3,14 @@
     android:fromDegrees="270"
     android:toDegrees="270">
     <shape
-        android:innerRadiusRatio="2.5"
         android:shape="ring"
         android:thickness="15px"
         android:useLevel="true">
         <gradient
-            android:angle="2.5"
             android:endColor="@color/colorGoogleGreen"
-            android:startColor="@color/colorGoogleGreen"
-            android:useLevel="true" />
+            android:centerColor="@color/colorGoogleYellow"
+            android:startColor="@color/colorGoogleRed"
+            android:useLevel="true"
+            android:type="linear"/>
     </shape>
 </rotate>

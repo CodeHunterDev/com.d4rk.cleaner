@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.fxn.stash.Stash;
 import java.io.File;
 import java.util.List;
+@SuppressWarnings("unused")
 public class WhitelistActivity extends AppCompatActivity {
     ListView listView;
     BaseAdapter adapter;
@@ -84,7 +85,6 @@ public class WhitelistActivity extends AppCompatActivity {
         });
     }
     public static synchronized List<String> getWhiteList() {
-        if (whiteList==null)
             whiteList=Stash.getArrayList("whiteList", String.class);
         return whiteList;
     }

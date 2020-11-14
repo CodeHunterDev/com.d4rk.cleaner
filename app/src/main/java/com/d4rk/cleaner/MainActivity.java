@@ -26,7 +26,7 @@ import com.fxn.stash.Stash;
 import java.io.File;
 import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
-    ConstraintSet constraintSet = new ConstraintSet();
+    final ConstraintSet constraintSet = new ConstraintSet();
     static boolean running = false;
     SharedPreferences prefs;
     LinearLayout fileListView;
@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     TextView progressText;
     TextView statusText;
     ConstraintLayout layout;
-    @SuppressLint("LogConditional")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

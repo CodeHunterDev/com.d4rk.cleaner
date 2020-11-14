@@ -5,7 +5,7 @@ android {
         applicationId "com.d4rk.cleaner"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 17
+        versionCode 18
         versionName '1.0 (Beta Preview)'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
@@ -57,11 +57,7 @@ android {
     }
     buildTypes {
         release {
-            debuggable true
-            jniDebuggable true
-            renderscriptDebuggable true
             signingConfig signingConfigs.debug
-            minifyEnabled true
         }
     }
     compileOptions {

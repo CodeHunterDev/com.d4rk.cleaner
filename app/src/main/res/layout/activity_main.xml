@@ -27,7 +27,8 @@
         app:layout_constraintBottom_toTopOf="@+id/cleanButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scanProgress">
+        app:layout_constraintTop_toBottomOf="@+id/scanProgress"
+        tools:ignore="ScrollViewCount">
         <LinearLayout
             android:id="@+id/fileListView"
             android:layout_width="match_parent"
@@ -83,6 +84,7 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/todo"
             android:src="@drawable/ic_text_clean"/>
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -113,7 +115,6 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/statusTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/statusTextView"
         app:layout_constraintVertical_bias="0.0"/>
