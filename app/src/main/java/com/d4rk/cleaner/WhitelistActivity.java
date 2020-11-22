@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.fxn.stash.Stash;
 import java.io.File;
 import java.util.List;
-@SuppressWarnings("unused")
 public class WhitelistActivity extends AppCompatActivity {
     ListView listView;
     BaseAdapter adapter;
@@ -21,6 +20,7 @@ public class WhitelistActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_whitelist);
+        Stash.init(getApplicationContext());
         listView = findViewById(R.id.whitelistView);
         adapter = new ArrayAdapter<>(this, R.layout.custom_textview, getWhiteList());
         listView.setAdapter(adapter);
@@ -40,7 +40,6 @@ public class WhitelistActivity extends AppCompatActivity {
                 })
                 .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
     }
-    @SuppressWarnings("unused")
     public void addRecommended(View view) {
         File externalDir = Environment.getExternalStorageDirectory();
         if (!whiteList.contains(new File(externalDir, "Music").getPath())) {
@@ -57,7 +56,7 @@ public class WhitelistActivity extends AppCompatActivity {
             Stash.put("whiteList", whiteList);
             refreshListView();
         } else
-            Toast.makeText(this, "Already added",
+            Toast.makeText(this, "Already added.",
                     Toast.LENGTH_LONG).show();
     }
     /**

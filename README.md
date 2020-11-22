@@ -4,9 +4,6 @@
 
 # The last Android Cleaner you will ever need with Google inspired material design made by D4rK!
 
-[<img src="https://f-droid.org/badge/get-it-on.png"
-     alt="Get it on F-Droid"
-     height="90">](https://f-droid.org/packages/d4rk/)
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
     alt="Get it on Google Play"
     height="90">](https://play.google.com/store/apps/details?id=com.d4rk.cleaner)
@@ -29,14 +26,13 @@ Bugs can be reported here.
 ## Opening Issues :warning:
 
 > Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk. You can ask for help at [Stack Overflow](https://stackoverflow.com/questions/tagged/android).
-> For support, please contact <d4rk7355608@gmail.com> for more informations.
+> For support and informations, please contact <d4rk7355608@gmail.com>.
 
 - Create an Android/general issue/bug.
 
 Known bugs:
-- Rare split screen inconvenience;
-- Rare moments when "Clean" button not working;
-- Dark notification bar when dark mode is on on Pixel/AOSP devices.
+- Rare moments when "Clean" button not working after using split screen;
+- Dark notification bar when dark mode is active on Pixel/AOSP devices.
 
 __D4rK Cleaner is 100% free, open source inspired by LTE Cleaner by TheRedSpy15, ad free, and deletes everything it claims to.__
 

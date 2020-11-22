@@ -21,6 +21,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/boostView"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:src="@drawable/ic_boost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"/>
+    <ImageView
+        android:id="@+id/dustpanView"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:src="@drawable/ic_dustpan"
+        tools:ignore="ContentDescription,MissingConstraints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <ListView
         android:id="@+id/whitelistView"
         android:layout_width="0dp"
@@ -30,7 +46,6 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorTransparent"
         app:layout_constraintBottom_toTopOf="@+id/recommendedButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +55,6 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:onClick="emptyWhitelist"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
@@ -82,8 +96,7 @@
         fancy:fb_radius="100dp"
         fancy:fb_textColor="@color/colorAccent"
         tools:ignore="UsingOnClickInXml"
-        fancy:fb_text=""
-        android:layout_marginLeft="8dp">
+        fancy:fb_text="">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

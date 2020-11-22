@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Looper;
@@ -35,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     TextView progressText;
     TextView statusText;
     ConstraintLayout layout;
+    @SuppressLint("LogConditional")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,9 +77,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void animateBtn() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            TransitionManager.beginDelayedTransition(layout);
-        }
+        TransitionManager.beginDelayedTransition(layout);
         constraintSet.clear(R.id.cleanButton,ConstraintSet.TOP);
         constraintSet.clear(R.id.statusTextView,ConstraintSet.BOTTOM);
         constraintSet.setMargin(R.id.statusTextView,ConstraintSet.TOP,50);
@@ -96,18 +94,18 @@ public class MainActivity extends AppCompatActivity {
         running = true;
         reset();
         File path = Environment.getExternalStorageDirectory();
-        // scanner setup
+        // Scanner setup:
         FileScanner fs = new FileScanner(path);
         fs.setEmptyDir(prefs.getBoolean("empty", false));
         fs.setAutoWhite(prefs.getBoolean("auto_white", true));
         fs.setDelete(delete);
         fs.setCorpse(prefs.getBoolean("corpse", false));
         fs.setGUI(this);
-        // filters
+        // Filters:
         fs.setUpFilters(prefs.getBoolean("generic", true),
                 prefs.getBoolean("aggressive", false),
                 prefs.getBoolean("apk", false));
-        // failed scan
+        // Failed scan:
         if (path.listFiles() == null) { // is this needed? yes.
             TextView textView = printTextView("Scan failed.", Color.RED);
             runOnUiThread(() -> fileListView.addView(textView));
@@ -116,14 +114,14 @@ public class MainActivity extends AppCompatActivity {
             animateBtn();
             statusText.setText(getString(R.string.status_running));
         });
-        // start scanning
+        // Start scanning:
         long kilobytesTotal = fs.startScan();
-        // crappy but working fix for percentage never reaching 100
+        // Crappy but working fix for percentage never reaching 100:
         runOnUiThread(() -> {
             scanPBar.setProgress(scanPBar.getMax());
             progressText.setText("100%");
         });
-        // kilobytes found/freed text
+        // Kilobytes found/freed text:
         runOnUiThread(() -> {
             if (delete) {
                 statusText.setText(getString(R.string.freed) + " " + convertSize(kilobytesTotal));
@@ -165,11 +163,11 @@ public class MainActivity extends AppCompatActivity {
      * @param file file to delete
      */
     synchronized TextView displayPath(File file) {
-        // creating and adding a text view to the scroll view with path to file
+        // Creating and adding a text view to the scroll view with path to file:
         TextView textView = printTextView(file.getAbsolutePath(), getResources().getColor(R.color.colorAccent));
-        // adding to scroll view
+        // Adding to scroll view:
         runOnUiThread(() -> fileListView.addView(textView));
-        // scroll to bottom
+        // Scroll to bottom:
         fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
         return textView;
     }
@@ -179,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private synchronized void reset() {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
         runOnUiThread(() -> {
             fileListView.removeAllViews();
             scanPBar.setProgress(0);
@@ -189,11 +188,9 @@ public class MainActivity extends AppCompatActivity {
      * Request write permission
      */
     public synchronized void requestWriteExternalPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE},
-                    1);
-        }
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CLEAR_APP_CACHE, Manifest.permission.MASTER_CLEAR},
+                1);
     }
     /**
      * Handles the whether the user grants permission. Launches new fragment asking the user to give file permission.

@@ -25,6 +25,7 @@
     <string name="one_click_clean">One click clean.</string>
     <string name="freed">Freed: </string>
     <string name="found">Found: </string>
+    <string name="github">GitHub link.</string>
     <string name="are_you_reset_whitelist">Are you sure you want to clear the whitelist?</string>
     <string name="reset">Clear</string>
     <string name="delete_apk_files">Delete .apk files.</string>
@@ -59,12 +60,11 @@
 <br> </br>
         <b>Version 1.0:\n</b>
         <br> </br>
-        -Initial release.\n
+        -Initial stable release build.\n
         <br> </br>
     </string>
     <string name="changelog_settings" translatable="false">Changelog!</string>
     <string name="changelog_sum" translatable="false">All changes added over time to each versions!</string>
-
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -76,7 +76,6 @@
         <item>Temporary</item>
         <item>temporary</item>
     </string-array>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string-array name="aggressive_filter_folders">
         <item>supersonicads</item>
@@ -102,4 +101,20 @@
         <item>.exo</item>
         <item>thumbs?.db</item>
     </string-array>
+    <string name="title_activity_about">AboutActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>

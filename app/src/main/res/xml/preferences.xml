@@ -61,35 +61,41 @@
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="generic"
+            android:icon="@drawable/ic_generic_filter"
             android:persistent="true"
             android:summary="@string/generic_sum"
             android:title="@string/enable_generic_filter"/>
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="aggressive"
+            android:icon="@drawable/ic_aggressive_filter"
             android:persistent="true"
             android:summary="@string/aggressive_sum"
             android:title="@string/aggressive_filter"/>
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="empty"
+            android:icon="@drawable/ic_delete_empty_folder"
             android:persistent="true"
             android:title="@string/delete_empty_folders"/>
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="corpse"
             android:persistent="true"
+            android:icon="@drawable/ic_delete_corpse_files"
             android:summary="@string/corpse_summary"
             android:title="@string/corpse_title"/>
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="apk"
+            android:icon="@drawable/ic_delete_apk"
             android:persistent="true"
             android:summary="@string/apk_sum"
             android:title="@string/delete_apk_files"/>
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="auto_white"
+            android:icon="@drawable/ic_auto_whitelist"
             android:persistent="true"
             android:summary="@string/autowhite_sum"
             android:title="@string/whitelist_auto"/>
@@ -99,7 +105,16 @@
             android:defaultValue="false"
             android:key="one_click"
             android:persistent="true"
+            android:icon="@drawable/ic_one_click_clean"
             android:summary="@string/oneclick_sum"
             android:title="@string/one_click_clean"/>
     </PreferenceCategory>
+    <Preference android:title="About."
+        android:key="about"
+        android:icon="@drawable/ic_about">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.d4rk.cleaner"
+            android:targetClass="com.d4rk.cleaner.AboutActivity"/>
+    </Preference>
 </PreferenceScreen>

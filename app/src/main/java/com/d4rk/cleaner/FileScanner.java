@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 import static com.d4rk.cleaner.WhitelistActivity.getWhiteList;
-@SuppressWarnings("StatementWithEmptyBody")
 public class FileScanner{
     private final File path;
     private Resources res;
@@ -26,8 +25,7 @@ public class FileScanner{
     private boolean autoWhite = true;
     private boolean corpse = false;
     private static final ArrayList<String> filters = new ArrayList<>();
-    private static final String[] protectedFileList = {
-            "backup", "copy", "copies", "important", "do_not_edit"};
+    private static final String[] protectedFileList = {"backup", "copy", "copies", "important", "do_not_edit"};
     FileScanner(File path) {
         this.path = path;
     }
@@ -35,10 +33,10 @@ public class FileScanner{
         return getListFiles(path);
     }
     /**
-     * Used to generate a list of all files on device
+     * Used to generate a list of all files on device.
      *
-     * @param parentDirectory where to start searching from
-     * @return List of all files on device (besides whitelisted ones)
+     * @param parentDirectory where to start searching from.
+     * @return List of all files on device (besides whitelisted ones).
      */
     private synchronized List<File> getListFiles(File parentDirectory) {
         ArrayList<File> inFiles = new ArrayList<>();
@@ -47,14 +45,11 @@ public class FileScanner{
             for (File file : files) {
                 if (!isWhiteListed(file)) {
                     if (file.isDirectory()) {
-
                         if (autoWhite) {
                             if (!autoWhiteList(file))
                                 inFiles.add(file);
                         } else inFiles.add(file);
-
                         inFiles.addAll(getListFiles(file));
-
                     } else inFiles.add(file);
                 }
             }
@@ -138,7 +133,6 @@ public class FileScanner{
      * extensions to filter. 'generic', 'aggressive', and 'apk' should be assigned
      * by calling preferences.getBoolean()
      */
-    @SuppressLint("ResourceType")
     synchronized void setUpFilters(boolean generic, boolean aggressive, boolean apk) {
         List<String> folders = new ArrayList<>();
         List<String> files = new ArrayList<>();

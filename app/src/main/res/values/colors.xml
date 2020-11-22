@@ -9,7 +9,4 @@
     <color name="colorGoogleGreen">#0F9D58</color>
     <color name="colorAndroidGreen">#3DDC84</color>
     <color name="colorAccent">#4285F4</color>
-    <color name="inactiveAddButtonColor">#BB00FF</color>
-    <color name="infoPageBackgroundColor">#FF00F2</color>
-    <color name="colorTransparent">#66000000</color>
 </resources>

@@ -5,8 +5,6 @@
         android:enabled="true"
         android:icon="@mipmap/ic_shortcut_settings"
         android:shortcutShortLabel="@string/settings_string"
-        android:shortcutLongLabel="@string/settings_string"
-        android:shortcutDisabledMessage="@string/settings_string"
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.VIEW"
@@ -19,8 +17,6 @@
         android:enabled="true"
         android:icon="@mipmap/ic_shortcut_whitelist"
         android:shortcutShortLabel="@string/whitelist_app_shourtcut"
-        android:shortcutLongLabel="@string/whitelist_app_shourtcut"
-        android:shortcutDisabledMessage="@string/whitelist_app_shourtcut"
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.VIEW"

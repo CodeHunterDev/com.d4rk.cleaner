@@ -10,6 +10,7 @@
             android:endColor="@color/colorGoogleGreen"
             android:centerColor="@color/colorGoogleYellow"
             android:startColor="@color/colorGoogleRed"
+            android:gradientRadius="3dp"
             android:useLevel="true"
             android:type="linear"/>
     </shape>
