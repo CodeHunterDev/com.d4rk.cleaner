@@ -58,8 +58,26 @@
 <br> </br>
         \n
 <br> </br>
-        <b>Version 1.0:\n</b>
+        <b>Version 1.0_r2:\n</b>
+<br> </br>
+        -Bug fixes;\n
         <br> </br>
+        -Performance optimizations;\n
+        <br> </br>
+        -Little layout updates;\n
+        <br> </br>
+        -Removed unused strings;\n
+        <br> </br>
+        -Fixed "About" layout;\n
+        <br> </br>
+        -Optimized icons;\n
+        <br> </br>
+        -Fixed some strings.\n
+<br> </br>
+        \n
+<br> </br>
+        <b>Version 1.0_r1:\n</b>
+<br> </br>
         -Initial stable release build.\n
         <br> </br>
     </string>
