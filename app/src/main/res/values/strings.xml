@@ -1,25 +1,27 @@
 <resources>
-    <string name="app_name" translatable="false">Cleaner</string>
-    <string name="no_files_found" translatable="false">No files found! 😃</string>
-    <string name="delete_empty_folders" translatable="false">Delete empty folders.</string>
-    <string name="aggressive_filter" translatable="false">Enable aggressive filter.</string>
-    <string name="Save" translatable="false">Save</string>
-    <string name="filter" translatable="false">Filter</string>
-    <string name="whitelist" translatable="false">Whitelist!</string>
-    <string name="whitelist_app_shourtcut" translatable="false">Whitelist</string>
+    <string name="app_name">Cleaner</string>
+    <string name="dev">Developer:</string>
+    <string name="no_files_found">No files found! 😃</string>
+    <string name="delete_empty_folders">Delete empty folders.</string>
+    <string name="aggressive_filter">Enable aggressive filter.</string>
+    <string name="Save">Save</string>
+    <string name="filter">Filter</string>
+    <string name="whitelist">Whitelist!</string>
+    <string name="whitelist_app_shourtcut">Whitelist</string>
     <string name="whitelist_auto">Auto Whitelist.</string>
     <string name="reset_whitelist">Empty whitelist?</string>
-    <string name="add_to_whitelist" translatable="false">Add to whitelist:</string>
-    <string name="support_patreon" translatable="false">Support on Patreon!</string>
+    <string name="add_to_whitelist">Add to whitelist:</string>
+    <string name="support_patreon">Support on Patreon!</string>
     <string name="support_patreon_sum">If you want to more support me click here.</string>
-    <string name="add" translatable="false">Add</string>
-    <string name="cancel" translatable="false">Cancel</string>
-    <string name="enter_file_name" translatable="false">Enter file/folder name to whitelist.</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_file_name">Enter file/folder name to whitelist.</string>
     <string name="make_suggestion">Make a suggestion!</string>
     <string name="select_task">Select a task:</string>
     <string name="apk_sum">Installer files (.apk) files for android.</string>
     <string name="do_you_want_to">Do you want to delete (Clean) all found files, or only display (Analyze) them?</string>
     <string name="clean">Clean</string>
+    <string name="app_version">1.0_r3</string>
     <string name="analyze">Analyze</string>
     <string name="enable_generic_filter">Enable generic filter.</string>
     <string name="one_click_clean">One click clean.</string>
@@ -48,13 +50,29 @@
     <string name="corpse_summary">Files left over from uninstalled apps.</string>
     <string name="corpse_title">Delete corpse files.</string>
     <string name="donate">Donate!</string>
-    <string name="donate_sum">Buy me a Beer! Or choose how much to donate using PayPal so I can keep supporting this app development.</string>
-    <string name="todo" translatable="false">TODO</string>
-    <string name="d4rk_youtube" translatable="false">D4rK!</string>
-    <string name="michael_tutorials_youtube" translatable="false">Michael Tutorials!</string>
-    <string name="d4rk_youtube_sum" translatable="false">Hello, I\'m D4rK, my real name is Michael or Mihai, because I\'m from Romania and I make 3D animations in Source Filmmaker and probably other programs soon. I have a secondary channel for tutorials &amp; more named Michael Tutorials. If you like my work leave a like, share and subscribe for more. If you need other information you can find here or you can ask me.</string>
-    <string name="michael_tutorials_youtube_sum" translatable="false">Hello, I\'m Michael and I make a lot of videos especially tutorials. If you need the Pro version of apps you can tell me and I make tutorials.</string>
-    <string name="changelog" translatable="false">D4rK Cleaner - Changelog:\n
+    <string name="donate_sum">Buy me a beer! Or choose how much to donate using PayPal so I can keep supporting this app development.</string>
+    <string name="todo">TODO</string>
+    <string name="d4rk_youtube">D4rK!</string>
+    <string name="michael_tutorials_youtube">Michael Tutorials!</string>
+    <string name="d4rk_youtube_sum">Hello, I\'m D4rK, my real name is Michael or Mihai, because I\'m from Romania and I make 3D animations in Source Filmmaker and probably other programs soon. I have a secondary channel for tutorials &amp; more named Michael Tutorials. If you like my work leave a like, share and subscribe for more. If you need other information you can find here or you can ask me.</string>
+    <string name="michael_tutorials_youtube_sum">Hello, I\'m Michael and I make a lot of videos especially tutorials. If you need the Pro version of apps you can tell me and I make tutorials.</string>
+    <string name="changelog">D4rK Cleaner - Changelog:\n
+<br> </br>
+        \n
+<br> </br>
+        <b>Version 1.0_r3:\n</b>
+<br> </br>
+        -Bug fixes;\n
+        <br> </br>
+        -Removed unused strings;\n
+        <br> </br>
+        -Fixed some colors;\n
+        <br> </br>
+        -New icons added;\n
+        <br> </br>
+        -Fixed &amp; remastered layouts;\n
+        <br> </br>
+        -Fixed some strings.\n
 <br> </br>
         \n
 <br> </br>
@@ -81,8 +99,8 @@
         -Initial stable release build.\n
         <br> </br>
     </string>
-    <string name="changelog_settings" translatable="false">Changelog!</string>
-    <string name="changelog_sum" translatable="false">All changes added over time to each versions!</string>
+    <string name="changelog_settings">Changelog!</string>
+    <string name="changelog_sum">All changes added over time to each versions!</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -119,16 +137,13 @@
         <item>.exo</item>
         <item>thumbs?.db</item>
     </string-array>
-    <string name="title_activity_about">AboutActivity</string>
-
+    <string name="title_activity_about">About:</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
-
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
     <string name="reply_title">Default reply action</string>
-
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
     <string name="attachment_title">Download incoming attachments</string>

@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">@android:color/transparent</color>
     <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorWhiteShortcuts">#F5F5F5</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorGoogleRed">#DB4437</color>

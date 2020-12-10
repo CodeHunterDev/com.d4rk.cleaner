@@ -1,16 +1,20 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.test:core:1.3.1-alpha02@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9b434daa60bd9ed3c1e2e7a0c4ae865a/transformed/jetified-core-1.3.1-alpha02/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/877d8187b32ce15697a22a861304bb88/transformed/jetified-core-1.3.1-alpha02/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c3c13983f1c8b34b9ef6c19dd10ad9e1/transformed/jetified-core-1.3.1-alpha02/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c3c13983f1c8b34b9ef6c19dd10ad9e1/transformed/jetified-core-1.3.1-alpha02/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c3c13983f1c8b34b9ef6c19dd10ad9e1/transformed/jetified-core-1.3.1-alpha02/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/a2af77b3415f4d7fb4b501d74f73772c/transformed/jetified-core-1.3.1-alpha02/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/a2af77b3415f4d7fb4b501d74f73772c/transformed/jetified-core-1.3.1-alpha02/res" />
+      <root url="file://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/a2af77b3415f4d7fb4b501d74f73772c/transformed/jetified-core-1.3.1-alpha02/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../../../../../../Google/Android/Android Studio/Gradle/caches/transforms-3/a2af77b3415f4d7fb4b501d74f73772c/transformed/jetified-core-1.3.1-alpha02/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a2af77b3415f4d7fb4b501d74f73772c/transformed/jetified-core-1.3.1-alpha02/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a2af77b3415f4d7fb4b501d74f73772c/transformed/jetified-core-1.3.1-alpha02/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a2af77b3415f4d7fb4b501d74f73772c/transformed/jetified-core-1.3.1-alpha02/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/modules-2/files-2.1/androidx.test/core/1.3.1-alpha02/96b4d161def059d92989a352500d05d215c33d5e/core-1.3.1-alpha02-javadoc.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/core/1.3.1-alpha02/96b4d161def059d92989a352500d05d215c33d5e/core-1.3.1-alpha02-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/modules-2/files-2.1/androidx.test/core/1.3.1-alpha02/498b0c809c6c6f108fa1f99961abcaf1c78a8425/core-1.3.1-alpha02-sources.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/core/1.3.1-alpha02/498b0c809c6c6f108fa1f99961abcaf1c78a8425/core-1.3.1-alpha02-sources.jar!/" />
     </SOURCES>
   </library>

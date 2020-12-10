@@ -12,6 +12,13 @@
         android:src="@drawable/ic_d4rk"
         android:layout_gravity="top|center"
         tools:ignore="ContentDescription,MissingConstraints"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_splash_screen"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        tools:ignore="ContentDescription,MissingConstraints"/>
     <TextView
         android:id="@+id/prompttext"
         android:layout_width="wrap_content"

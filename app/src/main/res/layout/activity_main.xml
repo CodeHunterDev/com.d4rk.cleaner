@@ -82,11 +82,6 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/todo"
             android:src="@drawable/ic_text_clean"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_text_clean"/>
     </mehdi.sakout.fancybuttons.FancyButton>
     <ProgressBar
         android:id="@+id/scanProgress"

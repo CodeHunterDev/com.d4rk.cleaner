@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 import static com.d4rk.cleaner.WhitelistActivity.getWhiteList;
+@SuppressWarnings("StatementWithEmptyBody")
 public class FileScanner{
     private final File path;
     private Resources res;

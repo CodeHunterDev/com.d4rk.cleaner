@@ -12,11 +12,11 @@
         android:title="Developer:"
         android:summary="D4rK"/>
     <Preference
-        android:title="App Version:"
-        android:summary="1.0"/>
+        android:title="App version:"
+        android:summary="1.0_r3"/>
     <Preference
         android:title="Special thanks:"
-        android:summary="UnderPenis69/UnderBenis96, Sonerie C8chilu dă Haur a.k.a C8chiulu Mămăligă, Wiss Kill"/>
+        android:summary="UnderPenis69/UnderBenis96, Sonerie C8chilu' dă Haur a.k.a Băiatu' Pocnitoare (fostă petardă de elită pă vremea lu' Ștefan cel Mare), Wiss Kill"/>
     <Preference
         android:title="Privacy policy."
         android:key="privacy_policy_link">

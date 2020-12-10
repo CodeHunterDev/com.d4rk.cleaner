@@ -7,6 +7,7 @@ import android.provider.Settings;
 import android.widget.Button;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+@SuppressWarnings("deprecation")
 public class PromptActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
