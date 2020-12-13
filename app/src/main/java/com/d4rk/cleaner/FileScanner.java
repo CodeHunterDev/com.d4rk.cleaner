@@ -132,7 +132,7 @@ public class FileScanner{
     /**
      * Adds paths to the white list that are not to be cleaned. As well as adds
      * extensions to filter. 'generic', 'aggressive', and 'apk' should be assigned
-     * by calling preferences.getBoolean()
+     * by calling settings.getBoolean()
      */
     synchronized void setUpFilters(boolean generic, boolean aggressive, boolean apk) {
         List<String> folders = new ArrayList<>();

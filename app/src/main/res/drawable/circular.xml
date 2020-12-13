@@ -8,8 +8,7 @@
         android:useLevel="true">
         <gradient
             android:endColor="@color/colorGoogleGreen"
-            android:centerColor="@color/colorGoogleYellow"
-            android:startColor="@color/colorGoogleRed"
+            android:startColor="@color/colorGoogleGreen"
             android:gradientRadius="3dp"
             android:useLevel="true"
             android:type="linear"/>

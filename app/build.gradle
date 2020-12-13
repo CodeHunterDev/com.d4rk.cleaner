@@ -6,8 +6,8 @@ android {
         minSdkVersion 19
         //noinspection OldTargetApi
         targetSdkVersion 29
-        versionCode 24
-        versionName '1.0_r3'
+        versionCode 25
+        versionName '1.0_r4-a1'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
         multiDexEnabled false

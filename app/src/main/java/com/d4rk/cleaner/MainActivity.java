@@ -16,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -24,6 +25,7 @@ import androidx.core.app.ActivityCompat;
 import com.fxn.stash.Stash;
 import java.io.File;
 import java.text.DecimalFormat;
+@SuppressWarnings("ConstantConditions")
 public class MainActivity extends AppCompatActivity {
     final ConstraintSet constraintSet = new ConstraintSet();
     static boolean running = false;
@@ -49,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         constraintSet.clone(layout);
         requestWriteExternalPermission();
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.custom_toolbar);
     }
     /**
      * Starts the settings activity
@@ -65,12 +69,12 @@ public class MainActivity extends AppCompatActivity {
         if (!running) {
             if (!prefs.getBoolean("one_click", false)) // one-click disabled
                 new AlertDialog.Builder(this,R.style.MyAlertDialogTheme)
-                        .setTitle(R.string.select_task)
-                        .setMessage(R.string.do_you_want_to)
-                        .setPositiveButton(R.string.clean, (dialog, whichButton) -> { // clean
+                        .setTitle(R.string.main_select_task)
+                        .setMessage(R.string.main_select_task_description)
+                        .setPositiveButton(R.string.main_clean, (dialog, whichButton) -> { // clean
                             new Thread(()-> scan(true)).start();
                         })
-                        .setNegativeButton(R.string.analyze, (dialog, whichButton) -> { // analyze
+                        .setNegativeButton(R.string.main_analyze, (dialog, whichButton) -> { // analyze
                             new Thread(()-> scan(false)).start();
                         }).show();
             else new Thread(()-> scan(true)).start(); // one-click enabled
@@ -112,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         }
         runOnUiThread(() -> {
             animateBtn();
-            statusText.setText(getString(R.string.status_running));
+            statusText.setText(getString(R.string.main_status_running));
         });
         // Start scanning:
         long kilobytesTotal = fs.startScan();
@@ -124,9 +128,9 @@ public class MainActivity extends AppCompatActivity {
         // Kilobytes found/freed text:
         runOnUiThread(() -> {
             if (delete) {
-                statusText.setText(getString(R.string.freed) + " " + convertSize(kilobytesTotal));
+                statusText.setText(getString(R.string.main_freed) + " " + convertSize(kilobytesTotal));
             } else {
-                statusText.setText(getString(R.string.found) + " " + convertSize(kilobytesTotal));
+                statusText.setText(getString(R.string.main_found) + " " + convertSize(kilobytesTotal));
             }
         });
         fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));

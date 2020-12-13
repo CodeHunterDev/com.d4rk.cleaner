@@ -31,14 +31,14 @@ public class WhitelistActivity extends AppCompatActivity {
      */
     public final void emptyWhitelist(View view) {
         new AlertDialog.Builder(WhitelistActivity.this,R.style.MyAlertDialogTheme)
-                .setTitle(R.string.reset_whitelist)
-                .setMessage(R.string.are_you_reset_whitelist)
-                .setPositiveButton(R.string.reset, (dialog, whichButton) -> {
+                .setTitle(R.string.whitelist_empty)
+                .setMessage(R.string.whitelist_empty_description)
+                .setPositiveButton(R.string.whitelist_clear, (dialog, whichButton) -> {
                     whiteList.clear();
                     Stash.put("whiteList", whiteList);
                     refreshListView();
                 })
-                .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
+                .setNegativeButton(R.string.whitelist_cancel_button, (dialog, whichButton) -> { }).show();
     }
     public void addRecommended(View view) {
         File externalDir = Environment.getExternalStorageDirectory();
@@ -66,15 +66,15 @@ public class WhitelistActivity extends AppCompatActivity {
     public final void addToWhiteList(View view) {
         final EditText input = new EditText(WhitelistActivity.this);
         new AlertDialog.Builder(WhitelistActivity.this,R.style.MyAlertDialogTheme)
-                .setTitle(R.string.add_to_whitelist)
-                .setMessage(R.string.enter_file_name)
+                .setTitle(R.string.whitelist_add)
+                .setMessage(R.string.whitelist_add_description)
                 .setView(input)
-                .setPositiveButton(R.string.add, (dialog, whichButton) -> {
+                .setPositiveButton(R.string.whitelist_add_button, (dialog, whichButton) -> {
                     whiteList.add(String.valueOf(input.getText()));
                     Stash.put("whiteList", whiteList);
                     refreshListView();
                 })
-                .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
+                .setNegativeButton(R.string.whitelist_cancel_button, (dialog, whichButton) -> { }).show();
     }
     public void refreshListView() {
         runOnUiThread(() -> {

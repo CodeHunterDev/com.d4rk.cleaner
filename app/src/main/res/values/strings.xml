@@ -1,106 +1,179 @@
 <resources>
+    <!-- App strings. -->
     <string name="app_name">Cleaner</string>
-    <string name="dev">Developer:</string>
-    <string name="no_files_found">No files found! 😃</string>
-    <string name="delete_empty_folders">Delete empty folders.</string>
-    <string name="aggressive_filter">Enable aggressive filter.</string>
+    <string name="app_d4rk_cleaner">D4rK Cleaner</string>
+    <string name="app_d4rk">D4rK!</string>
+    <string name="copyright">Copyright ©2020 ~ D4rK</string>
+
+    <!-- Preference Titles -->
+    <string name="ui">UI</string>
+    <string name="dark_mode">Select theme (maybe isn\'t working).</string>
+    <string name="dark_mode_def_value">MODE_NIGHT_FOLLOW_SYSTEM</string>
+
+    <!-- Main activity strings. -->
+    <string name="main_string">D4rK Cleaner!!!</string>
+    <string name="main_status">Status: Idle…</string>
+    <string name="main_status_running">Status: Running.</string>
+    <string name="main_progress">0%</string>
+    <string name="main_nothing_found">Nothing found. 😃</string>
+    <string name="main_found">Found: </string>
+    <string name="main_freed">Freed: </string>
+    <string name="main_select_task">Select a task:</string>
+    <string name="main_select_task_description">Do you want to delete (Clean) all found files, or only display (Analyze) them?</string>
+    <string name="main_clean">Clean!</string>
+    <string name="main_analyze">Analyze!</string>
+
+    <!-- Settings activity strings. -->
+    <string name="settings_string">Settings!</string>
+    <string name="settings_donate">Donate!</string>
+    <string name="settings_donate_description">Buy me a beer and cheers! 🍺 Or choose how much to donate using PayPal so I can keep supporting this app development. 😄</string>
+    <string name="settings_support_patreon">Support on Patreon!</string>
+    <string name="settings_support_patreon_description">If you want to more support me click here and be a patron.</string>
+    <string name="settings_d4rk_description">Hello, I\'m D4rK, my real name is Michael, and I make 3D animations in Source Filmmaker and probably other programs soon. I have a secondary channel for tutorials &amp; more called Michael Tutorials. If you like my work leave a like, share and subscribe for more. And, if you need other information you can find here or you can ask me.</string>
+    <string name="settings_michael_tutorials">Michael Tutorials!</string>
+    <string name="settings_michael_tutorials_description">Hello, I\'m Michael and I make a lot of videos especially tutorials XD. If you need the \'Pro\' version of apps you can tell me and I make tutorials.</string>
+    <string name="settings_github_suggestion">Make a suggestion. Or report an issue!</string>
+    <string name="settings_github_suggestion_description">Open an issue on GitHub from the app. No account needed and everything is free.</string>
+    <string name="settings_whitelist">Whitelist!</string>
+    <string name="settings_whitelist_description">Shows the paths to exclude from scans.</string>
+    <string name="settings_changelog">Changelog!</string>
+    <string name="settings_changelog_description">All detailed changes added over time to each versions!</string>
+    <!-- Settings activity (filters) strings. -->
+    <string name="filters_important">Important!!!</string>
+    <string name="filters_string">Filters:</string>
+    <string name="filters_generic_filter">Generic filter.</string>
+    <string name="filters_generic_filter_description">Delete temp, log, logs, &amp; other useless files &amp; folders.</string>
+    <string name="filters_aggressive_filter">Aggressive filter.</string>
+    <string name="filters_aggressive_filter_description">Too much to list here &amp; I\'m too lazy to add staff here. Sorry.</string>
+    <string name="filters_delete_empty_folders">Delete empty folders.</string>
+    <string name="filters_corpse_files">Delete corpse files.</string>
+    <string name="filters_corpse_files_description">Files left over from uninstalled/removed apps.</string>
+    <string name="filters_delete_apk_files">Delete APK files.</string>
+    <string name="filters_delete_apk_files_description">Installer files (.apk) files for Android.</string>
+    <string name="filters_auto_whitelist">Auto whitelist.</string>
+    <string name="filters_auto_whitelist_description">Detect folders that should be protected automatically.</string>
+    <!-- Settings activity (miscellaneous) strings. -->
+    <string name="miscellaneous_string">Miscellaneous:</string>
+    <string name="miscellaneous_one_click_clean">One click clean.</string>
+    <string name="miscellaneous_one_click_clean_description">No dialog menu when clicking clean button.</string>
+    <string name="miscellaneous_about">About.</string>
+
+    <!-- Whitelist activity strings. -->
+    <string name="whitelist_string">Whitelist!</string>
+    <string name="whitelist_d4rk_default">Add D4rK recommended whitelists!</string>
+    <string name="whitelist_empty">Empty whitelist?</string>
+    <string name="whitelist_empty_description">Are you sure you want to clear the whitelist?</string>
+    <string name="whitelist_add">Add to whitelist:</string>
+    <string name="whitelist_add_description">Enter file/folder name to whitelist.</string>
+    <string name="whitelist_clear">Clear!</string>
+    <string name="whitelist_add_button">Add!</string>
+    <string name="whitelist_cancel_button">Cancel!</string>
+    <string name="whitelist_already_added">Already added.</string>
+
+    <!-- Changelog activity strings. -->
+    <string name="changelog">D4rK Cleaner - Changelog:\n
+	<br> </br>
+		<b>Version 1.0_r4-a1:\n</b>
+	<br> </br>
+			•Added custom toolbar in MainActivity;\n
+	<br> </br>
+			•Removed unused resources;\n
+    <br> </br>
+            •App theme switcher added in settings panel.\n
+    <br> </br>
+\n
+	<br> </br>
+		<b>Version 1.0_r3:\n</b>
+	<br> </br>
+			•A lot of bugs fixed;\n
+	<br> </br>
+			•Updated all strings;\n
+	<br> </br>
+			•Fixed some colors;\n
+	<br> </br>
+			•New icons added;\n
+	<br> </br>
+			•Fixed &amp; remastered layouts;\n
+	<br> </br>
+			•General optimizations added to clean process.\n
+	<br> </br>
+\n
+	<br> </br>
+		<b>Version 1.0_r2:\n</b>
+	<br> </br>
+			•Bug fixes;\n
+	<br> </br>
+			•Performance optimizations;\n
+	<br> </br>
+			•Little layout updates;\n
+    <br> </br>
+			•Removed unused strings;\n
+	<br> </br>
+			•Fixed "About" layout;\n
+	<br> </br>
+			•Optimized icons;\n
+    <br> </br>
+			•Fixed some strings.\n
+	<br> </br>
+\n
+	<br> </br>
+		<b>Version 1.0_r1:\n</b>
+	<br> </br>
+			•Initial stable release build.\n
+    <br> </br>
+	</string>
+
+    <!-- Other. -->
     <string name="Save">Save</string>
     <string name="filter">Filter</string>
-    <string name="whitelist">Whitelist!</string>
-    <string name="whitelist_app_shourtcut">Whitelist</string>
-    <string name="whitelist_auto">Auto Whitelist.</string>
-    <string name="reset_whitelist">Empty whitelist?</string>
-    <string name="add_to_whitelist">Add to whitelist:</string>
-    <string name="support_patreon">Support on Patreon!</string>
-    <string name="support_patreon_sum">If you want to more support me click here.</string>
-    <string name="add">Add</string>
-    <string name="cancel">Cancel</string>
-    <string name="enter_file_name">Enter file/folder name to whitelist.</string>
-    <string name="make_suggestion">Make a suggestion!</string>
-    <string name="select_task">Select a task:</string>
-    <string name="apk_sum">Installer files (.apk) files for android.</string>
-    <string name="do_you_want_to">Do you want to delete (Clean) all found files, or only display (Analyze) them?</string>
-    <string name="clean">Clean</string>
-    <string name="app_version">1.0_r3</string>
-    <string name="analyze">Analyze</string>
-    <string name="enable_generic_filter">Enable generic filter.</string>
-    <string name="one_click_clean">One click clean.</string>
-    <string name="freed">Freed: </string>
-    <string name="found">Found: </string>
-    <string name="github">GitHub link.</string>
-    <string name="are_you_reset_whitelist">Are you sure you want to clear the whitelist?</string>
-    <string name="reset">Clear</string>
-    <string name="delete_apk_files">Delete .apk files.</string>
     <string name="default_whitelist">Default Whitelist</string>
-    <string name="add_defaults">Add D4rK recommended whitelists</string>
-    <string name="nothing_found">Nothing found</string>
-    <string name="status_idle">Status: Idle</string>
-    <string name="progress_0">0%</string>
-    <string name="status_running">Status: Running</string>
-    <string name="whitelist_sum">Shows the paths to exclude from scans.</string>
-    <string name="suggestion_sum">Open an issue on GitHub from the app. No account needed.</string>
-    <string name="generic_sum">Delete temp, log, logs, and other useless files.</string>
-    <string name="aggressive_sum">Too much to list here and too lazy to add staff here.</string>
-    <string name="oneclick_sum">No dialog menu when clicking clean button.</string>
-    <string name="autowhite_sum">Detect folders that should be protected automatically.</string>
-    <string name="prompt_string">Please add file access permissions</string>
-    <string name="settings_string">Settings</string>
+    <string name="prompt">Please add file access permissions.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_prompt">PromptActivity</string>
-    <string name="corpse_summary">Files left over from uninstalled apps.</string>
-    <string name="corpse_title">Delete corpse files.</string>
-    <string name="donate">Donate!</string>
-    <string name="donate_sum">Buy me a beer! Or choose how much to donate using PayPal so I can keep supporting this app development.</string>
     <string name="todo">TODO</string>
-    <string name="d4rk_youtube">D4rK!</string>
-    <string name="michael_tutorials_youtube">Michael Tutorials!</string>
-    <string name="d4rk_youtube_sum">Hello, I\'m D4rK, my real name is Michael or Mihai, because I\'m from Romania and I make 3D animations in Source Filmmaker and probably other programs soon. I have a secondary channel for tutorials &amp; more named Michael Tutorials. If you like my work leave a like, share and subscribe for more. If you need other information you can find here or you can ask me.</string>
-    <string name="michael_tutorials_youtube_sum">Hello, I\'m Michael and I make a lot of videos especially tutorials. If you need the Pro version of apps you can tell me and I make tutorials.</string>
-    <string name="changelog">D4rK Cleaner - Changelog:\n
-<br> </br>
-        \n
-<br> </br>
-        <b>Version 1.0_r3:\n</b>
-<br> </br>
-        -Bug fixes;\n
-        <br> </br>
-        -Removed unused strings;\n
-        <br> </br>
-        -Fixed some colors;\n
-        <br> </br>
-        -New icons added;\n
-        <br> </br>
-        -Fixed &amp; remastered layouts;\n
-        <br> </br>
-        -Fixed some strings.\n
-<br> </br>
-        \n
-<br> </br>
-        <b>Version 1.0_r2:\n</b>
-<br> </br>
-        -Bug fixes;\n
-        <br> </br>
-        -Performance optimizations;\n
-        <br> </br>
-        -Little layout updates;\n
-        <br> </br>
-        -Removed unused strings;\n
-        <br> </br>
-        -Fixed "About" layout;\n
-        <br> </br>
-        -Optimized icons;\n
-        <br> </br>
-        -Fixed some strings.\n
-<br> </br>
-        \n
-<br> </br>
-        <b>Version 1.0_r1:\n</b>
-<br> </br>
-        -Initial stable release build.\n
-        <br> </br>
-    </string>
-    <string name="changelog_settings">Changelog!</string>
-    <string name="changelog_sum">All changes added over time to each versions!</string>
+
+    <!-- About activity strings. -->
+    <string name="about_github_link">GitHub link.</string>
+    <string name="about_developer">Developer:</string>
+    <string name="about_app_version">App version:</string>
+    <string name="about_app_version_code">1.0_r3</string>
+    <string name="about_special_thanks">Special thanks:</string>
+    <string name="about_supporters">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill.</string>
+    <string name="about_privacy_policy">Privacy policy.</string>
+
+    <!-- TODO: Remove or change this placeholder text. -->
+    <string-array name="aggressive_filter_folders">
+            <item>supersonicads</item>
+            <item>Cache</item>
+            <item>ApkEditor</item>
+            <item>AnyDesk</item>
+            <item>.estrongs</item>
+            <item>bluetooth</item>
+            <item>thumbnails?</item>
+            <item>HBWhatsApp</item>
+            <item>mobvista</item>
+            <item>ifont</item>
+            <item>Telegram</item>
+            <item>UnityAdsVideoCache</item>
+            <item>albumthumbs?</item>
+            <item>DCIM</item>
+            <item>OSSLog</item>
+            <item>LOST.DIR</item>
+            <item>.Trash</item>
+            <item>desktop.ini</item>
+            <item>leakcanary</item>
+            <item>.DS_Store</item>
+            <item>.spotlight-V100</item>
+            <item>fseventsd</item>
+            <item>Bugreport</item>
+            <item>bugreports</item>
+            <item>.Trash</item>
+            <item>cache</item>
+    </string-array>
+    <string-array name="aggressive_filter_files">
+            <item>.exo</item>
+            <item>thumbs?.db</item>
+    </string-array>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -112,42 +185,4 @@
         <item>Temporary</item>
         <item>temporary</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string-array name="aggressive_filter_folders">
-        <item>supersonicads</item>
-        <item>Cache</item>
-        <item>Analytics</item>
-        <item>thumbnails?</item>
-        <item>mobvista</item>
-        <item>UnityAdsVideoCache</item>
-        <item>albumthumbs?</item>
-        <item>LOST.DIR</item>
-        <item>.Trash</item>
-        <item>desktop.ini</item>
-        <item>leakcanary</item>
-        <item>.DS_Store</item>
-        <item>.spotlight-V100</item>
-        <item>fseventsd</item>
-        <item>Bugreport</item>
-        <item>bugreports</item>
-        <item>.Trash</item>
-        <item>cache</item>
-    </string-array>
-    <string-array name="aggressive_filter_files">
-        <item>.exo</item>
-        <item>thumbs?.db</item>
-    </string-array>
-    <string name="title_activity_about">About:</string>
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>

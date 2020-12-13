@@ -21,7 +21,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="150dp"
         android:layout_gravity="center"
         android:src="@drawable/ic_d4rk"
         tools:ignore="ContentDescription" />
@@ -137,15 +137,6 @@
         android:layout_gravity="top"
         android:layout_marginStart="10dp"
         android:layout_marginTop="60dp"
-        android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_triangle_blue"
-        tools:ignore="ContentDescription"/>
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_gravity="top"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="450dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_triangle_blue"
         tools:ignore="ContentDescription"/>

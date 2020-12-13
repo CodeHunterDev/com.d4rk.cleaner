@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="About"
+    android:title="@string/miscellaneous_about"
     android:key="about">
     <Preference
-        android:title="@string/github"
+        android:title="@string/about_github_link"
         android:key="github_link">
         <intent android:action="android.intent.action.VIEW"
             android:data="https://github.com/D4rK7355608/com.d4rk.cleaner"/>
     </Preference>
     <Preference
-        android:title="Developer:"
-        android:summary="D4rK"/>
+        android:title="@string/about_developer"
+        android:summary="@string/app_d4rk"/>
     <Preference
-        android:title="App version:"
-        android:summary="1.0_r3"/>
+        android:title="@string/about_app_version"
+        android:summary="@string/about_app_version_code"/>
     <Preference
-        android:title="Special thanks:"
-        android:summary="UnderPenis69/UnderBenis96, Sonerie C8chilu' dă Haur a.k.a Băiatu' Pocnitoare (fostă petardă de elită pă vremea lu' Ștefan cel Mare), Wiss Kill"/>
+        android:title="@string/about_special_thanks"
+        android:summary="@string/about_supporters"/>
     <Preference
-        android:title="Privacy policy."
-        android:key="privacy_policy_link">
+        android:title="@string/about_privacy_policy">
         <intent android:action="android.intent.action.VIEW"
             android:data="https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html"/>
     </Preference>

@@ -22,7 +22,7 @@ public class SettingsActivity extends AppCompatActivity {
          */
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            addPreferencesFromResource(R.xml.preferences);
+            addPreferencesFromResource(R.xml.settings);
         }
         /**
          * ClickEvent Listener for Preferences
