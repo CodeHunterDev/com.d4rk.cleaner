@@ -3,12 +3,7 @@
     <string name="app_name">Cleaner</string>
     <string name="app_d4rk_cleaner">D4rK Cleaner</string>
     <string name="app_d4rk">D4rK!</string>
-    <string name="copyright">Copyright ©2020 ~ D4rK</string>
-
-    <!-- Preference Titles -->
-    <string name="ui">UI</string>
-    <string name="dark_mode">Select theme (maybe isn\'t working).</string>
-    <string name="dark_mode_def_value">MODE_NIGHT_FOLLOW_SYSTEM</string>
+    <string name="copyright">Copyright ©2021 ~ D4rK</string>
 
     <!-- Main activity strings. -->
     <string name="main_string">D4rK Cleaner!!!</string>
@@ -72,14 +67,22 @@
 
     <!-- Changelog activity strings. -->
     <string name="changelog">D4rK Cleaner - Changelog:\n
+   <br> </br>
+\n
 	<br> </br>
-		<b>Version 1.0_r4-a1:\n</b>
+		<b>Version 1.0_r4:\n</b>
 	<br> </br>
-			•Added custom toolbar in MainActivity;\n
-	<br> </br>
-			•Removed unused resources;\n
+			•Added new toolbar in MainActivity;\n
     <br> </br>
-            •App theme switcher added in settings panel.\n
+			•Fixed Settings shortcut;\n
+    <br> </br>
+			•General app &amp; layout optimizations;\n
+	<br> </br>
+			•GitHub page fixed;\n
+	<br> </br>
+			•Removed unused resources &amp; strings;\n
+    <br> </br>
+            •Theme switcher added in settings menu.\n
     <br> </br>
 \n
 	<br> </br>
@@ -136,42 +139,61 @@
     <string name="about_github_link">GitHub link.</string>
     <string name="about_developer">Developer:</string>
     <string name="about_app_version">App version:</string>
-    <string name="about_app_version_code">1.0_r3</string>
+    <string name="about_app_version_code">1.0_r4</string>
     <string name="about_special_thanks">Special thanks:</string>
     <string name="about_supporters">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill.</string>
     <string name="about_privacy_policy">Privacy policy.</string>
 
     <!-- TODO: Remove or change this placeholder text. -->
     <string-array name="aggressive_filter_folders">
-            <item>supersonicads</item>
-            <item>Cache</item>
-            <item>ApkEditor</item>
-            <item>AnyDesk</item>
-            <item>.estrongs</item>
-            <item>bluetooth</item>
-            <item>thumbnails?</item>
-            <item>HBWhatsApp</item>
-            <item>mobvista</item>
-            <item>ifont</item>
-            <item>Telegram</item>
-            <item>UnityAdsVideoCache</item>
-            <item>albumthumbs?</item>
-            <item>DCIM</item>
-            <item>OSSLog</item>
-            <item>LOST.DIR</item>
-            <item>.Trash</item>
-            <item>desktop.ini</item>
-            <item>leakcanary</item>
-            <item>.DS_Store</item>
-            <item>.spotlight-V100</item>
-            <item>fseventsd</item>
-            <item>Bugreport</item>
-            <item>bugreports</item>
-            <item>.Trash</item>
-            <item>cache</item>
+        <item>supersonicads</item>
+        <item>Cache</item>
+        <item>ApkEditor</item>
+        <item>AnyDesk</item>
+        <item>Download</item>
+        <item>.estrongs</item>
+        <item>bluetooth</item>
+        <item>thumbnails?</item>
+        <item>GBWhatsApp</item>
+        <item>WhatsApp</item>
+        <item>ASUS</item>
+        <item>Screenshots</item>
+        <item>QQSecureDownload</item>
+        <item>com.kingroot.kinguser</item>
+        <item>jumobile</item>
+        <item>minidump</item>
+        <item>PicsArt</item>
+        <item>mobvista</item>
+        <item>ifont</item>
+        <item>OSSLog</item>
+        <item>Telegram</item>
+        <item>.thumbnails</item>
+        <item>UnityAdsVideoCache</item>
+        <item>albumthumbs?</item>
+        <item>DCIM</item>
+        <item>OSSLog</item>
+        <item>LOST.DIR</item>
+        <item>Discord</item>
+        <item>.Trash</item>
+        <item>kinguserdown</item>
+        <item>desktop.ini</item>
+        <item>leakcanary</item>
+        <item>.DS_Store</item>
+        <item>.spotlight-V100</item>
+        <item>fseventsd</item>
+        <item>Bugreport</item>
+        <item>bugreports</item>
+        <item>TWRP</item>
+        <item>.Trash</item>
+        <item>cache</item>
     </string-array>
     <string-array name="aggressive_filter_files">
+            <item>.nomedia</item>
             <item>.exo</item>
+            <item>.apk</item>
+            <item>.apks</item>
+            <item>.apkm</item>
+            <item>.csv</item>
             <item>thumbs?.db</item>
     </string-array>
     <string-array name="generic_filter_files">
@@ -181,6 +203,7 @@
     <string-array name="generic_filter_folders">
         <item>Logs</item>
         <item>logs</item>
+        <item>tmp</item>
         <item>temp</item>
         <item>Temporary</item>
         <item>temporary</item>

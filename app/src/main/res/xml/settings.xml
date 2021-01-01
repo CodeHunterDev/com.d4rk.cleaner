@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/settings_string"
     android:key="settings">
     <PreferenceCategory android:title="@string/filters_important"/>
@@ -110,13 +109,6 @@
             android:icon="@drawable/ic_one_click_clean"
             android:summary="@string/miscellaneous_one_click_clean_description"
             android:title="@string/miscellaneous_one_click_clean"/>
-        <ListPreference
-            app:defaultValue="@string/dark_mode_def_value"
-            app:entries="@array/dark_mode_entries"
-            app:icon="@drawable/ic_theme"
-            app:entryValues="@array/dark_mode_values"
-            app:key="@string/dark_mode"
-            app:title="@string/dark_mode" />
     </PreferenceCategory>
     <Preference android:title="@string/miscellaneous_about"
         android:key="about"

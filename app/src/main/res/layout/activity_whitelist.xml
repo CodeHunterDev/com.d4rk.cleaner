@@ -102,7 +102,7 @@
             android:layout_marginBottom="0dp"
             android:layout_weight="1"
             android:contentDescription="@string/todo"
-            android:src="@drawable/ic_plus_4"/>
+            android:src="@drawable/ic_plus"/>
     </mehdi.sakout.fancybuttons.FancyButton>
     <mehdi.sakout.fancybuttons.FancyButton
         android:id="@+id/recommendedButton"

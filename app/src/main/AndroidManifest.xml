@@ -59,7 +59,7 @@
             android:theme="@style/SettingsTheme"
             tools:targetApi="jelly_bean" />
         <activity android:name=".SplashScreenActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

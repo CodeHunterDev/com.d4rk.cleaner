@@ -2,15 +2,15 @@
   <library name="Gradle: androidx.appcompat:appcompat:1.3.0-alpha02@aar">
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/c331ed23d639d1666c17aec985399549/transformed/appcompat-1.3.0-alpha02/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c331ed23d639d1666c17aec985399549/transformed/appcompat-1.3.0-alpha02/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/09acff75342dd530fccf24820b208162/transformed/appcompat-1.3.0-alpha02/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/c331ed23d639d1666c17aec985399549/transformed/appcompat-1.3.0-alpha02/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/c331ed23d639d1666c17aec985399549/transformed/appcompat-1.3.0-alpha02/res" />
       <root url="file://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/c331ed23d639d1666c17aec985399549/transformed/appcompat-1.3.0-alpha02/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c331ed23d639d1666c17aec985399549/transformed/appcompat-1.3.0-alpha02/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c331ed23d639d1666c17aec985399549/transformed/appcompat-1.3.0-alpha02/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c331ed23d639d1666c17aec985399549/transformed/appcompat-1.3.0-alpha02/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/09acff75342dd530fccf24820b208162/transformed/appcompat-1.3.0-alpha02/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/09acff75342dd530fccf24820b208162/transformed/appcompat-1.3.0-alpha02/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/09acff75342dd530fccf24820b208162/transformed/appcompat-1.3.0-alpha02/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

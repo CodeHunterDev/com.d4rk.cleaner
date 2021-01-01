@@ -32,7 +32,7 @@ Bugs can be reported here.
 
 Known bugs:
 - Rare moments when "Clean" button not working after using split screen;
-- Dark notification bar when dark mode is active on Pixel/AOSP devices.
+- Dark notification bar icons when dark mode is active on Pixel/AOSP devices.
 
 __D4rK Cleaner is 100% free, open source inspired by LTE Cleaner by TheRedSpy15, ad free, and deletes everything it claims to.__
 
@@ -43,11 +43,13 @@ Cleans:
 - Caches;
 - Advertisement folders.
 
+Features in development:
+-Changeable themes;
+
 Upcoming major features:
 - Daily cleans;
 - Clean SD card;
 - SAF file browser;
-- Community made filters.
 
 ![screenshot](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/screenshot_1.png)
 
