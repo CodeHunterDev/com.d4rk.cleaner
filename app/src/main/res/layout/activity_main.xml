@@ -86,7 +86,7 @@
     <ProgressBar
         android:id="@+id/scanProgress"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="151dp"
+        android:layout_width="150dp"
         android:layout_height="144dp"
         android:background="@drawable/circular_background"
         android:indeterminate="false"
@@ -123,4 +123,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.36"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        fancy:srcCompat="@drawable/ic_line"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

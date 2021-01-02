@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:id="@+id/custom_toolbar"
     android:layout_width="match_parent"
     android:layout_height="56dp">
     <RelativeLayout
@@ -14,21 +15,20 @@
             android:orientation="horizontal"
             android:layout_centerInParent="true"
             tools:ignore="UseCompoundDrawables,UselessParent">
+
             <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:contentDescription="TODO"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_d4rk"
                 tools:ignore="ContentDescription,HardcodedText" />
-            <TextView
-                android:id="@+id/toolbar_title"
-                android:layout_width="wrap_content"
+
+            <ImageView
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
                 android:layout_gravity="center"
-                android:layout_marginStart="8dp"
-                android:text="@string/app_name"
-                tools:ignore="HardcodedText" />
+                android:src="@drawable/ic_cleaner"
+                tools:ignore="ContentDescription,HardcodedText" />
         </LinearLayout>
 
     </RelativeLayout>

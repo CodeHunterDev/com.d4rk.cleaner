@@ -18,13 +18,15 @@
         android:layout_marginTop="20dp"
         android:text="@string/changelog"
         android:gravity="center_horizontal"/>
+
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="150dp"
         android:layout_gravity="center"
+        android:layout_marginTop="240dp"
         android:src="@drawable/ic_d4rk"
         tools:ignore="ContentDescription" />
+
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -39,7 +41,7 @@
         android:layout_gravity="top"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_square_outline"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="400dp"
         tools:ignore="ContentDescription"/>
     <ImageView
@@ -49,7 +51,7 @@
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_square_outline"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="630dp"
         tools:ignore="ContentDescription"/>
     <ImageView
         android:layout_width="60dp"
@@ -108,23 +110,14 @@
         android:src="@drawable/ic_square"
         tools:ignore="ContentDescription"/>
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="top"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="560dp"
-        android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_line"
-        tools:ignore="ContentDescription"/>
-    <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="end"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:layout_marginStart="300dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginTop="333dp"
-        android:src="@drawable/ic_line"
+        android:layout_marginEnd="310dp"
+        android:layout_marginTop="422dp"
+        android:src="@drawable/ic_roundline"
         tools:ignore="ContentDescription"/>
     <ImageView
         android:layout_width="100dp"

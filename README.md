@@ -51,7 +51,7 @@ Upcoming major features:
 - Clean SD card;
 - SAF file browser;
 
-![screenshot](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/screenshot_1.png)
+![screenshot](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/screenshot.png)
 
 __Thanks TheRedSpy15 for LTECleaner:__ https://github.com/TheRedSpy15/LTECleanerFOSS
 

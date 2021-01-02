@@ -17,6 +17,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -27,7 +28,9 @@ import com.fxn.stash.Stash;
 
 import java.io.File;
 import java.text.DecimalFormat;
+import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class MainActivity extends AppCompatActivity {
 
     ConstraintSet constraintSet = new ConstraintSet();
@@ -46,8 +49,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.custom_toolbar);
+        View view =getSupportActionBar().getCustomView();
         Stash.init(getApplicationContext());
-
         fileListView = findViewById(R.id.fileListView);
         fileScrollView = findViewById(R.id.fileScrollView);
         scanPBar = findViewById(R.id.scanProgress);
@@ -103,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
      * out files for deletion. Repeats the process as long as it keeps finding files to clean,
      * unless nothing is found to begin with
      */
+    @SuppressWarnings("IfStatementWithIdenticalBranches")
     @SuppressLint("SetTextI18n")
     private void scan(boolean delete) {
         Looper.prepare();
@@ -149,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
             if (delete) {
                 statusText.setText(getString(R.string.main_freed) + " " + convertSize(kilobytesTotal));
             } else {
-                statusText.setText(getString(R.string.main_freed) + " " + convertSize(kilobytesTotal));
+                statusText.setText(getString(R.string.main_found) + " " + convertSize(kilobytesTotal));
             }
         });
         fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
