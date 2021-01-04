@@ -12,12 +12,19 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+
+    <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="512dp"
         android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:editable="false"
+        android:focusable="false"
+        android:gravity="center_horizontal"
+        android:selectAllOnFocus="false"
         android:text="@string/changelog"
-        android:gravity="center_horizontal"/>
+        android:textIsSelectable="false"
+        tools:ignore="Deprecated" />
 
     <ImageView
         android:layout_width="100dp"
@@ -41,7 +48,7 @@
         android:layout_gravity="top"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_square_outline"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="400dp"
         tools:ignore="ContentDescription"/>
     <ImageView

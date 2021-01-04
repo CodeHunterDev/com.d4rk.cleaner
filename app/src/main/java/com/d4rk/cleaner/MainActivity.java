@@ -1,6 +1,7 @@
 package com.d4rk.cleaner;
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -11,11 +12,12 @@ import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.transition.TransitionManager;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -23,27 +25,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.core.app.ActivityCompat;
-
 import com.fxn.stash.Stash;
-
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.Objects;
-
 @SuppressWarnings("unused")
 public class MainActivity extends AppCompatActivity {
-
-    ConstraintSet constraintSet = new ConstraintSet();
+    final ConstraintSet constraintSet = new ConstraintSet();
     static boolean running = false;
     SharedPreferences prefs;
-
     LinearLayout fileListView;
     ScrollView fileScrollView;
     ProgressBar scanPBar;
     TextView progressText;
     TextView statusText;
     ConstraintLayout layout;
-
     @SuppressLint("LogConditional")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,15 +55,14 @@ public class MainActivity extends AppCompatActivity {
         scanPBar = findViewById(R.id.scanProgress);
         progressText = findViewById(R.id.ScanTextView);
         statusText = findViewById(R.id.statusTextView);
+
         layout = findViewById(R.id.main_layout);
-
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
-
         constraintSet.clone(layout);
-
         requestWriteExternalPermission();
+        Window w = getWindow();
+        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
     }
-
     /**
      * Starts the settings activity
      * @param view the view that is clickedprefs = getSharedPreferences("Settings",0);
@@ -76,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
-
     /**
      * Runs search and delete on background thread
      */
@@ -95,7 +89,17 @@ public class MainActivity extends AppCompatActivity {
             else new Thread(()-> scan(true)).start(); // one-click enabled
         }
     }
+    public static void setWindowFlag(Activity activity, final int bits, boolean on) {
 
+        Window win = activity.getWindow();
+        WindowManager.LayoutParams winParams = win.getAttributes();
+        if (on) {
+            winParams.flags |= bits;
+        } else {
+            winParams.flags &= ~bits;
+        }
+        win.setAttributes(winParams);
+    }
     public void animateBtn() {
         TransitionManager.beginDelayedTransition(layout);
         constraintSet.clear(R.id.cleanButton,ConstraintSet.TOP);
@@ -103,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
         constraintSet.setMargin(R.id.statusTextView,ConstraintSet.TOP,50);
         constraintSet.applyTo(layout);
     }
-
     /**
      * Searches entire device, adds all files to a list, then a for each loop filters
      * out files for deletion. Repeats the process as long as it keeps finding files to clean,
@@ -115,43 +118,35 @@ public class MainActivity extends AppCompatActivity {
         Looper.prepare();
         running = true;
         reset();
-
         File path = Environment.getExternalStorageDirectory();
-
-        // scanner setup
+        // Scanner setup.
         FileScanner fs = new FileScanner(path);
         fs.setEmptyDir(prefs.getBoolean("empty", false));
         fs.setAutoWhite(prefs.getBoolean("auto_white", true));
         fs.setDelete(delete);
         fs.setCorpse(prefs.getBoolean("corpse", false));
         fs.setGUI(this);
-
-        // filters
+        // Filters.
         fs.setUpFilters(prefs.getBoolean("generic", true),
                 prefs.getBoolean("aggressive", false),
                 prefs.getBoolean("apk", false));
-
-        // failed scan
+        // Failed scan.
         if (path.listFiles() == null) { // is this needed? yes.
             TextView textView = printTextView("Scan failed.", Color.RED);
             runOnUiThread(() -> fileListView.addView(textView));
         }
-
         runOnUiThread(() -> {
             animateBtn();
             statusText.setText(getString(R.string.main_status_running));
         });
-
-        // start scanning
+        // Start scanning.
         long kilobytesTotal = fs.startScan();
-
-        // crappy but working fix for percentage never reaching 100
+        // Crappy but working fix for percentage never reaching 100%.
         runOnUiThread(() -> {
             scanPBar.setProgress(scanPBar.getMax());
             progressText.setText("100%");
         });
-
-        // kilobytes found/freed text
+        // Kilobytes found/freed text.
         runOnUiThread(() -> {
             if (delete) {
                 statusText.setText(getString(R.string.main_freed) + " " + convertSize(kilobytesTotal));
@@ -160,12 +155,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
-
         running = false;
         Looper.loop();
     }
-
-
     /**
      * Convenience method to quickly create a textview
      * @param text - text of textview
@@ -178,12 +170,10 @@ public class MainActivity extends AppCompatActivity {
         textView.setPadding(3,3,3,3);
         return textView;
     }
-
     private String convertSize(long length) {
         final DecimalFormat format = new DecimalFormat("#.##");
         final long MiB = 1024 * 1024;
         final long KiB = 1024;
-
         if (length > MiB) {
             return format.format(length / MiB) + " MB";
         }
@@ -192,40 +182,32 @@ public class MainActivity extends AppCompatActivity {
         }
         return format.format(length) + " B";
     }
-
     /**
      * Increments amount removed, then creates a text view to add to the scroll view.
      * If there is any error while deleting, turns text view of path red
      * @param file file to delete
      */
     synchronized TextView displayPath(File file) {
-        // creating and adding a text view to the scroll view with path to file
+        // Creating and adding a text view to the scroll view with path to file.
         TextView textView = printTextView(file.getAbsolutePath(), getResources().getColor(R.color.colorAccent));
-
-        // adding to scroll view
+        // Adding to scroll view.
         runOnUiThread(() -> fileListView.addView(textView));
-
-        // scroll to bottom
+        // Scroll to bottom.
         fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
-
         return textView;
     }
-
-
     /**
      * Removes all views present in fileListView (linear view), and sets found and removed
      * files to 0
      */
     private synchronized void reset() {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
-
         runOnUiThread(() -> {
             fileListView.removeAllViews();
             scanPBar.setProgress(0);
             scanPBar.setMax(1);
         });
     }
-
     /**
      * Request write permission
      */
@@ -234,7 +216,6 @@ public class MainActivity extends AppCompatActivity {
                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE,},
                 2);
     }
-
     /**
      * Handles the whether the user grants permission. Launches new fragment asking the user to give file permission.
      */
@@ -246,7 +227,6 @@ public class MainActivity extends AppCompatActivity {
                 grantResults[0] != PackageManager.PERMISSION_GRANTED)
             prompt();
     }
-
     /**
      * Launches the prompt activity
      */

@@ -2,15 +2,15 @@
   <library name="Gradle: androidx.core:core:1.5.0-alpha02@aar">
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/f2e56b8274cdcc610edda5970eae150f/transformed/core-1.5.0-alpha02/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e7b9dc92aca6dd4662eafd6f9e8a7678/transformed/core-1.5.0-alpha02/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/39aff65bee1b659b811b7841cee03247/transformed/core-1.5.0-alpha02/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/f2e56b8274cdcc610edda5970eae150f/transformed/core-1.5.0-alpha02/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/f2e56b8274cdcc610edda5970eae150f/transformed/core-1.5.0-alpha02/res" />
       <root url="file://$PROJECT_DIR$/../../../../../Program Files/Google/Android/Android Studio/Gradle/caches/transforms-3/f2e56b8274cdcc610edda5970eae150f/transformed/core-1.5.0-alpha02/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e7b9dc92aca6dd4662eafd6f9e8a7678/transformed/core-1.5.0-alpha02/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e7b9dc92aca6dd4662eafd6f9e8a7678/transformed/core-1.5.0-alpha02/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e7b9dc92aca6dd4662eafd6f9e8a7678/transformed/core-1.5.0-alpha02/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/39aff65bee1b659b811b7841cee03247/transformed/core-1.5.0-alpha02/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/39aff65bee1b659b811b7841cee03247/transformed/core-1.5.0-alpha02/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/39aff65bee1b659b811b7841cee03247/transformed/core-1.5.0-alpha02/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
