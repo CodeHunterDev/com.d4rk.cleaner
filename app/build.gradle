@@ -5,8 +5,8 @@ android {
         applicationId "com.d4rk.cleaner"
         minSdkVersion 19
         targetSdkVersion 30
-        versionCode 27
-        versionName '1.0_r6'
+        versionCode 28
+        versionName '1.0_r7'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
         multiDexEnabled false

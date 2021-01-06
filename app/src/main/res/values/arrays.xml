@@ -8,4 +8,91 @@
         <item>reply</item>
         <item>reply_all</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text. -->
+    <string-array name="aggressive_filter_folders">
+        <item>supersonicads</item>
+        <item>Cache</item>
+        <item>ApkEditor</item>
+        <item>AnyDesk</item>
+        <item>Download</item>
+        <item>acmarket</item>
+        <item>net.appcake</item>
+        <item>Downloads</item>
+        <item>.estrongs</item>
+        <item>bluetooth</item>
+        <item>thumbnails?</item>
+        <item>GBWhatsApp</item>
+        <item>WhatsApp</item>
+        <item>ASUS</item>
+        <item>Screenshots</item>
+        <item>PhotoEditor</item>
+        <item>QQSecureDownload</item>
+        <item>com.kingroot.kinguser</item>
+        <item>jumobile</item>
+        <item>minidump</item>
+        <item>PicsArt</item>
+        <item>Pictures</item>
+        <item>mobvista</item>
+        <item>PhotosEditor</item>
+        <item>ifont</item>
+        <item>OSSLog</item>
+        <item>Telegram</item>
+        <item>.thumbnails</item>
+        <item>UnityAdsVideoCache</item>
+        <item>albumthumbs?</item>
+        <item>DCIM</item>
+        <item>blueWAplus</item>
+        <item>XiaoYing</item>
+        <item>OSSLog</item>
+        <item>LOST.DIR</item>
+        <item>Discord</item>
+        <item>Media</item>
+        <item>GBWhatsApp Images</item>
+        <item>GBWhatsApp Stickers</item>
+        <item>GBWhatsApp Documents</item>
+        <item>GBWhatsApp Animated Gifs</item>
+        <item>GBWhatsApp Audio</item>
+        <item>GBWhatsApp Video</item>
+        <item>.Trash</item>
+        <item>kinguserdown</item>
+        <item>desktop.ini</item>
+        <item>leakcanary</item>
+        <item>.DS_Store</item>
+        <item>.spotlight-V100</item>
+        <item>fseventsd</item>
+        <item>Bugreport</item>
+        <item>bugreports</item>
+        <item>Ringtones</item>
+        <item>Ringtones</item>
+        <item>Camera</item>
+        <item>Notifications</item>
+        <item>TWRP</item>
+        <item>.Trash</item>
+        <item>cache</item>
+    </string-array>
+    <string-array name="aggressive_filter_files">
+        <item>.nomedia</item>
+        <item>.exo</item>
+        <item>.apk</item>
+        <item>.apks</item>
+        <item>.apkm</item>
+        <item>.csv</item>
+        <item>thumbs?.db</item>
+    </string-array>
+    <string-array name="generic_filter_files">
+        <item>.tmp</item>
+        <item>.temp</item>
+        <item>.log</item>
+    </string-array>
+    <string-array name="generic_filter_folders">
+        <item>Logs</item>
+        <item>logs</item>
+        <item>log</item>
+        <item>Log</item>
+        <item>tmp</item>
+        <item>temp</item>
+        <item>Temporary</item>
+        <item>temporary</item>
+    </string-array>
 </resources>

@@ -15,13 +15,15 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="match_parent"
-        android:layout_height="512dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:background="@color/colorPrimary"
         android:editable="false"
         android:focusable="false"
         android:gravity="center_horizontal"
-        android:selectAllOnFocus="false"
         android:text="@string/changelog"
         android:textIsSelectable="false"
         tools:ignore="Deprecated" />
@@ -29,11 +31,9 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="240dp"
+        android:layout_gravity="bottom|center"
         android:src="@drawable/ic_d4rk"
         tools:ignore="ContentDescription" />
-
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -45,29 +45,28 @@
     <ImageView
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_gravity="top"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_square_outline"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="300dp"
         tools:ignore="ContentDescription"/>
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="top"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_square_outline"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="630dp"
+        android:layout_marginStart="60dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-80dp"
         tools:ignore="ContentDescription"/>
     <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="top"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_circle"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="6dp"
         tools:ignore="ContentDescription"/>
     <ImageView
         android:layout_width="70dp"
@@ -78,40 +77,28 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="630dp"
         tools:ignore="ContentDescription"/>
-
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="top"
-        android:layout_marginStart="310dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="-25dp"
         android:layout_marginTop="199dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_triangle"
         tools:ignore="ContentDescription" />
-
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="top"
+        android:layout_gravity="start|left"
         android:src="@drawable/ic_triangle"
-        android:layout_marginStart="260dp"
+        android:layout_marginLeft="-40dp"
         android:layout_marginTop="500dp"
-        tools:ignore="ContentDescription"/>
-
+        tools:ignore="ContentDescription,RtlHardcoded"/>
     <ImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_gravity="top"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="700dp"
-        android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_square"
-        tools:ignore="ContentDescription"/>
-    <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_gravity="top"
-        android:layout_marginStart="333dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="-70dp"
         android:layout_marginTop="333dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_square"
@@ -120,27 +107,25 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="end"
-        android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:layout_marginStart="300dp"
-        android:layout_marginEnd="310dp"
-        android:layout_marginTop="422dp"
+        android:layout_marginEnd="-99dp"
+        android:layout_marginTop="440dp"
         android:src="@drawable/ic_roundline"
         tools:ignore="ContentDescription"/>
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="top"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
         android:layout_marginTop="60dp"
+        android:layout_marginStart="0dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_triangle_blue"
         tools:ignore="ContentDescription"/>
     <ImageView
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_gravity="top"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="666dp"
+        android:layout_gravity="bottom|right|end"
+        android:layout_marginRight="-60dp"
+        android:layout_marginBottom="-69dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         android:src="@drawable/ic_triangle_blue"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription,RtlHardcoded"/>
 </com.google.android.material.card.MaterialCardView>
