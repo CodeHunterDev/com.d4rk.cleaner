@@ -55,13 +55,11 @@ public class MainActivity extends AppCompatActivity {
         scanPBar = findViewById(R.id.scanProgress);
         progressText = findViewById(R.id.ScanTextView);
         statusText = findViewById(R.id.statusTextView);
-
         layout = findViewById(R.id.main_layout);
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         constraintSet.clone(layout);
         requestWriteExternalPermission();
         Window w = getWindow();
-        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
     }
     /**
      * Starts the settings activity

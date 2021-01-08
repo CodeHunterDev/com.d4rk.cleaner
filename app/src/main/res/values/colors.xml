@@ -3,6 +3,8 @@
     <color name="colorPrimary">@android:color/transparent</color>
     <color name="colorPrimaryDark">@color/colorPrimary</color>
     <color name="colorDarkMode">#121212</color>
+    <color name="colorDarkModeIssueReporter">#303030</color>
+    <color name="colorWhiteIssueReporter">#FAFAFA</color>
     <color name="colorWhiteShortcuts">#F5F5F5</color>
     <color name="colorGoogleYellow">#F4B400</color>
     <color name="colorGoogleGreen">#0F9D58</color>
