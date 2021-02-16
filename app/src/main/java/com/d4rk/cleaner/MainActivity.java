@@ -2,14 +2,19 @@ package com.d4rk.cleaner;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AppOpsManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Looper;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.transition.TransitionManager;
 import android.view.View;
 import android.view.Window;
@@ -29,7 +34,7 @@ import com.fxn.stash.Stash;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.Objects;
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "ConstantConditions"})
 public class MainActivity extends AppCompatActivity {
     final ConstraintSet constraintSet = new ConstraintSet();
     static boolean running = false;
@@ -60,31 +65,27 @@ public class MainActivity extends AppCompatActivity {
         constraintSet.clone(layout);
         requestWriteExternalPermission();
         Window w = getWindow();
+        if (!isAccessGranted()) {
+            Intent intent = null;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
+            }
+            startActivity(intent);
+        }
     }
-    /**
-     * Starts the settings activity
-     * @param view the view that is clickedprefs = getSharedPreferences("Settings",0);
-     */
     public final void settings(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
-    /**
-     * Runs search and delete on background thread
-     */
     public final void clean(View view) {
         if (!running) {
-            if (!prefs.getBoolean("one_click", false)) // one-click disabled
+            if (!prefs.getBoolean("one_click", false))
                 new AlertDialog.Builder(this,R.style.MyAlertDialogTheme)
                         .setTitle(R.string.main_select_task)
                         .setMessage(R.string.main_select_task_description)
-                        .setPositiveButton(R.string.main_clean, (dialog, whichButton) -> { // clean
-                            new Thread(()-> scan(true)).start();
-                        })
-                        .setNegativeButton(R.string.main_analyze, (dialog, whichButton) -> { // analyze
-                            new Thread(()-> scan(false)).start();
-                        }).show();
-            else new Thread(()-> scan(true)).start(); // one-click enabled
+                        .setPositiveButton(R.string.main_clean, (dialog, whichButton) -> new Thread(()-> scan(true)).start())
+                        .setNegativeButton(R.string.main_analyze, (dialog, whichButton) -> new Thread(()-> scan(false)).start()).show();
+            else new Thread(()-> scan(true)).start();
         }
     }
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
@@ -93,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
         WindowManager.LayoutParams winParams = win.getAttributes();
         if (on) {
             winParams.flags |= bits;
-        } else {
+        }
+        {
             winParams.flags &= ~bits;
         }
         win.setAttributes(winParams);
@@ -105,30 +107,21 @@ public class MainActivity extends AppCompatActivity {
         constraintSet.setMargin(R.id.statusTextView,ConstraintSet.TOP,50);
         constraintSet.applyTo(layout);
     }
-    /**
-     * Searches entire device, adds all files to a list, then a for each loop filters
-     * out files for deletion. Repeats the process as long as it keeps finding files to clean,
-     * unless nothing is found to begin with
-     */
-    @SuppressWarnings("IfStatementWithIdenticalBranches")
     @SuppressLint("SetTextI18n")
     private void scan(boolean delete) {
         Looper.prepare();
         running = true;
         reset();
         File path = Environment.getExternalStorageDirectory();
-        // Scanner setup.
         FileScanner fs = new FileScanner(path);
         fs.setEmptyDir(prefs.getBoolean("empty", false));
         fs.setAutoWhite(prefs.getBoolean("auto_white", true));
         fs.setDelete(delete);
         fs.setCorpse(prefs.getBoolean("corpse", false));
         fs.setGUI(this);
-        // Filters.
         fs.setUpFilters(prefs.getBoolean("generic", true),
                 prefs.getBoolean("aggressive", false),
                 prefs.getBoolean("apk", false));
-        // Failed scan.
         if (path.listFiles() == null) { // is this needed? yes.
             TextView textView = printTextView("Scan failed.", Color.RED);
             runOnUiThread(() -> fileListView.addView(textView));
@@ -137,14 +130,11 @@ public class MainActivity extends AppCompatActivity {
             animateBtn();
             statusText.setText(getString(R.string.main_status_running));
         });
-        // Start scanning.
         long kilobytesTotal = fs.startScan();
-        // Crappy but working fix for percentage never reaching 100%.
         runOnUiThread(() -> {
             scanPBar.setProgress(scanPBar.getMax());
             progressText.setText("100%");
         });
-        // Kilobytes found/freed text.
         runOnUiThread(() -> {
             if (delete) {
                 statusText.setText(getString(R.string.main_freed) + " " + convertSize(kilobytesTotal));
@@ -156,11 +146,6 @@ public class MainActivity extends AppCompatActivity {
         running = false;
         Looper.loop();
     }
-    /**
-     * Convenience method to quickly create a textview
-     * @param text - text of textview
-     * @return - created textview
-     */
     private synchronized TextView printTextView(String text, int color) {
         TextView textView = new TextView(MainActivity.this);
         textView.setTextColor(color);
@@ -180,24 +165,12 @@ public class MainActivity extends AppCompatActivity {
         }
         return format.format(length) + " B";
     }
-    /**
-     * Increments amount removed, then creates a text view to add to the scroll view.
-     * If there is any error while deleting, turns text view of path red
-     * @param file file to delete
-     */
     synchronized TextView displayPath(File file) {
-        // Creating and adding a text view to the scroll view with path to file.
         TextView textView = printTextView(file.getAbsolutePath(), getResources().getColor(R.color.colorAccent));
-        // Adding to scroll view.
         runOnUiThread(() -> fileListView.addView(textView));
-        // Scroll to bottom.
         fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
         return textView;
     }
-    /**
-     * Removes all views present in fileListView (linear view), and sets found and removed
-     * files to 0
-     */
     private synchronized void reset() {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         runOnUiThread(() -> {
@@ -206,17 +179,31 @@ public class MainActivity extends AppCompatActivity {
             scanPBar.setMax(1);
         });
     }
-    /**
-     * Request write permission
-     */
     public synchronized void requestWriteExternalPermission() {
-        ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE,},
-                2);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE,},
+                    2);
+        }
     }
-    /**
-     * Handles the whether the user grants permission. Launches new fragment asking the user to give file permission.
-     */
+    private boolean isAccessGranted() {
+        try {
+            PackageManager packageManager = getPackageManager();
+            ApplicationInfo applicationInfo = packageManager.getApplicationInfo(getPackageName(), 0);
+            AppOpsManager appOpsManager = (AppOpsManager) getSystemService(Context.APP_OPS_SERVICE);
+            int mode = 0;
+            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    mode = appOpsManager.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS,
+                            applicationInfo.uid, applicationInfo.packageName);
+                }
+            }
+            return (mode == AppOpsManager.MODE_ALLOWED);
+
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
     @SuppressLint("MissingSuperCall")
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -225,9 +212,6 @@ public class MainActivity extends AppCompatActivity {
                 grantResults[0] != PackageManager.PERMISSION_GRANTED)
             prompt();
     }
-    /**
-     * Launches the prompt activity
-     */
     public final void prompt() {
         Intent intent = new Intent(this, PromptActivity.class);
         startActivity(intent);

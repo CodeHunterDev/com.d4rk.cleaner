@@ -1,15 +1,16 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App strings. -->
     <string name="app_name">Cleaner</string>
     <string name="app_d4rk_cleaner">D4rK Cleaner</string>
-    <string name="app_d4rk">D4rK!</string>
-    <string name="copyright">Copyright ©2021 ~ D4rK</string>
+    <string name="app_d4rk" translatable="false">D4rK!</string>
+    <string name="copyright" translatable="false">Copyright ©2021 ~ D4rK</string>
 
     <!-- Main activity strings. -->
     <string name="main_string">D4rK Cleaner!!!</string>
     <string name="main_status">Status: Idle…</string>
     <string name="main_status_running">Status: Running.</string>
-    <string name="main_progress">0%</string>
+    <string name="main_progress" translatable="false">0%</string>
     <string name="main_nothing_found">Nothing found. 😃</string>
     <string name="main_found">Found: </string>
     <string name="main_freed">Freed: </string>
@@ -24,22 +25,22 @@
     <string name="settings_donate_description">Buy me a beer and cheers! 🍺 Or choose how much to donate using PayPal so I can keep supporting this app development. 😄</string>
     <string name="settings_support_patreon">Support on Patreon!</string>
     <string name="settings_support_patreon_description">If you want to more support me click here and be a patron.</string>
-    <string name="settings_d4rk_description">Hello, I\'m D4rK, my real name is Michael, and I make 3D animations in Source Filmmaker and probably other programs soon. I have a secondary channel for tutorials &amp; more called Michael Tutorials. If you like my work leave a like, share and subscribe for more. And, if you need other information you can find here or you can ask me.</string>
-    <string name="settings_michael_tutorials">Michael Tutorials!</string>
-    <string name="settings_michael_tutorials_description">Hello, I\'m Michael and I make a lot of videos especially tutorials XD. If you need the \'Pro\' version of apps you can tell me and I make tutorials.</string>
     <string name="settings_github_suggestion">Make a suggestion. Or report an issue!</string>
     <string name="settings_github_suggestion_description">Open an issue on GitHub from the app. No account needed and everything is free.</string>
     <string name="settings_whitelist">Whitelist!</string>
     <string name="settings_whitelist_description">Shows the paths to exclude from scans.</string>
     <string name="settings_changelog">Changelog!</string>
-    <string name="settings_changelog_description">All detailed changes added over time to each versions!</string>
+    <string name="settings_changelog_description">All detailed changes added over time to each versions.</string>
+    <string name="settings_clipboard">Clipboard Cleaner!</string>
+    <string name="settings_clipboard_description">Clean your clipboard easy and fast from here.</string>
+
     <!-- Settings activity (filters) strings. -->
-    <string name="filters_important">Important!!!</string>
+    <string name="filters_important" translatable="false">Important!!!</string>
     <string name="filters_string">Filters:</string>
     <string name="filters_generic_filter">Generic filter.</string>
     <string name="filters_generic_filter_description">Delete temp, log, logs, &amp; other useless files &amp; folders.</string>
     <string name="filters_aggressive_filter">Aggressive filter.</string>
-    <string name="filters_aggressive_filter_description">Too much to list here &amp; I\'m too lazy to add staff here. Sorry.</string>
+    <string name="filters_aggressive_filter_description"><b>Warning!!!</b> Be careful, you will <b>loose videos, photos</b> and a lot of junk. Too much to list here &amp; I\'m too lazy to add staff here. Sorry.</string>
     <string name="filters_delete_empty_folders">Delete empty folders.</string>
     <string name="filters_corpse_files">Delete corpse files.</string>
     <string name="filters_corpse_files_description">Files left over from uninstalled/removed apps.</string>
@@ -47,6 +48,7 @@
     <string name="filters_delete_apk_files_description">Installer files (.apk) files for Android.</string>
     <string name="filters_auto_whitelist">Auto whitelist.</string>
     <string name="filters_auto_whitelist_description">Detect folders that should be protected automatically.</string>
+
     <!-- Settings activity (miscellaneous) strings. -->
     <string name="miscellaneous_string">Miscellaneous:</string>
     <string name="miscellaneous_one_click_clean">One click clean.</string>
@@ -66,7 +68,33 @@
     <string name="whitelist_already_added">Already added.</string>
 
     <!-- Changelog activity strings. -->
-    <string name="changelog">D4rK Cleaner - Changelog:\n
+    <string name="changelog" translatable="false">D4rK Cleaner - Changelog:\n
+    <br> </br>
+\n
+	<br> </br>
+		<b>Version 2.0_r1:\n</b>
+    <br> </br>
+			•Integrated Clipboard Cleaner;\n
+    <br> </br>
+			•Updated scripts &amp; plugins;\n
+    <br> </br>
+			•Bug fixes &amp; optimizations;\n
+    <br> </br>
+			•Added Firebase;\n
+    <br> </br>
+			•Request usage access;\n
+    <br> </br>
+			•Added Aggressive Filter warning in description;\n
+    <br> </br>
+			•Improved some layouts;\n
+    <br> </br>
+			•Added new icons;\n
+    <br> </br>
+			•Added romanian language (special thanks to YoYo);\n
+    <br> </br>
+			•Dark mode scroll issue fixed;\n
+    <br> </br>
+			•Some improvements here and there.\n
     <br> </br>
 \n
 	<br> </br>
@@ -181,20 +209,74 @@
 	</string>
 
     <!-- Other. -->
-    <string name="Save">Save</string>
-    <string name="filter">Filter</string>
+    <string name="save">Save.</string>
+    <string name="filter">Filter.</string>
     <string name="default_whitelist">Default Whitelist</string>
     <string name="prompt">Please add file access permissions.</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_prompt">PromptActivity</string>
-    <string name="todo">TODO</string>
+    <string name="title_activity_prompt" translatable="false">PromptActivity</string>
+    <string name="todo" translatable="false">TODO</string>
+    <plurals name="seconds">
+        <item quantity="one">1 second</item>
+        <item quantity="other"><xliff:g example="7" id="number">%s</xliff:g> seconds</item>
+    </plurals>
 
     <!-- About activity strings. -->
     <string name="about_github_link">GitHub link.</string>
+    <string name="about_play_store">Google Play Store</string>
     <string name="about_developer">Developer:</string>
+    <string name="about_d4rk_description">Official D4rK YouTube Channel.</string>
+    <string name="about_michael_tutorials" translatable="false">Michael Tutorials!</string>
+    <string name="about_michael_tutorials_description">A simple channel with tutorials.</string>
+    <string name="about_gamejolt" translatable="false">GameJolt.</string>
+    <string name="about_gamejolt_description">My official GameJolt profile.</string>
+    <string name="about_deviantart" translatable="false">DeviantArt.</string>
+    <string name="about_deviantart_description">A little artist in a big world.</string>
     <string name="about_app_version">App version:</string>
-    <string name="about_app_version_code">1.0_r8</string>
+    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">2.0_release1</string>
     <string name="about_special_thanks">Special thanks:</string>
-    <string name="about_supporters">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo.</string>
+    <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_privacy_policy">Privacy policy.</string>
+    <string name="about_firebase" translatable="false">Firebase.</string>
+    <string name="about_firebase_description">Help me to improve app using Firebase logs.</string>
+
+    <!-- Clipboard activity strings. -->
+    <string name="clipboard_main_description">Clipboard Cleaner is here to prevent your clipboard from being used casually, secure your copied password, and defend your privacy!</string>
+    <string name="clipboard_content_short">Content!</string>
+    <string name="clipboard_cleaned">Clipboard has been cleaned.</string>
+    <string name="clipboard_clean_failed">Clipboard clean failed.</string>
+    <string name="clipboard_empty">Clipboard is empty.</string>
+    <string name="clipboard_nothing">Nothing needs to be cleaned.</string>
+    <string name="clipboard_clean">Clean clipboard.</string>
+    <string name="clipboard_content">Show clipboard.</string>
+    <string name="clipboard_shortcut_disabled">Disabled.</string>
+    <string name="clipboard_service_content">Create a service running in the background. Reset your clipboard if it\'s changed or notify you. This solution is efficient but battery-draining.</string>
+    <string name="clipboard_service_clean">Clean clipboard if it\'s changed.</string>
+    <string name="service_report">Report me if the clipboard\'s changed.</string>
+    <!-- Clipboard status strings. -->
+    <string name="clipboard_status" translatable="false">Status: %s</string>
+    <string name="clipboard_status_running">Running.</string>
+    <string name="clipboard_status_stopped">Stopped.</string>
+    <!-- Clipboard service strings. -->
+    <string name="clipboard_service">Service!</string>
+    <string name="clipboard_service_start">Start Service.</string>
+    <string name="clipboard_service_stop">Stop Service.</string>
+    <string name="clipboard_service_started">Clipboard Cleaner Service Started.</string>
+    <string name="clipboard_service_stopped">Clipboard Cleaner Service Stopped.</string>
+    <string name="clipboard_service_channel_name">Clipboard Cleaner notification channel.</string>
+    <string name="clipboard_service_notif_title">Your clipboard is under the protection.</string>
+    <string name="clipboard_service_clean_timeout_template" formatted="false">Clean the clipboard after %s (click here to edit).</string>
+    <string name="clipboard_service_clean_timeout">Timeout.</string>
+    <string name="clipboard_service_clean_after_seconds_template">Clipboard will be cleaned in %s.</string>
+    <!-- Clipboard shortcut strings. -->
+    <string name="clipboard_shortcut_no_permission">App doesn\'t have enough permissions.</string>
+    <string name="clipboard_shortcut_have_permission">Permission granted! Please create shortcuts now.</string>
+    <!-- Clipboard settings strings. -->
+    <string name="clipboard_setting_title">Setting.</string>
+    <string name="clipboard_setting_message_saved">Saved.</string>
+    <string name="clipboard_setting_keyword_title">Keyword Filter.</string>
+    <string name="clipboard_setting_keyword_content">If enabled, will only clean the content that includes keywords.</string>
+    <string name="clipboard_setting_keyword_normal_title">Keyword.</string>
+    <string name="clipboard_setting_keyword_regex_title" translatable="false">Regex.</string>
+    <string name="clipboard_setting_keyword_add">Add a new keyword.</string>
+    <string name="clipboard_setting_keyword_remove">Remove keyword %s.</string>
 </resources>

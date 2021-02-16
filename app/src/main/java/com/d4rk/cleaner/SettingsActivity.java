@@ -17,16 +17,10 @@ public class SettingsActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             this.setHasOptionsMenu(true);
         }
-        /**
-         * Inflate Preferences
-         */
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             addPreferencesFromResource(R.xml.settings);
         }
-        /**
-         * ClickEvent Listener for Preferences
-         */
         @Override
         public boolean onPreferenceTreeClick(androidx.preference.Preference preference) {
             String key = preference.getKey();
@@ -36,9 +30,6 @@ public class SettingsActivity extends AppCompatActivity {
             }
             return super.onPreferenceTreeClick(preference);
         }
-        /**
-         * Creates a menu that allows the user to create an issue on github
-         */
         final void reportIssue(Context context) {
             IssueReporterLauncher.forTarget("D4rK7355608", "com.d4rk.cleaner")
                     .theme(R.style.CustomIssueReportTheme)

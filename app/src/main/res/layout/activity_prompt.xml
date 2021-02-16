@@ -7,20 +7,20 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.d4rk.cleaner.PromptActivity">
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/ic_d4rk"
         android:layout_gravity="top|center"
         tools:ignore="ContentDescription,MissingConstraints"/>
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/ic_splash_screen"
         android:layout_gravity="center"
         android:layout_marginBottom="100dp"
         tools:ignore="ContentDescription,MissingConstraints"/>
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/prompttext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         android:text="@string/settings_string"
         android:layout_gravity="center"
         app:layout_constraintTop_toTopOf="@id/prompttext"/>
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="222dp"
         android:layout_height="222dp"
         android:src="@drawable/ic_material"

@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.activity:activity:1.2.0-rc01@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/62f77f48cf873b94272d4d9343112661/transformed/jetified-activity-1.2.0-rc01/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/edc0f8a363a29e0792f441c6292b98fc/transformed/jetified-activity-1.2.0-rc01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3a1e6d436377f83d4dac1bf38ef82920/transformed/jetified-activity-1.2.0-rc01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c00bfc7e816e37a513028c5260280cca/transformed/jetified-activity-1.2.0-rc01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7f7cec4e36a30d4ba822423df438620a/transformed/jetified-activity-1.2.0-rc01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3128553b965fdc181adcc32de6f31799/transformed/jetified-activity-1.2.0-rc01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f23b11972b783a34922a19a063c6d660/transformed/jetified-activity-1.2.0-rc01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/354ed387c55d4f22685d4c519524aa17/transformed/jetified-activity-1.2.0-rc01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/62f77f48cf873b94272d4d9343112661/transformed/jetified-activity-1.2.0-rc01/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/62f77f48cf873b94272d4d9343112661/transformed/jetified-activity-1.2.0-rc01/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/62f77f48cf873b94272d4d9343112661/transformed/jetified-activity-1.2.0-rc01/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.activity/activity/1.2.0-rc01/db99858022040027c637fdf623d4db4d7823e60b/activity-1.2.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,92 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.d4rk.cleaner">
-
-    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
-    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission
         android:name="android.permission.CLEAR_APP_CACHE"
-        tools:ignore="ProtectedPermissions" />
+        tools:ignore="ProtectedPermissions"/>
     <uses-permission
         android:name="android.permission.CLEAR_APP_USER_DATA"
-        tools:ignore="ProtectedPermissions" />
+        tools:ignore="ProtectedPermissions"/>
     <uses-permission
         android:name="android.permission.DELETE_CACHE_FILES"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+        tools:ignore="ProtectedPermissions"/>
     <uses-permission
         android:name="android.permission.MEDIA_CONTENT_CONTROL"
-        tools:ignore="ProtectedPermissions" />
+        tools:ignore="ProtectedPermissions"/>
     <uses-permission
         android:name="android.permission.CLEAR_APP_CACHE"
-        tools:ignore="ProtectedPermissions" />
+        tools:ignore="ProtectedPermissions"/>
     <uses-permission
         android:name="android.permission.DELETE_PACKAGES"
-        tools:ignore="ProtectedPermissions" />
+        tools:ignore="ProtectedPermissions"/>
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
-
+        tools:ignore="ScopedStorage"/>
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions"/>
     <application
         android:allowBackup="true"
-        android:fullBackupContent="false"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Cleaner"
         android:requestLegacyExternalStorage="true"
         android:resizeableActivity="true"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
-        tools:targetApi="n">
+        android:usesCleartextTraffic="true"
+        tools:targetApi="n"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true"/>
         <activity
             android:name=".AboutActivity"
             android:label="@string/miscellaneous_about"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".ChangelogActivity"
             android:label="@string/settings_changelog"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".PromptActivity"
             android:label="@string/title_activity_prompt"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".WhitelistActivity"
             android:label="@string/whitelist_string"
             android:parentActivityName=".SettingsActivity"
             android:screenOrientation="fullUser"
             android:theme="@style/SettingsTheme"
-            tools:targetApi="jelly_bean" />
+            tools:targetApi="jelly_bean"/>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/settings_string"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="fullUser"
             android:theme="@style/SettingsTheme"
-            tools:targetApi="jelly_bean" />
+            tools:targetApi="jelly_bean"/>
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
             <meta-data
                 android:name="android.app.shortcuts"
-                android:resource="@xml/shortcuts" />
+                android:resource="@xml/shortcuts"/>
         </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_d4rk_cleaner"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.d4rk.cleaner.clipboard.ClipboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.d4rk.cleaner.clipboard.ClipboardActivity"/>
+        </activity>
+        <activity
+            android:name="com.d4rk.cleaner.clipboard.IntentActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.NoDisplay"/>
+        <receiver
+            android:name="com.d4rk.cleaner.clipboard.BootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.d4rk.cleaner.clipboard.CleanService"
+            android:enabled="true" />
     </application>
-
 </manifest>

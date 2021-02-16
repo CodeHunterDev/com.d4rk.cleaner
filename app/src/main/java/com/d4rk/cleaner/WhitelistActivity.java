@@ -56,7 +56,7 @@ public class WhitelistActivity extends AppCompatActivity {
             Stash.put("whiteList", whiteList);
             refreshListView();
         } else
-            Toast.makeText(this, "Already added",
+            Toast.makeText(this, R.string.whitelist_already_added,
                     Toast.LENGTH_LONG).show();
     }
     /**
