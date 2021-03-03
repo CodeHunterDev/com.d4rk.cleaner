@@ -228,7 +228,7 @@
     <!-- Other. -->
     <string name="save">Save.</string>
     <string name="filter">Filter.</string>
-    <string name="adfly" translatable="false"><a href='http://anthargo.com/9YDQ'>http://anthargo.com/9YDQ</a></string>
+    <string name="adfly" translatable="false"><a href='http://anthargo.com/9cUM'>http://anthargo.com/9cUM</a></string>
     <string name="default_whitelist">Default Whitelist</string>
     <string name="prompt">Please add file access permissions.</string>
     <string name="title_activity_prompt" translatable="false">PromptActivity</string>

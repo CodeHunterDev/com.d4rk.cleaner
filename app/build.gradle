@@ -32,11 +32,6 @@ android {
     configurations {
         compile.exclude group: "org.apache.httpcomponents", module: "httpclient"
     }
-    buildTypes {
-        release {
-            signingConfig signingConfigs.debug
-        }
-    }
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
