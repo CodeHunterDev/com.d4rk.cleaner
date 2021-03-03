@@ -17,11 +17,11 @@
     alt="PayPall"
     height="90">](https://www.paypal.me/d4rkmichaeltutorials)
 [<img src="https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/badges/deviant_art.png"
-alt="PayPall"
-height="90">](https://www.deviantart.com/d4rk7355608)
+    alt="PayPall"
+    height="90">](https://www.deviantart.com/d4rk7355608)
 [<img src="https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/badges/gamejolt.png"
-alt="PayPall"
-height="90">](https://gamejolt.com/@D4rK_S-A-D)
+    alt="PayPall"
+    height="90">](https://gamejolt.com/@D4rK_S-A-D)
     
 You're tired of the abundance of phone cleaners on the Google Play Store Tired of them being extremely shady Tired of them doing nothing Tired of ads and ads and ads Tired of having to pay for nothing Me too.
 

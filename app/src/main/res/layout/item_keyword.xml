@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        tools:text="Keyword"/>
+        tools:text="Keyword" />
     <ImageButton
         android:id="@+id/imageKeywordRemove"
         android:layout_width="32dp"
@@ -23,5 +23,6 @@
         android:layout_marginStart="8dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:srcCompat="@drawable/ic_minus"
-        tools:ignore="ContentDescription"/>
+        app:tint="?colorControlNormal"
+        tools:ignore="ContentDescription" />
 </LinearLayout>

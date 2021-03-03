@@ -6,9 +6,13 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4e4334e642ddc977b9da936662c25303/transformed/jetified-firebase-config-20.0.2/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ad055c7f19226f64230201d805ed3ecb/transformed/jetified-firebase-config-20.0.2/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/976914620c1d642fd6aec32f1bfa9692/transformed/jetified-firebase-config-20.0.2/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4a2d1b1c9400bed243bdb36d635443e5/transformed/jetified-firebase-config-20.0.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4a2d1b1c9400bed243bdb36d635443e5/transformed/jetified-firebase-config-20.0.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4a2d1b1c9400bed243bdb36d635443e5/transformed/jetified-firebase-config-20.0.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/970fa1f249652d50ad2ed3ecb01bbe0b/transformed/jetified-firebase-config-20.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7b80e0c2a5534fda0eac822edc1e4278/transformed/jetified-firebase-config-20.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1adfbd9782bdf57b128047886949b93b/transformed/jetified-firebase-config-20.0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/02602268ef7cd55db9018e005f38844e/transformed/jetified-firebase-config-20.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/02602268ef7cd55db9018e005f38844e/transformed/jetified-firebase-config-20.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/02602268ef7cd55db9018e005f38844e/transformed/jetified-firebase-config-20.0.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-config/20.0.2/7bf58fe735ad69a970ea0d7cbf3d0f99dfce9159/firebase-config-20.0.2-javadoc.jar!/" />

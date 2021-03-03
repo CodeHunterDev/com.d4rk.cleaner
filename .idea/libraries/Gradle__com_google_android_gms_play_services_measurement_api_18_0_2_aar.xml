@@ -3,9 +3,13 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c1673a0751faa1db4dfe34a13d7927e5/transformed/jetified-play-services-measurement-api-18.0.2/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9cbc44191c87c05369f97ca151882dd8/transformed/jetified-play-services-measurement-api-18.0.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b49fe375f82676052835261139b60f7e/transformed/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b49fe375f82676052835261139b60f7e/transformed/jetified-play-services-measurement-api-18.0.2/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b49fe375f82676052835261139b60f7e/transformed/jetified-play-services-measurement-api-18.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f3ecc8e208424818f94bfbb8601b130a/transformed/jetified-play-services-measurement-api-18.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bc8ee70fcc3cfca90972973fbf543df9/transformed/jetified-play-services-measurement-api-18.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/160ce9111f7108a89ddba0881fb300a4/transformed/jetified-play-services-measurement-api-18.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f52908aeb07692829bf4a2782b12aecf/transformed/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f52908aeb07692829bf4a2782b12aecf/transformed/jetified-play-services-measurement-api-18.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f52908aeb07692829bf4a2782b12aecf/transformed/jetified-play-services-measurement-api-18.0.2/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-api/18.0.2/ce5402a41baf6b500c336a0a8fa66c0f6f8db979/play-services-measurement-api-18.0.2-javadoc.jar!/" />

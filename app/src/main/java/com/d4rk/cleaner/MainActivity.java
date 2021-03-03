@@ -122,8 +122,8 @@ public class MainActivity extends AppCompatActivity {
         fs.setUpFilters(prefs.getBoolean("generic", true),
                 prefs.getBoolean("aggressive", false),
                 prefs.getBoolean("apk", false));
-        if (path.listFiles() == null) { // is this needed? yes.
-            TextView textView = printTextView("Scan failed.", Color.RED);
+        if (path.listFiles() == null) {
+            TextView textView = printTextView("Scan failed...", Color.RED);
             runOnUiThread(() -> fileListView.addView(textView));
         }
         runOnUiThread(() -> {

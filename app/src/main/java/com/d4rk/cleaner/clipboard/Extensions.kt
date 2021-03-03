@@ -1,5 +1,6 @@
 @file:Suppress("unused")
 package com.d4rk.cleaner.clipboard
+import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
@@ -22,6 +23,7 @@ fun Context.toast(@StringRes id: Int) = toast(getString(id))
 fun Context.toast(s: String) = Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
 fun Context.longToast(@StringRes id: Int) = longToast(getString(id))
 fun Context.longToast(s: String) = Toast.makeText(this, s, Toast.LENGTH_LONG).show()
+@SuppressLint("ObsoleteSdkInt")
 fun isKitkatOrLater(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
 fun isNOrLater(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 fun isOOrLater(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
@@ -31,6 +33,7 @@ fun Context.safeContext(): Context =
     } ?: this
 fun Context.getSafeSharedPreference(): SharedPreferences =
     PreferenceManager.getDefaultSharedPreferences(safeContext())
+@SuppressLint("UnspecifiedImmutableFlag")
 fun Context.pendingActivityIntent(intent: Intent): PendingIntent {
     return PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
 }
@@ -53,6 +56,7 @@ fun Context.requestInput(
             ?.let { callback.invoke(it) }
     }
 }
+@SuppressLint("UnspecifiedImmutableFlag")
 private fun Context.createShortcut(
     id: String,
     @StringRes shortLabelRes: Int, @StringRes longLabelRes: Int,

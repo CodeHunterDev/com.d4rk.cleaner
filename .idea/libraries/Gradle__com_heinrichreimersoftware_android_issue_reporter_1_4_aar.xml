@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.heinrichreimersoftware:android-issue-reporter:1.4@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3288b43901f7fbb2682d38bc69e2ff88/transformed/jetified-android-issue-reporter-1.4/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/38dc701c52f7731f29c3ffaadaa8318a/transformed/jetified-android-issue-reporter-1.4/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3288b43901f7fbb2682d38bc69e2ff88/transformed/jetified-android-issue-reporter-1.4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3288b43901f7fbb2682d38bc69e2ff88/transformed/jetified-android-issue-reporter-1.4/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3288b43901f7fbb2682d38bc69e2ff88/transformed/jetified-android-issue-reporter-1.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/38dc701c52f7731f29c3ffaadaa8318a/transformed/jetified-android-issue-reporter-1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/38dc701c52f7731f29c3ffaadaa8318a/transformed/jetified-android-issue-reporter-1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/38dc701c52f7731f29c3ffaadaa8318a/transformed/jetified-android-issue-reporter-1.4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

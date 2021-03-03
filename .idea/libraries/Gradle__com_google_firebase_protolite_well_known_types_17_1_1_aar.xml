@@ -7,8 +7,12 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9bbd25dcfc5016f0d7f8f75f705c7ced/transformed/jetified-protolite-well-known-types-17.1.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/82502a2a0188b4c225ade904ee0d6405/transformed/jetified-protolite-well-known-types-17.1.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ee98417e7375174dd8c7552aff9dde60/transformed/jetified-protolite-well-known-types-17.1.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ee98417e7375174dd8c7552aff9dde60/transformed/jetified-protolite-well-known-types-17.1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ee98417e7375174dd8c7552aff9dde60/transformed/jetified-protolite-well-known-types-17.1.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e37a8ba1c39d3c5b85d3652439fa8d0/transformed/jetified-protolite-well-known-types-17.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/db470af1f8e1792cd9a50f9271dd7061/transformed/jetified-protolite-well-known-types-17.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4ed89e969ad0126d7247371e8c02378c/transformed/jetified-protolite-well-known-types-17.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8fd452b465ba78ca1a5930b4c8cc7149/transformed/jetified-protolite-well-known-types-17.1.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8fd452b465ba78ca1a5930b4c8cc7149/transformed/jetified-protolite-well-known-types-17.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8fd452b465ba78ca1a5930b4c8cc7149/transformed/jetified-protolite-well-known-types-17.1.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/protolite-well-known-types/17.1.1/5fbe3622c8be8565ee56aa41117b13f095965904/protolite-well-known-types-17.1.1-javadoc.jar!/" />

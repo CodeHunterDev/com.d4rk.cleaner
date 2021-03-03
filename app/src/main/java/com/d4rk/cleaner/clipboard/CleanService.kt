@@ -93,18 +93,4 @@ class CleanService : Service(), ClipboardManager.OnPrimaryClipChangedListener {
                 .removePrimaryClipChangedListener(this)
         toast(R.string.clipboard_service_stopped)
     }
-    private fun buildChannelIfNecessary() {
-        if (isOOrLater()) {
-            val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-            if (manager.getNotificationChannel(CHANNEL_ID) == null) {
-                manager.createNotificationChannel(
-                        NotificationChannel(
-                                CHANNEL_ID,
-                                getString(R.string.clipboard_service_channel_name),
-                                NotificationManager.IMPORTANCE_DEFAULT
-                        )
-                )
-            }
-        }
-    }
 }

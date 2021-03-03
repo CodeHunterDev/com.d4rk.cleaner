@@ -7,8 +7,12 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/660b2ca1c5a1249b0d3f190e67403481/transformed/jetified-firebase-encoders-json-17.1.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9048286eb37cb90ede22f3c89290e816/transformed/jetified-firebase-encoders-json-17.1.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/18ce0b2119ff42f4033e9404838c2ef1/transformed/jetified-firebase-encoders-json-17.1.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/18ce0b2119ff42f4033e9404838c2ef1/transformed/jetified-firebase-encoders-json-17.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/18ce0b2119ff42f4033e9404838c2ef1/transformed/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/70e10eac8b550ab4e264f75dacd7f7ad/transformed/jetified-firebase-encoders-json-17.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c8cc9472e40ba7e7122bd303e119763f/transformed/jetified-firebase-encoders-json-17.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d59f16d48d5f6496e4134618205c1bd2/transformed/jetified-firebase-encoders-json-17.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a0e371ccda0912e722b0c6e95f2e7e5c/transformed/jetified-firebase-encoders-json-17.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a0e371ccda0912e722b0c6e95f2e7e5c/transformed/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a0e371ccda0912e722b0c6e95f2e7e5c/transformed/jetified-firebase-encoders-json-17.1.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-encoders-json/17.1.0/5fbe3622c8be8565ee56aa41117b13f095965904/firebase-encoders-json-17.1.0-javadoc.jar!/" />

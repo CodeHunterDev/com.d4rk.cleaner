@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.test.ext:truth:1.4.0-alpha04@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cb9a77f81b8deec65e3e46e4379fcbfb/transformed/jetified-truth-1.4.0-alpha04/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/40c5ee005041a0ba5a3bdecac444c0ae/transformed/jetified-truth-1.4.0-alpha04/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/726f32be4649649f5be09fbb1406acf3/transformed/jetified-truth-1.4.0-alpha04/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/085ece1a48c125040a81aa38f782ffc3/transformed/jetified-truth-1.4.0-alpha04/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/085ece1a48c125040a81aa38f782ffc3/transformed/jetified-truth-1.4.0-alpha04/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/085ece1a48c125040a81aa38f782ffc3/transformed/jetified-truth-1.4.0-alpha04/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test.ext/truth/1.4.0-alpha04/9c5ec4edc172ab87ffbd8551f96ed3fc3472a081/truth-1.4.0-alpha04-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test.ext/truth/1.4.0-alpha04/28adad5424016162842ef4f6a5d236719f77678b/truth-1.4.0-alpha04-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -80,7 +80,8 @@
             tools:targetApi="jelly_bean"/>
         <activity
             android:name=".SplashScreenActivity"
-            android:theme="@style/AppThemeNoActionBar">
+            android:theme="@style/AppThemeNoActionBar"
+            tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -116,6 +117,6 @@
         </receiver>
         <service
             android:name="com.d4rk.cleaner.clipboard.CleanService"
-            android:enabled="true" />
+            android:enabled="true"/>
     </application>
 </manifest>

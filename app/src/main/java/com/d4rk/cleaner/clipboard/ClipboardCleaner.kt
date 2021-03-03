@@ -1,15 +1,23 @@
 package com.d4rk.cleaner.clipboard
+import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 import android.os.Build
 import android.view.View
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatDelegate
 class ClipboardCleaner : Application() {
     private var view: View? = null
     override fun onCreate() {
         super.onCreate()
-
         app = this
+        AppCompatDelegate.setDefaultNightMode(
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+            } else {
+                AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY
+            }
+        )
     }
     fun showSystemAlertWindow(windowContext: Context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && view == null) {
@@ -20,8 +28,8 @@ class ClipboardCleaner : Application() {
                     width = 1
                     height = 1
                     flags = flags or
-                        WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL or
-                        WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM
+                            WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL or
+                            WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM
                 }
             )
         }
@@ -32,7 +40,9 @@ class ClipboardCleaner : Application() {
             view = null
         }
     }
+    @SuppressLint("StaticFieldLeak")
     companion object {
+        @SuppressLint("StaticFieldLeak")
         lateinit var app: ClipboardCleaner
     }
 }

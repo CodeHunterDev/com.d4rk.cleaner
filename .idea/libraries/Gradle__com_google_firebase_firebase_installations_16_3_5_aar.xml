@@ -7,9 +7,13 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b7e756637e8a438435d899b66b3a9f68/transformed/jetified-firebase-installations-16.3.5/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fe22d683985b1b91d223bf656a19db0f/transformed/jetified-firebase-installations-16.3.5/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e04f30f6ffded60e390a6d3197dc2e83/transformed/jetified-firebase-installations-16.3.5/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cf004db422a1e87ec72e05f87ebb05d2/transformed/jetified-firebase-installations-16.3.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cf004db422a1e87ec72e05f87ebb05d2/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cf004db422a1e87ec72e05f87ebb05d2/transformed/jetified-firebase-installations-16.3.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b6ce428b25515def9218c0e218782c81/transformed/jetified-firebase-installations-16.3.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cc49961a595c337faae264232a6fefdf/transformed/jetified-firebase-installations-16.3.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8b9ee1e6d88cd8a85ed36d9e73f49bea/transformed/jetified-firebase-installations-16.3.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ccbaf6b873750a5b9a461e78eb2b2e29/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ccbaf6b873750a5b9a461e78eb2b2e29/transformed/jetified-firebase-installations-16.3.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ccbaf6b873750a5b9a461e78eb2b2e29/transformed/jetified-firebase-installations-16.3.5/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-installations/16.3.5/ba864fdfc85df3cb215b477c4a82732e6c4aad2/firebase-installations-16.3.5-javadoc.jar!/" />

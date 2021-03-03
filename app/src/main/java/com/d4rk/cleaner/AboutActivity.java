@@ -27,5 +27,6 @@ public class AboutActivity extends AppCompatActivity {
     }
     @Override public boolean onSupportNavigateUp() {
         onBackPressed();
-        return true; }
+        return true;
+    }
 }

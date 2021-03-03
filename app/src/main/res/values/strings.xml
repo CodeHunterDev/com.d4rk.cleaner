@@ -15,6 +15,7 @@
     <string name="main_found">Found: </string>
     <string name="main_freed">Freed: </string>
     <string name="main_select_task">Select a task:</string>
+    <string name="main_scan_failed">Scan failed… (Please check if you gave all app permissions)</string>
     <string name="main_select_task_description">Do you want to delete (Clean) all found files, or only display (Analyze) them?</string>
     <string name="main_clean">Clean!</string>
     <string name="main_analyze">Analyze!</string>
@@ -69,6 +70,22 @@
 
     <!-- Changelog activity strings. -->
     <string name="changelog" translatable="false">D4rK Cleaner - Changelog:\n
+    <br> </br>
+\n
+	<br> </br>
+		<b>Version 2.0_r2:\n</b>
+    <br> </br>
+			•Added new smile button;\n
+    <br> </br>
+			•Improved Clipboard Cleaner;\n
+    <br> </br>
+			•Bug fixes (thanks for feedback);\n
+    <br> </br>
+			•Some improvements in clean process;\n
+    <br> </br>
+			•Added Firebase crashlytics;\n
+    <br> </br>
+			•Some improvements here and there again.\n
     <br> </br>
 \n
 	<br> </br>
@@ -211,6 +228,7 @@
     <!-- Other. -->
     <string name="save">Save.</string>
     <string name="filter">Filter.</string>
+    <string name="adfly" translatable="false"><a href='http://anthargo.com/9YDQ'>http://anthargo.com/9YDQ</a></string>
     <string name="default_whitelist">Default Whitelist</string>
     <string name="prompt">Please add file access permissions.</string>
     <string name="title_activity_prompt" translatable="false">PromptActivity</string>
@@ -232,7 +250,7 @@
     <string name="about_deviantart" translatable="false">DeviantArt.</string>
     <string name="about_deviantart_description">A little artist in a big world.</string>
     <string name="about_app_version">App version:</string>
-    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">2.0_release1</string>
+    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">2.0_release2</string>
     <string name="about_special_thanks">Special thanks:</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_privacy_policy">Privacy policy.</string>

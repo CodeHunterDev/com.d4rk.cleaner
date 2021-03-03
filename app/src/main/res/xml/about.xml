@@ -15,7 +15,7 @@
         android:icon="@drawable/ic_play_store"
         android:key="play_store">
         <intent android:action="android.intent.action.VIEW"
-            android:data="https://play.google.com/store/apps/details?id=com.d4rk.cleaner"/>
+            android:data="https://play.google.com/store/apps/dev?id=5390214922640123642&amp;hl=en&amp;gl=US"/>
     </Preference>
     <Preference
         android:title="@string/about_developer"
@@ -34,7 +34,7 @@
         android:icon="@drawable/ic_michael_tutorials"
         android:summary="@string/about_michael_tutorials_description">
         <intent android:action="android.intent.action.VIEW"
-            android:data="https://youtube.com/c/MichaelTutorials"/>
+            android:data="https://www.youtube.com/channel/UCee5YBhGHVCF4JnQzoLFzVA"/>
     </Preference>
     <Preference android:title="@string/about_gamejolt"
         android:key="gamejolt"
