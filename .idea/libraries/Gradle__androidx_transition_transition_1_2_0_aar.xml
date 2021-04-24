@@ -1,12 +1,16 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.transition:transition:1.2.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cc3ebda8d1b522e2e68e407afff57358/transformed/transition-1.2.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b881ae12501a853c7b8d6b15fa9df196/transformed/transition-1.2.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/237e95648e04eda26447ea9b0ec67236/transformed/transition-1.2.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cc3ebda8d1b522e2e68e407afff57358/transformed/transition-1.2.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cc3ebda8d1b522e2e68e407afff57358/transformed/transition-1.2.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cc3ebda8d1b522e2e68e407afff57358/transformed/transition-1.2.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b881ae12501a853c7b8d6b15fa9df196/transformed/transition-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b881ae12501a853c7b8d6b15fa9df196/transformed/transition-1.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b881ae12501a853c7b8d6b15fa9df196/transformed/transition-1.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/237e95648e04eda26447ea9b0ec67236/transformed/transition-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/237e95648e04eda26447ea9b0ec67236/transformed/transition-1.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/237e95648e04eda26447ea9b0ec67236/transformed/transition-1.2.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

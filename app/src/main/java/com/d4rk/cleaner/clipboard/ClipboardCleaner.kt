@@ -40,7 +40,6 @@ class ClipboardCleaner : Application() {
             view = null
         }
     }
-    @SuppressLint("StaticFieldLeak")
     companion object {
         @SuppressLint("StaticFieldLeak")
         lateinit var app: ClipboardCleaner

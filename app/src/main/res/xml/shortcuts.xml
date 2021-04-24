@@ -2,11 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
-        android:shortcutId="settings"
         android:enabled="true"
-        android:icon="@mipmap/ic_shortcut_settings"
-        android:shortcutShortLabel="@string/settings_string"
-        tools:targetApi="n_mr1">
+        android:icon="@mipmap/ic_shortcut_settings">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.d4rk.cleaner"
@@ -24,5 +21,14 @@
             android:targetPackage="com.d4rk.cleaner"
             android:targetClass="com.d4rk.cleaner.WhitelistActivity"/>
         <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_clipboard_cleaner">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.d4rk.cleaner"
+            android:targetClass="com.d4rk.cleaner.clipboard.ClipboardActivity"/>
+            <categories android:name="android.shortcut.conversation"/>
     </shortcut>
 </shortcuts>

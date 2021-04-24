@@ -2,7 +2,6 @@
 <androidx.appcompat.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:id="@+id/custom_toolbar"
     android:layout_width="match_parent"
@@ -14,32 +13,29 @@
             android:layout_width="56dp"
             android:layout_height="match_parent"
             android:autoLink="all"
-            android:textColorLink="@color/colorPrimary"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/adfly"
+            android:textColor="@color/colorPrimary"
             android:textColorHighlight="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
-            android:textColor="@color/colorPrimary"
+            android:textColorLink="@color/colorPrimary"
             android:textIsSelectable="false"
-            android:clickable="true"
-            android:text="@string/adfly"
-            android:focusable="true"
-            app:drawableStartCompat="@drawable/ic_face" />
+            app:drawableStartCompat="@drawable/ic_face"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            tools:ignore="UseCompoundDrawables,UselessParent">
+            android:layout_centerInParent="true">
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="36dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_d4rk"
-                tools:ignore="ContentDescription,HardcodedText"/>
+                android:src="@drawable/ic_toolbar_d4rk"/>
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_cleaner"
-                tools:ignore="ContentDescription,HardcodedText"/>
+                android:src="@drawable/ic_cleaner"/>
         </LinearLayout>
     </RelativeLayout>
 </androidx.appcompat.widget.Toolbar>

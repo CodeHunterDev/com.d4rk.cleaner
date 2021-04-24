@@ -7,15 +7,14 @@
     android:layout_marginTop="4dp"
     android:layout_marginBottom="4dp"
     android:gravity="center_vertical"
-    android:orientation="horizontal"
-    tools:ignore="UseCompoundDrawables">
+    android:orientation="horizontal">
     <TextView
         android:id="@+id/textKeywordContent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        tools:text="Keyword" />
+        tools:text="Keyword"/>
     <ImageButton
         android:id="@+id/imageKeywordRemove"
         android:layout_width="32dp"
@@ -24,5 +23,5 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         app:srcCompat="@drawable/ic_minus"
         app:tint="?colorControlNormal"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"/>
 </LinearLayout>

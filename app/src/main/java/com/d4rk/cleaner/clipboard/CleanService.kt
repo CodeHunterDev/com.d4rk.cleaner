@@ -1,7 +1,5 @@
 package com.d4rk.cleaner.clipboard
 import android.app.ActivityManager
-import android.app.NotificationChannel
-import android.app.NotificationManager
 import android.app.Service
 import android.content.ClipboardManager
 import android.content.Context
@@ -19,12 +17,11 @@ class CleanService : Service(), ClipboardManager.OnPrimaryClipChangedListener {
         private const val PREF_SERVICE_OPTION = "pref_service_option"
         const val SERVICE_OPTION_CLEAN = 0
         const val SERVICE_OPTION_CONTENT = 1
-        private const val CHANNEL_ID = "CHANNEL_CLEAN"
         fun start(context: Context) {
             setServiceStarted(context, true)
             ActivityCompat.startForegroundService(
-                    context,
-                    Intent(context, CleanService::class.java)
+                context,
+                Intent(context, CleanService::class.java)
             )
         }
         fun stop(context: Context) {
@@ -32,10 +29,10 @@ class CleanService : Service(), ClipboardManager.OnPrimaryClipChangedListener {
             context.stopService(Intent(context, CleanService::class.java))
         }
         fun getServiceStarted(context: Context) = context.getSafeSharedPreference()
-                .getBoolean(PREF_SERVICE_STARTED, false)
+            .getBoolean(PREF_SERVICE_STARTED, false)
         fun setServiceStarted(context: Context, started: Boolean) =
-                context.getSafeSharedPreference()
-                        .edit().putBoolean(PREF_SERVICE_STARTED, started).apply()
+            context.getSafeSharedPreference()
+                .edit().putBoolean(PREF_SERVICE_STARTED, started).apply()
         fun isServiceRunning(context: Context): Boolean {
             val manager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
             @Suppress("DEPRECATION")
@@ -47,10 +44,10 @@ class CleanService : Service(), ClipboardManager.OnPrimaryClipChangedListener {
             return false
         }
         fun getServiceOption(context: Context): Int = context.getSafeSharedPreference()
-                .getInt(PREF_SERVICE_OPTION, SERVICE_OPTION_CLEAN)
+            .getInt(PREF_SERVICE_OPTION, SERVICE_OPTION_CLEAN)
         fun setServiceOption(context: Context, option: Int) {
             context.getSafeSharedPreference().edit()
-                    .putInt(PREF_SERVICE_OPTION, if (option in 0..1) option else 0).apply()
+                .putInt(PREF_SERVICE_OPTION, if (option in 0..1) option else 0).apply()
         }
     }
     private val cleanHandler: Handler by lazy { Handler(Looper.getMainLooper()) }
@@ -58,8 +55,8 @@ class CleanService : Service(), ClipboardManager.OnPrimaryClipChangedListener {
     override fun onCreate() {
         super.onCreate()
         (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager)
-                .addPrimaryClipChangedListener(this)
-        toast(R.string.clipboard_service_started)
+            .addPrimaryClipChangedListener(this)
+        toast(R.string.clipboard_service_start)
     }
     override fun onPrimaryClipChanged() {
         if (currentContent().isEmpty()) return
@@ -74,13 +71,13 @@ class CleanService : Service(), ClipboardManager.OnPrimaryClipChangedListener {
                     clean()
                 }, timeout * 1_000L)
                 toast(
-                        getString(R.string.clipboard_service_clean_after_seconds_template).format(
-                                resources.getQuantityString(
-                                        R.plurals.seconds,
-                                        timeout,
-                                        NumberFormat.getInstance().format(timeout)
-                                )
+                    getString(R.string.clipboard_service_start).format(
+                        resources.getQuantityString(
+                            R.plurals.seconds,
+                            timeout,
+                            NumberFormat.getInstance().format(timeout)
                         )
+                    )
                 )
             }
         } else if (option == SERVICE_OPTION_CONTENT) {
@@ -90,7 +87,7 @@ class CleanService : Service(), ClipboardManager.OnPrimaryClipChangedListener {
     override fun onDestroy() {
         super.onDestroy()
         (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager)
-                .removePrimaryClipChangedListener(this)
-        toast(R.string.clipboard_service_stopped)
+            .removePrimaryClipChangedListener(this)
+        toast(R.string.clipboard_service_stop)
     }
 }

@@ -13,69 +13,94 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <androidx.appcompat.widget.AppCompatEditText
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="100dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:background="@color/colorPrimary"
-        android:editable="false"
-        android:focusable="false"
-        android:gravity="center_horizontal"
-        android:text="@string/changelog"
-        android:textIsSelectable="false"
-        tools:ignore="Deprecated"/>
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/recommendedButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:background="@color/colorPrimary"
+                android:isScrollContainer="true"
+                android:editable="false"
+                android:focusable="false"
+                android:scrollbars="vertical"
+                android:gravity="center_horizontal"
+                android:text="@string/changelog"
+                android:textIsSelectable="false"
+                tools:ignore="Deprecated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         android:layout_gravity="bottom|center"
-        android:src="@drawable/ic_d4rk"
-        tools:ignore="ContentDescription"/>
+        app:srcCompat="@drawable/ic_d4rk"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:rotation="@android:integer/config_longAnimTime"
-        android:src="@drawable/ic_square_outline"
+        app:srcCompat="@drawable/ic_square_outline"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="10dp"
-        tools:ignore="ContentDescription"/>
+        android:layout_marginTop="24dp"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_square_outline"
+        app:srcCompat="@drawable/ic_square_outline"
         android:layout_marginStart="-10dp"
-        android:layout_marginTop="300dp"
-        tools:ignore="ContentDescription"/>
+        android:layout_marginTop="300dp"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_square_outline"
+        app:srcCompat="@drawable/ic_square_outline"
         android:layout_marginStart="60dp"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="-80dp"
-        tools:ignore="ContentDescription"/>
+        android:layout_marginBottom="-80dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:rotation="@android:integer/status_bar_notification_info_maxnum"
+        app:srcCompat="@drawable/ic_vn_down_solid"
+        android:layout_marginStart="210dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-90dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="160dp"
+        android:rotation="@android:integer/config_longAnimTime"
+        app:srcCompat="@drawable/ic_vn_back_solid" />
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="end"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_circle"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="6dp"
-        tools:ignore="ContentDescription"/>
+        app:srcCompat="@drawable/ic_circle"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="6dp"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_gravity="top"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_circle"
+        app:srcCompat="@drawable/ic_circle"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="630dp"
-        tools:ignore="ContentDescription"/>
+        android:layout_marginTop="630dp"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -83,16 +108,15 @@
         android:layout_marginEnd="-25dp"
         android:layout_marginTop="199dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_triangle"
-        tools:ignore="ContentDescription"/>
+        app:srcCompat="@drawable/ic_triangle"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="start|left"
-        android:src="@drawable/ic_triangle"
-        android:layout_marginLeft="-40dp"
+        app:srcCompat="@drawable/ic_triangle"
+        android:layout_marginStart="-40dp"
         android:layout_marginTop="500dp"
-        tools:ignore="ContentDescription,RtlHardcoded"/>
+        tools:ignore="RtlHardcoded"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
@@ -100,31 +124,34 @@
         android:layout_marginEnd="-70dp"
         android:layout_marginTop="333dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_square"
-        tools:ignore="ContentDescription"/>
+        app:srcCompat="@drawable/ic_square"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="end"
         android:layout_marginEnd="-99dp"
         android:layout_marginTop="440dp"
-        android:src="@drawable/ic_roundline"
-        tools:ignore="ContentDescription"/>
+        app:srcCompat="@drawable/ic_roundline"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="69dp"
         android:layout_height="69dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="64dp"
         android:layout_marginStart="0dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_triangle_blue"
-        tools:ignore="ContentDescription"/>
+        app:srcCompat="@drawable/ic_triangle_blue"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_gravity="bottom|right|end"
-        android:layout_marginRight="-60dp"
+        android:layout_marginEnd="-60dp"
         android:layout_marginBottom="-69dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
-        android:src="@drawable/ic_triangle_blue"
-        tools:ignore="ContentDescription,RtlHardcoded"/>
+        app:srcCompat="@drawable/ic_triangle_blue"
+        tools:ignore="RtlHardcoded"/>
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"/>
 </com.google.android.material.card.MaterialCardView>

@@ -73,6 +73,44 @@
     <br> </br>
 \n
 	<br> </br>
+		<b>Version 3.0_r1:\n</b>
+    <br> </br>
+			•Compatibility with API 31 - Android 12;\n
+    <br> </br>
+			•More protected files &amp; folders by whitelist;\n
+    <br> </br>
+			•Smooth scroll in Changelog Activity;\n
+    <br> </br>
+			•More compatibility with old Android versions;\n
+    <br> </br>
+			•Changed licence &amp; privacy policy;\n
+    <br> </br>
+			•Fixed permissions in old Android versions (thanks for feedback);\n
+    <br> </br>
+			•Adaptive theme launcher icon (may not work for everyone);\n
+    <br> </br>
+			•Added GitHub releases;\n
+    <br> </br>
+			•Added Clipboard Cleaner shortcut;\n
+    <br> </br>
+			•ViewBinding migration;\n
+    <br> </br>
+			•Updated Clipboard Cleaner;\n
+    <br> </br>
+			•Reduced app size + performance optimizations;\n
+    <br> </br>
+			•Removed unused resources;\n
+    <br> </br>
+			•Icon changes + new &amp; old SVG icons;\n
+    <br> </br>
+			•Reimagined icons and design;\n
+    <br> </br>
+			•Improvements to Firebase;\n
+    <br> </br>
+			•Migrated Fancy Buttons to MaterialCardView by Gologolo.\n
+    <br> </br>
+\n
+	<br> </br>
 		<b>Version 2.0_r2:\n</b>
     <br> </br>
 			•Added new smile button;\n
@@ -245,12 +283,14 @@
     <string name="about_d4rk_description">Official D4rK YouTube Channel.</string>
     <string name="about_michael_tutorials" translatable="false">Michael Tutorials!</string>
     <string name="about_michael_tutorials_description">A simple channel with tutorials.</string>
+    <string name="about_desene_animate" translatable="false">Desene Animate!</string>
+    <string name="about_desene_animate_description">A simple channel with romanian cartoons.</string>
     <string name="about_gamejolt" translatable="false">GameJolt.</string>
     <string name="about_gamejolt_description">My official GameJolt profile.</string>
     <string name="about_deviantart" translatable="false">DeviantArt.</string>
     <string name="about_deviantart_description">A little artist in a big world.</string>
     <string name="about_app_version">App version:</string>
-    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">2.0_release2</string>
+    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">3.0_release1</string>
     <string name="about_special_thanks">Special thanks:</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_privacy_policy">Privacy policy.</string>
@@ -282,7 +322,7 @@
     <string name="clipboard_service_stopped">Clipboard Cleaner Service Stopped.</string>
     <string name="clipboard_service_channel_name">Clipboard Cleaner notification channel.</string>
     <string name="clipboard_service_notif_title">Your clipboard is under the protection.</string>
-    <string name="clipboard_service_clean_timeout_template" formatted="false">Clean the clipboard after %s (click here to edit).</string>
+    <string name="clipboard_service_clean_timeout_template" formatted="false" tools:ignore="StringFormatCount">Clean the clipboard after %s (click here to edit).</string>
     <string name="clipboard_service_clean_timeout">Timeout.</string>
     <string name="clipboard_service_clean_after_seconds_template">Clipboard will be cleaned in %s.</string>
     <!-- Clipboard shortcut strings. -->

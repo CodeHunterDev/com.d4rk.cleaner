@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
@@ -14,19 +14,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
-        <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/white</item>
-    </style>
-
-    <style name="SettingsTheme" parent="Theme.MaterialComponents.DayNight">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
-        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/white</item>
     </style>
 
@@ -49,8 +40,9 @@
         <item name="buttonBarNegativeButtonStyle">@style/Widget.MyApp.NegativeButton</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.MyApp.PositiveButton</item>
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <item name="android:navigationBarDividerColor" tools:targetApi="o_mr1">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/white</item>
     </style>
 
@@ -70,23 +62,8 @@
         <item name="colorPrimary">@color/colorAndroidGreen</item>
     </style>
 
-    <style name="Theme.AppCompat.Dialog.MinWidth" parent="Theme.AppCompat.DayNight.Dialog.MinWidth" />
-
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.DayNight" />
-
-    <style name="Widget.AppTheme.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@android:color/darker_gray</item>
-    </style>
-
-    <style name="Widget.AppTheme.ButtonBar.Fullscreen" parent="">
-        <item name="android:background">@android:color/darker_gray</item>
-        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
 </resources>

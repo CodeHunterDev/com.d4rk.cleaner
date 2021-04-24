@@ -20,8 +20,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                tools:ignore="UseCompoundDrawables">
+                android:orientation="vertical">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -29,7 +28,7 @@
                     android:contentDescription="@string/app_name"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
-                    app:srcCompat="@mipmap/ic_launcher"/>
+                    app:srcCompat="@mipmap/ic_clipboard_cleaner"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -71,8 +70,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                tools:ignore="UseCompoundDrawables">
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -169,8 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:animateLayoutChanges="true"
-                android:orientation="vertical"
-                tools:ignore="UseCompoundDrawables">
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -180,7 +177,7 @@
                     android:paddingBottom="8dp"
                     android:text="@string/clipboard_setting_title"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"/>
                 <CheckBox
                     android:id="@+id/checkKeyword"
                     android:layout_width="match_parent"
@@ -188,7 +185,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:text="@string/clipboard_setting_keyword_title" />
+                    android:text="@string/clipboard_setting_keyword_title"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -196,7 +193,7 @@
                     android:layout_marginEnd="16dp"
                     android:text="@string/clipboard_setting_keyword_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
                 <LinearLayout
                     android:id="@+id/layoutKeywordSetting"
                     android:layout_width="match_parent"
@@ -211,12 +208,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/clipboard_setting_keyword_normal_title"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
                     <LinearLayout
                         android:id="@+id/layoutKeywordNormal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical" />
+                        android:orientation="vertical"/>
                     <ImageButton
                         android:id="@+id/btnKeywordAddNormal"
                         android:layout_width="32dp"
@@ -225,19 +222,18 @@
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:contentDescription="@string/clipboard_setting_keyword_add"
                         app:srcCompat="@drawable/ic_add"
-                        app:tint="?colorControlNormal"
-                        tools:ignore="VectorDrawableCompat" />
+                        app:tint="?colorControlNormal"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/clipboard_setting_keyword_regex_title"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
                     <LinearLayout
                         android:id="@+id/layoutKeywordRegex"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical" />
+                        android:orientation="vertical"/>
                     <ImageButton
                         android:id="@+id/btnKeywordAddRegex"
                         android:layout_width="32dp"
@@ -246,8 +242,7 @@
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:contentDescription="@string/clipboard_setting_keyword_add"
                         app:srcCompat="@drawable/ic_add"
-                        app:tint="?colorControlNormal"
-                        tools:ignore="VectorDrawableCompat" />
+                        app:tint="?colorControlNormal"/>
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnKeywordSave"
                         android:layout_width="wrap_content"
@@ -255,7 +250,7 @@
                         android:layout_gravity="center_horizontal"
                         android:paddingStart="16dp"
                         android:paddingEnd="16dp"
-                        android:text="@string/save" />
+                        android:text="@string/save"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

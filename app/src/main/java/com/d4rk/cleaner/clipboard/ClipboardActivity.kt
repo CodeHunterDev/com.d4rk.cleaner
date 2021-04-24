@@ -1,6 +1,5 @@
 package com.d4rk.cleaner.clipboard
 import android.Manifest
-import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -11,35 +10,28 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import com.d4rk.cleaner.R
-import kotlinx.android.synthetic.main.activity_clipboard.*
-import kotlinx.android.synthetic.main.activity_main.*
+import com.d4rk.cleaner.databinding.ActivityClipboardBinding
 import java.text.NumberFormat
 class ClipboardActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityClipboardBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_clipboard)
-        AppCompatDelegate.setDefaultNightMode(
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
-                } else {
-                    AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY
-                }
-        )
+        binding = ActivityClipboardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         setUpButtons()
         setUpService()
-        setUpShortcut()
+        setUpSetting()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            cardService.visibility = View.GONE
+            binding.cardService.visibility = View.GONE
         }
     }
     override fun onRequestPermissionsResult(
-            requestCode: Int,
-            permissions: Array<out String>, grantResults: IntArray
+        requestCode: Int,
+        permissions: Array<out String>, grantResults: IntArray
     ) {
         if (permissions.isNotEmpty() && permissions[0] == Manifest.permission.INSTALL_SHORTCUT &&
-                grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
+            grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
         ) {
             toast(R.string.clipboard_shortcut_have_permission)
         } else {
@@ -48,32 +40,32 @@ class ClipboardActivity : AppCompatActivity() {
         }
     }
     private fun setUpButtons() {
-        btnClean.setOnClickListener {
+        binding.btnClean.setOnClickListener {
             clean()
         }
-        btnContent.setOnClickListener {
+        binding.btnContent.setOnClickListener {
             content()
         }
     }
     private fun setUpService() {
         fun updateServiceStatus(started: Boolean) {
             if (started) {
-                textServiceStatus.text = getString(R.string.clipboard_status)
-                        .format(getString(R.string.clipboard_status_running))
-                btnServiceStart.text = getString(R.string.clipboard_service_stop)
+                binding.textServiceStatus.text = getString(R.string.clipboard_status)
+                    .format(getString(R.string.clipboard_status_running))
+                binding.btnServiceStart.text = getString(R.string.clipboard_status_stopped)
             } else {
-                textServiceStatus.text = getString(R.string.clipboard_status)
-                        .format(getString(R.string.clipboard_status_stopped))
-                btnServiceStart.text = getString(R.string.clipboard_service_start)
+                binding.textServiceStatus.text = getString(R.string.clipboard_status_running)
+                    .format(getString(R.string.clipboard_status_stopped))
+                binding.btnServiceStart.text = getString(R.string.clipboard_service_start)
             }
         }
         val serviceOption = CleanService.getServiceOption(this)
         if (serviceOption == CleanService.SERVICE_OPTION_CLEAN) {
-            radioBtnClean.isChecked = true
+            binding.radioBtnClean.isChecked = true
         } else if (serviceOption == CleanService.SERVICE_OPTION_CONTENT) {
-            radioBtnReport.isChecked = true
+            binding.radioBtnReport.isChecked = true
         }
-        groupServiceOptions.setOnCheckedChangeListener { _, checkedId ->
+        binding.groupServiceOptions.setOnCheckedChangeListener { _, checkedId ->
             if (checkedId == R.id.radioBtnClean) {
                 CleanService.setServiceOption(this, CleanService.SERVICE_OPTION_CLEAN)
             } else if (checkedId == R.id.radioBtnReport) {
@@ -83,7 +75,7 @@ class ClipboardActivity : AppCompatActivity() {
         val isServiceRunning = CleanService.isServiceRunning(this)
         updateServiceStatus(isServiceRunning)
         CleanService.setServiceStarted(this, isServiceRunning)
-        btnServiceStart.setOnClickListener {
+        binding.btnServiceStart.setOnClickListener {
             if (CleanService.getServiceStarted(this@ClipboardActivity)) {
                 CleanService.stop(this@ClipboardActivity)
                 updateServiceStatus(false)
@@ -94,32 +86,36 @@ class ClipboardActivity : AppCompatActivity() {
         }
         fun updateCleanTimeoutText() {
             val timeout = serviceCleanTimeout
-            textServiceCleanTimeout.text =
-                    getString(R.string.clipboard_service_clean_timeout_template).format(
-                            resources.getQuantityString(
-                                    R.plurals.seconds,
-                                    timeout,
-                                    NumberFormat.getInstance().format(timeout)
-                            )
+            binding.textServiceCleanTimeout.text =
+                getString(R.string.clipboard_service_clean_timeout_template).format(
+                    resources.getQuantityString(
+                        R.plurals.seconds,
+                        timeout,
+                        NumberFormat.getInstance().format(timeout)
                     )
+                )
         }
         updateCleanTimeoutText()
-        textServiceCleanTimeout.setOnClickListener {
+        binding.textServiceCleanTimeout.setOnClickListener {
             requestInput(
-                    R.string.clipboard_service_clean_timeout,
-                    InputType.TYPE_CLASS_NUMBER
+                R.string.clipboard_service_clean_timeout,
+                InputType.TYPE_CLASS_NUMBER
             ) {
                 serviceCleanTimeout = it.toIntOrNull() ?: 0
                 updateCleanTimeoutText()
             }
         }
     }
-    @SuppressLint("InlinedApi")
-    private fun setUpShortcut() {
-        checkKeyword.setOnCheckedChangeListener { _, isChecked ->
+    private fun setUpSetting() {
+        if (getUsingKeyword()) {
+            binding.checkKeyword.isChecked = true
+            binding.layoutKeywordSetting.visibility = View.VISIBLE
+        }
+        binding.checkKeyword.setOnCheckedChangeListener { _, isChecked ->
             setUsingKeyword(isChecked)
-            layoutKeywordSetting.visibility = if (isChecked) View.VISIBLE else View.GONE
-            layoutMainScroll.postDelayed({
+            binding.layoutKeywordSetting.visibility = if (isChecked) View.VISIBLE else View.GONE
+            binding.layoutMainScroll.postDelayed({
+                binding.layoutMainScroll.fullScroll(View.FOCUS_DOWN)
             }, 300)
         }
         fun ViewGroup.addKeywordView(keyword: String): View {
@@ -138,31 +134,31 @@ class ClipboardActivity : AppCompatActivity() {
             val keywords = mutableListOf<String>()
             (0..childCount).forEach {
                 getChildAt(it)?.findViewById<TextView>(R.id.textKeywordContent)
-                        ?.text?.toString()?.let { keyword ->
-                            keywords.add(keyword)
-                        }
+                    ?.text?.toString()?.let { keyword ->
+                        keywords.add(keyword)
+                    }
             }
             return keywords.toSet()
         }
         getNormalKeywords().forEach {
-            layoutKeywordNormal.addKeywordView(it)
+            binding.layoutKeywordNormal.addKeywordView(it)
         }
-        btnKeywordAddNormal.setOnClickListener {
+        binding.btnKeywordAddNormal.setOnClickListener {
             requestInput(R.string.clipboard_setting_keyword_normal_title) {
-                layoutKeywordNormal.addKeywordView(it)
+                binding.layoutKeywordNormal.addKeywordView(it)
             }
         }
         getRegexKeywords().forEach {
-            layoutKeywordRegex.addKeywordView(it)
+            binding.layoutKeywordRegex.addKeywordView(it)
         }
-        btnKeywordAddRegex.setOnClickListener {
-            requestInput(R.string.clipboard_setting_keyword_normal_title) {
-                layoutKeywordRegex.addKeywordView(it)
+        binding.btnKeywordAddRegex.setOnClickListener {
+            requestInput(R.string.clipboard_setting_keyword_regex_title) {
+                binding.layoutKeywordRegex.addKeywordView(it)
             }
         }
-        btnKeywordSave.setOnClickListener {
-            setNormalKeywords(layoutKeywordNormal.getKeywords())
-            setRegexKeywords(layoutKeywordRegex.getKeywords())
+        binding.btnKeywordSave.setOnClickListener {
+            setNormalKeywords(binding.layoutKeywordNormal.getKeywords())
+            setRegexKeywords(binding.layoutKeywordRegex.getKeywords())
             toast(R.string.clipboard_setting_message_saved)
         }
     }

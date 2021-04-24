@@ -100,4 +100,5 @@
     <string name="settings_clipboard_description">Curăță clipboard-ul rapid și simplu direct aici.</string>
     <string name="about_gamejolt_description">Profilul meu oficial de Gamejolt.</string>
     <string name="main_scan_failed">Scanare esuata… (Te rog verifica daca ai aprobat toate permisiunile)</string>
+    <string name="about_desene_animate_description">Un canal simplu cu desene animate in romana.</string>
 </resources>

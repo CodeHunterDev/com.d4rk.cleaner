@@ -1,7 +1,6 @@
 package com.d4rk.cleaner;
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.AppOpsManager;
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +8,6 @@ import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Looper;
@@ -17,8 +15,6 @@ import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.transition.TransitionManager;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
@@ -30,11 +26,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import com.fxn.stash.Stash;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.Objects;
-@SuppressWarnings({"unused", "ConstantConditions"})
+@SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
     final ConstraintSet constraintSet = new ConstraintSet();
     static boolean running = false;
@@ -45,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     TextView progressText;
     TextView statusText;
     ConstraintLayout layout;
-    @SuppressLint("LogConditional")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.custom_toolbar);
-        View view =getSupportActionBar().getCustomView();
         Stash.init(getApplicationContext());
         fileListView = findViewById(R.id.fileListView);
         fileScrollView = findViewById(R.id.fileScrollView);
@@ -64,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         constraintSet.clone(layout);
         requestWriteExternalPermission();
-        Window w = getWindow();
         if (!isAccessGranted()) {
             Intent intent = null;
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
@@ -87,18 +81,6 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton(R.string.main_analyze, (dialog, whichButton) -> new Thread(()-> scan(false)).start()).show();
             else new Thread(()-> scan(true)).start();
         }
-    }
-    public static void setWindowFlag(Activity activity, final int bits, boolean on) {
-
-        Window win = activity.getWindow();
-        WindowManager.LayoutParams winParams = win.getAttributes();
-        if (on) {
-            winParams.flags |= bits;
-        }
-        {
-            winParams.flags &= ~bits;
-        }
-        win.setAttributes(winParams);
     }
     public void animateBtn() {
         TransitionManager.beginDelayedTransition(layout);
@@ -123,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 prefs.getBoolean("aggressive", false),
                 prefs.getBoolean("apk", false));
         if (path.listFiles() == null) {
-            TextView textView = printTextView("Scan failed...", Color.RED);
+            TextView textView = printTextView(printTextView(R.string.main_scan_failed), Color.RED);
             runOnUiThread(() -> fileListView.addView(textView));
         }
         runOnUiThread(() -> {
@@ -146,6 +128,11 @@ public class MainActivity extends AppCompatActivity {
         running = false;
         Looper.loop();
     }
+
+    private String printTextView(int main_scan_failed) {
+        return null;
+    }
+
     private synchronized TextView printTextView(String text, int color) {
         TextView textView = new TextView(MainActivity.this);
         textView.setTextColor(color);
@@ -180,11 +167,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public synchronized void requestWriteExternalPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE,},
-                    2);
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE},
+                    1);
         }
+    private boolean checkPermission() {
+        int result = ContextCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.MANAGE_EXTERNAL_STORAGE);
+        return result == PackageManager.PERMISSION_GRANTED;
     }
     private boolean isAccessGranted() {
         try {
@@ -192,22 +181,18 @@ public class MainActivity extends AppCompatActivity {
             ApplicationInfo applicationInfo = packageManager.getApplicationInfo(getPackageName(), 0);
             AppOpsManager appOpsManager = (AppOpsManager) getSystemService(Context.APP_OPS_SERVICE);
             int mode = 0;
-            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     mode = appOpsManager.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS,
                             applicationInfo.uid, applicationInfo.packageName);
-                }
-            }
             return (mode == AppOpsManager.MODE_ALLOWED);
 
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
     }
-    @SuppressLint("MissingSuperCall")
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == 1 &&
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 2 &&
                 grantResults.length > 0 &&
                 grantResults[0] != PackageManager.PERMISSION_GRANTED)
             prompt();

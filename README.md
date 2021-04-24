@@ -1,5 +1,9 @@
 # D4rK Cleaner
 
+╔╦╦╦═╦╗╔═╦═╦══╦═╗
+║║║║╩╣╚╣═╣║║║║║╩╣
+╚══╩═╩═╩═╩═╩╩╩╩═╝
+
 ![logo](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/logo.png) 
 
 # The last Android Cleaner you will ever need with Google inspired material design made by D4rK!
@@ -32,7 +36,7 @@ Bugs can be reported here.
 ## Opening Issues :warning:
 
 > Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk. You can ask for help at [Stack Overflow](https://stackoverflow.com/questions/tagged/android).
-> For support and informations, please contact <d4rk7355608@gmail.com>.
+> For support, informations and requests, please contact <d4rk7355608@gmail.com>.
 
 - Create an Android/general issue/bug.
 
@@ -49,17 +53,19 @@ Cleans:
 - Caches;
 - Advertisement folders.
 
-Features in development:
--Hidden cache cleaner;
-
-Upcoming major features:
-- Daily cleans;
-- Changeable themes; 
-- Clean SD card;
-- SAF file browser;
+Upcoming major features in development:
+| Feature name         | Description                                  | Linux        |
+| -------------------- | -------------------------------------------- | ------------ |
+| Daily cleans         | Auto daily cleans                            | Alpine Linux |
+| Hidden cache cleaner | Cleans hidden cache like CCleaner            | Alpine Linux |
+| Changeable themes    | Changeable themes for older Android versions | Alpine Linux |
+| Clean SD card        | Micro SD card cleaner                        | Alpine Linux |
+| SAF file browser     | Internal/external memory file explorer       | Alpine Linux |
 
 ![screenshot](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/screenshot.png)
 
 __Thanks TheRedSpy15 for LTECleaner:__ https://github.com/TheRedSpy15/LTECleanerFOSS
 
 __Privacy Policy:__ https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html
+
+![license](https://imgur.com/QQlcEVT.png) 

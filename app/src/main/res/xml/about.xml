@@ -7,14 +7,16 @@
         android:title="@string/about_github_link"
         android:icon="@drawable/ic_github"
         android:key="github_link">
-        <intent android:action="android.intent.action.VIEW"
+        <intent
+            android:action="android.intent.action.VIEW"
             android:data="https://github.com/D4rK7355608/com.d4rk.cleaner"/>
     </Preference>
     <Preference
         android:title="@string/about_play_store"
         android:icon="@drawable/ic_play_store"
         android:key="play_store">
-        <intent android:action="android.intent.action.VIEW"
+        <intent
+            android:action="android.intent.action.VIEW"
             android:data="https://play.google.com/store/apps/dev?id=5390214922640123642&amp;hl=en&amp;gl=US"/>
     </Preference>
     <Preference
@@ -26,21 +28,33 @@
         android:key="D4rK"
         android:icon="@drawable/ic_d4rk"
         android:summary="@string/about_d4rk_description">
-        <intent android:action="android.intent.action.VIEW"
+        <intent
+            android:action="android.intent.action.VIEW"
             android:data="https://www.youtube.com/channel/UCLDi-rmSRry0pNL-oVvGJAw"/>
     </Preference>
     <Preference android:title="@string/about_michael_tutorials"
         android:key="patreonSupport"
         android:icon="@drawable/ic_michael_tutorials"
         android:summary="@string/about_michael_tutorials_description">
-        <intent android:action="android.intent.action.VIEW"
+        <intent
+            android:action="android.intent.action.VIEW"
             android:data="https://www.youtube.com/channel/UCee5YBhGHVCF4JnQzoLFzVA"/>
+    </Preference>
+    <Preference
+        android:title="@string/about_desene_animate"
+        android:key="D4rK"
+        android:icon="@drawable/ic_desene_animate"
+        android:summary="@string/about_desene_animate_description">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://www.youtube.com/channel/UCgtHCg34rrDvdkjjjPW2jhQ"/>
     </Preference>
     <Preference android:title="@string/about_gamejolt"
         android:key="gamejolt"
         android:icon="@drawable/ic_gamejolt"
         android:summary="@string/about_gamejolt_description">
-        <intent android:action="android.intent.action.VIEW"
+        <intent
+            android:action="android.intent.action.VIEW"
             android:data="https://gamejolt.com/@D4rK_S-A-D"/>
     </Preference>
     <Preference
@@ -48,7 +62,8 @@
         android:key="deviantart"
         android:summary="@string/about_deviantart_description"
         android:icon="@drawable/ic_deviantart">
-        <intent android:action="android.intent.action.VIEW"
+        <intent
+            android:action="android.intent.action.VIEW"
             android:data="https://www.deviantart.com/d4rk7355608"/>
     </Preference>
     <Preference
@@ -62,8 +77,18 @@
     <Preference
         android:title="@string/about_privacy_policy"
         android:icon="@drawable/ic_privacy">
-        <intent android:action="android.intent.action.VIEW"
-            android:data="https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html"/>
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://ghcdn.rawgit.org/D4rK7355608/com.d4rk.cleaner/master/privacy_policy.html"/>
+    </Preference>
+    <Preference
+        android:title="@string/settings_support_patreon"
+        android:key="MichaelTutorials"
+        android:icon="@drawable/ic_patreon"
+        android:summary="@string/settings_support_patreon_description">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://www.patreon.com/d4rk7355608"/>
     </Preference>
     <CheckBoxPreference
         android:defaultValue="true"

@@ -49,6 +49,8 @@ public class WhitelistActivity extends AppCompatActivity {
             whiteList.add(new File(externalDir, "Alarms").getPath());
             whiteList.add(new File(externalDir, "Notifications").getPath());
             whiteList.add(new File(externalDir, "Pictures").getPath());
+            whiteList.add(new File(externalDir, "WhatsApp").getPath());
+            whiteList.add(new File(externalDir, "GBWhatsApp").getPath());
             whiteList.add(new File(externalDir, "Movies").getPath());
             whiteList.add(new File(externalDir, "Download").getPath());
             whiteList.add(new File(externalDir, "DCIM").getPath());
