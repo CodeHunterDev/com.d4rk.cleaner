@@ -6,6 +6,7 @@
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable-night/card.xml" value="0.2305921052631579" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable-night/ic_clean.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable-night/ic_github.xml" value="0.20208333333333334" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable-night/ic_splash_screen_d4rk.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable-night/ic_vn_back_solid.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable-night/ic_vn_down_solid.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/1.xml" value="0.22833876221498373" />
@@ -57,6 +58,7 @@
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_changelog.xml" value="0.2305921052631579" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_circle.xml" value="0.2305921052631579" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_clean.xml" value="0.22833876221498373" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_cleaner.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_clear_black_24dp.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_clipboard.xml" value="0.15" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_clipboard_back.xml" value="0.11677631578947369" />
@@ -74,6 +76,7 @@
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_dustpan.xml" value="0.25" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_email.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_error.xml" value="0.22833876221498373" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_face.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_filters.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_firebase.xml" value="0.14" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_gamejolt.xml" value="0.12203947368421053" />
@@ -96,6 +99,8 @@
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_miscellaneous.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_mobiledata_1x.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_mute.xml" value="0.22833876221498373" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_noname.xml" value="0.22833876221498373" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_noname4.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_oem.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_oem_acura.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_oem_alpine.xml" value="0.22833876221498373" />
@@ -124,11 +129,13 @@
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_search_black.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_sentiment_very_dissatisfied_grey600_36dp.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_settings.xml" value="0.12171052631578948" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_splash_screen_d4rk.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_spotify_56x56.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_square.xml" value="0.12203947368421053" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_square_outline.xml" value="0.1194078947368421" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_stopplay_animation.xml" value="0.21611842105263157" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_swap_calls.xml" value="0.22833876221498373" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_text_clean.xml" value="0.2257328990228013" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_triangle.xml" value="0.2305921052631579" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_triangle_blue.xml" value="0.11677631578947369" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/ic_vn_back_outlined.xml" value="0.22833876221498373" />
@@ -163,6 +170,7 @@
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/metadata_icon_new_circle.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/mtrl_ic_arrow_drop_down.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/music_icon.xml" value="0.22833876221498373" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/my_progress.xml" value="0.11414473684210526" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/newboost.xml" value="0.25" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/no_content_view_focus_ring.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/notification_action_background.xml" value="0.22833876221498373" />
@@ -218,21 +226,23 @@
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/white_circle.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/wifi_signal.xml" value="0.22833876221498373" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/drawable/wifi_signal_no_internet.xml" value="0.22833876221498373" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout-v26/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout-v26/activity_whitelist.xml" value="0.18" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout-v28/activity_main.xml" value="0.22" />
-        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout-v28/activity_whitelist.xml" value="0.22" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout-v28/activity_whitelist.xml" value="0.16" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_about.xml" value="0.22" />
-        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_changelog.xml" value="0.16155419222903886" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_changelog.xml" value="0.22" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_clipboard - Copy.xml" value="0.2182410423452769" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_clipboard.xml" value="0.22" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_fmm.xml" value="0.10394736842105264" />
-        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_prompt.xml" value="0.22" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_settings.xml" value="0.14" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_splash_screen.xml" value="0.1118421052631579" />
-        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_whitelist.xml" value="0.5" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_whitelist.xml" value="0.22" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/activity_whitelist_custom_textview.xml" value="0.20208333333333334" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/custom_toolbar.xml" value="0.22" />
-        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/dialog_input.xml" value="0.32914572864321606" />
+        <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/dialog_input.xml" value="0.2" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/layout/item_keyword.xml" value="0.21709006928406466" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/menu/main.xml" value="0.2182410423452769" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/mipmap-anydpi-v26/ic_clipboard_cleaner.xml" value="0.2305921052631579" />

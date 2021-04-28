@@ -29,16 +29,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:focusable="false">
-            <androidx.appcompat.widget.AppCompatEditText
+            <androidx.appcompat.widget.AppCompatTextView
                 android:background="@color/colorPrimary"
                 android:isScrollContainer="true"
-                android:editable="false"
                 android:focusable="false"
                 android:scrollbars="vertical"
                 android:gravity="center_horizontal"
                 android:text="@string/changelog"
-                android:textIsSelectable="false"
-                tools:ignore="Deprecated"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </ScrollView>
@@ -81,7 +78,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="0dp"
+        android:layout_marginStart="-10dp"
         android:layout_marginTop="160dp"
         android:rotation="@android:integer/config_longAnimTime"
         app:srcCompat="@drawable/ic_vn_back_solid" />
@@ -149,7 +146,6 @@
         app:srcCompat="@drawable/ic_triangle_blue"
         tools:ignore="RtlHardcoded"/>
     <ProgressBar
-        android:id="@+id/pbLoading"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

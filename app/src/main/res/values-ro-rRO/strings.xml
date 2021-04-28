@@ -101,4 +101,7 @@
     <string name="about_gamejolt_description">Profilul meu oficial de Gamejolt.</string>
     <string name="main_scan_failed">Scanare esuata… (Te rog verifica daca ai aprobat toate permisiunile)</string>
     <string name="about_desene_animate_description">Un canal simplu cu desene animate in romana.</string>
+    <string name="whitelist_button_clear">Curăță lista.</string>
+    <string name="whitelist_button_add">Adaugă fișiere/dosare.</string>
+    <string name="clipboard_setting_add">Adaugă orice dorești.</string>
 </resources>

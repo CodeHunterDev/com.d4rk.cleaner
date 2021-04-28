@@ -71,7 +71,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_text_clean"/>
+            app:srcCompat="@drawable/ic_text_clean"/>
     </com.google.android.material.card.MaterialCardView>
     <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/scanProgress"

@@ -42,7 +42,9 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:onClick="settings"
+        android:title="@string/settings_string"
         app:rippleColor="@color/colorAccent"
+        android:tooltipText="@string/settings_string"
         app:cardBackgroundColor="@color/colorPrimary"
         android:background="@color/colorPrimary"
         app:cardCornerRadius="100dp"
@@ -73,7 +75,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_text_clean"/>
+            app:srcCompat="@drawable/ic_text_clean"/>
     </com.google.android.material.card.MaterialCardView>
     <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/scanProgress"

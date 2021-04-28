@@ -41,7 +41,7 @@ Bugs can be reported here.
 - Create an Android/general issue/bug.
 
 Known bugs:
-- Rare moments when "Clean" button not working after using split screen;
+- Rare moments when "Clean" button not working after using split screen.
 
 __D4rK Cleaner is 100% free, open source inspired by LTE Cleaner by TheRedSpy15, ad free, and deletes everything it claims to!__
 
@@ -54,18 +54,18 @@ Cleans:
 - Advertisement folders.
 
 Upcoming major features in development:
-| Feature name         | Description                                  | Linux        |
-| -------------------- | -------------------------------------------- | ------------ |
-| Daily cleans         | Auto daily cleans                            | Alpine Linux |
-| Hidden cache cleaner | Cleans hidden cache like CCleaner            | Alpine Linux |
-| Changeable themes    | Changeable themes for older Android versions | Alpine Linux |
-| Clean SD card        | Micro SD card cleaner                        | Alpine Linux |
-| SAF file browser     | Internal/external memory file explorer       | Alpine Linux |
+| Feature name         | Description                                  | Status        |
+| -------------------- | -------------------------------------------- | ------------- |
+| Daily cleans         | Auto daily cleans                            | Not started   |
+| Hidden cache cleaner | Cleans hidden cache like CCleaner            | In developing |
+| Changeable themes    | Changeable themes for older Android versions | In developing |
+| Clean SD card        | Micro SD card cleaner                        | Not started   |
+| SAF file browser     | Internal/external memory file explorer       | In developing |
 
 ![screenshot](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/screenshot.png)
 
 __Thanks TheRedSpy15 for LTECleaner:__ https://github.com/TheRedSpy15/LTECleanerFOSS
 
-__Privacy Policy:__ https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html
+__Privacy Policy:__ https://ghcdn.rawgit.org/D4rK7355608/com.d4rk.cleaner/master/privacy_policy.html
 
 ![license](https://imgur.com/QQlcEVT.png) 

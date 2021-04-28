@@ -1,11 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.fxn769:stash:1.3.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a9246bffe6b76730f3261989121fde3c/transformed/jetified-stash-1.3.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/179d13799fe6d41c2ca28582ccd621df/transformed/jetified-stash-1.3.2/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/74844b52686b48041491e57abf9355fe/transformed/jetified-stash-1.3.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/74844b52686b48041491e57abf9355fe/transformed/jetified-stash-1.3.2/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/74844b52686b48041491e57abf9355fe/transformed/jetified-stash-1.3.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/74844b52686b48041491e57abf9355fe/transformed/jetified-stash-1.3.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fxn769/stash/1.3.2/279afecd83227095a4fbfbc755961af77edebf25/stash-1.3.2-javadoc.jar!/" />
