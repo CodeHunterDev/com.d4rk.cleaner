@@ -9,7 +9,7 @@
 - ║║║║╩╣╚╣═╣║║║║║╩╣
 - ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-![logo](https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/screenshots/logo.png) 
+<img src="/screenshots/logo.png" width="512">
 
 # The last Android Cleaner you will ever need with Google inspired material design made by D4rK to be more simplistic and easy to use!
 
@@ -73,12 +73,13 @@ Upcoming major features and there development stage:
 
 ## Screenshots
 
-<img src="/screenshots/1.png" width="200">
+<img src="/screenshots/screenshot.png" width="200">
 
 <details>
   <summary>Special Thanks</summary>
-__Thanks TheRedSpy15 for LTECleaner:__ https://github.com/TheRedSpy15/LTECleanerFOSS
-__Thanks to UnderBenis96, Sonerie C8chilu' dă Haur a.k.a Băiatu' Pocnitoare (fostă petardă de elită pă vremea lu' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu for some translations and support.
+- Thanks TheRedSpy15 for LTECleaner: https://github.com/TheRedSpy15/LTECleanerFOSS
+
+- Thanks to UnderBenis96, Sonerie C8chilu' dă Haur a.k.a Băiatu' Pocnitoare (fostă petardă de elită pă vremea lu' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu for some translations and support.
 </details>
 
 __Privacy Policy:__ https://ghcdn.rawgit.org/D4rK7355608/com.d4rk.cleaner/master/privacy_policy.html
