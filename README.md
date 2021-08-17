@@ -77,7 +77,7 @@ Upcoming major features and there development stage:
 ## Screenshots
 
 <img src="/screenshots/screenshot.png" width="200">
-<img src="/screenshots/6.png" width="300">
+<img src="/screenshots/6.png">
 
 <details>
   <summary>Special Thanks</summary>
