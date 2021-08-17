@@ -77,7 +77,7 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.21'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1'
-    implementation 'org.jetbrains:annotations:21.0.1'
+    implementation 'org.jetbrains:annotations:22.0.0'
     implementation 'com.github.pluscubed:recycler-fast-scroll:0.3.2'
     implementation 'com.github.obolsh:rambooster:1.0.2@aar'
     implementation 'id.zelory:compressor:3.0.1'
