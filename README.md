@@ -1,3 +1,7 @@
+<p align="center">
+<img src="/screenshots/d4rk_cleaner.png" width="300">
+</p>
+
 ![Works with Android](https://img.shields.io/badge/Works_with-Android-green?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/D4rK7355608/com.d4rk.cleaner)
 ![GitHub license](https://img.shields.io/github/license/D4rK7355608/com.d4rk.cleaner)
@@ -9,9 +13,6 @@
 - ║║║║╩╣╚╣═╣║║║║║╩╣
 - ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-<p align="center">
-<img src="/screenshots/d4rk_cleaner.png" width="300">
-</p>
 
 # The last Android Cleaner you will ever need with Google inspired material design made by D4rK to be more simplistic and easy to use!
 
