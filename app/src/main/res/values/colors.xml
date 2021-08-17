@@ -2,8 +2,6 @@
 <resources>
     <color name="colorPrimary">@android:color/transparent</color>
     <color name="colorDarkMode">#121212</color>
-    <color name="colorDarkModeIssueReporter">#303030</color>
-    <color name="colorWhiteIssueReporter">#FAFAFA</color>
     <color name="colorWhiteShortcuts">#F5F5F5</color>
     <color name="colorDarkShortcuts">#2D2D2D</color>
     <color name="colorGoogleYellow">#F4B400</color>

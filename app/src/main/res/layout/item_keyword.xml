@@ -8,14 +8,14 @@
     android:layout_marginBottom="4dp"
     android:gravity="center_vertical"
     android:orientation="horizontal">
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textKeywordContent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         tools:text="Keyword"/>
-    <ImageButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/imageKeywordRemove"
         android:layout_width="32dp"
         android:layout_height="32dp"

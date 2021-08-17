@@ -56,6 +56,21 @@ fun Context.requestInput(
             ?.let { callback.invoke(it) }
     }
 }
+fun Context.createCleanShortcut() {
+    createShortcut(
+        "clean",
+        R.string.clipboard_clean, R.string.clipboard_clean,
+        R.mipmap.ic_clipboard_cleaner, ACTION_CLEAN
+    )
+}
+
+fun Context.createContentShortcut() {
+    createShortcut(
+        "content",
+        R.string.clipboard_content_short, R.string.clipboard_content,
+        R.drawable.ic_clipboard_widget, ACTION_CONTENT
+    )
+}
 @SuppressLint("UnspecifiedImmutableFlag")
 private fun Context.createShortcut(
     id: String,
@@ -68,7 +83,6 @@ private fun Context.createShortcut(
             ShortcutInfoCompat.Builder(this, id)
                 .setShortLabel(getString(shortLabelRes))
                 .setLongLabel(getString(longLabelRes))
-                .setDisabledMessage(getString(R.string.clipboard_shortcut_disabled))
                 .setIcon(IconCompat.createWithResource(this, iconRes))
                 .setIntent(IntentActivity.activityIntent(this, action))
                 .build(), PendingIntent.getBroadcast(

@@ -16,7 +16,8 @@
         android:shortcutId="whitelist"
         android:enabled="true"
         android:icon="@mipmap/ic_shortcut_whitelist"
-        android:shortcutShortLabel="@string/settings_whitelist"
+        android:shortcutShortLabel="@string/whitelist_string"
+        android:shortcutLongLabel="@string/long_shortcut_whitelist"
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.VIEW"
@@ -28,12 +29,35 @@
         android:shortcutId="clipboardcleaner"
         android:enabled="true"
         android:icon="@mipmap/ic_clipboard_cleaner"
-        android:shortcutShortLabel="@string/settings_clipboard"
+        android:shortcutShortLabel="@string/navigation_drawer_clipboard_cleaner"
+        android:shortcutLongLabel="@string/long_shortcut_clipboard_cleaner"
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.d4rk.cleaner"
             android:targetClass="com.d4rk.cleaner.clipboard.ClipboardActivity"/>
             <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_shortcut_clean_clipboard"
+        android:shortcutId="clean"
+        android:shortcutLongLabel="@string/long_shortcut_clipboard_cleaner"
+        android:shortcutShortLabel="@string/clipboard_clean">
+        <intent
+            android:action="com.d4rk.cleaner.clipboard.CLEAN"
+            android:targetClass="com.d4rk.cleaner.clipboard.IntentActivity"
+            android:targetPackage="com.d4rk.cleaner.clipboard"/>
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_clipboard_cleaner"
+        android:shortcutId="content"
+        android:shortcutLongLabel="@string/clipboard_content"
+        android:shortcutShortLabel="@string/clipboard_content_short">
+        <intent
+            android:action="com.d4rk.cleaner.clipboard.CONTENT"
+            android:targetClass="com.d4rk.cleaner.clipboard.IntentActivity"
+            android:targetPackage="com.d4rk.cleaner.clipboard"/>
     </shortcut>
 </shortcuts>

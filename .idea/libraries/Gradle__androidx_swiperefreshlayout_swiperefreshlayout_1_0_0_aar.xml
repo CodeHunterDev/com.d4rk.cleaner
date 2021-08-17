@@ -1,39 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0d45445c00ad1f45ae296dc1631133c/transformed/swiperefreshlayout-1.0.0/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1761b1b579b2b217defb3d8ff6ab3701/transformed/swiperefreshlayout-1.0.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/810e51690ff6c199cee785d4e0b8b1fd/transformed/swiperefreshlayout-1.0.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../../../../Google/Android/Android Studio/Gradle/caches/transforms-3/29e6e6d3d66e32d7f0e3e3dd70e3d91e/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$PROJECT_DIR$/../../../../../Google/Android/Android Studio/Gradle/caches/transforms-3/29e6e6d3d66e32d7f0e3e3dd70e3d91e/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/29e6e6d3d66e32d7f0e3e3dd70e3d91e/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6ebdfea9b4358747b1bc54aabb364afb/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6a4fabbe59f45330353f14a8d597fd21/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0cfb6396671f69de193d28dd4a73b855/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/54f626dc43eb5f6aa66a6d0bc77fd9cb/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/091d3477af89ed6dd2ab7905cd5f5234/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/966acd66ff1571be148b4d50fd9a520c/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/176236373f06af8d8265e1e90ef772a2/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fd2c648066685e23450a7924e324ba99/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f01d22190a66e6f148b488e1914e81f8/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/86f264b3618f7448f238b1fde249dc89/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/11637debb09d8e9f68c1f6587ab12ea6/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/412d9b2afbb60aea00f910e1d1fa3244/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ffa2042538c76a98bf45ec0d3817f72e/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/51cf365d83d915e63f29033170949ef8/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4d98ee321c198910489e397311c8fc1e/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0d45445c00ad1f45ae296dc1631133c/transformed/swiperefreshlayout-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d0d45445c00ad1f45ae296dc1631133c/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d0d45445c00ad1f45ae296dc1631133c/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/39ed3c27cf19e85196441c6529757410/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/de19c3947ac17b99e47a51c6e2f0acb8/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/89a976e7d870beb0d5a6c0b7f6cf5630/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5c8a121e6d6165e3ca39db07e755a57b/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2a2e5ad4eab6054dc46c09aff5c60ca3/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1761b1b579b2b217defb3d8ff6ab3701/transformed/swiperefreshlayout-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1761b1b579b2b217defb3d8ff6ab3701/transformed/swiperefreshlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1761b1b579b2b217defb3d8ff6ab3701/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/eba6e7515568586fbad60803ed6f640d/transformed/swiperefreshlayout-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/810e51690ff6c199cee785d4e0b8b1fd/transformed/swiperefreshlayout-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/810e51690ff6c199cee785d4e0b8b1fd/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/810e51690ff6c199cee785d4e0b8b1fd/transformed/swiperefreshlayout-1.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

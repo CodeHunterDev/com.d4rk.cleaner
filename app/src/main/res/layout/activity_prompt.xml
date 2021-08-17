@@ -8,8 +8,8 @@
     android:fitsSystemWindows="true"
     tools:context="com.d4rk.cleaner.PromptActivity">
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:srcCompat="@drawable/ic_d4rk"
         android:layout_gravity="top|center"/>
     <androidx.appcompat.widget.AppCompatImageView
@@ -32,11 +32,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="@color/colorAccent"
         android:text="@string/settings_string"
         android:layout_gravity="center"
         app:layout_constraintTop_toTopOf="@id/prompttext"/>

@@ -3,6 +3,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import androidx.annotation.StringDef
+import androidx.core.content.edit
 import com.d4rk.cleaner.R
 private const val PREFIX = "com.d4rk.cleaner.clipboard.action"
 const val ACTION_CLEAN = "$PREFIX.CLEAN"
@@ -55,6 +56,7 @@ private fun ClipboardManager.getClipContent(context: Context): String = primaryC
 private const val PREF_USE_KEYWORD = "pref_use_keyword"
 private const val PREF_KEYWORD_NORMAL = "pref_keyword_normal"
 private const val PREF_KEYWORD_REGEX = "pref_keyword_regex"
+private const val PREF_ASSISTANT_ACTION = "pref_assistant_action"
 fun Context.getUsingKeyword(): Boolean = getSafeSharedPreference()
     .getBoolean(PREF_USE_KEYWORD, false)
 fun Context.setUsingKeyword(value: Boolean) = getSafeSharedPreference().edit()
@@ -71,3 +73,6 @@ private const val PREF_CLEAN_TIMEOUT = "pref_clean_timeout"
 var Context.serviceCleanTimeout: Int
     get() = getSafeSharedPreference().getInt(PREF_CLEAN_TIMEOUT, 0)
     set(value) = getSafeSharedPreference().edit().putInt(PREF_CLEAN_TIMEOUT, value).apply()
+var Context.assistantAction: String
+    get() = getSafeSharedPreference().getString(PREF_ASSISTANT_ACTION, ACTION_CLEAN) ?: ACTION_CLEAN
+    set(value) = getSafeSharedPreference().edit { putString(PREF_ASSISTANT_ACTION, value) }

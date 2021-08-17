@@ -1,9 +1,11 @@
 package com.d4rk.cleaner;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 import androidx.appcompat.app.AppCompatActivity;
+@SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {
     Handler handler;
     @Override
@@ -16,6 +18,6 @@ public class SplashScreenActivity extends AppCompatActivity {
             Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-        }, 2569);
+        }, 2500);
     }
 }

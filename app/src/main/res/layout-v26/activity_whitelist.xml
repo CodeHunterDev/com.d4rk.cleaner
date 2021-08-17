@@ -68,6 +68,7 @@
         app:cardCornerRadius="100dp"
         android:tooltipText="@string/whitelist_button_clear"
         app:cardBackgroundColor="@color/colorPrimary"
+        app:cardElevation="0dp"
         app:rippleColor="@color/colorAccent"
         android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
@@ -86,9 +87,10 @@
         android:layout_marginStart="8dp"
         app:cardCornerRadius="100dp"
         android:onClick="addToWhiteList"
-        android:tooltipText="@string/whitelist_button_add"
         app:rippleColor="@color/colorAccent"
+        app:cardElevation="0dp"
         android:background="@color/colorPrimary"
+        android:tooltipText="@string/whitelist_button_add"
         app:cardBackgroundColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintStart_toEndOf="@+id/textView"
@@ -116,12 +118,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="UsingOnClickInXml">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:textColor="@color/colorAndroidGreen"
-        android:text="@string/whitelist_d4rk_default"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAndroidGreen"
+            android:text="@string/whitelist_d4rk_default"/>
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

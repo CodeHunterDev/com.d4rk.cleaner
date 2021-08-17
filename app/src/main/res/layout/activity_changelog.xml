@@ -13,6 +13,11 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <androidx.core.widget.ContentLoadingProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"/>
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
-        <ScrollView
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:focusable="false">
@@ -38,35 +43,30 @@
                 android:text="@string/changelog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-        </ScrollView>
+        </androidx.core.widget.NestedScrollView>
     </com.google.android.material.card.MaterialCardView>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_gravity="bottom|center"
-        app:srcCompat="@drawable/ic_d4rk"/>
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:rotation="@android:integer/config_longAnimTime"
-        app:srcCompat="@drawable/ic_square_outline"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="24dp"/>
+        app:srcCompat="@drawable/ic_changelog"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="300dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         app:srcCompat="@drawable/ic_square_outline"
-        android:layout_marginStart="-10dp"
-        android:layout_marginTop="300dp"/>
+        tools:ignore="ImageContrastCheck" />
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="-80dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         app:srcCompat="@drawable/ic_square_outline"
-        android:layout_marginStart="60dp"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="-80dp"/>
+        tools:ignore="ImageContrastCheck" />
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -126,9 +126,10 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="end"
-        android:layout_marginEnd="-99dp"
         android:layout_marginTop="440dp"
-        app:srcCompat="@drawable/ic_roundline"/>
+        android:layout_marginEnd="-99dp"
+        app:srcCompat="@drawable/ic_roundline"
+        tools:ignore="ImageContrastCheck" />
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="69dp"
         android:layout_height="69dp"
@@ -145,9 +146,4 @@
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         app:srcCompat="@drawable/ic_triangle_blue"
         tools:ignore="RtlHardcoded"/>
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"/>
 </com.google.android.material.card.MaterialCardView>

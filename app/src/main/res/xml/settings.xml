@@ -3,58 +3,6 @@
     android:title="@string/settings_string"
     android:key="settings">
     <PreferenceCategory
-        android:title="@string/filters_important"
-        android:icon="@drawable/ic_info"/>
-    <Preference
-        android:title="@string/settings_donate"
-        android:key="donate"
-        android:icon="@drawable/ic_contribute"
-        android:summary="@string/settings_donate_description">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://www.paypal.me/d4rkmichaeltutorials"/>
-    </Preference>
-    <Preference
-        android:title="@string/settings_github_suggestion"
-        android:key="suggestion"
-        android:icon="@drawable/ic_github"
-        android:summary="@string/settings_github_suggestion_description">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.cleaner"
-            android:targetClass="com.package.name.ActivityName"/>
-    </Preference>
-    <Preference
-        android:title="@string/settings_changelog"
-        android:key="changelog"
-        android:icon="@drawable/ic_changelog"
-        android:summary="@string/settings_changelog_description">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.cleaner"
-            android:targetClass="com.d4rk.cleaner.ChangelogActivity"/>
-    </Preference>
-    <Preference
-        android:title="@string/settings_whitelist"
-        android:key="whitelist"
-        android:icon="@drawable/ic_whitelist"
-        android:summary="@string/settings_whitelist_description">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.cleaner"
-            android:targetClass="com.d4rk.cleaner.WhitelistActivity"/>
-    </Preference>
-    <Preference
-        android:title="@string/settings_clipboard"
-        android:key="clipboard"
-        android:icon="@drawable/ic_clipboard"
-        android:summary="@string/settings_clipboard_description">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.cleaner"
-            android:targetClass="com.d4rk.cleaner.clipboard.ClipboardActivity"/>
-    </Preference>
-    <PreferenceCategory
         android:title="@string/filters_string"
         android:icon="@drawable/ic_filters">
         <CheckBoxPreference
@@ -71,6 +19,13 @@
             android:persistent="true"
             android:summary="@string/filters_aggressive_filter_description"
             android:title="@string/filters_aggressive_filter"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="true_aggressive"
+            android:icon="@drawable/ic_true_aggressive_filter"
+            android:persistent="true"
+            android:summary="@string/true_aggressive_filer_description"
+            android:title="@string/true_aggressive_filter"/>
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="empty"
@@ -109,15 +64,13 @@
             android:icon="@drawable/ic_one_click_clean"
             android:summary="@string/miscellaneous_one_click_clean_description"
             android:title="@string/miscellaneous_one_click_clean"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="firebase"
+            android:icon="@drawable/ic_firebase"
+            android:persistent="true"
+            android:summary="@string/miscellaneous_firebase_description"
+            android:title="@string/miscellaneous_firebase"/>
     </PreferenceCategory>
-    <Preference
-        android:title="@string/miscellaneous_about"
-        android:key="about"
-        android:icon="@drawable/ic_about">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.cleaner"
-            android:targetClass="com.d4rk.cleaner.AboutActivity"/>
-    </Preference>
     <PreferenceCategory android:title="@string/copyright"/>
 </PreferenceScreen>

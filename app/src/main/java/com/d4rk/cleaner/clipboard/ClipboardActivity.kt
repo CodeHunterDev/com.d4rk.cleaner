@@ -1,15 +1,22 @@
 package com.d4rk.cleaner.clipboard
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.text.InputType
 import android.view.View
+import android.provider.Settings
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.content.edit
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import com.d4rk.cleaner.R
 import com.d4rk.cleaner.databinding.ActivityClipboardBinding
 import java.text.NumberFormat
@@ -19,11 +26,31 @@ class ClipboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityClipboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        if (!isNOrLater()) {
+            binding.cardTile.visibility = View.GONE
+        }
         setUpButtons()
         setUpService()
+        setUpShortcut()
+        setUpAssistant()
         setUpSetting()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            binding.cardService.visibility = View.GONE
+            binding.cardService.isGone = true
+            val showServerCardKey = "show_service_card"
+            val sp = getSafeSharedPreference()
+            if (sp.getBoolean(showServerCardKey, false)) {
+                binding.cardService.isVisible = true
+            } else {
+                var times = 0
+                binding.imageTitle.setOnClickListener {
+                    if (++times == 7) {
+                        sp.edit {
+                            putBoolean(showServerCardKey, true)
+                        }
+                        binding.cardService.isVisible = true
+                    }
+                }
+            }
         }
     }
     override fun onRequestPermissionsResult(
@@ -104,6 +131,58 @@ class ClipboardActivity : AppCompatActivity() {
                 serviceCleanTimeout = it.toIntOrNull() ?: 0
                 updateCleanTimeoutText()
             }
+        }
+    }
+    private fun setUpShortcut() {
+        fun checkAndRequestShortcutPermission(): Boolean {
+            return if (!isOOrLater() && isKitkatOrLater() &&
+                ContextCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.INSTALL_SHORTCUT
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.INSTALL_SHORTCUT), 0
+                )
+                false
+            } else {
+                true
+            }
+        }
+        binding.btnShortcutClean.setOnClickListener {
+            if (checkAndRequestShortcutPermission()) {
+                createCleanShortcut()
+            }
+        }
+        binding.btnShortcutContent.setOnClickListener {
+            if (checkAndRequestShortcutPermission()) {
+                createContentShortcut()
+            }
+        }
+    }
+    private fun setUpAssistant() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            binding.cardSystemAssist.isGone = true
+            return
+        }
+
+        binding.btnOpenAssistantSettings.setOnClickListener {
+            try {
+                startActivity(Intent(Settings.ACTION_VOICE_INPUT_SETTINGS))
+            } catch (e: Exception) {
+                // Ignore
+            }
+        }
+
+        if (assistantAction == ACTION_CLEAN) {
+            binding.ratioAssistantClean.isChecked = true
+        } else {
+            binding.ratioAssistantContent.isChecked = true
+        }
+        binding.ratioGroupAssistant.setOnCheckedChangeListener { _, checkedId ->
+            assistantAction =
+                if (checkedId == R.id.ratioAssistantClean) ACTION_CLEAN else ACTION_CONTENT
         }
     }
     private fun setUpSetting() {

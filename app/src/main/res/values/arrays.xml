@@ -2,6 +2,97 @@
     <string-array name="aggressive_filter_folders">
         <item>supersonicads</item>
         <item>Cache</item>
+        <item>AnyDesk</item>
+        <item>acmarket</item>
+        <item>net.appcake</item>
+        <item>Downloads</item>
+        <item>.estrongs</item>
+        <item>thumbnails?</item>
+        <item>ASUS</item>
+        <item>Podcasts</item>
+        <item>QQSecureDownload</item>
+        <item>com.kingroot.kinguser</item>
+        <item>jumobile</item>
+        <item>minidump</item>
+        <item>mobvista</item>
+        <item>ifont</item>
+        <item>OSSLog</item>
+        <item>.thumbnails</item>
+        <item>UnityAdsVideoCache</item>
+        <item>albumthumbs?</item>
+        <item>blueWAplus</item>
+        <item>XiaoYing</item>
+        <item>OSSLog</item>
+        <item>LOST.DIR</item>
+        <item>Discord</item>
+        <item>.Trash</item>
+        <item>kinguserdown</item>
+        <item>desktop.ini</item>
+        <item>leakcanary</item>
+        <item>.DS_Store</item>
+        <item>.spotlight-V100</item>
+        <item>fseventsd</item>
+        <item>Bugreport</item>
+        <item>bugreports</item>
+        <item>Ringtones</item>
+        <item>Audiobooks</item>
+        <item>Notifications</item>
+        <item>TWRP</item>
+        <item>.trash</item>
+        <item>cache</item>
+    </string-array>
+    <string-array name="aggressive_filter_files">
+        <item>.nomedia</item>
+        <item>.exe</item>
+        <item>.apk</item>
+        <item>.apks</item>
+        <item>.apkm</item>
+        <item>.csv</item>
+        <item>thumbs?.db</item>
+    </string-array>
+    <string-array name="true_aggressive_filter_files">
+        <item>.nomedia</item>
+        <item>.exe</item>
+        <item>.apk</item>
+        <item>.apks</item>
+        <item>.apkm</item>
+        <item>.csv</item>
+        <item>thumbs?.db</item>
+        <item>.tmp</item>
+        <item>.temp</item>
+        <item>.log</item>
+        <item>.logs</item>
+        <item>.png</item>
+        <item>.jpg</item>
+        <item>.webp</item>
+        <item>.gif</item>
+        <item>.bmp</item>
+        <item>.psd</item>
+        <item>.pxr</item>
+        <item>.mp4</item>
+        <item>.mkv</item>
+        <item>.xd</item>
+        <item>.mp3</item>
+        <item>.wav</item>
+        <item>.xml</item>
+        <item>.zip</item>
+        <item>.rar</item>
+        <item>.txt</item>
+        <item>.pdf</item>
+        <item>.ini</item>
+        <item>.viz</item>
+        <item>.psxpj</item>
+        <item>.ttf</item>
+        <item>.doc</item>
+        <item>.docx</item>
+        <item>.htm</item>
+        <item>.html</item>
+        <item>.ppt</item>
+        <item>.pptx</item>
+    </string-array>
+    <string-array name="true_aggressive_filter_files_folders">
+        <item>supersonicads</item>
+        <item>Cache</item>
         <item>ApkEditor</item>
         <item>AnyDesk</item>
         <item>Download</item>
@@ -64,23 +155,26 @@
         <item>Camera</item>
         <item>Notifications</item>
         <item>TWRP</item>
-        <item>.Trash</item>
+        <item>.trash</item>
         <item>cache</item>
-    </string-array>
-    <string-array name="aggressive_filter_files">
-        <item>.nomedia</item>
-        <item>.exe</item>
-        <item>.apk</item>
-        <item>.apks</item>
-        <item>.apkm</item>
-        <item>.csv</item>
-        <item>thumbs?.db</item>
+        <item>Logs</item>
+        <item>logs</item>
+        <item>log</item>
+        <item>Log</item>
+        <item>tmp</item>
+        <item>Tmp</item>
+        <item>Temp</item>
+        <item>ads</item>
+        <item>temp</item>
+        <item>Temporary</item>
+        <item>temporary</item>
     </string-array>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.temp</item>
         <item>.log</item>
         <item>.logs</item>
+        <item>.ini</item>
     </string-array>
     <string-array name="generic_filter_folders">
         <item>Logs</item>
@@ -90,6 +184,9 @@
         <item>tmp</item>
         <item>Tmp</item>
         <item>Temp</item>
+        <item>ads</item>
+        <item>Ads</item>
+        <item>Advertisement</item>
         <item>temp</item>
         <item>Temporary</item>
         <item>temporary</item>

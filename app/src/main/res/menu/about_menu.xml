@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/open_source_libraries"
+        android:orderInCategory="200"
+        android:title="@string/about_open_source_libraries"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/privacy_policy"
+        android:orderInCategory="200"
+        android:title="@string/about_privacy_policy"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/about_license"
+        android:orderInCategory="200"
+        android:title="@string/about_license"
+        app:showAsAction="never"/>
+</menu>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.d4rk.cleaner">
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
@@ -11,7 +10,14 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission
         android:name="android.permission.CLEAR_APP_CACHE"
@@ -38,9 +44,9 @@
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <meta-data
@@ -52,8 +58,16 @@
             android:theme="@style/AppTheme"/>
         <activity
             android:name=".ChangelogActivity"
-            android:label="@string/settings_changelog"
+            android:label="@string/about_changelog"
             android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".compressor.CompressorActivity"
+            android:label="@string/image_compressor"
+            android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.d4rk.cleaner.compressor.CompressorActivity"/>
+        </activity>
         <activity
             android:name=".PromptActivity"
             android:label="@string/title_activity_prompt"
@@ -65,6 +79,14 @@
             android:screenOrientation="fullUser"
             android:theme="@style/AppTheme"/>
         <activity
+            android:name=".rambooster.Home"
+            android:theme="@style/AppTheme"
+            android:label="@string/navigation_drawer_ram_booster">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".rambooster.Home"/>
+        </activity>
+        <activity
             android:name=".SettingsActivity"
             android:label="@string/settings_string"
             android:parentActivityName=".MainActivity"
@@ -73,7 +95,8 @@
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/AppThemeNoActionBar"
-            tools:ignore="IntentFilterExportedReceiver">
+            tools:ignore="IntentFilterExportedReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -84,32 +107,79 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_d4rk_cleaner"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppThemeNoActionBar"/>
         <activity
-            android:name="com.d4rk.cleaner.clipboard.ClipboardActivity"
-            android:label="@string/settings_clipboard">
+            android:name=".clipboard.ClipboardActivity"
+            android:label="@string/navigation_drawer_clipboard_cleaner">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.d4rk.cleaner.clipboard.ClipboardActivity"/>
         </activity>
         <activity
-            android:name="com.d4rk.cleaner.clipboard.IntentActivity"
+            android:name=".clipboard.IntentActivity"
             android:excludeFromRecents="true"
             android:exported="true"
             android:launchMode="singleTask"
             android:taskAffinity=""
-            android:theme="@android:style/Theme.NoDisplay"/>
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.ASSIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <receiver
-            android:name="com.d4rk.cleaner.clipboard.BootReceiver"
+            android:name=".clipboard.BootReceiver"
             android:enabled="true"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
         <service
-            android:name="com.d4rk.cleaner.clipboard.CleanService"
+            android:name=".clipboard.CleanService"
             android:enabled="true"/>
+        <service
+            android:name=".clipboard.tile.CleanTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_broom"
+            android:label="@string/clipboard_clean"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name=".clipboard.widget.ContentWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_content_info"/>
+        </receiver>
+        <service
+            android:name=".clipboard.tile.ContentTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_drawer_clipboard"
+            android:label="@string/clipboard_content"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name=".NotificationReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".NotificationIntentService"
+            android:exported="false" >
+        </service>
+        <service android:name=".rambooster.services.LightService"/>
     </application>
 </manifest>
