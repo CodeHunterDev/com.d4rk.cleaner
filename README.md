@@ -81,10 +81,12 @@ Upcoming major features and there development stage:
 
 <details>
   <summary>Special Thanks</summary>
+
 - Thanks TheRedSpy15 for LTECleaner;
 - Thanks DeweyReed for Clipboard Cleaner;
 - Thanks UnderBenis96, Sonerie C8chilu' dă Haur a.k.a Băiatu' Pocnitoare (fostă petardă de elită pă vremea lu' Ștefan cel Mare) & Wiss Kill for testing;
 - YoYo & Auroșu Roșu for some translations.
+
 </details>
 
 __Privacy Policy:__ https://ghcdn.rawgit.org/D4rK7355608/com.d4rk.cleaner/master/privacy_policy.html
