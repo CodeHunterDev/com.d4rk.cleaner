@@ -9,7 +9,7 @@
 - ║║║║╩╣╚╣═╣║║║║║╩╣
 - ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-<img src="/screenshots/d4rk_cleaner.png" width="200">
+<img align="center" src="/screenshots/d4rk_cleaner.png" width="300">
 
 # The last Android Cleaner you will ever need with Google inspired material design made by D4rK to be more simplistic and easy to use!
 
