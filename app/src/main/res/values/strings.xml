@@ -17,6 +17,7 @@
     <string name="navigation_drawer_support" translatable="false">Support!</string>
     <string name="main_progress" translatable="false">0%</string>
 
+    <string name="invalid_media_cleaner" translatable="false">Invalid Media Cleaner!</string>
     <string name="first_step_tips" translatable="false"><![CDATA[
     Start scan and choose invalid media files to remove.<br>
     <br>

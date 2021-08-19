@@ -85,12 +85,10 @@ class FileUtil {
         return newFile;
     }
     private static void copy(InputStream input, OutputStream output) throws IOException {
-        long count = 0;
         int n;
         byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
         while (EOF != (n = input.read(buffer))) {
             output.write(buffer, 0, n);
-            count += n;
         }
     }
 }
