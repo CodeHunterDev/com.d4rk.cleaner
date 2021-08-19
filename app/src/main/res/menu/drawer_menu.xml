@@ -15,6 +15,11 @@
             android:title="@string/navigation_drawer_clipboard_cleaner">
         </item>
         <item
+            android:id="@+id/nav_drawer_invalid_media_cleaner"
+            android:icon="@drawable/ic_drawer_invalid_media_cleaner"
+            android:title="Invalid Media Cleaner">
+        </item>
+        <item
             android:id="@+id/nav_drawer_image_compressor"
             android:icon="@drawable/ic_drawer_image_compressor"
             android:title="@string/image_compressor">

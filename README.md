@@ -2,7 +2,8 @@
 <img src="/screenshots/d4rk_cleaner.png" width="300">
 </p>
 
-![Works with Android](https://img.shields.io/badge/Works_with-Android-green?style=flat-square)
+![Android CI](https://github.com/D4rK7355608/com.d4rk.cleaner/workflows/Android%20CI/badge.svg)
+![Works with Android](https://img.shields.io/badge/Works%20with-Android-blue)
 ![GitHub issues](https://img.shields.io/github/issues/D4rK7355608/com.d4rk.cleaner)
 ![GitHub license](https://img.shields.io/github/license/D4rK7355608/com.d4rk.cleaner)
 ![code-grade](https://www.code-inspector.com/project/26544/status/svg)
@@ -61,6 +62,7 @@ Features:
 - Cleans temporary files;
 - Cleans caches;
 - Cleans advertisement folders;
+- Cleans invalid media files;
 - Make whitelists;
 - Customizable cleans;
 - Compress Images.
@@ -74,11 +76,7 @@ Upcoming major features and there development stage:
 | Clean SD card        | Micro SD card cleaner                        | Not started   |
 | SAF file browser     | Internal/external memory file explorer       | In developing |
 
-## Screenshots
-
-<p align="center">
-<img src="/screenshots/screenshot.png" width="200">
-</p>
+## Screenshots:
 
 <img src="/screenshots/6.png">
 

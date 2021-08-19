@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.pluscubed:recycler-fast-scroll:0.3.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/09fb9499fe38d3043e3e373b9b758523/transformed/jetified-recycler-fast-scroll-0.3.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/09fb9499fe38d3043e3e373b9b758523/transformed/jetified-recycler-fast-scroll-0.3.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/09fb9499fe38d3043e3e373b9b758523/transformed/jetified-recycler-fast-scroll-0.3.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dd8623ae03f53798ff5ac10c05c63959/transformed/jetified-recycler-fast-scroll-0.3.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dd8623ae03f53798ff5ac10c05c63959/transformed/jetified-recycler-fast-scroll-0.3.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/dd8623ae03f53798ff5ac10c05c63959/transformed/jetified-recycler-fast-scroll-0.3.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.pluscubed/recycler-fast-scroll/0.3.2/7f7ac79941397ac44dedfaa716fdec336140290a/recycler-fast-scroll-0.3.2-javadoc.jar!/" />

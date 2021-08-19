@@ -32,7 +32,11 @@
     <Preference
         android:title="@string/about_developer"
         android:icon="@drawable/ic_dev"
-        android:summary="@string/app_d4rk"/>
+        android:summary="@string/app_d4rk">
+    <intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://developers.google.com/profile/u/113550389053875890031"/>
+    </Preference>
     <Preference
         android:title="@string/app_d4rk"
         android:key="D4rK"

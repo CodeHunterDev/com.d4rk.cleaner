@@ -16,6 +16,28 @@
     <string name="about_deviantart" translatable="false">DeviantArt.</string>
     <string name="navigation_drawer_support" translatable="false">Support!</string>
     <string name="main_progress" translatable="false">0%</string>
+
+    <string name="first_step_tips" translatable="false"><![CDATA[
+    Start scan and choose invalid media files to remove.<br>
+    <br>
+    Step:<br>
+    1. <b>Click "Scan" button</b> and wait for finishing scanning.<br>
+    2. <b>Choose actually invalid media files</b> and click "Clean" button.<br>
+    3. Done!<br>
+    ]]></string>
+    <string name="action_scan" translatable="false">Start scan</string>
+    <string name="action_clean" translatable="false">Clean</string>
+    <string name="action_reset" translatable="false">Reset</string>
+    <string name="action_stop" translatable="false">Stop</string>
+    <string name="action_help" translatable="false">Help</string>
+    <string name="progress_text_scanning" translatable="false">Scanning…</string>
+    <string name="progress_text_cleaning" translatable="false">Cleaning…</string>
+    <string name="empty_text" translatable="false">No Result</string>
+    <string name="dialog_confirm_clean_title" translatable="false">Confirm cleaning</string>
+    <string name="dialog_confirm_clean_message" translatable="false">Do you want to remove %d selected item(s) from MediaStore? This operation cannot be reverted.</string>
+    <string name="dialog_finished_clean_title" translatable="false">Finished</string>
+    <string name="dialog_finished_clean_message" translatable="false">%d item(s) have been removed from MediaStore.</string>
+
     <string name="about_changelog">Changelog!</string>
     <string name="about_changelog_description">All detailed changes added over time to each versions.</string>
     <string name="main_status">Status: Idle…</string>

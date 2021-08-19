@@ -1,9 +1,7 @@
 package com.d4rk.cleaner;
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.AlarmManager;
 import android.app.AppOpsManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -40,13 +38,13 @@ import androidx.core.graphics.drawable.IconCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.d4rk.cleaner.clipboard.ClipboardActivity;
 import com.d4rk.cleaner.compressor.CompressorActivity;
+import com.d4rk.cleaner.invalid.ui.InvalidActivity;
 import com.d4rk.cleaner.rambooster.Home;
 import com.google.android.material.navigation.NavigationView;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
-    private static final int NOTIFICATION_REMINDER_DAY = 3;
     final ConstraintSet constraintSet = new ConstraintSet();
     static boolean running = false;
     static SharedPreferences prefs;
@@ -77,13 +75,7 @@ public class MainActivity extends AppCompatActivity {
         constraintSet.clone(layout);
         setUpToolbar();
         navigationView = findViewById(R.id.navigation_view);
-        Intent notifyIntent = new Intent(this,NotificationReceiver.class);
-        @SuppressLint("UnspecifiedImmutableFlag") PendingIntent pendingIntent = PendingIntent.getBroadcast
-                (context, NOTIFICATION_REMINDER_DAY, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
-                1000 * 60 * 60 * 24, pendingIntent);
-        @SuppressLint("RestrictedApi")
+       @SuppressLint("RestrictedApi")
         ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(context, "atm_shortcut")
                 .setShortLabel(getString(R.string.atmegame))
                 .setLongLabel(getString(R.string.long_shortcut_atmegame))
@@ -113,6 +105,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.nav_drawer_ram_booster:
                     intent = new Intent (MainActivity.this, Home.class);
+                    startActivity(intent);
+                    break;
+                case R.id.nav_drawer_invalid_media_cleaner:
+                    intent = new Intent (MainActivity.this, InvalidActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.nav_drawer_about:
