@@ -379,7 +379,7 @@
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout-sw720dp/activity_main.xml" value="0.26171875" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout-v21/activity_compressor.xml" value="0.22039473684210525" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout-v21/activity_invalid.xml" value="0.22" />
-        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout-v26/activity_clipboard.xml" value="0.22" />
+        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout-v26/activity_clipboard.xml" value="0.1" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout-v26/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout-v26/activity_ram_booster.xml" value="0.22" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout-v26/activity_whitelist.xml" value="0.21145833333333333" />
@@ -416,6 +416,12 @@
     <pattern value="com.d4rk.cleaner.rambooster.interfaces.ScanListener" method="onClick" />
     <pattern value="com.d4rk.cleaner.rambooster.interfaces.ScanListener" method="onSupportNavigateUp" />
     <pattern value="com.d4rk.cleaner.rambooster.interfaces.ScanListener" />
+    <pattern value="com.d4rk.cleaner.rambooster.interfaces.Booster" />
+    <pattern value="com.d4rk.cleaner.rambooster.interfaces.Booster" method="setCleanListener" />
+    <pattern value="com.d4rk.cleaner.rambooster.interfaces.Booster" method="setDebug" />
+    <pattern value="com.d4rk.cleaner.rambooster.interfaces.Booster" method="setScanListener" />
+    <pattern value="com.d4rk.cleaner.rambooster.interfaces.Booster" method="startClean" />
+    <pattern value="com.d4rk.cleaner.rambooster.interfaces.Booster" method="startScan" />
   </component>
   <component name="FindBugsConfigurable">
     <option name="make" value="true" />

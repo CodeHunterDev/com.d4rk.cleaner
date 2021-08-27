@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
     final Context context = this;
     ConstraintLayout layout;
     @RequiresApi(api = Build.VERSION_CODES.M)
-    @SuppressLint({"RestrictedApi", "NonConstantResourceId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,8 +74,7 @@ public class MainActivity extends AppCompatActivity {
         constraintSet.clone(layout);
         setUpToolbar();
         navigationView = findViewById(R.id.navigation_view);
-       @SuppressLint("RestrictedApi")
-        ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(context, "atm_shortcut")
+        @SuppressLint("RestrictedApi") ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(context, "atm_shortcut")
                 .setShortLabel(getString(R.string.atmegame))
                 .setLongLabel(getString(R.string.long_shortcut_atmegame))
                 .setIcon(IconCompat.createFromIcon(Icon.createWithResource(context, R.mipmap.ic_launch_atmegame)))
@@ -166,7 +164,6 @@ public class MainActivity extends AppCompatActivity {
         constraintSet.setMargin(R.id.statusTextView,ConstraintSet.TOP,50);
         constraintSet.applyTo(layout);
     }
-    @SuppressLint("SetTextI18n")
     private void scan(boolean delete) {
         Looper.prepare();
         running = true;

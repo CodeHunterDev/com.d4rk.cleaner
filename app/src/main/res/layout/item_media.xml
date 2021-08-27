@@ -9,7 +9,6 @@
     android:clickable="true"
     android:focusable="true"
     android:baselineAligned="false"
-    android:foreground="?android:attr/selectableItemBackground"
     android:addStatesFromChildren="true">
 
     <FrameLayout

@@ -8,20 +8,20 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 import androidx.core.text.HtmlCompat;
 import androidx.recyclerview.widget.RecyclerView;
+import android.view.MenuItem;
 import com.d4rk.cleaner.R;
 import com.d4rk.cleaner.invalid.loader.InvalidImagesLoader;
 import com.d4rk.cleaner.invalid.model.MediaItem;
@@ -61,7 +61,6 @@ public class InvalidActivity extends Activity {
             VISIBLE,
             GONE
     };
-    private View mToolbar;
     private RecyclerView mRecyclerView;
     private View mFirstStepView, mProgressView, mEmptyView, mListContainer;
     private TextView mActionButton;
@@ -77,11 +76,8 @@ public class InvalidActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setupStatusBarUi();
-        }
+        setupStatusBarUi();
         setContentView(R.layout.activity_invalid);
-        mToolbar = findViewById(R.id.toolbar);
         mRecyclerView = findViewById(android.R.id.list);
         mFirstStepView = findViewById(R.id.first_step_view);
         mProgressView = findViewById(R.id.progress_view);
@@ -93,9 +89,7 @@ public class InvalidActivity extends Activity {
         final TextView firstStepText = findViewById(R.id.first_step_text);
         firstStepText.setText(HtmlCompat.fromHtml(getString(R.string.first_step_tips), 0));
         setupRecyclerView();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
-            setupViewCallbacks();
-        }
+        setupViewCallbacks();
         mInvalidLoader = new InvalidImagesLoader(this);
         mInvalidLoader.registerListener(0, (loader, data) -> {
             if (data == null) {
@@ -126,6 +120,11 @@ public class InvalidActivity extends Activity {
         }
         updateViewsByState();
     }
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent myIntent = new Intent(getApplicationContext(), InvalidActivity.class);
+        startActivityForResult(myIntent, 0);
+        return true;
+    }
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -142,7 +141,6 @@ public class InvalidActivity extends Activity {
             mCleanFilesTask.cancel(true);
         }
     }
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void setupStatusBarUi() {
         int uiFlags = 0;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
@@ -190,26 +188,16 @@ public class InvalidActivity extends Activity {
         final List < MediaItem > items = new ArrayList < > ();
         mAdapter.submitList(items);
     }
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT_WATCH)
     private void setupViewCallbacks() {
         final View rootView = findViewById(R.id.root_view);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
-            rootView.setOnApplyWindowInsetsListener((v, insets) -> {
-                Log.i(TAG, insets.toString());
-                final int windowInsetTop = insets.getSystemWindowInsetTop();
-                final int toolbarHeight = getResources().getDimensionPixelSize(R.dimen.toolbar_height);
-                mRecyclerView.setPadding(0, toolbarHeight + windowInsetTop, 0, 0);
-                mToolbar.setPadding(0, windowInsetTop, 0, 0);
+        rootView.setOnApplyWindowInsetsListener((v, insets) -> {
+            Log.i(TAG, insets.toString());
 
-                final ViewGroup.MarginLayoutParams fsvLayoutParams =
-                        (ViewGroup.MarginLayoutParams) mFirstStepView.getLayoutParams();
-                fsvLayoutParams.topMargin = toolbarHeight + windowInsetTop;
 
-                return insets.consumeSystemWindowInsets();
-            });
-        }
+            return insets.consumeSystemWindowInsets();
+        });
         mActionButton.setOnClickListener(v -> onActionButtonClick());
-        mRecyclerView.addOnScrollListener(new RaisedViewScrollListener(mToolbar));
+
         mResetButton.setOnClickListener(v -> {
             mState = STATE_NORMAL;
             updateViewsByState();
@@ -270,16 +258,10 @@ public class InvalidActivity extends Activity {
     private void updateViewsByState() {
         switch (mState) {
             case STATE_NORMAL: {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    mToolbar.setElevation(0);
-                }
                 setActionButton(R.drawable.ic_image_search, R.string.action_scan);
                 break;
             }
             case STATE_SCANNING: {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    mToolbar.setElevation(0);
-                }
                 mProgressText.setText(R.string.progress_text_scanning);
                 setActionButton(R.drawable.ic_stop, R.string.action_stop);
                 break;
@@ -290,9 +272,6 @@ public class InvalidActivity extends Activity {
                 break;
             }
             case STATE_CLEANING: {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    mToolbar.setElevation(0);
-                }
                 mProgressText.setText(R.string.progress_text_cleaning);
                 setActionButton(R.drawable.ic_stop, R.string.action_stop);
                 break;

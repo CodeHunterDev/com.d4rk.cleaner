@@ -2,20 +2,12 @@ package com.d4rk.cleaner.invalid.loader;
 import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.graphics.BitmapFactory;
-import android.util.Log;
-import androidx.multidex.BuildConfig;
+import com.d4rk.cleaner.invalid.model.MediaItem;
+import com.d4rk.cleaner.invalid.util.MediaStoreUtils;
 import java.util.List;
 import java9.util.stream.Collectors;
 import java9.util.stream.Stream;
-import com.d4rk.cleaner.invalid.model.MediaItem;
-import com.d4rk.cleaner.invalid.util.MediaStoreUtils;
 public class InvalidImagesLoader extends AsyncTaskLoader < List < MediaItem >> {
-    private static void DEBUG_LOG(String message) {
-        if (BuildConfig.DEBUG) {
-            Log.d(TAG, message);
-        }
-    }
-    private static final String TAG = InvalidImagesLoader.class.getSimpleName();
     public InvalidImagesLoader(Context context) {
         super(context);
     }
@@ -28,16 +20,10 @@ public class InvalidImagesLoader extends AsyncTaskLoader < List < MediaItem >> {
                         opts.inJustDecodeBounds = true;
                         BitmapFactory.decodeFile(item.path, opts);
                         if (opts.outWidth <= 0 || opts.outHeight <= 0) {
-                            DEBUG_LOG("Found " + item + " is invalid.");
                             return true;
                         }
-                        if (opts.outMimeType == null) {
-                            DEBUG_LOG("Found " + item + " is invalid.");
-                            return true;
-                        }
-                        return false;
+                        return opts.outMimeType == null;
                     } catch (Exception e) {
-                        DEBUG_LOG("Found " + item + " is invalid.");
                         return true;
                     }
                 });

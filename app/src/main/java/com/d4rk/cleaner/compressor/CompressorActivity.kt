@@ -1,5 +1,4 @@
 package com.d4rk.cleaner.compressor
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -20,6 +19,7 @@ import java.text.DecimalFormat
 import java.util.*
 import kotlin.math.log10
 import kotlin.math.pow
+
 class CompressorActivity : AppCompatActivity() {
     companion object {
         private const val PICK_IMAGE_REQUEST = 1
@@ -80,7 +80,6 @@ class CompressorActivity : AppCompatActivity() {
             Log.d("Compressor", "Compressed image save in " + it.path)
         }
     }
-    @SuppressLint("SetTextI18n")
     private fun clearImage() {
         actualImageView.setBackgroundColor(getRandomColor())
         compressedImageView.setImageDrawable(null)

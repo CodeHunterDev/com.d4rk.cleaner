@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_view"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    tools:context=".InvalidActivity">
     <LinearLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -95,15 +94,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:clickable="true"
+                android:drawablePadding="16dp"
                 android:focusable="true"
+                android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:textColor="@color/colorAccent"
-                android:drawablePadding="16dp"
-                android:gravity="center_vertical"
                 android:text="@string/action_scan"
+                android:textColor="@color/colorAccent"
                 app:drawableStartCompat="@drawable/ic_image_search"
-                app:drawableTint="@color/colorAccent" />
+                app:drawableTint="@color/colorAccent"
+                tools:ignore="TextContrastCheck"/>
             <View
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -112,23 +112,17 @@
                 android:id="@+id/reset_button"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="4dp"
-                android:layout_margin="12dp"
-                android:clickable="true"
                 android:background="@android:color/transparent"
-                android:focusable="true"
+                android:clickable="true"
                 android:contentDescription="@string/action_reset"
+                android:focusable="true"
+                android:minWidth="48dp"
+                android:padding="4dp"
                 android:tooltipText="@string/action_reset"
-                app:srcCompat="@drawable/ic_refresh_24dp"
                 android:visibility="gone"
-                tools:visibility="visible"
-                tools:ignore="UnusedAttribute" />
+                app:srcCompat="@drawable/ic_refresh_24dp"
+                tools:ignore="UnusedAttribute"
+                tools:visibility="visible"/>
         </LinearLayout>
     </LinearLayout>
-    <FrameLayout
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:alpha="0.9"/>
-</FrameLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

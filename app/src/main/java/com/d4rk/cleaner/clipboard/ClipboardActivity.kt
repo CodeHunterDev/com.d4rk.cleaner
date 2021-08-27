@@ -162,10 +162,6 @@ class ClipboardActivity : AppCompatActivity() {
         }
     }
     private fun setUpAssistant() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            binding.cardSystemAssist.isGone = true
-            return
-        }
 
         binding.btnOpenAssistantSettings.setOnClickListener {
             try {

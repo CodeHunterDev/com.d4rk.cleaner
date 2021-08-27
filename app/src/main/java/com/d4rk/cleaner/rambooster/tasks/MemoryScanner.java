@@ -44,10 +44,8 @@ public class MemoryScanner implements Runnable, Constants {
                 ApplicationInfo applicationInfo = getApplicationInfo(processInfo.processName);
                 if (RAMBooster.isDEBUG())
                     Log.d(TAG, "Scanner founded process: " + applicationInfo.packageName);
-                // remove system processes
                 if (!RAMBooster.mShouldCleanSystemApps())
                     if ((applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 1) continue;
-                // remove SpeedChecker app process
                 if (applicationInfo.packageName.equals(context.getPackageName())) continue;
                 result.add(processInfo);
             } catch (PackageManager.NameNotFoundException ignored) {}

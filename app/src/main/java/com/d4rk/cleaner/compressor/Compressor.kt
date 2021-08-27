@@ -1,5 +1,4 @@
 package com.d4rk.cleaner.compressor
-
 import android.content.Context
 import com.d4rk.cleaner.compressor.constraint.Compression
 import com.d4rk.cleaner.compressor.constraint.default
@@ -7,7 +6,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
 import kotlin.coroutines.CoroutineContext
-
 /**
  * Created on : January 22, 2020
  * Author     : zetbaitsu

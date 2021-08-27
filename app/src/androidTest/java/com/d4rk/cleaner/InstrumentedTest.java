@@ -17,7 +17,6 @@ import static org.junit.Assert.assertTrue;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-@SuppressWarnings("ResultOfMethodCallIgnored")
 @RunWith(AndroidJUnit4.class)
 public class InstrumentedTest {
     private FileScanner fs;
@@ -35,7 +34,7 @@ public class InstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.d4rk", appContext.getPackageName());
+        assertEquals("com.d4rk.cleaner", appContext.getPackageName());
     }
     @Test
     public void checkLogFiles() {

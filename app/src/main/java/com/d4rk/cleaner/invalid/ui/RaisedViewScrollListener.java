@@ -2,7 +2,6 @@ package com.d4rk.cleaner.invalid.ui;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.os.Build;
 import android.view.View;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,10 +18,10 @@ import com.d4rk.cleaner.R;
  */
 public class RaisedViewScrollListener extends RecyclerView.OnScrollListener {
     @NonNull
-    public View mTargetView;
+    public final View mTargetView;
     @NonNull
-    private Map<Boolean, Float> mStatedElevation = new HashMap<>();
-    private long mDuration;
+    private final Map<Boolean, Float> mStatedElevation = new HashMap<>();
+    private final long mDuration;
     @Nullable
     private Animator mElevationAnimator = null;
     @Nullable
@@ -56,16 +55,14 @@ public class RaisedViewScrollListener extends RecyclerView.OnScrollListener {
         }
         mAnimatorDirection = shouldRaise;
         if (mElevationAnimator == null || !mElevationAnimator.isRunning()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                if (mTargetView.getElevation() != getElevationInState(shouldRaise)) {
-                    mElevationAnimator = ObjectAnimator.ofFloat(
-                            mTargetView,
-                            "elevation",
-                            getElevationInState(!shouldRaise),
-                            getElevationInState(shouldRaise)
-                    ).setDuration(mDuration);
-                    mElevationAnimator.start();
-                }
+            if (mTargetView.getElevation() != getElevationInState(shouldRaise)) {
+                mElevationAnimator = ObjectAnimator.ofFloat(
+                        mTargetView,
+                        "elevation",
+                        getElevationInState(!shouldRaise),
+                        getElevationInState(shouldRaise)
+                ).setDuration(mDuration);
+                mElevationAnimator.start();
             }
         }
     }

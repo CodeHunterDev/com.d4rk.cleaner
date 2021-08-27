@@ -9,9 +9,9 @@ import androidx.annotation.NonNull;
 import com.d4rk.cleaner.invalid.model.MediaItem;
 import com.d4rk.cleaner.invalid.util.MediaStoreUtils;
 public class CleanFilesTask extends AsyncTask < Stream < MediaItem > , Void, Integer > {
-    private ContentResolver mContentResolver;
+    private final ContentResolver mContentResolver;
     private int mDeletedCount;
-    private Consumer < Integer > mCallback;
+    private final Consumer < Integer > mCallback;
     public CleanFilesTask(@NonNull Context context, @NonNull Consumer < Integer > callback) {
         Objects.requireNonNull(context);
         mContentResolver = context.getContentResolver();
