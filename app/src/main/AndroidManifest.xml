@@ -106,11 +106,7 @@
             android:name=".invalid.ui.InvalidActivity"
             android:theme="@style/AppTheme"
             android:label="@string/invalid_media_cleaner"
-            android:exported="true">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".invalid.ui.InvalidActivity"/>
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppThemeNoActionBar"/>

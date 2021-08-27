@@ -8,7 +8,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,7 +20,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.core.text.HtmlCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.MenuItem;
 import com.d4rk.cleaner.R;
 import com.d4rk.cleaner.invalid.loader.InvalidImagesLoader;
 import com.d4rk.cleaner.invalid.model.MediaItem;
@@ -119,11 +117,6 @@ public class InvalidActivity extends Activity {
             mItems.clear();
         }
         updateViewsByState();
-    }
-    public boolean onOptionsItemSelected(MenuItem item){
-        Intent myIntent = new Intent(getApplicationContext(), InvalidActivity.class);
-        startActivityForResult(myIntent, 0);
-        return true;
     }
     @Override
     protected void onSaveInstanceState(Bundle outState) {
