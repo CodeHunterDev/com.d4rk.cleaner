@@ -13,8 +13,8 @@ android {
         applicationId "com.d4rk.cleaner"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 37
-        versionName '4.0_beta_preview2'
+        versionCode 38
+        versionName '4.0_beta_preview3'
         vectorDrawables.useSupportLibrary true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
@@ -81,7 +81,6 @@ dependencies {
     implementation 'com.github.obolsh:rambooster:1.0.2@aar'
     implementation 'net.sourceforge.streamsupport:android-retrostreams:1.7.3'
     implementation 'net.sourceforge.streamsupport:android-retrofuture:1.7.3'
-    implementation 'id.zelory:compressor:3.0.1'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:truth:1.4.0'

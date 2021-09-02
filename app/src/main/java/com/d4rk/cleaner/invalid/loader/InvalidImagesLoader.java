@@ -19,10 +19,7 @@ public class InvalidImagesLoader extends AsyncTaskLoader < List < MediaItem >> {
                         final BitmapFactory.Options opts = new BitmapFactory.Options();
                         opts.inJustDecodeBounds = true;
                         BitmapFactory.decodeFile(item.path, opts);
-                        if (opts.outWidth <= 0 || opts.outHeight <= 0) {
-                            return true;
-                        }
-                        return opts.outMimeType == null;
+                        return opts.outWidth <= 0 || opts.outHeight <= 0;
                     } catch (Exception e) {
                         return true;
                     }

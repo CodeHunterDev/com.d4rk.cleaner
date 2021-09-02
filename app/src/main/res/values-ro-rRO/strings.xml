@@ -6,7 +6,6 @@
     <string name="assistant_content">Setați această aplicație ca aplicație asistent de sistem</string>
     <string name="main_status_running">Stare: Rularea.</string>
     <string name="title_activity_prompt">Activitate promptă!</string>
-    <string name="navigation_drawer_ram_booster">RAM Booster!</string>
     <string name="main_found">Găsite:</string>
     <string name="main_freed">Eliberat:</string>
     <string name="assistant_open_settings">Deschideți setările asistentului</string>
@@ -72,8 +71,6 @@
     <string name="clipboard_service_clean">Curățați clipboardul dacă este schimbat.</string>
     <string name="service_report">Raportați-mă dacă clipboard-ul s-a schimbat.</string>
     <string name="clipboard_widget_title">Widget!</string>
-    <string name="ram_boost">Boost!</string>
-    <string name="ram_boost_tooltip">Faceți clic aici pentru a vă crește memoria RAM!</string>
     <string name="clipboard_widget_content">Creați widgeturi pe ecranul de pornire. Faceți clic pe ele pentru a reseta clipboard sau pentru a vedea conținutul clipboard. \n\nLe puteți găsi în lista de widgeturi.</string>
     <string name="clipboard_shortcut_title">Comandă rapidă!</string>
     <string name="clipboard_shortcut_content">Creați o comandă rapidă a aplicației pe ecranul de pornire. Faceți clic pe ele pentru a reseta clipboard sau pentru a vedea conținutul clipboard.</string>
@@ -111,13 +108,6 @@
     <string name="true_aggressive_filter">Adevărat filtru agresiv!</string>
     <string name="true_aggressive_filer_description"><b> Avertizare!!!</b> Acest filtru șterge fiecare tip de fișier care se află în dispozitivul dvs., cum ar fi<b> documente</b> ,<b> fotografii</b> ,<b> Videoclipuri</b> ,<b> dosare</b> </string>
     <string name="navigation_drawer_about">Despre!</string>
-    <string name="image_compressor">Compresor de imagine!</string>
-    <string name="image_compressor_actual_image">Imagine reală:</string>
-    <string name="image_compressor_compressed_image">Imagine comprimată:</string>
-    <string name="image_compressor_size">Mărimea : -</string>
-    <string name="image_compressor_choose_image">Alegeți imaginea …</string>
-    <string name="image_compressor_compress_image">Comprimă imaginea …</string>
-    <string name="image_compressor_custom_compress">Comprimare personalizată …</string>
     <string name="tooltip_atmegames">Merge</string>
     <string name="tooltip_clean_button">Faceți clic aici pentru a vă curăța dispozitivul!</string>
     <string name="tooltip_add_words">Faceți clic aici pentru a adăuga cuvintele dvs.</string>

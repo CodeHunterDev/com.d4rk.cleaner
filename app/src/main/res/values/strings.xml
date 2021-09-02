@@ -1,11 +1,9 @@
 <resources
     xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" translatable="false">Cleaner</string>
-    <string name="app_d4rk_cleaner" translatable="false">D4rK Cleaner</string>
     <string name="app_d4rk" translatable="false">D4rK!</string>
     <string name="copyright" translatable="false">Copyright ©2021 ~ D4rK</string>
     <string name="atmegame" translatable="false">Atmegame!</string>
-    <string name="main_string" translatable="false">D4rK Cleaner!!!</string>
     <string name="about_michael_tutorials" translatable="false">Michael Tutorials!</string>
     <string name="adfly" translatable="false"><a href='http://anthargo.com/9cUM'>http://anthargo.com/9cUM</a></string>
     <string name="about_app_version_code" translatable="false" tools:ignore="Typos">4.0_beta_preview2</string>
@@ -30,7 +28,6 @@
     <string name="action_clean" translatable="false">Clean</string>
     <string name="action_reset" translatable="false">Reset</string>
     <string name="action_stop" translatable="false">Stop</string>
-    <string name="action_help" translatable="false">Help</string>
     <string name="progress_text_scanning" translatable="false">Scanning…</string>
     <string name="progress_text_cleaning" translatable="false">Cleaning…</string>
     <string name="empty_text" translatable="false">No Result</string>
@@ -46,7 +43,6 @@
     <string name="assistant_content">Set this app as the system assistant app &amp; use it by long-pressing the home button or swiping from the bottom corners.</string>
     <string name="main_status_running">Status: Running.</string>
     <string name="title_activity_prompt">Prompt Activity!</string>
-    <string name="navigation_drawer_ram_booster">RAM Booster!</string>
     <string name="main_found">Found: </string>
     <string name="main_freed">Freed: </string>
     <string name="assistant_open_settings">Open assistant settings</string>
@@ -112,8 +108,6 @@
     <string name="clipboard_service_clean">Clean clipboard if it\'s changed.</string>
     <string name="service_report">Report me if the clipboard\'s changed.</string>
     <string name="clipboard_widget_title">Widget!</string>
-    <string name="ram_boost">Boost!</string>
-    <string name="ram_boost_tooltip">Click here to boost up your RAM!</string>
     <string name="clipboard_widget_content">Create widgets on your home screen. Click them to reset clipboard or see clipboard content. \n\nYou can find them in the widget list.</string>
     <string name="clipboard_shortcut_title">Shortcut!</string>
     <string name="clipboard_shortcut_content">Create an app shortcut on your home screen. Click them to reset clipboard or see clipboard content.</string>
@@ -151,13 +145,6 @@
     <string name="true_aggressive_filter">True aggressive filter!</string>
     <string name="true_aggressive_filer_description"><b>Warning!!!</b> This filter delete every file type is in your device like <b>documents</b>, <b>photos</b>, <b>videos</b>, <b>folders</b> &amp; more! I\'m not responsible for anything, use at your own risk.</string>
     <string name="navigation_drawer_about">About!</string>
-    <string name="image_compressor">Image Compressor!</string>
-    <string name="image_compressor_actual_image">Actual Image:</string>
-    <string name="image_compressor_compressed_image">Compressed Image:</string>
-    <string name="image_compressor_size">Size : -</string>
-    <string name="image_compressor_choose_image">Choose Image…</string>
-    <string name="image_compressor_compress_image">Compress Image…</string>
-    <string name="image_compressor_custom_compress">Custom Compress…</string>
     <string name="tooltip_atmegames">Go &amp; play cool games here!!!</string>
     <string name="tooltip_clean_button">Click here to clean your device!</string>
     <string name="tooltip_add_words">Click here to add your words.</string>
@@ -180,10 +167,6 @@
 			•Added Clipboard Cleaner widgets;\n
     <br> </br>
 			•Added Clipboard Cleaner titles;\n
-    <br> </br>
-			•Added Image Compressor;\n
-    <br> </br>
-			•Added RAM Booster;\n
     <br> </br>
 			•Added open source libraries;\n
     <br> </br>

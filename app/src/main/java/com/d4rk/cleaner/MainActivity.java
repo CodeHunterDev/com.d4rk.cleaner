@@ -37,9 +37,7 @@ import androidx.core.content.pm.ShortcutManagerCompat;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.d4rk.cleaner.clipboard.ClipboardActivity;
-import com.d4rk.cleaner.compressor.CompressorActivity;
 import com.d4rk.cleaner.invalid.ui.InvalidActivity;
-import com.d4rk.cleaner.rambooster.Home;
 import com.google.android.material.navigation.NavigationView;
 import java.io.File;
 import java.text.DecimalFormat;
@@ -95,14 +93,6 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.nav_drawer_clipboard_cleaner:
                     intent = new Intent (MainActivity.this, ClipboardActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.nav_drawer_image_compressor:
-                    intent = new Intent (MainActivity.this, CompressorActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.nav_drawer_ram_booster:
-                    intent = new Intent (MainActivity.this, Home.class);
                     startActivity(intent);
                     break;
                 case R.id.nav_drawer_invalid_media_cleaner:

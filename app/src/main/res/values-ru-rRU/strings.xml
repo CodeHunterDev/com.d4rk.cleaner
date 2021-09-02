@@ -6,7 +6,6 @@
     <string name="assistant_content">Установите это приложение как приложение для системного помощника</string>
     <string name="main_status_running">Статус: Работает.</string>
     <string name="title_activity_prompt">Оперативная активность!</string>
-    <string name="navigation_drawer_ram_booster">RAM Booster!</string>
     <string name="main_found">Найденный:</string>
     <string name="main_freed">Освобожден:</string>
     <string name="assistant_open_settings">Открыть настройки помощника</string>
@@ -72,8 +71,6 @@
     <string name="clipboard_service_clean">Очистите буфер обмена, если он был изменен.</string>
     <string name="service_report">Сообщите мне, если буфер обмена изменился.</string>
     <string name="clipboard_widget_title">Виджет!</string>
-    <string name="ram_boost">Увеличение!</string>
-    <string name="ram_boost_tooltip">Нажмите здесь, чтобы увеличить объем оперативной памяти!</string>
     <string name="clipboard_widget_content">Создавайте виджеты на главном экране. Щелкните их, чтобы сбросить буфер обмена или просмотреть содержимое буфера обмена. \n\nВы можете найти их в списке виджетов.</string>
     <string name="clipboard_shortcut_title">Ярлык!</string>
     <string name="clipboard_shortcut_content">Создайте ярлык приложения на главном экране. Щелкните их, чтобы сбросить буфер обмена или просмотреть содержимое буфера обмена.</string>
@@ -111,13 +108,6 @@
     <string name="true_aggressive_filter">Настоящий агрессивный фильтр!</string>
     <string name="true_aggressive_filer_description"><b> Предупреждение!!!</b> Этот фильтр удаляет все типы файлов на вашем устройстве, например<b> документы</b> ,<b> фотографии</b> ,<b> видео</b> ,<b> папки</b> </string>
     <string name="navigation_drawer_about">О!</string>
-    <string name="image_compressor">Image Compressor!</string>
-    <string name="image_compressor_actual_image">Фактическое изображение:</string>
-    <string name="image_compressor_compressed_image">Сжатое изображение:</string>
-    <string name="image_compressor_size">Размер : -</string>
-    <string name="image_compressor_choose_image">Выбрать изображение…</string>
-    <string name="image_compressor_compress_image">Сжать изображение…</string>
-    <string name="image_compressor_custom_compress">Пользовательское сжатие…</string>
     <string name="tooltip_atmegames">Идти</string>
     <string name="tooltip_clean_button">Щелкните здесь, чтобы очистить устройство!</string>
     <string name="tooltip_add_words">Щелкните здесь, чтобы добавить свои слова.</string>

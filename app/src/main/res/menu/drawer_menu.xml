@@ -19,16 +19,6 @@
             android:icon="@drawable/ic_drawer_invalid_media_cleaner"
             android:title="@string/invalid_media_cleaner">
         </item>
-        <item
-            android:id="@+id/nav_drawer_image_compressor"
-            android:icon="@drawable/ic_drawer_image_compressor"
-            android:title="@string/image_compressor">
-        </item>
-        <item
-            android:id="@+id/nav_drawer_ram_booster"
-            android:icon="@drawable/ic_drawer_ram_booster"
-            android:title="@string/navigation_drawer_ram_booster">
-        </item>
         </group>
     <group
         android:checkableBehavior="single"

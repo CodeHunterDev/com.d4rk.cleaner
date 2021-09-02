@@ -6,7 +6,6 @@
     <string name="assistant_content">Diese App als Systemassistent-App festlegen</string>
     <string name="main_status_running">Status: Läuft.</string>
     <string name="title_activity_prompt">Sofortige Aktivität!</string>
-    <string name="navigation_drawer_ram_booster">RAM-Booster!</string>
     <string name="main_found">Gefunden:</string>
     <string name="main_freed">Befreit:</string>
     <string name="assistant_open_settings">Assistent-Einstellungen öffnen</string>
@@ -72,8 +71,6 @@
     <string name="clipboard_service_clean">Zwischenablage bereinigen, wenn sie geändert wurde.</string>
     <string name="service_report">Melde mich, wenn sich die Zwischenablage geändert hat.</string>
     <string name="clipboard_widget_title">Widget!</string>
-    <string name="ram_boost">Schub!</string>
-    <string name="ram_boost_tooltip">Klicken Sie hier, um Ihren Arbeitsspeicher aufzustocken!</string>
     <string name="clipboard_widget_content">Erstellen Sie Widgets auf Ihrem Startbildschirm. Klicken Sie darauf, um die Zwischenablage zurückzusetzen oder den Inhalt der Zwischenablage anzuzeigen. \n\nSie finden sie in der Widget-Liste.</string>
     <string name="clipboard_shortcut_title">Abkürzung!</string>
     <string name="clipboard_shortcut_content">Erstellen Sie eine App-Verknüpfung auf Ihrem Startbildschirm. Klicken Sie darauf, um die Zwischenablage zurückzusetzen oder den Inhalt der Zwischenablage anzuzeigen.</string>
@@ -111,13 +108,6 @@
     <string name="true_aggressive_filter">Echt aggressiver Filter!</string>
     <string name="true_aggressive_filer_description"><b> Warnung!!!</b> Dieser Filter löscht jeden Dateityp, der sich auf Ihrem Gerät befindet, wie<b> Unterlagen</b> ,<b> Fotos</b> ,<b> Videos</b> ,<b> Ordner</b> </string>
     <string name="navigation_drawer_about">Über!</string>
-    <string name="image_compressor">Bildkompressor!</string>
-    <string name="image_compressor_actual_image">Tatsächliches Bild:</string>
-    <string name="image_compressor_compressed_image">Komprimiertes Bild:</string>
-    <string name="image_compressor_size">Größe : -</string>
-    <string name="image_compressor_choose_image">Bild auswählen…</string>
-    <string name="image_compressor_compress_image">Bild komprimieren…</string>
-    <string name="image_compressor_custom_compress">Benutzerdefinierte Komprimierung…</string>
     <string name="tooltip_atmegames">gehen</string>
     <string name="tooltip_clean_button">Klicken Sie hier, um Ihr Gerät zu reinigen!</string>
     <string name="tooltip_add_words">Klicken Sie hier, um Ihre Worte hinzuzufügen.</string>

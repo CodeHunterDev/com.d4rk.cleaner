@@ -64,6 +64,7 @@
         android:layout_gravity="bottom"
         android:layout_marginStart="60dp"
         android:layout_marginBottom="-80dp"
+        android:tint="#FF9800"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         app:srcCompat="@drawable/ic_square_outline"
         tools:ignore="ImageContrastCheck" />
@@ -86,6 +87,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="end"
+        android:tint="#C6DBFC"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         app:srcCompat="@drawable/ic_circle"
         android:layout_marginTop="14dp"
@@ -103,6 +105,7 @@
         android:layout_height="100dp"
         android:layout_gravity="end"
         android:layout_marginEnd="-25dp"
+        android:tint="#3DDC84"
         android:layout_marginTop="199dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         app:srcCompat="@drawable/ic_triangle"/>
@@ -134,6 +137,7 @@
         android:layout_width="69dp"
         android:layout_height="69dp"
         android:layout_marginTop="64dp"
+        android:tint="#C6DBFC"
         android:layout_marginStart="0dp"
         android:rotation="@android:integer/status_bar_notification_info_maxnum"
         app:srcCompat="@drawable/ic_triangle_blue"/>

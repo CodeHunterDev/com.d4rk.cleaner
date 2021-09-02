@@ -8,10 +8,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import androidx.annotation.DrawableRes;
@@ -74,7 +72,6 @@ public class InvalidActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupStatusBarUi();
         setContentView(R.layout.activity_invalid);
         mRecyclerView = findViewById(android.R.id.list);
         mFirstStepView = findViewById(R.id.first_step_view);
@@ -134,18 +131,6 @@ public class InvalidActivity extends Activity {
             mCleanFilesTask.cancel(true);
         }
     }
-    private void setupStatusBarUi() {
-        int uiFlags = 0;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-            uiFlags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
-                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
-            uiFlags |= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-        }
-        getWindow().getDecorView().setSystemUiVisibility(uiFlags);
-        getWindow().setStatusBarColor(Color.TRANSPARENT);
-    }
     private void setupRecyclerView() {
         if (mAdapter == null) {
             mAdapter = new MediaItemsAdapter();
@@ -183,14 +168,8 @@ public class InvalidActivity extends Activity {
     }
     private void setupViewCallbacks() {
         final View rootView = findViewById(R.id.root_view);
-        rootView.setOnApplyWindowInsetsListener((v, insets) -> {
-            Log.i(TAG, insets.toString());
-
-
-            return insets.consumeSystemWindowInsets();
-        });
+        rootView.setOnApplyWindowInsetsListener((v, insets) -> insets.consumeSystemWindowInsets());
         mActionButton.setOnClickListener(v -> onActionButtonClick());
-
         mResetButton.setOnClickListener(v -> {
             mState = STATE_NORMAL;
             updateViewsByState();

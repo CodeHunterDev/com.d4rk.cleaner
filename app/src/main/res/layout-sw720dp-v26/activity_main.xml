@@ -31,10 +31,10 @@
                     android:textIsSelectable="false"
                     app:drawableStartCompat="@drawable/ic_face"/>
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="40dp"
+                    android:layout_width="30dp"
                     android:layout_height="36dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_toolbar_d4rk"/>
+                    android:src="@drawable/ic_d4rk"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"

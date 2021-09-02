@@ -21,7 +21,7 @@ public class WhitelistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_whitelist);
         listView = findViewById(R.id.whitelistView);
-        adapter = new ArrayAdapter < > (this, R.layout.activity_whitelist_custom_textview, getWhiteList());
+        adapter = new ArrayAdapter < > (this, R.layout.fragment_whitelist_custom_textview, getWhiteList());
         listView.setAdapter(adapter);
     }
     public final void emptyWhitelist(View view) {

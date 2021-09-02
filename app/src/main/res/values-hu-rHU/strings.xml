@@ -6,7 +6,6 @@
     <string name="assistant_content">Állítsa be ezt az alkalmazást rendszersegéd -alkalmazásként</string>
     <string name="main_status_running">Állapot: fut.</string>
     <string name="title_activity_prompt">Azonnali tevékenység!</string>
-    <string name="navigation_drawer_ram_booster">RAM erősítő!</string>
     <string name="main_found">Megtalált:</string>
     <string name="main_freed">Szabadult:</string>
     <string name="assistant_open_settings">Nyissa meg az asszisztens beállításait</string>
@@ -72,8 +71,6 @@
     <string name="clipboard_service_clean">Tisztítsa meg a vágólapot, ha megváltozott.</string>
     <string name="service_report">Jelentés, ha a vágólap megváltozott.</string>
     <string name="clipboard_widget_title">Widget!</string>
-    <string name="ram_boost">Boost!</string>
-    <string name="ram_boost_tooltip">Kattintson ide a RAM növeléséhez!</string>
     <string name="clipboard_widget_content">Modulok létrehozása a kezdőképernyőn. Kattintson rájuk a vágólap visszaállításához vagy a vágólap tartalmának megtekintéséhez. \n\nA widgetlistában megtalálhatja őket.</string>
     <string name="clipboard_shortcut_title">Parancsikon!</string>
     <string name="clipboard_shortcut_content">Hozzon létre egy alkalmazás parancsikont a kezdőképernyőn. Kattintson rájuk a vágólap visszaállításához vagy a vágólap tartalmának megtekintéséhez.</string>
@@ -111,13 +108,6 @@
     <string name="true_aggressive_filter">Igazi agresszív szűrő!</string>
     <string name="true_aggressive_filer_description"><b> Figyelem!!!</b> Ez a szűrő töröl minden fájltípust az eszközén, mint például<b> dokumentumokat</b> ,<b> fotók</b> ,<b> videók</b> ,<b> mappák</b> </string>
     <string name="navigation_drawer_about">Ról ről!</string>
-    <string name="image_compressor">Képkompresszor!</string>
-    <string name="image_compressor_actual_image">Tényleges kép:</string>
-    <string name="image_compressor_compressed_image">Tömörített kép:</string>
-    <string name="image_compressor_size">Méret: -</string>
-    <string name="image_compressor_choose_image">Kép kiválasztása…</string>
-    <string name="image_compressor_compress_image">Kép tömörítése…</string>
-    <string name="image_compressor_custom_compress">Egyedi tömörítés…</string>
     <string name="tooltip_atmegames">Megy</string>
     <string name="tooltip_clean_button">Kattintson ide a készülék tisztításához!</string>
     <string name="tooltip_add_words">Kattintson ide a szavak hozzáadásához.</string>
