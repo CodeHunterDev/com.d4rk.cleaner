@@ -25,10 +25,10 @@ android {
             release {
                 minifyEnabled false
                 shrinkResources false
-                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-                proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
                 proguardFile 'proguard-project.txt'
                 multiDexEnabled true
+                debuggable false
                 resValue("bool", "FIREBASE_CRASH_ENABLED", "true")
                 resValue("bool", "FIREBASE_ANALYTICS_DEACTIVATED", "true")
             }
@@ -47,12 +47,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
     }
-    dependenciesInfo {
-        includeInApk false
-        includeInBundle false
-    }
-    ndkVersion '23.0.7599858'
-    buildToolsVersion '30.0.3'
 }
 resourcePlaceholders {
     files = ['xml/shortcuts.xml']
