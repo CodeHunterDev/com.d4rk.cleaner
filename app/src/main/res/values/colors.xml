@@ -10,4 +10,7 @@
     <color name="colorGiHub">#0F0C0D</color>
     <color name="colorSplashScreenText">#DFDFDF</color>
     <color name="colorVNIcons">#E6E9E8</color>
+    <color name="colorIconClean">#EDEDED</color>
+    <color name="colorIconClean2">#F4F4F4</color>
+    <color name="colorIconClean3">#E1E1E1</color>
 </resources>

@@ -5,4 +5,7 @@
     <color name="colorGiHub">@android:color/white</color>
     <color name="colorSplashScreenText">#616161</color>
     <color name="colorVNIcons">#424242</color>
+    <color name="colorIconClean">#424242</color>
+    <color name="colorIconClean2">#616161</color>
+    <color name="colorIconClean3">#424242</color>
 </resources>

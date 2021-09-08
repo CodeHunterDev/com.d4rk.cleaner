@@ -120,7 +120,7 @@
                 android:padding="4dp"
                 android:tooltipText="@string/action_reset"
                 android:visibility="gone"
-                app:srcCompat="@drawable/ic_refresh_24dp"
+                app:srcCompat="@drawable/ic_refresh"
                 tools:ignore="UnusedAttribute"
                 tools:visibility="visible"/>
         </LinearLayout>

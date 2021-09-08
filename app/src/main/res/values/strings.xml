@@ -6,7 +6,7 @@
     <string name="atmegame" translatable="false">Atmegame!</string>
     <string name="about_michael_tutorials" translatable="false">Michael Tutorials!</string>
     <string name="adfly" translatable="false"><a href='http://anthargo.com/9cUM'>http://anthargo.com/9cUM</a></string>
-    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">4.0_beta_preview2</string>
+    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">4.0_beta_preview3</string>
     <string name="miscellaneous_firebase" translatable="false">Firebase.</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_gamejolt" translatable="false">GameJolt.</string>
@@ -164,41 +164,33 @@
     <br> </br>
 			•1000+ downloads celebration;\n
     <br> </br>
+			•Added Invalid Media Cleaner;\n
+    <br> </br>
 			•Added Clipboard Cleaner widgets;\n
     <br> </br>
 			•Added Clipboard Cleaner titles;\n
+    <br> </br>
+			•Updated service in Clipboard Cleaner;\n
     <br> </br>
 			•Added open source libraries;\n
     <br> </br>
         	•Added support for russian, hungarian, turkish &amp; german languages (isn\'t 100% correct);\n
     <br> </br>
-			•New navigation drawer;\n
+			•Requires minimum Android 5.0 Lollipop;\n
     <br> </br>
-			•Now D4rK Cleaner Supports just Android 5.0+ (target SDK 21+);\n
-    <br> </br>
-			•Removed issue reporter;\n
-    <br> </br>
-			•More compatibility with new APIs;\n
-    <br> </br>
-			•Updated service in Clipboard Cleaner;\n
-    <br> </br>
-			•Fixed GitHub README.md file;\n
-    <br> </br>
-			•Fixed, added &amp; remastered icons;\n
+			•Fixed, added, optimized &amp; remastered icons;\n
     <br> </br>
 			•Now settings is just to change values of filters or miscellaneous;\n
     <br> </br>
-			•Design tweaks;\n
-    <br> </br>
-			•New share button on navigation drawer;\n
+			•Design tweaks, more tooltips, new navigation drawer and more;\n
     <br> </br>
 			•Matured code complexity;\n
     <br> </br>
-			•Removed jcenter;\n
-   <br> </br>
-			•More tooltips;\n
+			•Removed jcenter from source code;\n
     <br> </br>
-			•Stability, performance &amp; general improvements;\n
+			•Removed issue reporter;\n
+    <br> </br>
+			•Stability, performance &amp; general compatibility improvements;\n
     <br> </br>
 			•Implemented MANAGE_EXTERNAL_STORAGE permission.\n
     <br> </br>

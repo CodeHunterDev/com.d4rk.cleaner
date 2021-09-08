@@ -51,6 +51,7 @@ Bugs can be reported here.
 - Create an Android/general issue/bug.
 
 Known bugs:
+- Clean process stops if theme is switched.
 - Rare moments when "Clean" button not working after using split screen.
 
 __D4rK Cleaner is 100% free, open source inspired by LTE Cleaner by TheRedSpy15, ad free, and deletes everything it claims to!__
