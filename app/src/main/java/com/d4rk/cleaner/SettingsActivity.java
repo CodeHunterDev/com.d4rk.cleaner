@@ -15,9 +15,6 @@ public class SettingsActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             this.setHasOptionsMenu(true);
         }
-        /**
-         * Inflate Preferences
-         */
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             addPreferencesFromResource(R.xml.settings);

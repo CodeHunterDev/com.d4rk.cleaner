@@ -17,10 +17,6 @@ android {
         versionName '4.0_beta_preview3'
         vectorDrawables.useSupportLibrary true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        signingConfig signingConfigs.debug
-        multiDexEnabled true
-        testFunctionalTest false
-        testHandleProfiling false
         buildTypes {
 		  debug {
             minifyEnabled false
@@ -28,12 +24,10 @@ android {
             debuggable true
         }
             release {
-                minifyEnabled false
-                shrinkResources false
-                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-                proguardFile 'proguard-project.txt'
-                multiDexEnabled true
+                minifyEnabled true
+                shrinkResources true
                 debuggable false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
                 resValue("bool", "FIREBASE_CRASH_ENABLED", "true")
                 resValue("bool", "FIREBASE_ANALYTICS_DEACTIVATED", "true")
             }
