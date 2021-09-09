@@ -80,11 +80,6 @@
                 android:resource="@xml/shortcuts"/>
         </activity>
         <activity
-            android:name=".invalid.ui.InvalidActivity"
-            android:theme="@style/AppTheme"
-            android:label="@string/invalid_media_cleaner"
-            android:exported="true"/>
-        <activity
             android:name=".MainActivity"
             android:theme="@style/AppThemeNoActionBar"/>
         <activity
@@ -93,6 +88,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".clipboard.ClipboardActivity"/>
+        </activity>
+        <activity
+            android:name=".invalid.ui.InvalidActivity"
+            android:theme="@style/AppTheme"
+            android:label="@string/invalid_media_cleaner">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".invalid.ui.InvalidActivity"/>
         </activity>
         <activity
             android:name=".clipboard.IntentActivity"

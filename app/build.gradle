@@ -16,6 +16,7 @@ android {
         versionCode 38
         versionName '4.0_beta_preview3'
         vectorDrawables.useSupportLibrary true
+        archivesBaseName = "ClipboardCleaner-v${versionName}(${versionCode})"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildTypes {
 		  debug {

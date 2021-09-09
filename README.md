@@ -60,14 +60,12 @@ Features:
 - Cleans empty folders;
 - Cleans clipboard; 
 - Cleans logs;
-- Cleans RAM;
 - Cleans temporary files;
 - Cleans caches;
 - Cleans advertisement folders;
 - Cleans invalid media files;
 - Make whitelists;
-- Customizable cleans;
-- Compress Images.
+- Customizable cleans.
 
 Upcoming major features and there development stage:
 | Feature name         | Description                                  | Status        |

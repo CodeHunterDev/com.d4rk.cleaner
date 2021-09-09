@@ -31,7 +31,7 @@
     <string name="progress_text_scanning" translatable="false">Scanning…</string>
     <string name="progress_text_cleaning" translatable="false">Cleaning…</string>
     <string name="empty_text" translatable="false">No Result</string>
-    <string name="dialog_confirm_clean_title" translatable="false">Confirm cleaning</string>
+    <string name="dialog_confirm_clean_title" translatable="false">Confirm cleaning?</string>
     <string name="dialog_confirm_clean_message" translatable="false">Do you want to remove %d selected item(s) from MediaStore? This operation cannot be reverted.</string>
     <string name="dialog_finished_clean_title" translatable="false">Finished</string>
     <string name="dialog_finished_clean_message" translatable="false">%d item(s) have been removed from MediaStore.</string>

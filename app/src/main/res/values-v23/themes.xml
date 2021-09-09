@@ -7,7 +7,7 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@color/colorDayNightMode</item>
     </style>
     <style name="AppThemeNoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -18,7 +18,7 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@color/colorDayNightMode</item>
     </style>
     <style name="MyAlertDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
         <item name="alertDialogTheme">@style/Theme.AppCompat.DayNight.Dialog.Alert</item>
@@ -28,8 +28,5 @@
         <item name="dialogCornerRadius">8dp</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.MyApp.NegativeButton</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.MyApp.PositiveButton</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/white</item>
     </style>
 </resources>

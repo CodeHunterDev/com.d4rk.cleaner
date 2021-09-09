@@ -4,7 +4,6 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -16,6 +15,7 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import com.d4rk.cleaner.R;
@@ -25,7 +25,7 @@ import com.d4rk.cleaner.invalid.task.CleanFilesTask;
 import java.util.ArrayList;
 import java.util.List;
 import java9.util.stream.StreamSupport;
-public class InvalidActivity extends Activity {
+public class InvalidActivity extends AppCompatActivity {
     private static final String TAG = InvalidActivity.class.getSimpleName();
     private static final String EXTRA_STATE = TAG + ".extra.STATE";
     private static final String EXTRA_ITEMS = TAG + ".extra.ITEMS";
@@ -33,30 +33,10 @@ public class InvalidActivity extends Activity {
     private static final int STATE_SCANNING = 1;
     private static final int STATE_CHOOSING = 2;
     private static final int STATE_CLEANING = 3;
-    private static final int[] FIRST_STEP_VISIBILITY = {
-            VISIBLE,
-            GONE,
-            GONE,
-            GONE
-    };
-    private static final int[] PROGRESS_VISIBILITY = {
-            GONE,
-            VISIBLE,
-            GONE,
-            VISIBLE
-    };
-    private static final int[] LIST_VISIBILITY = {
-            GONE,
-            GONE,
-            VISIBLE,
-            GONE
-    };
-    private static final int[] RESET_BUTTON_VISIBILITY = {
-            GONE,
-            GONE,
-            VISIBLE,
-            GONE
-    };
+    private static final int[] FIRST_STEP_VISIBILITY = {VISIBLE, GONE, GONE, GONE};
+    private static final int[] PROGRESS_VISIBILITY = {GONE, VISIBLE, GONE, VISIBLE};
+    private static final int[] LIST_VISIBILITY = {GONE, GONE, VISIBLE, GONE};
+    private static final int[] RESET_BUTTON_VISIBILITY = {GONE, GONE, VISIBLE, GONE};
     private RecyclerView mRecyclerView;
     private View mFirstStepView, mProgressView, mEmptyView, mListContainer;
     private TextView mActionButton;
@@ -168,7 +148,9 @@ public class InvalidActivity extends Activity {
     }
     private void setupViewCallbacks() {
         final View rootView = findViewById(R.id.root_view);
-        rootView.setOnApplyWindowInsetsListener((v, insets) -> insets.consumeSystemWindowInsets());
+        rootView.setOnApplyWindowInsetsListener((v, insets) -> {
+            return insets.consumeSystemWindowInsets();
+        });
         mActionButton.setOnClickListener(v -> onActionButtonClick());
         mResetButton.setOnClickListener(v -> {
             mState = STATE_NORMAL;
@@ -291,7 +273,7 @@ public class InvalidActivity extends Activity {
         }
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new AlertDialog.Builder(getActivity())
+            return new AlertDialog.Builder(getActivity(), R.style.MyAlertDialogTheme)
                     .setTitle(R.string.dialog_confirm_clean_title)
                     .setMessage(getString(R.string.dialog_confirm_clean_message, mCount))
                     .setPositiveButton(android.R.string.yes, (dialog, which) -> {
@@ -315,17 +297,20 @@ public class InvalidActivity extends Activity {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-
             if (getArguments() != null) {
                 mCount = getArguments().getInt(EXTRA_COUNT);
             }
         }
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new AlertDialog.Builder(getActivity())
+            return new AlertDialog.Builder(getActivity(), R.style.MyAlertDialogTheme)
                     .setTitle(R.string.dialog_finished_clean_title)
                     .setMessage(getString(R.string.dialog_finished_clean_message, mCount))
-                    .setPositiveButton(android.R.string.ok, null)
+                    .setPositiveButton(android.R.string.yes, (dialog, which) -> {
+                        final InvalidActivity activity = (InvalidActivity) getActivity();
+                        activity.startCleaning();
+                    })
+                    .setNegativeButton(android.R.string.no, null)
                     .create();
         }
     }

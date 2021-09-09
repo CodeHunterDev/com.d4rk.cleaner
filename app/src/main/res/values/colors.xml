@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">@android:color/transparent</color>
-    <color name="colorDarkMode">#121212</color>
+    <color name="colorDayNightMode">@android:color/white</color>
     <color name="colorShortcuts">#F5F5F5</color>
     <color name="colorGoogleYellow">#F4B400</color>
     <color name="colorGoogleGreen">#0F9D58</color>
@@ -10,8 +10,7 @@
     <color name="colorAccent">#4285F4</color>
     <color name="colorGiHub">#0F0C0D</color>
     <color name="colorSplashScreenText">#DFDFDF</color>
-    <color name="colorVNIcons">#E6E9E8</color>
     <color name="colorIconClean">#EDEDED</color>
-    <color name="colorIconClean2">#F4F4F4</color>
-    <color name="colorIconClean3">#E1E1E1</color>
+    <color name="colorPrimaryInvalid">#222222</color>
+    <color name="colorTextPrimary">@android:color/black</color>
 </resources>

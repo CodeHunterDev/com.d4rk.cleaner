@@ -126,7 +126,6 @@
             android:layout_width="150dp"
             android:layout_height="144dp"
             android:indeterminate="false"
-            android:background="@drawable/circular_background"
             android:progressDrawable="@drawable/circular"
             app:layout_constraintBottom_toBottomOf="@+id/ScanTextView"
             app:layout_constraintEnd_toEndOf="@+id/ScanTextView"

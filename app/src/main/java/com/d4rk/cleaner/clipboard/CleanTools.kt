@@ -4,6 +4,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import androidx.annotation.StringDef
 import androidx.core.content.edit
+import android.os.Build
 import com.d4rk.cleaner.R
 private const val PREFIX = "com.d4rk.cleaner.clipboard.action"
 const val ACTION_CLEAN = "$PREFIX.CLEAN"
@@ -16,7 +17,11 @@ fun Context.clean() {
     val clipboard = clipboard()
     fun clean() {
         if (clipboard.getClipContent(this).isNotEmpty()) {
-            clipboard.setPrimaryClip(ClipData.newPlainText("text", ""))
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                clipboard.clearPrimaryClip()
+            } else {
+                clipboard.setPrimaryClip(ClipData.newPlainText("text", ""))
+            }
             if (clipboard.getClipContent(this).isEmpty()) {
                 toast(R.string.clipboard_cleaned)
             } else {
@@ -49,9 +54,13 @@ fun Context.content() {
     toast(clipboard().getClipContent(this))
 }
 private fun Context.clipboard() = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-private fun ClipboardManager.getClipContent(context: Context): String = primaryClip.let { clip ->
-    if (clip != null && clip.itemCount > 0)
-        clip.getItemAt(0).coerceToText(context).toString() else ""
+private fun ClipboardManager.getClipContent(context: Context): String {
+    val primaryClip = primaryClip ?: return ""
+    val itemCount = primaryClip.itemCount
+    if (itemCount <= 0) return ""
+    return List(itemCount) { index ->
+        primaryClip.getItemAt(index).coerceToText(context).toString()
+    }.joinToString(separator = "\n")
 }
 private const val PREF_USE_KEYWORD = "pref_use_keyword"
 private const val PREF_KEYWORD_NORMAL = "pref_keyword_normal"

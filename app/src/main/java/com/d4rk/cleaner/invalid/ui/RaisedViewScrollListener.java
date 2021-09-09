@@ -11,11 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.d4rk.cleaner.R;
-/**
- * Control the elevation of raised view by recycler view (layout manager)
- *
- * @author Fung Gwo (fython@163.com)
- */
 public class RaisedViewScrollListener extends RecyclerView.OnScrollListener {
     @NonNull
     public final View mTargetView;
