@@ -80,43 +80,35 @@ public class MainActivity extends AppCompatActivity {
                         Uri.parse("https://www.atmegame.com/?utm_source=D4Cleaner&utm_medium=D4Cleaner")))
                 .build();
         ShortcutManagerCompat.pushDynamicShortcut(context, shortcut);
-        navigationView.setNavigationItemSelectedListener(menuItem -> {
-            switch (menuItem.getItemId())
-            {
-                case R.id.nav_drawer_settings:
-                    Intent intent = new Intent (MainActivity.this, SettingsActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.nav_drawer_whitelist:
-                    intent = new Intent (MainActivity.this, WhitelistActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.nav_drawer_clipboard_cleaner:
-                    intent = new Intent (MainActivity.this, ClipboardActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.nav_drawer_invalid_media_cleaner:
-                    intent = new Intent (MainActivity.this, InvalidActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.nav_drawer_about:
-                    intent = new Intent (MainActivity.this, AboutActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.nav_drawer_support:
-                    Intent newIntent = new Intent(android.content.Intent.ACTION_VIEW,
-                            Uri.parse("https://www.paypal.me/d4rkmichaeltutorials"));
-                    startActivity(newIntent);
-                    break;
-                case  R.id.nav_drawer_share:{
-                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        navigationView.setNavigationItemSelectedListener(MenuItem -> {
+            int id = MenuItem.getItemId();
+            if (id == R.id.nav_drawer_settings) {
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+            }
+            if (id == R.id.nav_drawer_whitelist) {
+                startActivity(new Intent(MainActivity.this, WhitelistActivity.class));
+            }
+            if (id == R.id.nav_drawer_clipboard_cleaner) {
+                startActivity(new Intent(MainActivity.this, ClipboardActivity.class));
+            }
+            if (id == R.id.nav_drawer_invalid_media_cleaner) {
+                startActivity(new Intent(MainActivity.this, InvalidActivity.class));
+            }
+            if (id == R.id.nav_drawer_about) {
+                startActivity(new Intent(MainActivity.this, AboutActivity.class));
+            }
+            if (id == R.id.nav_drawer_support) {
+                Intent openURL = new Intent(Intent.ACTION_VIEW);
+                openURL.setData(Uri.parse("https://www.paypal.me/d4rkmichaeltutorials"));
+                startActivity(openURL);
+            }
+            if (id == R.id.nav_drawer_share) {
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                     sharingIntent.setType("text/plain");
-                    String shareBody =  "https://play.google.com/store/apps/details?id=com.d4rk.cleaner";
-                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Try right now!");
-                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                    String shareBody = "https://play.google.com/store/apps/details?id=com.d4rk.cleaner";
+                    sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Try right now!");
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
                     startActivity(Intent.createChooser(sharingIntent, "Share using..."));
-                }
-                break;
             }
             return false;
         });
@@ -136,6 +128,11 @@ public class MainActivity extends AppCompatActivity {
     public final void link(View view) {
         Intent openURL = new Intent(android.content.Intent.ACTION_VIEW);
         openURL.setData(Uri.parse("https://www.atmegame.com/?utm_source=D4Cleaner&utm_medium=D4Cleaner"));
+        startActivity(openURL);
+    }
+    public final void adflylink(View view) {
+        Intent openURL = new Intent(android.content.Intent.ACTION_VIEW);
+        openURL.setData(Uri.parse("http://anthargo.com/9cUM"));
         startActivity(openURL);
     }
     public void setUpToolbar() {

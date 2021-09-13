@@ -1,6 +1,7 @@
 package com.d4rk.cleaner.invalid.ui;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.Manifest.permission.MANAGE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
@@ -49,6 +51,7 @@ public class InvalidActivity extends AppCompatActivity {
     private InvalidImagesLoader mInvalidLoader;
     @Nullable
     private CleanFilesTask mCleanFilesTask;
+    @RequiresApi(api = Build.VERSION_CODES.R)
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,7 +99,7 @@ public class InvalidActivity extends AppCompatActivity {
         updateViewsByState();
     }
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(EXTRA_STATE, mState);
         outState.putParcelableArrayList(EXTRA_ITEMS, mItems);
@@ -146,11 +149,10 @@ public class InvalidActivity extends AppCompatActivity {
         final List < MediaItem > items = new ArrayList < > ();
         mAdapter.submitList(items);
     }
+    @RequiresApi(api = Build.VERSION_CODES.R)
     private void setupViewCallbacks() {
         final View rootView = findViewById(R.id.root_view);
-        rootView.setOnApplyWindowInsetsListener((v, insets) -> {
-            return insets.consumeSystemWindowInsets();
-        });
+        rootView.setOnApplyWindowInsetsListener((v, insets) -> insets.consumeSystemWindowInsets());
         mActionButton.setOnClickListener(v -> onActionButtonClick());
         mResetButton.setOnClickListener(v -> {
             mState = STATE_NORMAL;
@@ -162,15 +164,13 @@ public class InvalidActivity extends AppCompatActivity {
         mActionButton.setCompoundDrawablesWithIntrinsicBounds(iconRes, 0, 0, 0);
         mActionButton.setText(textRes);
     }
+    @RequiresApi(api = Build.VERSION_CODES.R)
     private void onActionButtonClick() {
         switch (mState) {
             case STATE_NORMAL: {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (checkSelfPermission(WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
-                        requestPermissions(new String[] {
-                                READ_EXTERNAL_STORAGE,
-                                WRITE_EXTERNAL_STORAGE
-                        }, 0);
+                        requestPermissions(new String[] {READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, MANAGE_EXTERNAL_STORAGE}, 0);
                         return;
                     }
                 }

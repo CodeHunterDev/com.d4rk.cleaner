@@ -16,26 +16,9 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="colorPrimary">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="android:background">@color/colorAlertDialogBackground</item>
         <item name="dialogCornerRadius">8dp</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.MyApp.NegativeButton</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.MyApp.PositiveButton</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/colorDayNightMode</item>
-    </style>
-    <style name="Widget.MyApp.NegativeButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.MyApp.NegativeButton</item>
-    </style>
-    <style name="Widget.MyApp.PositiveButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.MyApp.PositiveButton</item>
-    </style>
-    <style name="ThemeOverlay.MyApp.NegativeButton" parent="">
-        <item name="colorPrimary">@color/colorAccent</item>
-    </style>
-    <style name="ThemeOverlay.MyApp.PositiveButton" parent="">
-        <item name="colorPrimary">@color/colorAndroidGreen</item>
-    </style>
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
     </style>
 </resources>

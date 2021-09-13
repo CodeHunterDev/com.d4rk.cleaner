@@ -83,8 +83,9 @@ Upcoming major features and there development stage:
 <details>
   <summary>Special Thanks</summary>
 
-- Thanks TheRedSpy15 for LTECleaner;
-- Thanks DeweyReed for Clipboard Cleaner;
+- Thanks [TheRedSpy15](https://github.com/TheRedSpy15) for [LTECleaner](https://github.com/TheRedSpy15/LTECleanerFOSS);
+- Thanks [fython for](https://github.com/fython) for [Invalid Media Cleaner](https://github.com/fython/InvalidMediaCleaner);
+- Thanks [DeweyReed](https://github.com/DeweyReed) for [Clipboard Cleaner](https://github.com/DeweyReed/ClipboardCleaner);
 - Thanks UnderBenis96, Sonerie C8chilu' dă Haur a.k.a Băiatu' Pocnitoare (fostă petardă de elită pă vremea lu' Ștefan cel Mare) & Wiss Kill for testing;
 - YoYo & Auroșu Roșu for some translations.
 

@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.d4rk.cleaner.R;
 public class RaisedViewScrollListener extends RecyclerView.OnScrollListener {
     @NonNull
     public final View mTargetView;
@@ -24,7 +23,6 @@ public class RaisedViewScrollListener extends RecyclerView.OnScrollListener {
     public RaisedViewScrollListener(@NonNull View targetView) {
         mTargetView = Objects.requireNonNull(targetView);
         final Context context = targetView.getContext();
-        mStatedElevation.put(true, context.getResources().getDimension(R.dimen.toolbar_elevation));
         mStatedElevation.put(false, 0F);
         mDuration = context.getResources().getInteger(android.R.integer.config_shortAnimTime);
     }

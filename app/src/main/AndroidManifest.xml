@@ -56,7 +56,7 @@
         <activity
             android:name=".PromptActivity"
             android:label="@string/title_activity_prompt"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppThemeNoActionBar"/>
         <activity
             android:name=".WhitelistActivity"
             android:label="@string/whitelist_string"

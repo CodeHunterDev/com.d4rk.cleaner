@@ -6,6 +6,6 @@
     <color name="colorGiHub">@android:color/white</color>
     <color name="colorSplashScreenText">#616161</color>
     <color name="colorIconClean">#424242</color>
-    <color name="colorPrimaryInvalid">#E0E0E0</color>
+    <color name="colorAlertDialogBackground">#424242</color>
     <color name="colorTextPrimary">@android:color/white</color>
 </resources>

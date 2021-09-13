@@ -19,17 +19,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent">
-                <androidx.appcompat.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/adflylink"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@android:color/transparent"
                     android:layout_gravity="end"
                     android:layout_marginEnd="20dp"
-                    android:autoLink="all"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:text="@string/adfly"
-                    android:textIsSelectable="false"
-                    app:drawableStartCompat="@drawable/ic_face"/>
+                    android:src="@drawable/ic_face"
+                    android:onClick="adflylink"
+                    tools:ignore="UsingOnClickInXml"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="30dp"
                     android:layout_height="36dp"

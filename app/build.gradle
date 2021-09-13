@@ -14,9 +14,9 @@ android {
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 38
-        versionName '4.0_beta_preview3'
+        versionName '4.0_r1'
         vectorDrawables.useSupportLibrary true
-        archivesBaseName = "ClipboardCleaner-v${versionName}(${versionCode})"
+        archivesBaseName = "com.d4rk.cleaner-v${versionName}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildTypes {
 		  debug {
