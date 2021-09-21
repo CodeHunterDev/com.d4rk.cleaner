@@ -16,10 +16,7 @@ import android.os.Environment;
 import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
-import android.transition.TransitionManager;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,47 +26,36 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.pm.ShortcutInfoCompat;
 import androidx.core.content.pm.ShortcutManagerCompat;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.d4rk.cleaner.clipboard.ClipboardActivity;
+import com.d4rk.cleaner.databinding.ActivityMainBinding;
 import com.d4rk.cleaner.invalid.ui.InvalidActivity;
 import com.google.android.material.navigation.NavigationView;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
-    final ConstraintSet constraintSet = new ConstraintSet();
     static boolean running = false;
     static SharedPreferences prefs;
-    LinearLayout fileListView;
-    ScrollView fileScrollView;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
-    ProgressBar scanPBar;
-    TextView progressText;
-    TextView statusText;
     final Context context = this;
-    ConstraintLayout layout;
+    public ActivityMainBinding binding;
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.cleanButton.setOnClickListener(this::clean);
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
-        fileListView = findViewById(R.id.fileListView);
-        fileScrollView = findViewById(R.id.fileScrollView);
-        scanPBar = findViewById(R.id.scanProgress);
-        progressText = findViewById(R.id.ScanTextView);
-        statusText = findViewById(R.id.statusTextView);
-        layout = findViewById(R.id.main_layout);
-        constraintSet.clone(layout);
         setUpToolbar();
         navigationView = findViewById(R.id.navigation_view);
         @SuppressLint("RestrictedApi") ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(context, "atm_shortcut")
@@ -97,6 +83,11 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.nav_drawer_about) {
                 startActivity(new Intent(MainActivity.this, AboutActivity.class));
             }
+            if (id == R.id.nav_drawer_atmegame) {
+                Intent openURL = new Intent(Intent.ACTION_VIEW);
+                openURL.setData(Uri.parse("https://www.atmegame.com/?utm_source=D4Cleaner&utm_medium=D4Cleaner"));
+                startActivity(openURL);
+            }
             if (id == R.id.nav_drawer_support) {
                 Intent openURL = new Intent(Intent.ACTION_VIEW);
                 openURL.setData(Uri.parse("https://www.paypal.me/d4rkmichaeltutorials"));
@@ -113,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
             return false;
         });
     }
+    /**
+     * Runs search and delete on background thread
+     */
     public final void clean(View view) {
         requestWriteExternalPermission();
         if (!running) {
@@ -145,11 +139,8 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
     }
     public void animateBtn() {
-        TransitionManager.beginDelayedTransition(layout);
-        constraintSet.clear(R.id.cleanButton,ConstraintSet.TOP);
-        constraintSet.clear(R.id.statusTextView,ConstraintSet.BOTTOM);
-        constraintSet.setMargin(R.id.statusTextView,ConstraintSet.TOP,50);
-        constraintSet.applyTo(layout);
+        binding.topSpacer.setVisibility(View.GONE);
+        binding.fileScrollView.setVisibility(View.VISIBLE);
     }
     private void scan(boolean delete) {
         Looper.prepare();
@@ -157,37 +148,38 @@ public class MainActivity extends AppCompatActivity {
         runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!running));
         reset();
         File path = Environment.getExternalStorageDirectory();
-        FileScanner fs = new FileScanner(path, this);
-        fs.setEmptyDir(prefs.getBoolean("empty", false));
-        fs.setAutoWhite(prefs.getBoolean("auto_white", true));
-        fs.setDelete(delete);
-        fs.setCorpse(prefs.getBoolean("corpse", false));
-        fs.setGUI(this);
-        fs.setUpFilters(prefs.getBoolean("generic", true),
-                prefs.getBoolean("aggressive", false),
-                prefs.getBoolean("true_aggressive", false),
-                prefs.getBoolean("apk", false));
+        FileScanner fs = new FileScanner(path, this)
+                .setEmptyDir(prefs.getBoolean("empty", false))
+                .setAutoWhite(prefs.getBoolean("auto_white", true))
+                .setDelete(delete)
+                .setCorpse(prefs.getBoolean("corpse", false))
+                .setGUI(binding)
+                .setContext(this)
+                .setUpFilters(
+                        prefs.getBoolean("generic", true),
+                        prefs.getBoolean("aggressive", false),
+                        prefs.getBoolean("true_aggressive", false),
+                        prefs.getBoolean("apk", false));
         if (path.listFiles() == null) {
             TextView textView = printTextView(printTextView(), Color.RED);
-            runOnUiThread(() -> fileListView.addView(textView));
+            runOnUiThread(() -> binding.fileListView.addView(textView));
         }
         runOnUiThread(() -> {
             animateBtn();
-            statusText.setText(getString(R.string.main_status_running));
+            binding.statusTextView.setText(getString(R.string.main_status_running));
+            binding.scanProgress.setProgress(binding.scanProgress.getMax());
+            TextView textView = binding.frameLayout.findViewById(R.id.scanTextView);
+            textView.setText("100%");
         });
         long kilobytesTotal = fs.startScan();
         runOnUiThread(() -> {
-            scanPBar.setProgress(scanPBar.getMax());
-            progressText.setText("100%");
-        });
-        runOnUiThread(() -> {
             if (delete) {
-                statusText.setText(getString(R.string.main_freed) + " " + convertSize(kilobytesTotal));
+                binding.statusTextView.setText(getString(R.string.main_freed) + " " + convertSize(kilobytesTotal));
             } else {
-                statusText.setText(getString(R.string.main_found) + " " + convertSize(kilobytesTotal));
+                binding.statusTextView.setText(getString(R.string.main_found) + " " + convertSize(kilobytesTotal));
             }
         });
-        fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
+        binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
         running = false;
         runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!running));
         Looper.loop();
@@ -195,6 +187,11 @@ public class MainActivity extends AppCompatActivity {
     private String printTextView() {
         return null;
     }
+    /**
+     * Convenience method to quickly create a textview
+     * @param text - text of textview
+     * @return - created textview
+     */
     private synchronized TextView printTextView(String text, int color) {
         TextView textView = new TextView(MainActivity.this);
         textView.setTextColor(color);
@@ -214,18 +211,18 @@ public class MainActivity extends AppCompatActivity {
         }
         return format.format(length) + " B";
     }
-    synchronized TextView displayPath(File file) {
+    public synchronized TextView displayPath(File file) {
         TextView textView = printTextView(file.getAbsolutePath(), getResources().getColor(R.color.colorAccent));
-        runOnUiThread(() -> fileListView.addView(textView));
-        fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
+        runOnUiThread(() -> binding.fileListView.addView(textView));
+        binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
         return textView;
     }
     private synchronized void reset() {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         runOnUiThread(() -> {
-            fileListView.removeAllViews();
-            scanPBar.setProgress(0);
-            scanPBar.setMax(1);
+            binding.fileListView.removeAllViews();
+            binding.scanProgress.setProgress(0);
+            binding.scanProgress.setMax(1);
         });
     }
     public synchronized void requestWriteExternalPermission() {

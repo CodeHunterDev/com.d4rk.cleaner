@@ -4,17 +4,19 @@
     <string name="app_d4rk" translatable="false">D4rK!</string>
     <string name="copyright" translatable="false">Copyright ©2021 ~ D4rK</string>
     <string name="atmegame" translatable="false">Atmegame!</string>
+    <string name="scan_prec" translatable="false">%.0f</string>
+    <string name="percentage" translatable="false">100%</string>
     <string name="about_michael_tutorials" translatable="false">Michael Tutorials!</string>
-    <string name="adfly" translatable="false">Help me by clicking here. Is free.</string>
+    <string name="adfly">Help me by clicking here. Is free.</string>
     <string name="about_app_version_code" translatable="false" tools:ignore="Typos">4.0_r1</string>
     <string name="miscellaneous_firebase" translatable="false">Firebase.</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_gamejolt" translatable="false">GameJolt.</string>
     <string name="about_desene_animate" translatable="false">Desene Animate!</string>
     <string name="about_deviantart" translatable="false">DeviantArt.</string>
-    <string name="navigation_drawer_support" translatable="false">Support!</string>
+    <string name="navigation_drawer_support">Support!</string>
     <string name="main_progress" translatable="false">0%</string>
-    <string name="invalid_media_cleaner" translatable="false">Invalid Media Cleaner!</string>
+    <string name="invalid_media_cleaner">Invalid Media Cleaner!</string>
     <string name="first_step_tips" translatable="false"><![CDATA[
     Start scan and choose invalid media files you want to remove.<br>
     <br>
@@ -23,8 +25,7 @@
     2. <b>Choose actually invalid media files</b> and click "Clean." button.<br>
     3. Done! You can go now XD<br>
     ]]></string>
-    <string name="action_scan" translatable="false">Start scan!</string>
-    <string name="action_clean" translatable="false">Clean.</string>
+    <string name="action_scan">Start scan!</string>
     <string name="action_reset" translatable="false">Reset.</string>
     <string name="action_stop" translatable="false">Stop.</string>
     <string name="progress_text_scanning" translatable="false">Scanning…</string>
@@ -156,6 +157,16 @@
         <item quantity="other"><xliff:g example="7" id="number">%s</xliff:g> seconds</item>
     </plurals>
     <string name="changelog" translatable="false">D4rK Cleaner - Changelog:\n
+    <br> </br>
+\n
+    <br> </br>
+		<b>Version 4.0_r2:\n</b>
+    <br> </br>
+			•Added missed translations;\n
+    <br> </br>
+			•Bug fixes;\n
+    <br> </br>
+			•Improved translations;\n
     <br> </br>
 \n
     <br> </br>

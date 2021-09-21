@@ -115,4 +115,8 @@
     <string name="long_shortcut_atmegame">Играйте в крутые игры здесь !!!</string>
     <string name="long_shortcut_whitelist">Обновите свой белый список!</string>
     <string name="long_shortcut_clipboard_cleaner">Очистите буфер обмена!</string>
+    <string name="adfly">Помогите мне, нажав здесь. Это бесплатно.</string>
+    <string name="navigation_drawer_support">Служба поддержки!</string>
+    <string name="invalid_media_cleaner">Неверный Media Cleaner!</string>
+    <string name="action_scan">"Начать сканирование! "</string>
 </resources>

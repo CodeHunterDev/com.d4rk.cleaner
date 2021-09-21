@@ -4,6 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
+    android:orientation="vertical"
+    android:weightSum="4"
     tools:context=".MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -49,115 +51,92 @@
                 app:srcCompat="@drawable/ic_line"/>
         </LinearLayout>
     </ScrollView>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main_layout"
+<LinearLayout
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:layout_marginTop="56dp"
+    tools:context="com.d4rk.cleaner.MainActivity">
+    <Space
+        android:id="@+id/topSpacer"
+        android:layout_weight="2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="56dp"
-        tools:context="com.d4rk.cleaner.MainActivity">
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/link"
-            android:layout_width="90dp"
-            android:layout_height="64dp"
-            android:background="@android:color/transparent"
-            android:onClick="link"
-            app:cardElevation="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/games"
-            tools:ignore="UsingOnClickInXml"/>
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/clean"
-            android:layout_width="90dp"
-            android:layout_height="64dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:srcCompat="@drawable/ic_clean"/>
-        <ScrollView
-            android:id="@+id/fileScrollView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/card"
-            android:focusable="false"
-            app:layout_constraintBottom_toTopOf="@+id/cleanButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scanProgress">
-            <LinearLayout
-                android:id="@+id/fileListView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:orientation="vertical"/>
-        </ScrollView>
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cleanButton"
-            android:layout_width="152dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="16dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
-            android:onClick="clean"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scanProgress"
-            app:layout_constraintVertical_bias="0.045"
-            tools:ignore="UsingOnClickInXml">
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_text_clean"/>
-        </com.google.android.material.card.MaterialCardView>
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/main_status"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"/>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
         <androidx.core.widget.ContentLoadingProgressBar
             android:id="@+id/scanProgress"
             android:layout_width="150dp"
             android:layout_height="144dp"
             android:indeterminate="false"
-            android:progressDrawable="@drawable/circular"
-            app:layout_constraintBottom_toBottomOf="@+id/ScanTextView"
-            app:layout_constraintEnd_toEndOf="@+id/ScanTextView"
-            app:layout_constraintStart_toStartOf="@+id/ScanTextView"
-            app:layout_constraintTop_toTopOf="@+id/ScanTextView"/>
+            android:max="1"
+            android:progress="0"
+            android:progressDrawable="@drawable/circular"/>
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/ScanTextView"
+            android:id="@+id/scanTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="32dp"
+            android:layout_gravity="center"
             android:text="@string/main_progress"
             android:textColor="@color/colorGoogleGreen"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="@+id/statusTextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/statusTextView"
-            app:layout_constraintVertical_bias="0.0"/>
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/statusTextView"
-            android:layout_width="wrap_content"
+            android:textSize="24sp"/>
+    </FrameLayout>
+    <ScrollView
+        android:animateLayoutChanges="true"
+        android:layout_weight="4"
+        android:id="@+id/fileScrollView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/card">
+        <LinearLayout
+            android:id="@+id/fileListView"
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/main_status"
-            android:textColor="@color/colorAccent"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.36"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginStart="3dp"
+            android:orientation="vertical" />
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cleanButton"
+            android:layout_width="144dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="8dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_text_clean"/>
+    </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
@@ -166,6 +145,5 @@
         android:clipToPadding="false"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header"
-        app:menu="@menu/drawer_menu">
-    </com.google.android.material.navigation.NavigationView>
+        app:menu="@menu/drawer_menu"/>
 </androidx.drawerlayout.widget.DrawerLayout>

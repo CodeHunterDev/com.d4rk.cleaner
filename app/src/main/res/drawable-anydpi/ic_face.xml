@@ -1,6 +1,7 @@
-<vector android:autoMirrored="true" android:height="30dp" android:viewportHeight="100" android:viewportWidth="100" android:width="30dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#4285F4" android:pathData="M29.3 80.2v-0.3c0.1 0 0.2 0.1 0.3 0.1 5.7 3.1 11.4 6.1 17.1 9.2 0.2 0.1 0.3 0.1 0.5 0 5.8-3.5 11.5-7 17.3-10.5 0.1 0 0.2-0.1 0.3-0.2 0.4 6.8 0.7 13.6 1.1 20.3-0.1 0-0.2-0.1-0.3-0.1-6-2.8-12.1-5.6-18.1-8.4-0.2-0.1-0.3-0.1-0.5 0-5.5 3.1-11 6.3-16.5 9.4-0.1 0 0 0-0.3 0.1h-0.5"/>
-    <path android:fillColor="#F4B400" android:pathData="M38.1 0c1.9 2.9 3.8 5.8 5.6 8.7 1.1 1.7 2.3 3.5 3.4 5.2 0.1 0.2 0.1 0.3-0.1 0.4-4.6 3-9.2 5.9-13.7 8.9-0.2 0.1-0.2 0.1-0.4-0.1-3-4.6-5.9-9.2-8.9-13.7 0-0.2 0-0.2 0.2-0.4 4.6-3 9.1-5.9 13.7-8.9 0.1 0 0.1 0 0.2-0.1z"/>
-    <path android:fillColor="#0F9D58" android:pathData="M15.4 40.1c0-2 0.2-4.3 0.7-6.6 0-0.2 0.1-0.2 0.3-0.2 12.3 2.6 24.6 5.2 37 7.9 10.2 2.2 20.3 4.3 30.5 6.5 0.2 0 0.2 0.1 0.1 0.2-0.5 2.3-1.2 4.5-2.2 6.7-15.7 34.1-66.3 23.1-66.4-14.5z"/>
-    <path android:fillColor="#DB4437" android:pathData="M76.1 11.9c4.7 0 8.5 3.8 8.5 8.5s-3.8 8.5-8.5 8.5-8.5-3.8-8.5-8.5 3.8-8.5 8.5-8.5z"/>
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="30dp" android:height="30dp" android:viewportWidth="100" android:viewportHeight="100">
+    <path android:fillColor="#DB4437" android:pathData="M 76.1 11.9 C 80.7944203736 11.9 84.6 15.7055796264 84.6 20.4 C 84.6 25.0944203736 80.7944203736 28.9 76.1 28.9 C 71.4055796264 28.9 67.6 25.0944203736 67.6 20.4 C 67.6 15.7055796264 71.4055796264 11.9 76.1 11.9 Z"/>
+    <path android:fillColor="#F4B400" android:pathData="M 38 0 L 24.2 8.9 L 32.9 23.2 L 47.1 14.3 Z"/>
+    <path android:fillColor="#0F9D58" android:pathData="M16.2,33.3L83.9,48l0,0c-4,18.5-22.3,30.3-40.9,26.2l-0.6-0.1C23.9,70.1,12.2,51.8,16.2,33.3L16.2,33.3z"/>
+    <path android:fillColor="#4285F4" android:pathData="M 28.1 78.6 L 47.3 89.7 L 66.5 78.6 L 66.5 99.7 L 47.3 89.7 L 28.1 99.7 Z"/>
 </vector>

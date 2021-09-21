@@ -8,10 +8,16 @@ import static android.view.View.VISIBLE;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -127,9 +133,7 @@ public class InvalidActivity extends AppCompatActivity {
                     onChanged();
                 }
                 @Override
-                public void onItemRangeChanged(int positionStart, int itemCount,
-                                               @Nullable Object payload) {
-                    onChanged();
+                public void onItemRangeChanged(int positionStart, int itemCount, @Nullable Object payload) {onChanged();
                 }
                 @Override
                 public void onItemRangeInserted(int positionStart, int itemCount) {
@@ -149,28 +153,31 @@ public class InvalidActivity extends AppCompatActivity {
         final List < MediaItem > items = new ArrayList < > ();
         mAdapter.submitList(items);
     }
-    @RequiresApi(api = Build.VERSION_CODES.R)
     private void setupViewCallbacks() {
         final View rootView = findViewById(R.id.root_view);
         rootView.setOnApplyWindowInsetsListener((v, insets) -> insets.consumeSystemWindowInsets());
-        mActionButton.setOnClickListener(v -> onActionButtonClick());
-        mResetButton.setOnClickListener(v -> {
-            mState = STATE_NORMAL;
-            updateViewsByState();
-            mItems.clear();
-        });
     }
     private void setActionButton(@DrawableRes int iconRes, @StringRes int textRes) {
         mActionButton.setCompoundDrawablesWithIntrinsicBounds(iconRes, 0, 0, 0);
         mActionButton.setText(textRes);
     }
-    @RequiresApi(api = Build.VERSION_CODES.R)
-    private void onActionButtonClick() {
+    public final void onActionButtonClick(View view) {
         switch (mState) {
             case STATE_NORMAL: {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (checkSelfPermission(WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
-                        requestPermissions(new String[] {READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, MANAGE_EXTERNAL_STORAGE}, 0);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                            requestPermissions(new String[] {READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, MANAGE_EXTERNAL_STORAGE}, 1);
+                        }
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                            if (!Environment.isExternalStorageManager()) {
+                                Toast.makeText(this, "Permission needed!", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                                Uri uri = Uri.fromParts("package", getPackageName(), null);
+                                intent.setData(uri);
+                                startActivity(intent);
+                            }
+                        }
                         return;
                     }
                 }
@@ -222,7 +229,7 @@ public class InvalidActivity extends AppCompatActivity {
             }
             case STATE_CHOOSING: {
                 mAdapter.submitList(new ArrayList < > (mItems));
-                setActionButton(R.drawable.ic_trash, R.string.action_clean);
+                setActionButton(R.drawable.ic_trash, R.string.main_clean);
                 break;
             }
             case STATE_CLEANING: {

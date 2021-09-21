@@ -81,7 +81,9 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppThemeNoActionBar"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".clipboard.ClipboardActivity"
             android:label="@string/navigation_drawer_clipboard_cleaner">

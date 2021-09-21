@@ -63,8 +63,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxWidth="300dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
                     android:textSize="16sp"
                     android:gravity="start"
                     tools:text="@string/first_step_tips"/>
@@ -96,22 +94,23 @@
             android:layout_height="54dp"
             android:orientation="horizontal"
             android:elevation="6dp">
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/action_button"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:clickable="true"
                 android:tooltipText="@string/invalid_media_cleaner_clean_tooltip"
                 android:drawablePadding="16dp"
                 android:focusable="true"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
+                android:onClick="onActionButtonClick"
                 android:paddingEnd="16dp"
                 android:text="@string/action_scan"
                 android:textColor="@color/colorAccent"
-                app:drawableStartCompat="@drawable/ic_image_search"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:drawableLeft="@drawable/ic_image_search"
                 app:drawableTint="@color/colorAccent"
-                tools:ignore="TextContrastCheck"/>
+                tools:ignore="RtlHardcoded,TextContrastCheck,UsingOnClickInXml"/>
             <View
                 android:layout_width="0dp"
                 android:layout_weight="1"

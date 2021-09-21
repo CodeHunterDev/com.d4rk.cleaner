@@ -115,4 +115,8 @@
     <string name="long_shortcut_atmegame">Spiele hier coole Spiele!!!</string>
     <string name="long_shortcut_whitelist">Aktualisieren Sie Ihre Whitelist!</string>
     <string name="long_shortcut_clipboard_cleaner">Räumen Sie Ihre Zwischenablage auf!</string>
+    <string name="adfly" translatable="false">Helfen Sie mir, indem Sie hier klicken. Ist gratis.</string>
+    <string name="navigation_drawer_support">" Unterstützung!"</string>
+    <string name="invalid_media_cleaner">Ungültiger Medienreiniger!</string>
+    <string name="action_scan">Scan starten!</string>
 </resources>

@@ -82,6 +82,8 @@ public class WhitelistActivity extends AppCompatActivity {
             String whiteListString = MainActivity.prefs.getString("whiteList","No whitelist");
             String[] whitelistStrings = whiteListString.split(", ");
             whiteList = new LinkedList<>(Arrays.asList(whitelistStrings));
+            whiteList.remove("[");
+            whiteList.remove("]");
         }
         return whiteList;
     }
