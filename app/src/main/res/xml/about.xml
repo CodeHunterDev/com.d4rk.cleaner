@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
+<androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/miscellaneous_about"
     android:key="about">
-    <Preference
+    <androidx.preference.Preference
         android:title="@string/about_github_link"
         android:icon="@drawable/ic_github"
         android:key="github_link">
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://github.com/D4rK7355608/com.d4rk.cleaner"/>
-    </Preference>
-    <Preference
+    </androidx.preference.Preference>
+    <androidx.preference.Preference
         android:title="@string/about_play_store"
         android:icon="@drawable/ic_play_store"
         android:key="play_store">
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://play.google.com/store/apps/dev?id=5390214922640123642&amp;hl=en&amp;gl=US"/>
-    </Preference>
-    <Preference
+    </androidx.preference.Preference>
+    <androidx.preference.Preference
         android:title="@string/about_changelog"
         android:key="changelog"
         android:icon="@drawable/ic_changelog"
@@ -28,16 +28,16 @@
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.d4rk.cleaner"
             android:targetClass="com.d4rk.cleaner.ChangelogActivity"/>
-    </Preference>
-    <Preference
+    </androidx.preference.Preference>
+    <androidx.preference.Preference
         android:title="@string/about_developer"
         android:icon="@drawable/ic_dev"
         android:summary="@string/app_d4rk">
     <intent
         android:action="android.intent.action.VIEW"
         android:data="https://developers.google.com/profile/u/113550389053875890031"/>
-    </Preference>
-    <Preference
+    </androidx.preference.Preference>
+    <androidx.preference.Preference
         android:title="@string/app_d4rk"
         android:key="D4rK"
         android:icon="@drawable/ic_d4rk"
@@ -45,16 +45,17 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://www.youtube.com/channel/UCLDi-rmSRry0pNL-oVvGJAw"/>
-    </Preference>
-    <Preference android:title="@string/about_michael_tutorials"
+    </androidx.preference.Preference>
+    <androidx.preference.Preference
+        android:title="@string/about_michael_tutorials"
         android:key="patreonSupport"
         android:icon="@drawable/ic_michael_tutorials"
         android:summary="@string/about_michael_tutorials_description">
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://www.youtube.com/channel/UCee5YBhGHVCF4JnQzoLFzVA"/>
-    </Preference>
-    <Preference
+    </androidx.preference.Preference>
+    <androidx.preference.Preference
         android:title="@string/about_desene_animate"
         android:key="D4rK"
         android:icon="@drawable/ic_desene_animate"
@@ -62,16 +63,17 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://www.youtube.com/channel/UCgtHCg34rrDvdkjjjPW2jhQ"/>
-    </Preference>
-    <Preference android:title="@string/about_gamejolt"
+    </androidx.preference.Preference>
+    <androidx.preference.Preference
+        android:title="@string/about_gamejolt"
         android:key="gamejolt"
         android:icon="@drawable/ic_gamejolt"
         android:summary="@string/about_gamejolt_description">
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://gamejolt.com/@D4rK_S-A-D"/>
-    </Preference>
-    <Preference
+    </androidx.preference.Preference>
+    <androidx.preference.Preference
         android:title="@string/about_deviantart"
         android:key="deviantart"
         android:summary="@string/about_deviantart_description"
@@ -79,16 +81,16 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://www.deviantart.com/d4rk7355608"/>
-    </Preference>
-    <Preference
+    </androidx.preference.Preference>
+    <androidx.preference.Preference
         android:title="@string/about_app_version"
         android:icon="@drawable/ic_app"
         android:summary="@string/about_app_version_code"/>
-    <Preference
+    <androidx.preference.Preference
         android:title="@string/about_special_thanks"
         android:icon="@drawable/ic_contribute"
         android:summary="@string/about_supporters"/>
-    <Preference
+    <androidx.preference.Preference
         android:title="@string/about_support_patreon"
         android:key="MichaelTutorials"
         android:icon="@drawable/ic_patreon"
@@ -96,5 +98,5 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://www.patreon.com/d4rk7355608"/>
-    </Preference>
-</PreferenceScreen>
+    </androidx.preference.Preference>
+</androidx.preference.PreferenceScreen>

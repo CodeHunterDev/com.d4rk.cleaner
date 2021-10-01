@@ -4,26 +4,34 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
-import java.util.LinkedList;
-import android.widget.ListView;
+import java.util.ArrayList;
 import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.cleaner.databinding.ActivityWhitelistBinding;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 public class WhitelistActivity extends AppCompatActivity {
-    ListView listView;
     BaseAdapter adapter;
-    private static LinkedList<String> whiteList;
+    private static ArrayList<String> whiteList;
+    ActivityWhitelistBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_whitelist);
-        listView = findViewById(R.id.whitelistView);
-        adapter = new ArrayAdapter < > (this, R.layout.fragment_whitelist_custom_textview, getWhiteList());
-        listView.setAdapter(adapter);
+        binding = ActivityWhitelistBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.resetWhiteList.setOnClickListener(this::emptyWhitelist);
+        binding.recommendedButton.setOnClickListener(this::addRecommended);
+        binding.addWhiteList.setOnClickListener(this::addToWhiteList);
+        adapter = new ArrayAdapter<>(this, R.layout.fragment_whitelist_custom_textview, getWhiteList());
+        binding.whitelistView.setAdapter(adapter);
     }
+    /**
+     * Clears the whitelist, then sets it up again without loading saved one from stash.
+     * @param view the view that is clicked
+     */
     public final void emptyWhitelist(View view) {
         new AlertDialog.Builder(WhitelistActivity.this, R.style.MyAlertDialogTheme)
                 .setTitle(R.string.whitelist_empty)
@@ -57,6 +65,10 @@ public class WhitelistActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.whitelist_already_added,
                     Toast.LENGTH_LONG).show();
     }
+    /**
+     * Creates a dialog asking for a file/folder name to add to the whitelist
+     * @param view the view that is clicked
+     */
     public final void addToWhiteList(View view) {
         final EditText input = new EditText(WhitelistActivity.this);
         new AlertDialog.Builder(WhitelistActivity.this, R.style.MyAlertDialogTheme)
@@ -73,15 +85,16 @@ public class WhitelistActivity extends AppCompatActivity {
     public void refreshListView() {
         runOnUiThread(() -> {
             adapter.notifyDataSetChanged();
-            listView.invalidateViews();
-            listView.refreshDrawableState();
+            binding.whitelistView.invalidateViews();
+            binding.whitelistView.refreshDrawableState();
         });
     }
     public static synchronized List < String > getWhiteList() {
         if (whiteList == null) {
             String whiteListString = MainActivity.prefs.getString("whiteList","No whitelist");
             String[] whitelistStrings = whiteListString.split(", ");
-            whiteList = new LinkedList<>(Arrays.asList(whitelistStrings));
+            whiteList = new ArrayList<>(Arrays.asList(whitelistStrings));
+            whiteList.remove("[]");
             whiteList.remove("[");
             whiteList.remove("]");
         }

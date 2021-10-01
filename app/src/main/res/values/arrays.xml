@@ -16,7 +16,6 @@
         <item>OSSLog</item>
         <item>.thumbnails</item>
         <item>UnityAdsVideoCache</item>
-        <item>albumthumbs?</item>
         <item>blueWAplus</item>
         <item>XiaoYing</item>
         <item>.facebook_cache</item>
@@ -192,5 +191,17 @@
         <item>temp</item>
         <item>Temporary</item>
         <item>temporary</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>MODE_NIGHT_NO</item>
+        <item>MODE_NIGHT_YES</item>
+        <item>MODE_NIGHT_FOLLOW_SYSTEM</item>
+        <item>MODE_NIGHT_AUTO_BATTERY</item>
+    </string-array>
+    <string-array name="theme_titles">
+        <item>System Theme.</item>
+        <item>Light Theme.</item>
+        <item>Dark Theme.</item>
+        <item>Battery Saver Dark Mode.</item>
     </string-array>
 </resources>

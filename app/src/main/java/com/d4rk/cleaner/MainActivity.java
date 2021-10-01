@@ -4,6 +4,10 @@ import android.annotation.SuppressLint;
 import android.app.AppOpsManager;
 import android.content.Context;
 import android.content.Intent;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.work.ExistingPeriodicWorkPolicy;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -35,12 +39,13 @@ import com.d4rk.cleaner.clipboard.ClipboardActivity;
 import com.d4rk.cleaner.databinding.ActivityMainBinding;
 import com.d4rk.cleaner.invalid.ui.InvalidActivity;
 import com.google.android.material.navigation.NavigationView;
+import java.util.concurrent.TimeUnit;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
     static boolean running = false;
-    static SharedPreferences prefs;
+    public static SharedPreferences prefs;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
@@ -50,12 +55,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final String[] darkModeValues = getResources().getStringArray(R.array.theme_values);
+        String pref = PreferenceManager.getDefaultSharedPreferences(this)
+                .getString(getString(R.string.theme), getString(R.string.default_theme_switcher));
+        if (pref.equals(darkModeValues[0]))
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        if (pref.equals(darkModeValues[1]))
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        if (pref.equals(darkModeValues[2]))
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        if (pref.equals(darkModeValues[3]))
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
         setContentView(R.layout.activity_main);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.cleanButton.setOnClickListener(this::clean);
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
+        PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(CleanWorker.class, 16, TimeUnit.MINUTES)
+                .build();
+        WorkManager.getInstance().enqueueUniquePeriodicWork("cleanworker", ExistingPeriodicWorkPolicy.KEEP, periodicWork);
         setUpToolbar();
         navigationView = findViewById(R.id.navigation_view);
         @SuppressLint("RestrictedApi") ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(context, "atm_shortcut")
@@ -94,12 +113,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(openURL);
             }
             if (id == R.id.nav_drawer_share) {
-                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                    sharingIntent.setType("text/plain");
-                    String shareBody = "https://play.google.com/store/apps/details?id=com.d4rk.cleaner";
-                    sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Try right now!");
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
-                    startActivity(Intent.createChooser(sharingIntent, "Share using..."));
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody = "https://play.google.com/store/apps/details?id=com.d4rk.cleaner";
+                sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Try right now!");
+                sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share using..."));
             }
             return false;
         });
@@ -111,18 +130,13 @@ public class MainActivity extends AppCompatActivity {
         requestWriteExternalPermission();
         if (!running) {
             if (!prefs.getBoolean("one_click", false))
-                new AlertDialog.Builder(this,R.style.MyAlertDialogTheme)
+                new AlertDialog.Builder(this, R.style.MyAlertDialogTheme)
                         .setTitle(R.string.main_select_task)
                         .setMessage(R.string.main_select_task_description)
-                        .setPositiveButton(R.string.main_clean, (dialog, whichButton) -> new Thread(()-> scan(true)).start())
-                        .setNegativeButton(R.string.main_analyze, (dialog, whichButton) -> new Thread(()-> scan(false)).start()).show();
-            else new Thread(()-> scan(true)).start();
+                        .setPositiveButton(R.string.main_clean, (dialog, whichButton) -> new Thread(() -> scan(true)).start())
+                        .setNegativeButton(R.string.main_analyze, (dialog, whichButton) -> new Thread(() -> scan(false)).start()).show();
+            else new Thread(() -> scan(true)).start();
         }
-    }
-    public final void link(View view) {
-        Intent openURL = new Intent(android.content.Intent.ACTION_VIEW);
-        openURL.setData(Uri.parse("https://www.atmegame.com/?utm_source=D4Cleaner&utm_medium=D4Cleaner"));
-        startActivity(openURL);
     }
     public final void adflylink(View view) {
         Intent openURL = new Intent(android.content.Intent.ACTION_VIEW);
@@ -142,10 +156,11 @@ public class MainActivity extends AppCompatActivity {
         binding.topSpacer.setVisibility(View.GONE);
         binding.fileScrollView.setVisibility(View.VISIBLE);
     }
+    @SuppressLint("SetTextI18n")
     private void scan(boolean delete) {
         Looper.prepare();
         running = true;
-        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!running));
+        runOnUiThread(() -> findViewById(R.id.cleanButton).setEnabled(!running));
         reset();
         File path = Environment.getExternalStorageDirectory();
         FileScanner fs = new FileScanner(path, this)
@@ -155,11 +170,7 @@ public class MainActivity extends AppCompatActivity {
                 .setCorpse(prefs.getBoolean("corpse", false))
                 .setGUI(binding)
                 .setContext(this)
-                .setUpFilters(
-                        prefs.getBoolean("generic", true),
-                        prefs.getBoolean("aggressive", false),
-                        prefs.getBoolean("true_aggressive", false),
-                        prefs.getBoolean("apk", false));
+                .setUpFilters(prefs.getBoolean("generic", true), prefs.getBoolean("aggressive", false), prefs.getBoolean("true_aggressive", false), prefs.getBoolean("apk", false));
         if (path.listFiles() == null) {
             TextView textView = printTextView(printTextView(), Color.RED);
             runOnUiThread(() -> binding.fileListView.addView(textView));
@@ -169,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
             binding.statusTextView.setText(getString(R.string.main_status_running));
             binding.scanProgress.setProgress(binding.scanProgress.getMax());
             TextView textView = binding.frameLayout.findViewById(R.id.scanTextView);
-            textView.setText("100%");
+            textView.setText(R.string.percentage);
         });
         long kilobytesTotal = fs.startScan();
         runOnUiThread(() -> {
@@ -181,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
         });
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
         running = false;
-        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!running));
+        runOnUiThread(() -> findViewById(R.id.cleanButton).setEnabled(!running));
         Looper.loop();
     }
     private String printTextView() {
@@ -196,10 +207,10 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = new TextView(MainActivity.this);
         textView.setTextColor(color);
         textView.setText(text);
-        textView.setPadding(3,3,3,3);
+        textView.setPadding(3, 3, 3, 3);
         return textView;
     }
-    private String convertSize(long length) {
+    public static String convertSize(long length) {
         final DecimalFormat format = new DecimalFormat("#.##");
         final long MiB = 1024 * 1024;
         final long KiB = 1024;
@@ -228,7 +239,9 @@ public class MainActivity extends AppCompatActivity {
     public synchronized void requestWriteExternalPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE},
+                    new String[] {
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE
+                    },
                     1);
             if (!Environment.isExternalStorageManager()) {
                 Toast.makeText(this, "Permission needed!", Toast.LENGTH_LONG).show();
@@ -244,8 +257,10 @@ public class MainActivity extends AppCompatActivity {
             }
         } else {
             ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                            Manifest.permission.READ_EXTERNAL_STORAGE},
+                    new String[] {
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                            Manifest.permission.READ_EXTERNAL_STORAGE
+                    },
                     1);
         }
     }

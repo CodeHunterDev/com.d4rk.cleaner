@@ -9,6 +9,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/colorDayNightMode</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:navigationBarColor">@color/colorDayNightMode</item>
     </style>
     <style name="MyAlertDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">

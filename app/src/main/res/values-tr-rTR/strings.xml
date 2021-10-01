@@ -119,4 +119,7 @@
     <string name="navigation_drawer_support">Destek!</string>
     <string name="invalid_media_cleaner">Geçersiz Medya Temizleyici!</string>
     <string name="action_scan">" Taramayı başlatın!"</string>
+    <string name="daily_title">Günlük Temiz.</string>
+    <string name="action_reset">Sıfırla.</string>
+    <string name="theme">Tema.</string>
 </resources>

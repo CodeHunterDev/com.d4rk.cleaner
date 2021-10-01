@@ -119,4 +119,7 @@
     <string name="navigation_drawer_support">Suport!</string>
     <string name="invalid_media_cleaner">Curățător fișiere media invalide!</string>
     <string name="action_scan">Începe scanarea!</string>
+    <string name="daily_title">Curățare zilnică.</string>
+    <string name="action_reset">Resetare.</string>
+    <string name="theme">Temă.</string>
 </resources>

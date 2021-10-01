@@ -345,6 +345,8 @@
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/xml/about.xml" value="0.2182410423452769" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/xml/faq.xml" value="0.12269736842105264" />
         <entry key="..\:/Program Files/Microsoft Corporation/OneDrive/Documents/Android/Documents/Apps/com.d4rk.cleaner/app/src/main/res/xml/settings.xml" value="0.19" />
+        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/background_round_padded_pressed.xml" value="0.22833876221498373" />
+        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/background_round_padded_selected.xml" value="0.22833876221498373" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/card.xml" value="0.12434210526315789" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/circular.xml" value="0.2305921052631579" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/circular_background.xml" value="0.2305921052631579" />
@@ -352,7 +354,9 @@
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_aggressive_filter.xml" value="0.22833876221498373" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_app.xml" value="0.22833876221498373" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_arrow_back.xml" value="0.29578059071729956" />
+        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_auto_delete.xml" value="0.22703583061889251" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_auto_whitelist.xml" value="0.2305921052631579" />
+        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_baseline_cleaning_services_24.xml" value="0.14539473684210527" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_boost.xml" value="0.22833876221498373" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_broom.xml" value="0.22833876221498373" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_changelog.xml" value="0.2305921052631579" />
@@ -404,6 +408,7 @@
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_prieten_broom.xml" value="0.2305921052631579" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_refresh_24dp.xml" value="0.12664473684210525" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_roundline.xml" value="0.12434210526315789" />
+        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_settings_appearance_theme.xml" value="0.13256578947368422" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_splash_screen_d4rk.xml" value="0.12434210526315789" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_square.xml" value="0.12434210526315789" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_square_outline.xml" value="0.12434210526315789" />
@@ -420,6 +425,8 @@
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_vn_back_solid.xml" value="0.12434210526315789" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_vn_down_solid.xml" value="0.12434210526315789" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/ic_whitelist.xml" value="0.1" />
+        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/menu_item_background_color_state.xml" value="0.22833876221498373" />
+        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/menu_item_color_state.xml" value="0.22833876221498373" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/rounded_button_outline.xml" value="0.2305921052631579" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-anydpi/rounded_view.xml" value="0.13223684210526315" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/drawable-night-anydpi/card.xml" value="0.12434210526315789" />
@@ -442,7 +449,7 @@
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout-v28/activity_main.xml" value="0.21151315789473685" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout-v28/activity_whitelist.xml" value="0.25" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout/activity_about.xml" value="0.21151315789473685" />
-        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout/activity_changelog.xml" value="0.3149976492712741" />
+        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout/activity_changelog.xml" value="0.22" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout/activity_clipboard.xml" value="0.2" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout/activity_compressor.xml" value="0.22039473684210525" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/layout/activity_invalid.xml" value="0.25" />
@@ -463,7 +470,7 @@
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/menu/about_menu.xml" value="0.13355263157894737" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/menu/drawer_menu.xml" value="0.2182410423452769" />
         <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/xml/about.xml" value="0.22039473684210525" />
-        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/xml/settings.xml" value="0.22039473684210525" />
+        <entry key="..\:/Users/D4rK/AndroidStudioProjects/com.d4rk.cleaner/app/src/main/res/xml/settings.xml" value="0.18" />
       </map>
     </option>
   </component>

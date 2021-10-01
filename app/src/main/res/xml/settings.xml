@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/settings_string"
     android:key="settings">
-    <PreferenceCategory
+    <androidx.preference.PreferenceCategory
         android:title="@string/filters_string"
         android:icon="@drawable/ic_filters">
-        <CheckBoxPreference
+        <androidx.preference.CheckBoxPreference
             android:defaultValue="true"
             android:key="generic"
             android:icon="@drawable/ic_generic_filter"
             android:persistent="true"
             android:summary="@string/filters_generic_filter_description"
             android:title="@string/filters_generic_filter"/>
-        <CheckBoxPreference
+        <androidx.preference.CheckBoxPreference
             android:defaultValue="false"
             android:key="aggressive"
             android:icon="@drawable/ic_aggressive_filter"
             android:persistent="true"
             android:summary="@string/filters_aggressive_filter_description"
             android:title="@string/filters_aggressive_filter"/>
-        <CheckBoxPreference
+        <androidx.preference.CheckBoxPreference
             android:defaultValue="false"
             android:key="true_aggressive"
             android:icon="@drawable/ic_true_aggressive_filter"
             android:persistent="true"
             android:summary="@string/true_aggressive_filer_description"
             android:title="@string/true_aggressive_filter"/>
-        <CheckBoxPreference
+        <androidx.preference.CheckBoxPreference
             android:defaultValue="true"
             android:key="empty"
             android:icon="@drawable/ic_delete_empty_folder"
             android:persistent="true"
             android:title="@string/filters_delete_empty_folders"/>
-        <CheckBoxPreference
+        <androidx.preference.CheckBoxPreference
             android:defaultValue="false"
             android:key="corpse"
             android:persistent="true"
@@ -46,31 +48,48 @@
             android:persistent="true"
             android:summary="@string/filters_delete_apk_files_description"
             android:title="@string/filters_delete_apk_files"/>
-        <CheckBoxPreference
+        <androidx.preference.CheckBoxPreference
             android:defaultValue="true"
             android:key="auto_white"
             android:icon="@drawable/ic_auto_whitelist"
             android:persistent="true"
             android:summary="@string/filters_auto_whitelist_description"
             android:title="@string/filters_auto_whitelist"/>
-    </PreferenceCategory>
-    <PreferenceCategory
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory
         android:title="@string/miscellaneous_string"
         android:icon="@drawable/ic_miscellaneous">
-        <CheckBoxPreference
+        <androidx.preference.ListPreference
+            app:useSimpleSummaryProvider="true"
+            android:key="@string/theme"
+            android:defaultValue="@string/default_theme_switcher"
+            android:title="@string/theme"
+            android:dialogTitle="@string/theme"
+            android:icon="@drawable/ic_themes"
+            android:entryValues="@array/theme_values"
+            android:entries="@array/theme_titles"/>
+        <androidx.preference.CheckBoxPreference
             android:defaultValue="false"
             android:key="one_click"
             android:persistent="true"
             android:icon="@drawable/ic_one_click_clean"
             android:summary="@string/miscellaneous_one_click_clean_description"
             android:title="@string/miscellaneous_one_click_clean"/>
-        <CheckBoxPreference
+        <androidx.preference.CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:defaultValue="true"
+            android:key="dailyclean"
+            android:persistent="true"
+            android:icon="@drawable/ic_auto_delete"
+            android:summary="@string/daily_sum"
+            android:title="@string/daily_title"/>
+        <androidx.preference.CheckBoxPreference
             android:defaultValue="true"
             android:key="firebase"
             android:icon="@drawable/ic_firebase"
             android:persistent="true"
             android:summary="@string/miscellaneous_firebase_description"
             android:title="@string/miscellaneous_firebase"/>
-    </PreferenceCategory>
+    </androidx.preference.PreferenceCategory>
     <PreferenceCategory android:title="@string/copyright"/>
-</PreferenceScreen>
+</androidx.preference.PreferenceScreen>

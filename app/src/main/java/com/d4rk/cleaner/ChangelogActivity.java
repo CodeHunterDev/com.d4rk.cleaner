@@ -1,6 +1,9 @@
 package com.d4rk.cleaner;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
 import java.util.Objects;
 public class ChangelogActivity extends AppCompatActivity {
     @Override
@@ -13,5 +16,8 @@ public class ChangelogActivity extends AppCompatActivity {
     @Override public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+    public void changelog_button(View view) {
+        Toast.makeText(this, "Changelog updated.", Toast.LENGTH_SHORT).show();
     }
 }

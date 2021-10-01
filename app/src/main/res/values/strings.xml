@@ -7,35 +7,26 @@
     <string name="scan_prec" translatable="false">%.0f</string>
     <string name="percentage" translatable="false">100%</string>
     <string name="about_michael_tutorials" translatable="false">Michael Tutorials!</string>
-    <string name="adfly">Help me by clicking here. Is free.</string>
-    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">4.0_r1</string>
+    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">5.0_beta1</string>
     <string name="miscellaneous_firebase" translatable="false">Firebase.</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_gamejolt" translatable="false">GameJolt.</string>
     <string name="about_desene_animate" translatable="false">Desene Animate!</string>
     <string name="about_deviantart" translatable="false">DeviantArt.</string>
     <string name="navigation_drawer_support">Support!</string>
+    <string name="default_theme_switcher" translatable="false">MODE_NIGHT_FOLLOW_SYSTEM</string>
     <string name="main_progress" translatable="false">0%</string>
+    <string name="daily_sum" translatable="false">Automatically runs daily, without you having to open the app.</string>
     <string name="invalid_media_cleaner">Invalid Media Cleaner!</string>
-    <string name="first_step_tips" translatable="false"><![CDATA[
-    Start scan and choose invalid media files you want to remove.<br>
-    <br>
-    Steps:<br>
-    1. <b>Click "Start scan!" button</b> and wait for finishing scanning.<br>
-    2. <b>Choose actually invalid media files</b> and click "Clean." button.<br>
-    3. Done! You can go now XD<br>
-    ]]></string>
-    <string name="action_scan">Start scan!</string>
-    <string name="action_reset" translatable="false">Reset.</string>
     <string name="action_stop" translatable="false">Stop.</string>
     <string name="progress_text_scanning" translatable="false">Scanning…</string>
     <string name="progress_text_cleaning" translatable="false">Cleaning…</string>
     <string name="invalid_media_cleaner_clean_tooltip" translatable="false">Check and decide what invalid media files you want to clean.</string>
     <string name="empty_text" translatable="false">No Result</string>
     <string name="dialog_confirm_clean_title" translatable="false">Confirm cleaning?</string>
-    <string name="dialog_confirm_clean_message" translatable="false">Do you want to remove %d selected item(s) from MediaStore? This operation cannot be reverted.</string>
-    <string name="dialog_finished_clean_title" translatable="false">Finished</string>
-    <string name="dialog_finished_clean_message" translatable="false">%d item(s) have been removed from MediaStore.</string>
+    <string name="dialog_confirm_clean_message" translatable="false" tools:ignore="PluralsCandidate">Do you want to remove %d selected item(s) from MediaStore? This operation cannot be reverted.</string>
+    <string name="dialog_finished_clean_title" translatable="false">Finished.</string>
+    <string name="dialog_finished_clean_message" translatable="false" tools:ignore="PluralsCandidate">%d item(s) have been removed from MediaStore.</string>
     <string name="about_changelog">Changelog!</string>
     <string name="about_changelog_description">All detailed changes added over time to each versions.</string>
     <string name="main_status">Status: Idle…</string>
@@ -43,8 +34,12 @@
     <string name="assistant_content">Set this app as the system assistant app &amp; use it by long-pressing the home button or swiping from the bottom corners.</string>
     <string name="main_status_running">Status: Running.</string>
     <string name="title_activity_prompt">Prompt Activity!</string>
+    <string name="daily_title">Daily Clean.</string>
     <string name="main_found">Found: </string>
     <string name="main_freed">Freed: </string>
+    <string name="action_scan">Start scan!</string>
+    <string name="action_reset">Reset.</string>
+    <string name="theme">Theme.</string>
     <string name="assistant_open_settings">Open assistant settings</string>
     <string name="navigation_drawer_clipboard_cleaner">Clipboard Cleaner!</string>
     <string name="main_select_task">Select a task:</string>
@@ -55,6 +50,7 @@
     <string name="settings_string">Settings!</string>
     <string name="filters_string">Filters:</string>
     <string name="filters_generic_filter">Generic filter.</string>
+    <string name="adfly">Help me by clicking here. Is free.</string>
     <string name="filters_generic_filter_description">Delete temp, log, logs, &amp; other useless files &amp; folders.</string>
     <string name="filters_aggressive_filter">Aggressive filter.</string>
     <string name="filters_aggressive_filter_description">Too much to list here &amp; I\'m too lazy to add stuff here. Sorry.</string>
@@ -156,7 +152,29 @@
         <item quantity="one">1 second</item>
         <item quantity="other"><xliff:g example="7" id="number">%s</xliff:g> seconds</item>
     </plurals>
+    <string name="first_step_tips" translatable="false"><![CDATA[
+    Start scan and choose invalid media files you want to remove.<br>
+    <br>
+    Steps:<br>
+    1. <b>Click "Start scan!" button</b> and wait for finishing scanning.<br>
+    2. <b>Choose actually invalid media files</b> and click "Clean." button.<br>
+    3. Done! You can go now XD<br>
+    ]]></string>
     <string name="changelog" translatable="false">D4rK Cleaner - Changelog:\n
+    <br> </br>
+\n
+    <br> </br>
+		<b>Version 5.0_r1:\n</b>
+    <br> </br>
+			•Crash &amp; bug fixes;\n
+    <br> </br>
+			•Some AndroidX stuff added;\n
+    <br> </br>
+			•Daily cleans;\n
+    <br> </br>
+			•Changeable themes;\n
+    <br> </br>
+			•Improved translations;\n
     <br> </br>
 \n
     <br> </br>

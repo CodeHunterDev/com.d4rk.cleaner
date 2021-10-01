@@ -17,7 +17,6 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -133,7 +132,8 @@ public class InvalidActivity extends AppCompatActivity {
                     onChanged();
                 }
                 @Override
-                public void onItemRangeChanged(int positionStart, int itemCount, @Nullable Object payload) {onChanged();
+                public void onItemRangeChanged(int positionStart, int itemCount, @Nullable Object payload) {
+                    onChanged();
                 }
                 @Override
                 public void onItemRangeInserted(int positionStart, int itemCount) {
@@ -167,7 +167,11 @@ public class InvalidActivity extends AppCompatActivity {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (checkSelfPermission(WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                            requestPermissions(new String[] {READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, MANAGE_EXTERNAL_STORAGE}, 1);
+                            requestPermissions(new String[] {
+                                    READ_EXTERNAL_STORAGE,
+                                    WRITE_EXTERNAL_STORAGE,
+                                    MANAGE_EXTERNAL_STORAGE
+                            }, 1);
                         }
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                             if (!Environment.isExternalStorageManager()) {

@@ -115,8 +115,11 @@
     <string name="long_shortcut_atmegame">Játssz klassz játékokat itt !!!</string>
     <string name="long_shortcut_whitelist">Frissítse az engedélyezőlistát!</string>
     <string name="long_shortcut_clipboard_cleaner">Tisztítsa meg a vágólapot!</string>
-    <string name="adfly" translatable="false">Segíts ide kattintva. Ingyenes.</string>
+    <string name="adfly">Segíts ide kattintva. Ingyenes.</string>
     <string name="navigation_drawer_support">Támogatás!</string>
     <string name="invalid_media_cleaner">Érvénytelen média tisztító!</string>
     <string name="action_scan">" Kezdje el a vizsgálatot!"</string>
+    <string name="daily_title">Napi tisztítás.</string>
+    <string name="action_reset">Visszaállítás.</string>
+    <string name="theme">Téma.</string>
 </resources>

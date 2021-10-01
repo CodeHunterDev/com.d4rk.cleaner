@@ -119,4 +119,7 @@
     <string name="navigation_drawer_support">Служба поддержки!</string>
     <string name="invalid_media_cleaner">Неверный Media Cleaner!</string>
     <string name="action_scan">"Начать сканирование! "</string>
+    <string name="daily_title">Ежедневная уборка.</string>
+    <string name="action_reset">Сброс настроек.</string>
+    <string name="theme">Тема.</string>
 </resources>
