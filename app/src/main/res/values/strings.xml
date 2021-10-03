@@ -11,6 +11,8 @@
     <string name="miscellaneous_firebase" translatable="false">Firebase.</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_gamejolt" translatable="false">GameJolt.</string>
+    <string name="service_channel_name" translatable="false">ClipboardCleaner notification channel</string>
+    <string name="service_notif_title" translatable="false">Your clipboard is under the protection</string>
     <string name="about_desene_animate" translatable="false">Desene Animate!</string>
     <string name="about_deviantart" translatable="false">DeviantArt.</string>
     <string name="navigation_drawer_support">Support!</string>
@@ -19,6 +21,7 @@
     <string name="daily_sum" translatable="false">Automatically runs daily, without you having to open the app.</string>
     <string name="invalid_media_cleaner">Invalid Media Cleaner!</string>
     <string name="action_stop" translatable="false">Stop.</string>
+    <string name="disabled" translatable="false">Disabled.</string>
     <string name="progress_text_scanning" translatable="false">Scanning…</string>
     <string name="progress_text_cleaning" translatable="false">Cleaning…</string>
     <string name="invalid_media_cleaner_clean_tooltip" translatable="false">Check and decide what invalid media files you want to clean.</string>

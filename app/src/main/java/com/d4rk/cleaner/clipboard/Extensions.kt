@@ -83,6 +83,7 @@ private fun Context.createShortcut(
             ShortcutInfoCompat.Builder(this, id)
                 .setShortLabel(getString(shortLabelRes))
                 .setLongLabel(getString(longLabelRes))
+                .setDisabledMessage(getString(R.string.disabled))
                 .setIcon(IconCompat.createWithResource(this, iconRes))
                 .setIntent(IntentActivity.activityIntent(this, action))
                 .build(), PendingIntent.getBroadcast(

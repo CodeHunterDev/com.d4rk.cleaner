@@ -13,8 +13,8 @@ android {
         applicationId "com.d4rk.cleaner"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 40
-        versionName '5.0_b1'
+        versionCode 42
+        versionName '5.0_b2'
         vectorDrawables.useSupportLibrary true
         archivesBaseName = "com.d4rk.cleaner-v${versionName}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -32,6 +32,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
     lintOptions {
         abortOnError false

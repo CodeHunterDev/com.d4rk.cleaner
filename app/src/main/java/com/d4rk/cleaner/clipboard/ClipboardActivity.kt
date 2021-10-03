@@ -162,15 +162,13 @@ class ClipboardActivity : AppCompatActivity() {
         }
     }
     private fun setUpAssistant() {
-
+        binding.cardSystemAssist.isGone = true
         binding.btnOpenAssistantSettings.setOnClickListener {
             try {
                 startActivity(Intent(Settings.ACTION_VOICE_INPUT_SETTINGS))
             } catch (e: Exception) {
-                // Ignore
             }
         }
-
         if (assistantAction == ACTION_CLEAN) {
             binding.ratioAssistantClean.isChecked = true
         } else {
@@ -200,11 +198,13 @@ class ClipboardActivity : AppCompatActivity() {
                 setOnClickListener {
                     this@addKeywordView.removeView(view)
                 }
-                contentDescription = getString(R.string.clipboard_setting_keyword_remove).format(keyword)
+                contentDescription =
+                    getString(R.string.clipboard_setting_keyword_remove).format(keyword)
             }
             addView(view)
             return view
         }
+
         fun LinearLayout.getKeywords(): Set<String> {
             val keywords = mutableListOf<String>()
             (0..childCount).forEach {

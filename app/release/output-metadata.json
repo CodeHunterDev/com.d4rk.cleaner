@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.d4rk.cleaner",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 42,
+      "versionName": "5.0_b2",
+      "outputFile": "com.d4rk.cleaner-v5.0_b2-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

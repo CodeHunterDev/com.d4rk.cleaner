@@ -1,4 +1,7 @@
 package com.d4rk.cleaner;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Environment;
@@ -9,9 +12,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import java.io.File;
 import java.io.IOException;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 /**
  * Instrumented test, which will execute on an Android device.
  *
@@ -25,31 +25,31 @@ public class InstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         File path = new File(Environment.getExternalStorageDirectory().toString() + "/");
         Resources res = appContext.getResources();
-        fs = new FileScanner(path, appContext);
+        fs = new FileScanner(path,appContext);
         fs.setAutoWhite(false);
         fs.setResources(res);
         fs.setDelete(true);
     }
     @Test
     public void useAppContext() {
-        // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.d4rk.cleaner", appContext.getPackageName());
+        assertEquals("d4rk.cleaner", appContext.getPackageName());
     }
     @Test
     public void checkLogFiles() {
         File logFile = createFile("testfile.loG");
         File clogFile = createFile("clogs.pnG");
-        fs.setUpFilters(true,
+        fs.setUpFilters(true, false,
                 false, false);
         fs.startScan();
+
         assertTrue(clogFile.exists());
         assertFalse(logFile.exists());
     }
     @Test
     public void checkTempFiles() {
         File tmpFile = createFile("testfile.tMp");
-        fs.setUpFilters(true,
+        fs.setUpFilters(true, false,
                 false, false);
         fs.startScan();
 
@@ -58,27 +58,28 @@ public class InstrumentedTest {
     @Test
     public void checkThumbFiles() {
         File thumbFile = createFile("thumbs.Db");
-        fs.setUpFilters(false,
+        fs.setUpFilters(false, true,
                 true, false);
-        fs.startScan();
-        assertFalse(thumbFile.exists());
-    }
-    @Test
-    public void checkAPKFiles() {
-        File thumbFile = createFile("chrome.aPk");
-        fs.setUpFilters(true,
-                true, true);
         fs.startScan();
 
         assertFalse(thumbFile.exists());
     }
     @Test
+    public void checkAPKFiles() {
+        File thumbFile = createFile("chrome.aPk");
+        fs.setUpFilters(true, true,
+                true, true);
+        fs.startScan();
+        assertFalse(thumbFile.exists());
+    }
+    @Test
     public void checkEmptyDir() {
         File emptyDir = createDir();
-        fs.setUpFilters(true,
+        fs.setUpFilters(true, false,
                 false, false);
         fs.setEmptyDir(true);
         fs.startScan();
+
         assertFalse(emptyDir.exists());
     }
     private File createFile(String name) {
@@ -94,7 +95,6 @@ public class InstrumentedTest {
     }
     private File createDir() {
         File file = new File(Environment.getExternalStorageDirectory(), "testdir");
-
         assertTrue(file.mkdir());
         assertTrue(file.exists());
         return file;

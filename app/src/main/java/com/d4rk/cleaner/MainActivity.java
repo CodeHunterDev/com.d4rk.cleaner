@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.AppOpsManager;
 import android.content.Context;
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.work.ExistingPeriodicWorkPolicy;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
@@ -44,7 +43,6 @@ import java.io.File;
 import java.text.DecimalFormat;
 import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
-    static boolean running = false;
     public static SharedPreferences prefs;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -55,26 +53,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final String[] darkModeValues = getResources().getStringArray(R.array.theme_values);
-        String pref = PreferenceManager.getDefaultSharedPreferences(this)
-                .getString(getString(R.string.theme), getString(R.string.default_theme_switcher));
-        if (pref.equals(darkModeValues[0]))
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
-        if (pref.equals(darkModeValues[1]))
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        if (pref.equals(darkModeValues[2]))
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        if (pref.equals(darkModeValues[3]))
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
         setContentView(R.layout.activity_main);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.cleanButton.setOnClickListener(this::clean);
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
-        PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(CleanWorker.class, 16, TimeUnit.MINUTES)
+        PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(CleanWorker.class, 21, TimeUnit.MINUTES,5,TimeUnit.MINUTES)
                 .build();
-        WorkManager.getInstance().enqueueUniquePeriodicWork("cleanworker", ExistingPeriodicWorkPolicy.KEEP, periodicWork);
+        WorkManager.getInstance().enqueueUniquePeriodicWork(CleanWorker.class.getSimpleName(), ExistingPeriodicWorkPolicy.REPLACE,periodicWork);
         setUpToolbar();
         navigationView = findViewById(R.id.navigation_view);
         @SuppressLint("RestrictedApi") ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(context, "atm_shortcut")
@@ -128,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public final void clean(View view) {
         requestWriteExternalPermission();
-        if (!running) {
+        if (!FileScanner.isRunning) {
             if (!prefs.getBoolean("one_click", false))
                 new AlertDialog.Builder(this, R.style.MyAlertDialogTheme)
                         .setTitle(R.string.main_select_task)
@@ -159,8 +146,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void scan(boolean delete) {
         Looper.prepare();
-        running = true;
-        runOnUiThread(() -> findViewById(R.id.cleanButton).setEnabled(!running));
+        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!FileScanner.isRunning));
         reset();
         File path = Environment.getExternalStorageDirectory();
         FileScanner fs = new FileScanner(path, this)
@@ -191,8 +177,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
-        running = false;
-        runOnUiThread(() -> findViewById(R.id.cleanButton).setEnabled(!running));
+        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!FileScanner.isRunning));
         Looper.loop();
     }
     private String printTextView() {
