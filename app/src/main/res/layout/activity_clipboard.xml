@@ -304,12 +304,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp">
-            <RadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/ratioAssistantClean"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/clipboard_clean" />
-            <RadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/ratioAssistantContent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
