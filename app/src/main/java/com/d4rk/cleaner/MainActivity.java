@@ -221,13 +221,12 @@ public class MainActivity extends AppCompatActivity {
             binding.scanProgress.setMax(1);
         });
     }
-    public synchronized void requestWriteExternalPermission() {
+    public final void requestWriteExternalPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             ActivityCompat.requestPermissions(this,
                     new String[] {
                             Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE
-                    },
-                    1);
+                    }, 1);
             if (!Environment.isExternalStorageManager()) {
                 Toast.makeText(this, "Permission needed!", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
@@ -243,10 +242,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             ActivityCompat.requestPermissions(this,
                     new String[] {
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                            Manifest.permission.READ_EXTERNAL_STORAGE
-                    },
-                    1);
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE
+                    }, 1);
         }
     }
     @RequiresApi(api = Build.VERSION_CODES.M)

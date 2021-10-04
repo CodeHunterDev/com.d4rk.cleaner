@@ -86,7 +86,10 @@ public class InstrumentedTest {
         File file = new File(Environment.getExternalStorageDirectory().toString()
                 + "/" + name);
         try {
-            file.createNewFile();
+            boolean fileCreated = file.createNewFile();
+            if (!fileCreated) {
+                throw new IOException("Unable to create file at specified path. It already exists.");
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

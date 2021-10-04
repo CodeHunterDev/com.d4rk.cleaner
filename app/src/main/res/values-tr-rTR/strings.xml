@@ -83,13 +83,8 @@
     <string name="clipboard_service">Hizmet!</string>
     <string name="clipboard_service_start">Hizmeti Başlatın.</string>
     <string name="clipboard_service_stop">Hizmeti durdur.</string>
-    <string name="clipboard_service_started">Pano Temizleyici Hizmeti Başladı.</string>
-    <string name="clipboard_service_stopped">Pano Temizleyici Hizmeti Durduruldu.</string>
-    <string name="clipboard_service_channel_name">Pano Temizleyici bildirim kanalı.</string>
-    <string name="clipboard_service_notif_title">Panonuz koruma altında.</string>
     <string formatted="false" name="clipboard_service_clean_timeout_template" ns0:ignore="StringFormatCount">+panoyu+temizle+sonra+%s+(düzenlemek için+burayı+tıklatın).</string>
     <string name="clipboard_service_clean_timeout">Zaman aşımı.</string>
-    <string name="clipboard_service_clean_after_seconds_template">Pano+%s içinde+temizlenecek+.</string>
     <string name="clipboard_setting_title">Ayar!</string>
     <string name="clipboard_setting_message_saved">Kaydedildi.</string>
     <string name="clipboard_setting_keyword_title">Anahtar Kelime Filtresi.</string>
@@ -108,12 +103,10 @@
     <string name="true_aggressive_filter">Gerçek agresif filtre!</string>
     <string name="true_aggressive_filer_description"><b> Uyarı!!!</b> Bu filtre, cihazınızda bulunan her dosya türünü siler.<b> belgeler</b> ,<b> fotoğraflar</b> ,<b> videolar</b> ,<b> klasörler</b> </string>
     <string name="navigation_drawer_about">Hakkında!</string>
-    <string name="tooltip_atmegames">Gitmek</string>
     <string name="tooltip_clean_button">Cihazınızı temizlemek için buraya tıklayın!</string>
     <string name="tooltip_add_words">Sözlerinizi eklemek için buraya tıklayın.</string>
     <string name="tooltip_remove_words">Sözlerinizi kaldırmak için buraya tıklayın.</string>
     <string name="long_shortcut_atmegame">Burada harika oyunlar oynayın!!!</string>
-    <string name="long_shortcut_whitelist">Beyaz listenizi güncelleyin!</string>
     <string name="long_shortcut_clipboard_cleaner">Panonuzu temizleyin!</string>
     <string name="adfly">" Buraya tıklayarak bana yardım edin. Bedava."</string>
     <string name="navigation_drawer_support">Destek!</string>

@@ -13,17 +13,19 @@ android {
         applicationId "com.d4rk.cleaner"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 42
-        versionName '5.0_b2'
+        versionCode 43
+        versionName '5.0_b3'
         vectorDrawables.useSupportLibrary true
         archivesBaseName = "com.d4rk.cleaner-v${versionName}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildTypes {
 		  debug {
+              minifyEnabled false
               debuggable true
               proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
             release {
+                minifyEnabled false
                 proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
                 resValue("bool", "FIREBASE_CRASH_ENABLED", "true")
                 resValue("bool", "FIREBASE_ANALYTICS_DEACTIVATED", "true")

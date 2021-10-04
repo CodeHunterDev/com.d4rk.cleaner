@@ -83,13 +83,8 @@
     <string name="clipboard_service">Szolgáltatás!</string>
     <string name="clipboard_service_start">Indítsa el a szolgáltatást.</string>
     <string name="clipboard_service_stop">Szolgálat leállítása.</string>
-    <string name="clipboard_service_started">A vágólap tisztító szolgáltatás elindult.</string>
-    <string name="clipboard_service_stopped">Vágólap -tisztító szolgáltatás leállt.</string>
-    <string name="clipboard_service_channel_name">Vágólap tisztító értesítési csatorna.</string>
-    <string name="clipboard_service_notif_title">A vágólap védett.</string>
     <string formatted="false" name="clipboard_service_clean_timeout_template" ns0:ignore="StringFormatCount">A+vágólap+tisztítása+%s+után (kattintson+ide+a+szerkesztéshez).</string>
     <string name="clipboard_service_clean_timeout">Időtúllépés.</string>
-    <string name="clipboard_service_clean_after_seconds_template">A vágólap+lesz+tisztítva+%s múlva.</string>
     <string name="clipboard_setting_title">Beállítás!</string>
     <string name="clipboard_setting_message_saved">Mentett.</string>
     <string name="clipboard_setting_keyword_title">Kulcsszószűrő.</string>
@@ -108,12 +103,10 @@
     <string name="true_aggressive_filter">Igazi agresszív szűrő!</string>
     <string name="true_aggressive_filer_description"><b> Figyelem!!!</b> Ez a szűrő töröl minden fájltípust az eszközén, mint például<b> dokumentumokat</b> ,<b> fotók</b> ,<b> videók</b> ,<b> mappák</b> </string>
     <string name="navigation_drawer_about">Ról ről!</string>
-    <string name="tooltip_atmegames">Megy</string>
     <string name="tooltip_clean_button">Kattintson ide a készülék tisztításához!</string>
     <string name="tooltip_add_words">Kattintson ide a szavak hozzáadásához.</string>
     <string name="tooltip_remove_words">Kattintson ide a szavak eltávolításához.</string>
     <string name="long_shortcut_atmegame">Játssz klassz játékokat itt !!!</string>
-    <string name="long_shortcut_whitelist">Frissítse az engedélyezőlistát!</string>
     <string name="long_shortcut_clipboard_cleaner">Tisztítsa meg a vágólapot!</string>
     <string name="adfly">Segíts ide kattintva. Ingyenes.</string>
     <string name="navigation_drawer_support">Támogatás!</string>

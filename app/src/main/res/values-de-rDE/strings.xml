@@ -83,13 +83,8 @@
     <string name="clipboard_service">Service!</string>
     <string name="clipboard_service_start">Dienst starten.</string>
     <string name="clipboard_service_stop">Dienst anhalten.</string>
-    <string name="clipboard_service_started">Zwischenablage-Reinigungsdienst gestartet.</string>
-    <string name="clipboard_service_stopped">Zwischenablage-Reinigungsdienst gestoppt.</string>
-    <string name="clipboard_service_channel_name">Zwischenablage-Reiniger-Benachrichtigungskanal.</string>
-    <string name="clipboard_service_notif_title">Ihre Zwischenablage ist geschützt.</string>
     <string formatted="false" name="clipboard_service_clean_timeout_template" ns0:ignore="StringFormatCount">Säubere+die+Zwischenablage+nach+%s+(klicke+hier+zum+Bearbeiten).</string>
     <string name="clipboard_service_clean_timeout">Auszeit.</string>
-    <string name="clipboard_service_clean_after_seconds_template">Zwischenablage+wird+gereinigt+in+%s.</string>
     <string name="clipboard_setting_title">Einstellung!</string>
     <string name="clipboard_setting_message_saved">Gerettet.</string>
     <string name="clipboard_setting_keyword_title">Stichwortfilter.</string>
@@ -108,12 +103,10 @@
     <string name="true_aggressive_filter">Echt aggressiver Filter!</string>
     <string name="true_aggressive_filer_description"><b> Warnung!!!</b> Dieser Filter löscht jeden Dateityp, der sich auf Ihrem Gerät befindet, wie<b> Unterlagen</b> ,<b> Fotos</b> ,<b> Videos</b> ,<b> Ordner</b> </string>
     <string name="navigation_drawer_about">Über!</string>
-    <string name="tooltip_atmegames">gehen</string>
     <string name="tooltip_clean_button">Klicken Sie hier, um Ihr Gerät zu reinigen!</string>
     <string name="tooltip_add_words">Klicken Sie hier, um Ihre Worte hinzuzufügen.</string>
     <string name="tooltip_remove_words">Klicken Sie hier, um Ihre Wörter zu entfernen.</string>
     <string name="long_shortcut_atmegame">Spiele hier coole Spiele!!!</string>
-    <string name="long_shortcut_whitelist">Aktualisieren Sie Ihre Whitelist!</string>
     <string name="long_shortcut_clipboard_cleaner">Räumen Sie Ihre Zwischenablage auf!</string>
     <string name="adfly">Helfen Sie mir, indem Sie hier klicken. Ist gratis.</string>
     <string name="navigation_drawer_support">" Unterstützung!"</string>

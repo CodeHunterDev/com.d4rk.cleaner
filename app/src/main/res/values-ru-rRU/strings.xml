@@ -83,13 +83,8 @@
     <string name="clipboard_service">Обслуживание!</string>
     <string name="clipboard_service_start">Запустить службу.</string>
     <string name="clipboard_service_stop">Остановить службу.</string>
-    <string name="clipboard_service_started">Служба очистки буфера обмена запущена.</string>
-    <string name="clipboard_service_stopped">Служба очистки буфера обмена остановлена.</string>
-    <string name="clipboard_service_channel_name">Канал уведомлений Очистителя буфера обмена.</string>
-    <string name="clipboard_service_notif_title">Ваш буфер обмена находится под защитой.</string>
     <string formatted="false" name="clipboard_service_clean_timeout_template" ns0:ignore="StringFormatCount">Очистить + буфер обмена + после + %s + (щелкните + здесь +, чтобы + изменить).</string>
     <string name="clipboard_service_clean_timeout">Тайм-аут.</string>
-    <string name="clipboard_service_clean_after_seconds_template">Буфер обмена + будет + очищен + через + %s.</string>
     <string name="clipboard_setting_title">Параметр!</string>
     <string name="clipboard_setting_message_saved">Сохранено.</string>
     <string name="clipboard_setting_keyword_title">Фильтр ключевых слов.</string>
@@ -108,12 +103,10 @@
     <string name="true_aggressive_filter">Настоящий агрессивный фильтр!</string>
     <string name="true_aggressive_filer_description"><b> Предупреждение!!!</b> Этот фильтр удаляет все типы файлов на вашем устройстве, например<b> документы</b> ,<b> фотографии</b> ,<b> видео</b> ,<b> папки</b> </string>
     <string name="navigation_drawer_about">О!</string>
-    <string name="tooltip_atmegames">Идти</string>
     <string name="tooltip_clean_button">Щелкните здесь, чтобы очистить устройство!</string>
     <string name="tooltip_add_words">Щелкните здесь, чтобы добавить свои слова.</string>
     <string name="tooltip_remove_words">Щелкните здесь, чтобы удалить свои слова.</string>
     <string name="long_shortcut_atmegame">Играйте в крутые игры здесь !!!</string>
-    <string name="long_shortcut_whitelist">Обновите свой белый список!</string>
     <string name="long_shortcut_clipboard_cleaner">Очистите буфер обмена!</string>
     <string name="adfly">Помогите мне, нажав здесь. Это бесплатно.</string>
     <string name="navigation_drawer_support">Служба поддержки!</string>

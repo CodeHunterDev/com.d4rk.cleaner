@@ -7,7 +7,6 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Environment;
-import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
@@ -24,7 +23,6 @@ public class CleanWorker extends Worker {
             try {
                 scan();
             } catch (Exception e) {
-                Log.e(CHANNEL_ID,"error running cleanworker",e);
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                     Intent intent=new Intent(getApplicationContext(),MainActivity.class);
                     NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"name", NotificationManager.IMPORTANCE_DEFAULT);

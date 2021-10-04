@@ -1,15 +1,15 @@
-D4rK Cleaner
+🧹D4rK Cleaner🧹
 
 ╔╦╦╦═╦╗╔═╦═╦══╦═╗
 ║║║║╩╣╚╣═╣║║║║║╩╣
 ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-The last Android Cleaner you will ever need with Google inspired material design made by D4rK!
+The last Android Cleaner you will ever need with Google inspired material design! 😄
 
-You're tired of the abundance of phone cleaners on the Google Play Store Tired of them being extremely shady Tired of them doing nothing Tired of ads and ads and ads Tired of having to pay for nothing Me too.
-There are simply way too many apps out there that claim to speed up your device. In reality, they don't do anything. D4rK Cleaner only aims to clean your phone by removing safe to delete files, which not only frees up a lot of space, but also improve your privacy. Since D4rK Cleaner removes .log files, which well, log what you do.
+You're tired of the abundance of phone cleaners for Android? Tired of them being extremely shady? Tired of them doing nothing? Tired of too much ads? Tired of having to pay for nothing? Me too.
+There are simply way too many apps out there that claim to speed up your device. In reality, they don't do anything. D4rK Cleaner only aims to clean your phone by removing safe to delete files, which not only frees up a lot of space, but also improve your privacy. Since D4rK Cleaner removes .log files, which well, log what you do, cleans your clipboard to prevent apps hack your passwords and many more!
 
-Opening Issues ⚠️
+⚠️Opening Issues ⚠️
 Bugs can be reported here: https://github.com/D4rK7355608/com.d4rk.cleaner/issues
 
 >Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk. You can ask for help at Stack Overflow.
@@ -30,12 +30,12 @@ Cleans:
 •Logs;
 •Temporary files;
 •Caches;
+•Daily cleans;
+•Changeable themes;
 •Advertisement folders.
 
 Upcoming major features in development:
-•Daily cleans;
 •Hidden cache cleaner;
-•Changeable themes;
 •Clean SD card;
 •SAF file browser.
 

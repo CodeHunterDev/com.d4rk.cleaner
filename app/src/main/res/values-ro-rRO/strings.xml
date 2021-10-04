@@ -83,13 +83,8 @@
     <string name="clipboard_service">Serviciu!</string>
     <string name="clipboard_service_start">Porniți serviciul.</string>
     <string name="clipboard_service_stop">Opriți serviciul.</string>
-    <string name="clipboard_service_started">A început serviciul Cleaner Clipboard.</string>
-    <string name="clipboard_service_stopped">Serviciul de curățare a clipboardului a fost oprit.</string>
-    <string name="clipboard_service_channel_name">Canal de notificare Clipboard Cleaner.</string>
-    <string name="clipboard_service_notif_title">Clipboard-ul dvs. este sub protecție.</string>
     <string formatted="false" name="clipboard_service_clean_timeout_template" ns0:ignore="StringFormatCount">Curățați + clipboardul + după + %s + (faceți clic pe + aici + pentru + edita).</string>
     <string name="clipboard_service_clean_timeout">Pauză.</string>
-    <string name="clipboard_service_clean_after_seconds_template">+ Clipboard + va fi + curățat + în + %s.</string>
     <string name="clipboard_setting_title">Setare!</string>
     <string name="clipboard_setting_message_saved">Salvat.</string>
     <string name="clipboard_setting_keyword_title">Filtru de cuvinte cheie.</string>
@@ -108,12 +103,10 @@
     <string name="true_aggressive_filter">Adevărat filtru agresiv!</string>
     <string name="true_aggressive_filer_description"><b> Avertizare!!!</b> Acest filtru șterge fiecare tip de fișier care se află în dispozitivul dvs., cum ar fi<b> documente</b> ,<b> fotografii</b> ,<b> Videoclipuri</b> ,<b> dosare</b> </string>
     <string name="navigation_drawer_about">Despre!</string>
-    <string name="tooltip_atmegames">Merge</string>
     <string name="tooltip_clean_button">Faceți clic aici pentru a vă curăța dispozitivul!</string>
     <string name="tooltip_add_words">Faceți clic aici pentru a adăuga cuvintele dvs.</string>
     <string name="tooltip_remove_words">Faceți clic aici pentru a vă elimina cuvintele.</string>
     <string name="long_shortcut_atmegame">Joacă jocuri interesante aici !!!</string>
-    <string name="long_shortcut_whitelist">Actualizați-vă lista albă!</string>
     <string name="long_shortcut_clipboard_cleaner">Curăță-ți clipboard-ul!</string>
     <string name="adfly">Ajută-mă făcând clic aici. Este gratuit.</string>
     <string name="navigation_drawer_support">Suport!</string>

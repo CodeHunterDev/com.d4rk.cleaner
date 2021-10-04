@@ -475,6 +475,9 @@
     </option>
   </component>
   <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="com.d4rk.cleaner.MainActivity actionBarDrawerToggle" />
+    </entry_points>
     <pattern value="com.d4rk.cleaner.rambooster.interfaces.ScanListener" method="onClick" />
     <pattern value="com.d4rk.cleaner.rambooster.interfaces.ScanListener" method="onSupportNavigateUp" />
     <pattern value="com.d4rk.cleaner.rambooster.interfaces.ScanListener" />
@@ -484,6 +487,7 @@
     <pattern value="com.d4rk.cleaner.rambooster.interfaces.Booster" method="setScanListener" />
     <pattern value="com.d4rk.cleaner.rambooster.interfaces.Booster" method="startClean" />
     <pattern value="com.d4rk.cleaner.rambooster.interfaces.Booster" method="startScan" />
+    <pattern value="com.d4rk.cleaner.CleanWorker" method="CleanWorker" />
   </component>
   <component name="FindBugsConfigurable">
     <option name="make" value="true" />

@@ -4,10 +4,9 @@
     <string name="app_d4rk" translatable="false">D4rK!</string>
     <string name="copyright" translatable="false">Copyright ©2021 ~ D4rK</string>
     <string name="atmegame" translatable="false">Atmegame!</string>
-    <string name="scan_prec" translatable="false">%.0f</string>
     <string name="percentage" translatable="false">100%</string>
     <string name="about_michael_tutorials" translatable="false">Michael Tutorials!</string>
-    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">5.0_beta1</string>
+    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">5.0_release1</string>
     <string name="miscellaneous_firebase" translatable="false">Firebase.</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_gamejolt" translatable="false">GameJolt.</string>
@@ -119,13 +118,8 @@
     <string name="clipboard_service">Service!</string>
     <string name="clipboard_service_start">Start Service.</string>
     <string name="clipboard_service_stop">Stop Service.</string>
-    <string name="clipboard_service_started">Clipboard Cleaner Service Started.</string>
-    <string name="clipboard_service_stopped">Clipboard Cleaner Service Stopped.</string>
-    <string name="clipboard_service_channel_name">Clipboard Cleaner notification channel.</string>
-    <string name="clipboard_service_notif_title">Your clipboard is under the protection.</string>
     <string name="clipboard_service_clean_timeout_template" formatted="false" tools:ignore="StringFormatCount">Clean the clipboard after %s (click here to edit).</string>
     <string name="clipboard_service_clean_timeout">Timeout.</string>
-    <string name="clipboard_service_clean_after_seconds_template">Clipboard will be cleaned in %s.</string>
     <string name="clipboard_setting_title">Setting!</string>
     <string name="clipboard_setting_message_saved">Saved.</string>
     <string name="clipboard_setting_keyword_title">Keyword Filter.</string>
@@ -144,12 +138,10 @@
     <string name="true_aggressive_filter">True aggressive filter!</string>
     <string name="true_aggressive_filer_description"><b>Warning!!!</b> This filter delete every file type is in your device like <b>documents</b>, <b>photos</b>, <b>videos</b>, <b>folders</b> &amp; more! I\'m not responsible for anything, use at your own risk.</string>
     <string name="navigation_drawer_about">About!</string>
-    <string name="tooltip_atmegames">Go &amp; play cool games here!!!</string>
     <string name="tooltip_clean_button">Click here to clean your device!</string>
     <string name="tooltip_add_words">Click here to add your words.</string>
     <string name="tooltip_remove_words">Click here to remove your words.</string>
     <string name="long_shortcut_atmegame">Play cool games here!!!</string>
-    <string name="long_shortcut_whitelist">Update your whitelist!</string>
     <string name="long_shortcut_clipboard_cleaner">Clean up your clipboard!</string>
     <plurals name="seconds">
         <item quantity="one">1 second</item>
@@ -169,15 +161,19 @@
     <br> </br>
 		<b>Version 5.0_r1:\n</b>
     <br> </br>
-			•Crash &amp; bug fixes;\n
+			•Crash, optimizations &amp; bug fixes here and there;\n
     <br> </br>
 			•Some AndroidX stuff added;\n
     <br> </br>
 			•Daily cleans;\n
     <br> </br>
+			•Updated Clipboard Cleaner;\n
+    <br> </br>
+			•Removed unused resources;\n
+    <br> </br>
 			•Changeable themes;\n
     <br> </br>
-			•Improved translations;\n
+			•Improved translations.\n
     <br> </br>
 \n
     <br> </br>
