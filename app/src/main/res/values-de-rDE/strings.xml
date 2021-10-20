@@ -51,14 +51,11 @@
     <string name="about_play_store">Google Play Store</string>
     <string name="about_developer">Entwickler:</string>
     <string name="about_d4rk_description">Offizieller D4rK-YouTube-Kanal.</string>
-    <string name="about_michael_tutorials_description">Ein einfacher Kanal mit Tutorials.</string>
     <string name="about_desene_animate_description">Ein einfacher Kanal mit rumänischen Cartoons.</string>
     <string name="about_gamejolt_description">Mein offizielles GameJolt-Profil.</string>
     <string name="about_deviantart_description">Ein kleiner Künstler in einer großen Welt.</string>
     <string name="about_app_version">App Version:</string>
     <string name="about_special_thanks">Besonderer Dank:</string>
-    <string name="about_support_patreon">Unterstützung auf Patreon!</string>
-    <string name="about_support_patreon_description">Wenn du mich mehr unterstützen möchtest, klicke hier</string>
     <string name="clipboard_main_description">Clipboard Cleaner ist hier, um zu verhindern, dass Ihre Zwischenablage zufällig verwendet wird, und sichern Sie Ihr kopiertes Passwort</string>
     <string name="clipboard_content_short">Inhalt!</string>
     <string name="clipboard_cleaned">Zwischenablage wurde gereinigt.</string>
@@ -109,7 +106,6 @@
     <string name="long_shortcut_atmegame">Spiele hier coole Spiele!!!</string>
     <string name="long_shortcut_clipboard_cleaner">Räumen Sie Ihre Zwischenablage auf!</string>
     <string name="adfly">Helfen Sie mir, indem Sie hier klicken. Ist gratis.</string>
-    <string name="navigation_drawer_support">" Unterstützung!"</string>
     <string name="invalid_media_cleaner">Ungültiger Medienreiniger!</string>
     <string name="action_scan">Scan starten!</string>
     <string name="daily_title">Tägliche Reinigung.</string>

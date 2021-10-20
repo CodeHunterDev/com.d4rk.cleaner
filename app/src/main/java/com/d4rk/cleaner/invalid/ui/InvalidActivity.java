@@ -76,7 +76,6 @@ public class InvalidActivity extends AppCompatActivity {
         mInvalidLoader = new InvalidImagesLoader(this);
         mInvalidLoader.registerListener(0, (loader, data) -> {
             if (data == null) {
-                // TODO Show error in UI
                 mState = STATE_NORMAL;
                 updateViewsByState();
                 return;

@@ -35,7 +35,11 @@ fun Context.getSafeSharedPreference(): SharedPreferences =
     PreferenceManager.getDefaultSharedPreferences(safeContext())
 @SuppressLint("UnspecifiedImmutableFlag")
 fun Context.pendingActivityIntent(intent: Intent): PendingIntent {
-    return PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+    var flags = PendingIntent.FLAG_UPDATE_CURRENT
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        flags = flags or PendingIntent.FLAG_IMMUTABLE
+    }
+    return PendingIntent.getActivity(this, 0, intent, flags)
 }
 fun Context.requestInput(
     @StringRes titleRes: Int,
@@ -88,7 +92,12 @@ private fun Context.createShortcut(
                 .setIntent(IntentActivity.activityIntent(this, action))
                 .build(), PendingIntent.getBroadcast(
                 this, 0,
-                IntentActivity.activityIntent(this, ACTION_CONTENT), 0
+                IntentActivity.activityIntent(this, ACTION_CONTENT),
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    PendingIntent.FLAG_IMMUTABLE
+                } else {
+                    0
+                }
             ).intentSender
         )
     } else {

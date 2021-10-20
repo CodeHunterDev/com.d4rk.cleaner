@@ -47,15 +47,6 @@
             android:data="https://www.youtube.com/channel/UCLDi-rmSRry0pNL-oVvGJAw"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
-        android:title="@string/about_michael_tutorials"
-        android:key="patreonSupport"
-        android:icon="@drawable/ic_michael_tutorials"
-        android:summary="@string/about_michael_tutorials_description">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://www.youtube.com/channel/UCee5YBhGHVCF4JnQzoLFzVA"/>
-    </androidx.preference.Preference>
-    <androidx.preference.Preference
         android:title="@string/about_desene_animate"
         android:key="D4rK"
         android:icon="@drawable/ic_desene_animate"
@@ -90,13 +81,4 @@
         android:title="@string/about_special_thanks"
         android:icon="@drawable/ic_contribute"
         android:summary="@string/about_supporters"/>
-    <androidx.preference.Preference
-        android:title="@string/about_support_patreon"
-        android:key="MichaelTutorials"
-        android:icon="@drawable/ic_patreon"
-        android:summary="@string/about_support_patreon_description">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://www.patreon.com/d4rk7355608"/>
-    </androidx.preference.Preference>
 </androidx.preference.PreferenceScreen>

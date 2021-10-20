@@ -15,14 +15,10 @@ annotation class CleanAction
 fun Context.currentContent(): String = clipboard().getClipContent(this)
 fun Context.clean() {
     val clipboard = clipboard()
-    fun clean() {
-        if (clipboard.getClipContent(this).isNotEmpty()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                clipboard.clearPrimaryClip()
-            } else {
-                clipboard.setPrimaryClip(ClipData.newPlainText("text", ""))
-            }
-            if (clipboard.getClipContent(this).isEmpty()) {
+    fun Context.tryToClean() {
+        if (!clipboard.isClipboardEmpty(this)) {
+            clipboard.doClean()
+            if (clipboard.isClipboardEmpty(this)) {
                 toast(R.string.clipboard_cleaned)
             } else {
                 toast(R.string.clipboard_clean_failed)
@@ -31,29 +27,48 @@ fun Context.clean() {
             toast(R.string.clipboard_empty)
         }
     }
-    if (getUsingKeyword()) {
-        val content = clipboard.getClipContent(this)
-        getNormalKeywords().forEach {
-            if (content.contains(it)) {
-                clean()
-                return
-            }
-        }
-        getRegexKeywords().forEach {
-            if (Regex(it).containsMatchIn(content)) {
-                clean()
-                return
-            }
-        }
-        toast(R.string.clipboard_nothing)
+
+    if (!getUsingKeyword()) {
+        tryToClean()
     } else {
-        clean()
+        if (!clipboard.isClipboardEmpty(this)) {
+            val content = clipboard.getClipContent(this)
+            getNormalKeywords().forEach {
+                if (content.contains(it)) {
+                    tryToClean()
+                    return
+                }
+            }
+            getRegexKeywords().forEach {
+                if (Regex(it).containsMatchIn(content)) {
+                    tryToClean()
+                    return
+                }
+            }
+            toast(R.string.clipboard_nothing)
+        } else {
+            toast(R.string.clipboard_empty)
+        }
     }
 }
 fun Context.content() {
-    toast(clipboard().getClipContent(this))
+    val clipboard = clipboard()
+    val content = if (clipboard.isClipboardEmpty(this)) {
+        ""
+    } else {
+        clipboard.getClipContent(this)
+    }
+    toast(content)
 }
 private fun Context.clipboard() = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+private fun ClipboardManager.isClipboardEmpty(context: Context): Boolean {
+    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) {
+        return getClipContent(context).isBlank()
+    }
+    if (!hasPrimaryClip()) return true
+    if (primaryClipDescription == null) return true
+    return getClipContent(context).isBlank()
+}
 private fun ClipboardManager.getClipContent(context: Context): String {
     val primaryClip = primaryClip ?: return ""
     val itemCount = primaryClip.itemCount
@@ -61,6 +76,13 @@ private fun ClipboardManager.getClipContent(context: Context): String {
     return List(itemCount) { index ->
         primaryClip.getItemAt(index).coerceToText(context).toString()
     }.joinToString(separator = "\n")
+}
+private fun ClipboardManager.doClean() {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+        clearPrimaryClip()
+    } else {
+        setPrimaryClip(ClipData.newPlainText("text", ""))
+    }
 }
 private const val PREF_USE_KEYWORD = "pref_use_keyword"
 private const val PREF_KEYWORD_NORMAL = "pref_keyword_normal"

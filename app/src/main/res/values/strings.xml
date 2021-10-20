@@ -2,11 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" translatable="false">Cleaner</string>
     <string name="app_d4rk" translatable="false">D4rK!</string>
+    <string name="adds_the_following" translatable="false">Adds the following filters:</string>
+    <string name="aggressive_filter_what_title" translatable="false">Warning!</string>
     <string name="copyright" translatable="false">Copyright ©2021 ~ D4rK</string>
     <string name="atmegame" translatable="false">Atmegame!</string>
     <string name="percentage" translatable="false">100%</string>
-    <string name="about_michael_tutorials" translatable="false">Michael Tutorials!</string>
-    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">5.0_release1</string>
+    <string name="double_check_title" translatable="false">Double Checker</string>
+    <string name="double_check_sum" translatable="false">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">5.0_release2</string>
     <string name="miscellaneous_firebase" translatable="false">Firebase.</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_gamejolt" translatable="false">GameJolt.</string>
@@ -14,13 +17,16 @@
     <string name="service_notif_title" translatable="false">Your clipboard is under the protection</string>
     <string name="about_desene_animate" translatable="false">Desene Animate!</string>
     <string name="about_deviantart" translatable="false">DeviantArt.</string>
-    <string name="navigation_drawer_support">Support!</string>
     <string name="default_theme_switcher" translatable="false">MODE_NIGHT_FOLLOW_SYSTEM</string>
     <string name="main_progress" translatable="false">0%</string>
     <string name="daily_sum" translatable="false">Automatically runs daily, without you having to open the app.</string>
     <string name="invalid_media_cleaner">Invalid Media Cleaner!</string>
     <string name="action_stop" translatable="false">Stop.</string>
+    <string name="samsung_not_work" translatable="false">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard" translatable="false">Clear clipboard</string>
     <string name="disabled" translatable="false">Disabled.</string>
+    <string name="are_you_sure_deletion_title" translatable="false">Confirm Deletion.</string>
+    <string name="are_you_sure_deletion" translatable="false">Are you sure? Files deleted cannot be restored.</string>
     <string name="progress_text_scanning" translatable="false">Scanning…</string>
     <string name="progress_text_cleaning" translatable="false">Cleaning…</string>
     <string name="invalid_media_cleaner_clean_tooltip" translatable="false">Check and decide what invalid media files you want to clean.</string>
@@ -86,14 +92,11 @@
     <string name="about_play_store">Google Play Store</string>
     <string name="about_developer">Developer:</string>
     <string name="about_d4rk_description">Official D4rK YouTube Channel.</string>
-    <string name="about_michael_tutorials_description">A simple channel with tutorials.</string>
     <string name="about_desene_animate_description">A simple channel with romanian cartoons.</string>
     <string name="about_gamejolt_description">My official GameJolt profile.</string>
     <string name="about_deviantart_description">A little artist in a big world.</string>
     <string name="about_app_version">App version:</string>
     <string name="about_special_thanks">Special thanks:</string>
-    <string name="about_support_patreon">Support on Patreon!</string>
-    <string name="about_support_patreon_description">If you want to more support me click here &amp; be a patron.</string>
     <string name="clipboard_main_description">Clipboard Cleaner is here to prevent your clipboard from being used casually, secure your copied password &amp; defend your privacy!</string>
     <string name="clipboard_content_short">Content!</string>
     <string name="clipboard_cleaned">Clipboard has been cleaned.</string>
@@ -156,6 +159,20 @@
     3. Done! You can go now XD<br>
     ]]></string>
     <string name="changelog" translatable="false">D4rK Cleaner - Changelog:\n
+    <br> </br>
+\n
+    <br> </br>
+		<b>Version 5.0_r2:\n</b>
+    <br> </br>
+			•Crash, optimizations &amp; bug fixes here and there;\n
+    <br> </br>
+			•Updated Clipboard Cleaner;\n
+    <br> </br>
+			•Removed unused resources;\n
+    <br> </br>
+			•Removed unused resources;\n
+    <br> </br>
+			•Improved translations.\n
     <br> </br>
 \n
     <br> </br>

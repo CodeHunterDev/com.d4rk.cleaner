@@ -4,7 +4,6 @@
         <item>Cache</item>
         <item>acmarket</item>
         <item>net.appcake</item>
-        <item>Downloads</item>
         <item>.estrongs</item>
         <item>thumbnails?</item>
         <item>QQSecureDownload</item>
@@ -21,40 +20,34 @@
         <item>.facebook_cache</item>
         <item>OSSLog</item>
         <item>LOST.DIR</item>
-        <item>Discord</item>
         <item>.Trash</item>
         <item>kinguserdown</item>
-        <item>desktop.ini</item>
         <item>leakcanary</item>
         <item>.DS_Store</item>
         <item>.spotlight-V100</item>
         <item>fseventsd</item>
         <item>Bugreport</item>
         <item>bugreports</item>
-        <item>Ringtones</item>
-        <item>Audiobooks</item>
-        <item>Notifications</item>
-        <item>TWRP</item>
         <item>.trash</item>
         <item>cache</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.nomedia</item>
-        <item>.exe</item>
-        <item>.apk</item>
-        <item>.apks</item>
-        <item>.apkm</item>
         <item>.csv</item>
+        <item>.thumb[0–9]</item>
         <item>thumbs?.db</item>
+        <item>splashad</item>
     </string-array>
     <string-array name="true_aggressive_filter_files">
         <item>.nomedia</item>
         <item>.exe</item>
         <item>.apk</item>
+        <item>splashad</item>
         <item>.apks</item>
         <item>.apkm</item>
         <item>.csv</item>
         <item>thumbs?.db</item>
+        <item>.thumb[0–9]</item>
         <item>.tmp</item>
         <item>.temp</item>
         <item>.log</item>
@@ -87,7 +80,7 @@
         <item>.ppt</item>
         <item>.pptx</item>
     </string-array>
-    <string-array name="true_aggressive_filter_files_folders">
+    <string-array name="true_aggressive_filter_folders">
         <item>supersonicads</item>
         <item>Cache</item>
         <item>ApkEditor</item>
@@ -175,12 +168,14 @@
         <item>.temp</item>
         <item>.log</item>
         <item>.logs</item>
+        <item>splashad</item>
         <item>.ini</item>
     </string-array>
     <string-array name="generic_filter_folders">
         <item>Logs</item>
         <item>logs</item>
         <item>log</item>
+        <item>splashad</item>
         <item>Log</item>
         <item>tmp</item>
         <item>Tmp</item>

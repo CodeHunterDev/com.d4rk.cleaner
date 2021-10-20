@@ -51,14 +51,11 @@
     <string name="about_play_store">Google Oyun mağazası</string>
     <string name="about_developer">Geliştirici:</string>
     <string name="about_d4rk_description">Resmi D4rK YouTube Kanalı.</string>
-    <string name="about_michael_tutorials_description">Öğreticiler içeren basit bir kanal.</string>
     <string name="about_desene_animate_description">Romen çizgi filmlerinin olduğu basit bir kanal.</string>
     <string name="about_gamejolt_description">Resmi GameJolt profilim.</string>
     <string name="about_deviantart_description">Büyük bir dünyada küçük bir sanatçı.</string>
     <string name="about_app_version">Uygulama sürümü:</string>
     <string name="about_special_thanks">Özel teşekkür:</string>
-    <string name="about_support_patreon">Patreon\'dan destek!</string>
-    <string name="about_support_patreon_description">Bana daha fazla destek olmak istiyorsanız buraya tıklayın</string>
     <string name="clipboard_main_description">Pano Temizleyici, panonuzun gelişigüzel kullanılmasını önlemek için burada, kopyalanan şifrenizi güvence altına alın</string>
     <string name="clipboard_content_short">İçerik!</string>
     <string name="clipboard_cleaned">Pano temizlendi.</string>
@@ -109,7 +106,6 @@
     <string name="long_shortcut_atmegame">Burada harika oyunlar oynayın!!!</string>
     <string name="long_shortcut_clipboard_cleaner">Panonuzu temizleyin!</string>
     <string name="adfly">" Buraya tıklayarak bana yardım edin. Bedava."</string>
-    <string name="navigation_drawer_support">Destek!</string>
     <string name="invalid_media_cleaner">Geçersiz Medya Temizleyici!</string>
     <string name="action_scan">" Taramayı başlatın!"</string>
     <string name="daily_title">Günlük Temiz.</string>

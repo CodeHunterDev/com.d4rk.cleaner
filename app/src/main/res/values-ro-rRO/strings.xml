@@ -51,14 +51,11 @@
     <string name="about_play_store">Magazin Google Play</string>
     <string name="about_developer">Dezvoltator:</string>
     <string name="about_d4rk_description">Canalul oficial D4rK YouTube.</string>
-    <string name="about_michael_tutorials_description">Un canal simplu cu tutoriale.</string>
     <string name="about_desene_animate_description">Un canal simplu cu desene animate românești.</string>
     <string name="about_gamejolt_description">Profilul meu oficial GameJolt.</string>
     <string name="about_deviantart_description">Un mic artist într-o lume mare.</string>
     <string name="about_app_version">Versiunea aplicației:</string>
     <string name="about_special_thanks">Multumiri speciale:</string>
-    <string name="about_support_patreon">Sprijin pentru Patreon!</string>
-    <string name="about_support_patreon_description">Dacă doriți să mă sprijiniți mai mult, faceți clic aici</string>
     <string name="clipboard_main_description">Clipboard Cleaner este aici pentru a împiedica utilizarea clipboard-ului dvs., pentru a vă asigura parola copiată</string>
     <string name="clipboard_content_short">Conţinut!</string>
     <string name="clipboard_cleaned">Clipboard-ul a fost curățat.</string>
@@ -109,7 +106,6 @@
     <string name="long_shortcut_atmegame">Joacă jocuri interesante aici !!!</string>
     <string name="long_shortcut_clipboard_cleaner">Curăță-ți clipboard-ul!</string>
     <string name="adfly">Ajută-mă făcând clic aici. Este gratuit.</string>
-    <string name="navigation_drawer_support">Suport!</string>
     <string name="invalid_media_cleaner">Curățător fișiere media invalide!</string>
     <string name="action_scan">Începe scanarea!</string>
     <string name="daily_title">Curățare zilnică.</string>

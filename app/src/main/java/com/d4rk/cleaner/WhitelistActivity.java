@@ -10,7 +10,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import com.d4rk.cleaner.databinding.ActivityWhitelistBinding;
 import java.io.File;
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 public class WhitelistActivity extends AppCompatActivity {
     BaseAdapter adapter;
@@ -59,7 +59,7 @@ public class WhitelistActivity extends AppCompatActivity {
             whiteList.add(new File(externalDir, "Download").getPath());
             whiteList.add(new File(externalDir, "DCIM").getPath());
             whiteList.add(new File(externalDir, "Documents").getPath());
-            MainActivity.prefs.edit().putString("whiteList", whiteList.toString()).apply();
+            MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
             refreshListView();
         } else
             Toast.makeText(this, R.string.whitelist_already_added,
@@ -77,7 +77,7 @@ public class WhitelistActivity extends AppCompatActivity {
                 .setView(input)
                 .setPositiveButton(R.string.whitelist_add_button, (dialog, whichButton) -> {
                     whiteList.add(String.valueOf(input.getText()));
-                    MainActivity.prefs.edit().putString("whiteList", whiteList.toString()).apply();
+                    MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
                     refreshListView();
                 })
                 .setNegativeButton(R.string.whitelist_cancel_button, (dialog, whichButton) -> {}).show();
@@ -91,9 +91,7 @@ public class WhitelistActivity extends AppCompatActivity {
     }
     public static synchronized List < String > getWhiteList() {
         if (whiteList == null) {
-            String whiteListString = MainActivity.prefs.getString("whiteList","No whitelist");
-            String[] whitelistStrings = whiteListString.split(", ");
-            whiteList = new ArrayList<>(Arrays.asList(whitelistStrings));
+            whiteList = new ArrayList<>(MainActivity.prefs.getStringSet("whitelist",new HashSet<>()));
             whiteList.remove("[]");
             whiteList.remove("[");
             whiteList.remove("]");

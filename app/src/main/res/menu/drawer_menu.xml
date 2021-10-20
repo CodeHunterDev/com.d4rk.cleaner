@@ -39,11 +39,6 @@
             android:title="@string/navigation_drawer_about">
         </item>
         <item
-            android:id="@+id/nav_drawer_support"
-            android:icon="@drawable/ic_love"
-            android:title="@string/navigation_drawer_support">
-        </item>
-        <item
             android:id="@+id/nav_drawer_share"
             android:icon="@drawable/ic_drawer_share"
             android:title="@string/navigation_drawer_share">

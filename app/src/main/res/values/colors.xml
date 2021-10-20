@@ -10,5 +10,6 @@
     <color name="colorAccent">#4285F4</color>
     <color name="colorGiHub">#0F0C0D</color>
     <color name="colorSplashScreenText">#DFDFDF</color>
+    <color name="colorIconClean">#EDEDED</color>
     <color name="colorAlertDialogBackground">@android:color/white</color>
 </resources>

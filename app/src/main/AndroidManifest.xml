@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto"
     package="com.d4rk.cleaner">
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
     <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
@@ -86,6 +87,7 @@
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".clipboard.ClipboardActivity"
+            android:exported="true"
             android:label="@string/navigation_drawer_clipboard_cleaner">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -133,6 +135,16 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+        <receiver
+            android:name=".clipboard.widget.CleanWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+            android:name="android.appwidget.provider"
+            android:resource="@xml/widget_clean_info" />
+        </receiver>
         <receiver
             android:name=".clipboard.widget.ContentWidget"
             android:exported="true">

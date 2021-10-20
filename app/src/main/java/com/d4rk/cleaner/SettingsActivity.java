@@ -4,32 +4,30 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.preference.CheckBoxPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.work.ExistingPeriodicWorkPolicy;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 public class SettingsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener,
         Preference.SummaryProvider < androidx.preference.ListPreference > {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.layout, new SettingsFragment())
-                .commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.layout, new MyPreferenceFragment()).commit();
         ActionBar supportActionBar = getSupportActionBar();
         if (supportActionBar != null)
             supportActionBar.setDisplayHomeAsUpEnabled(true);
         PreferenceManager.getDefaultSharedPreferences(this)
                 .registerOnSharedPreferenceChangeListener(this);
-    }
-    public static class SettingsFragment extends PreferenceFragmentCompat {
-        @Override
-        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferencesFromResource(R.xml.settings, rootKey);
-        }
     }
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
@@ -62,5 +60,52 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
         super.onDestroy();
         PreferenceManager.getDefaultSharedPreferences(this)
                 .unregisterOnSharedPreferenceChangeListener(this);
+    }
+    public static class MyPreferenceFragment extends PreferenceFragmentCompat {
+        @Override
+        public void onCreate(final Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            this.setHasOptionsMenu(true);
+            findPreference("aggressive").setOnPreferenceChangeListener((preference, newValue) -> {
+                boolean checked = ((CheckBoxPreference) preference).isChecked();
+                if (!checked) {
+                    String[] filtersFiles = getResources().getStringArray(R.array.aggressive_filter_folders);
+                    AlertDialog alertDialog = new AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme).create();
+                    alertDialog.setTitle(getString(R.string.aggressive_filter_what_title));
+                    alertDialog.setMessage(getString(R.string.adds_the_following)+" "+ Arrays.toString(filtersFiles));
+                    alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK",
+                            (dialog, which) -> dialog.dismiss());
+                    alertDialog.show();
+                }
+                return true;
+            });
+            findPreference("true_aggressive").setOnPreferenceChangeListener((preference, newValue) -> {
+                boolean checked = ((CheckBoxPreference) preference).isChecked();
+                if (!checked) {
+                    String[] filtersFiles = getResources().getStringArray(R.array.true_aggressive_filter_folders);
+                    AlertDialog alertDialog = new AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme).create();
+                    alertDialog.setTitle(getString(R.string.aggressive_filter_what_title));
+                    alertDialog.setMessage(getString(R.string.adds_the_following)+" "+ Arrays.toString(filtersFiles));
+                    alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK",
+                            (dialog, which) -> dialog.dismiss());
+                    alertDialog.show();
+                }
+                return true;
+            });
+            findPreference("dailyclean").setOnPreferenceChangeListener((preference, newValue) -> {
+                boolean checked = ((CheckBoxPreference) preference).isChecked();
+                if (!checked) {
+                    PeriodicWorkRequest.Builder builder = new PeriodicWorkRequest.Builder(CleanWorker.class, 24, TimeUnit.HOURS);
+                    PeriodicWorkRequest periodicWorkRequest = builder
+                            .build();
+                    WorkManager.getInstance().enqueueUniquePeriodicWork("Cleaner Worker",  ExistingPeriodicWorkPolicy.KEEP,periodicWorkRequest);
+                }
+                return true;
+            });
+        }
+        @Override
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+            addPreferencesFromResource(R.xml.settings);
+        }
     }
 }

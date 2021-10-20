@@ -26,8 +26,7 @@ public class MediaItemsAdapter extends ListAdapter<MediaItem, MediaItemsAdapter.
     }
     static class ViewHolder extends RecyclerView.ViewHolder {
         final CheckBox checkBox;
-        final TextView title;
-        final TextView text1;
+        final TextView title, text1;
         private MediaItem item;
         ViewHolder(@NonNull View itemView) {
             super(itemView);

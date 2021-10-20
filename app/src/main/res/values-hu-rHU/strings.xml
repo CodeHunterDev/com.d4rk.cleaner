@@ -51,14 +51,11 @@
     <string name="about_play_store">Google Play Áruház</string>
     <string name="about_developer">Fejlesztő:</string>
     <string name="about_d4rk_description">Hivatalos D4rK YouTube -csatorna.</string>
-    <string name="about_michael_tutorials_description">Egy egyszerű csatorna oktatóanyagokkal.</string>
     <string name="about_desene_animate_description">Egy egyszerű csatorna román karikatúrákkal.</string>
     <string name="about_gamejolt_description">Hivatalos GameJolt profilom.</string>
     <string name="about_deviantart_description">Kis művész egy nagy világban.</string>
     <string name="about_app_version">Alkalmazás verziója:</string>
     <string name="about_special_thanks">Külön köszönet:</string>
-    <string name="about_support_patreon">Támogassa a Patreont!</string>
-    <string name="about_support_patreon_description">Ha többet szeretne támogatni, kattintson ide</string>
     <string name="clipboard_main_description">A vágólap -tisztító azért van itt, hogy megakadályozza a vágólap véletlen használatát, és védje meg a másolt jelszót</string>
     <string name="clipboard_content_short">Tartalom!</string>
     <string name="clipboard_cleaned">A vágólapot megtisztították.</string>
@@ -109,7 +106,6 @@
     <string name="long_shortcut_atmegame">Játssz klassz játékokat itt !!!</string>
     <string name="long_shortcut_clipboard_cleaner">Tisztítsa meg a vágólapot!</string>
     <string name="adfly">Segíts ide kattintva. Ingyenes.</string>
-    <string name="navigation_drawer_support">Támogatás!</string>
     <string name="invalid_media_cleaner">Érvénytelen média tisztító!</string>
     <string name="action_scan">" Kezdje el a vizsgálatot!"</string>
     <string name="daily_title">Napi tisztítás.</string>

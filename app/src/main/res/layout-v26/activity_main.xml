@@ -52,52 +52,44 @@
                 app:srcCompat="@drawable/ic_line"/>
         </LinearLayout>
     </ScrollView>
-<LinearLayout
-    android:id="@+id/main_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="4"
-    android:layout_marginTop="56dp"
-    tools:context="com.d4rk.cleaner.MainActivity">
-    <Space
-        android:id="@+id/topSpacer"
-        android:layout_weight="2"
+    <LinearLayout
+        android:id="@+id/main_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/statusTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="@string/main_status"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="4"
+        android:layout_marginTop="56dp"
+        tools:context="com.d4rk.cleaner.MainActivity">
     <FrameLayout
         android:id="@+id/frameLayout"
+        android:visibility="visible"
+        android:layout_weight="4"
         android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <androidx.core.widget.ContentLoadingProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
             android:id="@+id/scanProgress"
-            android:layout_width="150dp"
-            android:layout_height="144dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:indeterminate="false"
             android:max="1"
             android:progress="0"
-            android:progressDrawable="@drawable/circular"/>
-        <com.google.android.material.textview.MaterialTextView
+            android:progressTint="@android:color/transparent"
+            android:progressDrawable="@drawable/ic_double_check"/>
+        <TextView
             android:id="@+id/scanTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/main_progress"
             android:textColor="@color/colorGoogleGreen"
-            android:textSize="24sp"/>
+            android:textSize="30sp"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="136dp"
+            android:layout_height="74dp"
+            android:layout_gravity="bottom|center"
+            android:src="@drawable/ic_clean"/>
     </FrameLayout>
     <ScrollView
         android:animateLayoutChanges="true"
@@ -119,25 +111,70 @@
             android:layout_marginStart="3dp"
             android:orientation="vertical" />
     </ScrollView>
-    <LinearLayout
+    <Space
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/statusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal">
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cleanButton"
-            android:layout_width="144dp"
-            android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/main_status"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_gravity="center|bottom">
+        <com.google.android.material.button.MaterialButton
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/cleanBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            android:minWidth="0dp"
+            app:layout_rowWeight="1"
             android:tooltipText="@string/tooltip_clean_button"
-            android:layout_gravity="center"
-            app:cardUseCompatPadding="true"
-            app:cardCornerRadius="8dp">
-        <androidx.appcompat.widget.AppCompatImageView
+            app:iconGravity="top"
+            app:icon="@drawable/ic_broom"
+            app:iconTint="@color/colorGoogleYellow"
+            android:textColor="@color/colorGoogleYellow"
+            android:text="@string/main_clean" />
+        <com.google.android.material.button.MaterialButton
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:id="@+id/analyzeBtn"
+            app:iconGravity="top"
+            app:icon="@drawable/ic_search"
+            app:iconTint="@color/colorAndroidGreen"
+            android:textColor="@color/colorAndroidGreen"
+            android:text="@string/main_analyze"
+            android:minWidth="0dp"
+            app:backgroundTint="@android:color/transparent" />
+    </androidx.gridlayout.widget.GridLayout>
+        <androidx.gridlayout.widget.GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_text_clean"/>
-    </com.google.android.material.card.MaterialCardView>
-    </LinearLayout>
+            android:layout_height="50dp"
+            android:layout_gravity="center|bottom">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SHOW IN APP REVIEW DIALOG"
+                android:textColor="#1976D2"
+                app:layout_gravity="center" />
+        </androidx.gridlayout.widget.GridLayout>
 </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
