@@ -10,5 +10,5 @@
         android:hint="@string/clipboard_setting_add"
         android:importantForAutofill="no"
         android:inputType="text"
-        android:minHeight="48dp"/>
+        android:minHeight="48dp" />
 </FrameLayout>

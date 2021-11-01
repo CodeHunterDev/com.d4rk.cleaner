@@ -22,17 +22,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import com.d4rk.cleaner.R;
 import com.d4rk.cleaner.invalid.loader.InvalidImagesLoader;
 import com.d4rk.cleaner.invalid.model.MediaItem;
 import com.d4rk.cleaner.invalid.task.CleanFilesTask;
+import com.kieronquinn.monetcompat.app.MonetCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 import java9.util.stream.StreamSupport;
-public class InvalidActivity extends AppCompatActivity {
+public class InvalidActivity extends MonetCompatActivity {
     private static final String TAG = InvalidActivity.class.getSimpleName();
     private static final String EXTRA_STATE = TAG + ".extra.STATE";
     private static final String EXTRA_ITEMS = TAG + ".extra.ITEMS";

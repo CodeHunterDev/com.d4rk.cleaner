@@ -16,6 +16,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         getReviewInfo();
         mButton = findViewById(R.id.button);
         mButton.setOnClickListener(view -> startReviewFlow());
+        new Handler().postDelayed(() -> mButton.setVisibility(View.GONE), 10000);
         setUpToolbar();
         navigationView = findViewById(R.id.navigation_view);
         /*
@@ -127,17 +129,17 @@ public class MainActivity extends AppCompatActivity {
             if (task.isSuccessful()) {
                 reviewlnfo = task.getResult();
             } else {
-                Toast.makeText(this, "In App ReviewFlow failed to start", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "In App ReviewFlow failed to start.", Toast.LENGTH_SHORT).show();
             }
         });
     }
     void startReviewFlow() {
         if (reviewlnfo != null) {
             Task<Void> flow = reviewManager.launchReviewFlow(this, reviewlnfo);
-            flow.addOnCompleteListener(task -> Toast.makeText(getApplicationContext(), "In App Rating complete", Toast.LENGTH_SHORT).show());
+            flow.addOnCompleteListener(task -> Toast.makeText(getApplicationContext(), "In App Rating complete.", Toast.LENGTH_SHORT).show());
         } else {
 
-            Toast.makeText(this, "In App Rating failed", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "In App Rating failed...", Toast.LENGTH_LONG).show();
         }
     }
     @Override public void onStart() {
@@ -152,7 +154,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public final void analyze(View view) {
         requestWriteExternalPermission();
-
         if (!FileScanner.isRunning) {
             new Thread(()-> scan(false)).start();
         }

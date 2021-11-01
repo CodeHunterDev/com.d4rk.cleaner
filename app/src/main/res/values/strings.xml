@@ -29,6 +29,7 @@
     <string name="are_you_sure_deletion" translatable="false">Are you sure? Files deleted cannot be restored.</string>
     <string name="progress_text_scanning" translatable="false">Scanning…</string>
     <string name="progress_text_cleaning" translatable="false">Cleaning…</string>
+    <string name="rate_us_on_google_play" translatable="false">Rate us on Google Play!</string>
     <string name="invalid_media_cleaner_clean_tooltip" translatable="false">Check and decide what invalid media files you want to clean.</string>
     <string name="empty_text" translatable="false">No Result</string>
     <string name="dialog_confirm_clean_title" translatable="false">Confirm cleaning?</string>

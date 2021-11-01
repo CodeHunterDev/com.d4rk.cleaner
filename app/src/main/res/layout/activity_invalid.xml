@@ -114,21 +114,21 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
-            <androidx.appcompat.widget.AppCompatImageButton
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/reset_button"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:clickable="true"
-                android:contentDescription="@string/action_reset"
-                android:focusable="true"
+                android:padding="10dp"
                 android:minWidth="48dp"
-                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/action_reset"
                 android:tooltipText="@string/action_reset"
-                android:visibility="gone"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/ic_refresh"
-                tools:ignore="UnusedAttribute"
-                tools:visibility="visible"/>
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:ignore="UnusedAttribute"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

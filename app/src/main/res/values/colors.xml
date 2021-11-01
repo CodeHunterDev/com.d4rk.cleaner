@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">@android:color/transparent</color>
-    <color name="colorDayNightMode">@android:color/white</color>
+    <color name="colorDayNightMode">#FEFBFE</color>
     <color name="colorShortcuts">#F5F5F5</color>
     <color name="colorGoogleYellow">#F4B400</color>
     <color name="colorGoogleGreen">#0F9D58</color>
     <color name="colorGoogleRed">#DA4437</color>
     <color name="colorAndroidGreen">#3DDC84</color>
     <color name="colorAccent">#4285F4</color>
+    <color name="colorTest">#009688</color>
+    <color name="colorTest2">#E6B8AF</color>
     <color name="colorGiHub">#0F0C0D</color>
     <color name="colorSplashScreenText">#DFDFDF</color>
     <color name="colorIconClean">#EDEDED</color>

@@ -19,6 +19,7 @@ import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.d4rk.cleaner.R
 import com.d4rk.cleaner.databinding.ActivityClipboardBinding
+import com.google.android.material.color.DynamicColors
 import java.text.NumberFormat
 class ClipboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityClipboardBinding
@@ -52,6 +53,9 @@ class ClipboardActivity : AppCompatActivity() {
                 }
             }
         }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            binding.cardTile.isGone = true
+        }
     }
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -77,7 +81,7 @@ class ClipboardActivity : AppCompatActivity() {
     private fun setUpService() {
         fun updateServiceStatus(started: Boolean) {
             if (started) {
-                binding.textServiceStatus.text = getString(R.string.clipboard_status)
+                binding.textServiceStatus.text = getString(R.string.clipboard_status )
                     .format(getString(R.string.clipboard_status_running))
                 binding.btnServiceStart.text = getString(R.string.clipboard_status_stopped)
             } else {

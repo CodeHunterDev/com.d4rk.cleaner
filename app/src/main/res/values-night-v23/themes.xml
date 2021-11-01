@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+    <style name="AppTheme" parent="Theme.Material3.DayNight">
         <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="colorPrimaryContainer">@color/colorTest</item>
+        <item name="colorSecondaryContainer">@color/colorTest</item>
+        <item name="colorSecondary">@color/colorTest</item>
+        <item name="colorTertiary">@color/colorTest</item>
+
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowLightStatusBar">false</item>

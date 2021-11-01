@@ -1,9 +1,8 @@
 package com.d4rk.cleaner;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
+import androidx.appcompat.app.AppCompatActivity;
 import java.util.Objects;
 public class ChangelogActivity extends AppCompatActivity {
     @Override

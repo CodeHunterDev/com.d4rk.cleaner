@@ -1,5 +1,4 @@
 package com.d4rk.cleaner;
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,7 +6,6 @@ import android.preference.PreferenceManager;
 import android.view.Window;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-@SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {
     Handler handler;
     @Override

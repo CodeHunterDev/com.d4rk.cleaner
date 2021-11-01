@@ -48,7 +48,7 @@
     </androidx.preference.Preference>
     <androidx.preference.Preference
         android:title="@string/about_desene_animate"
-        android:key="D4rK"
+        android:key="Cartoons"
         android:icon="@drawable/ic_desene_animate"
         android:summary="@string/about_desene_animate_description">
         <intent
