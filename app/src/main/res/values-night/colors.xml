@@ -7,4 +7,6 @@
     <color name="colorSplashScreenText">#616161</color>
     <color name="colorAlertDialogBackground">#424242</color>
     <color name="colorIconClean">#424242</color>
+    <color name="colorNavigationBar">#1C1B1F</color>
+    <color name="colorStatusBar">#20232F</color>
 </resources>

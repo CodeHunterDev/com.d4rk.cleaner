@@ -4,9 +4,9 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.text.InputType
 import android.view.View
-import android.provider.Settings
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.LinearLayout
@@ -19,7 +19,6 @@ import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.d4rk.cleaner.R
 import com.d4rk.cleaner.databinding.ActivityClipboardBinding
-import com.google.android.material.color.DynamicColors
 import java.text.NumberFormat
 class ClipboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityClipboardBinding

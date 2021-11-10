@@ -1,12 +1,11 @@
 <resources>
     <style name="AppTheme" parent="Theme.Material3.DayNight">
-        <item name="colorPrimary">@color/colorTest</item>
-        <item name="colorPrimaryDark">@color/colorTest</item>
-
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor">@color/colorDayNightMode</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:navigationBarColor">@color/colorDayNightMode</item>
+        <item name="android:statusBarColor">@color/colorStatusBar</item>
+        <item name="android:navigationBarColor">@color/colorNavigationBar</item>
     </style>
     <style name="AppThemeNoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -14,25 +13,9 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
-        <item name="colorPrimaryContainer">@color/colorTest</item>
-        <item name="colorSecondaryContainer">@color/colorTest</item>
-        <item name="colorSecondary">@color/colorTest</item>
-        <item name="colorTertiary">@color/colorTest</item>
-
         <item name="android:statusBarColor">@color/colorDayNightMode</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:navigationBarColor">@color/colorDayNightMode</item>
-    </style>
-    <style name="MyAlertDialogTheme" parent="Theme.Material3.DayNight.Dialog.Alert">
-        <item name="alertDialogTheme">@style/Theme.Material3.DayNight.Dialog.Alert</item>
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="colorPrimary">@color/colorAccent</item>
-        <item name="colorPrimaryDark">@color/colorAccent</item>
-        <item name="android:background">@color/colorAlertDialogBackground</item>
-        <item name="dialogCornerRadius">8dp</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Widget.MyApp.NegativeButton</item>
-        <item name="buttonBarPositiveButtonStyle">@style/Widget.MyApp.PositiveButton</item>
     </style>
     <style name="Widget.MyApp.NegativeButton" parent="Widget.Material3.Button.TextButton.Dialog">
         <item name="materialThemeOverlay">@style/ThemeOverlay.MyApp.NegativeButton</item>

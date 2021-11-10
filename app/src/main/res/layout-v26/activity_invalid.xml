@@ -66,6 +66,13 @@
                     android:textSize="16sp"
                     android:gravity="start"
                     tools:text="@string/first_step_tips"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="32dp"
+                    android:importantForAccessibility="no"
+                    app:srcCompat="@drawable/files" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/progress_view"

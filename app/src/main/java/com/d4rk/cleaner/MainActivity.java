@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
         requestWriteExternalPermission();
         if (!FileScanner.isRunning) {
             if (!prefs.getBoolean("one_click", false))
-            new AlertDialog.Builder(this, R.style.MyAlertDialogTheme)
+            new AlertDialog.Builder(this)
                     .setTitle(R.string.are_you_sure_deletion_title)
                     .setMessage(R.string.are_you_sure_deletion)
                     .setPositiveButton(R.string.main_clean, (dialog, whichButton) -> new Thread(()-> scan(true)).start())

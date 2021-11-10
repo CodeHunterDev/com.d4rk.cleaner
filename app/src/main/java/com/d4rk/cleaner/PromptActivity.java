@@ -6,8 +6,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import com.kieronquinn.monetcompat.app.MonetCompatActivity;
-public class PromptActivity extends MonetCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+public class PromptActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +21,6 @@ public class PromptActivity extends MonetCompatActivity {
             System.exit(0);
         });
     }
-    //Instead of onActivityResult() method use this one.
     final ActivityResultLauncher<Intent> resultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
