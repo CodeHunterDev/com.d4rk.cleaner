@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         binding.cleanBtn.setOnClickListener(this::clean);
         binding.analyzeBtn.setOnClickListener(this::analyze);
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        WhitelistActivity.getWhiteList();
+        WhitelistActivity.getWhiteList(prefs);
         getReviewInfo();
         mButton = findViewById(R.id.button);
         mButton.setOnClickListener(view -> startReviewFlow());
@@ -170,14 +170,11 @@ public class MainActivity extends AppCompatActivity {
         binding.frameLayout.setVisibility(View.GONE);
         binding.fileScrollView.setVisibility(View.VISIBLE);
     }
-    /*
-     * Runs search and delete on background thread
-     */
     public final void clean(View view) {
         requestWriteExternalPermission();
         if (!FileScanner.isRunning) {
             if (!prefs.getBoolean("one_click", false))
-            new AlertDialog.Builder(this)
+            new AlertDialog.Builder(this, R.style.MyAlertDialogTheme)
                     .setTitle(R.string.are_you_sure_deletion_title)
                     .setMessage(R.string.are_you_sure_deletion)
                     .setPositiveButton(R.string.main_clean, (dialog, whichButton) -> new Thread(()-> scan(true)).start())

@@ -155,6 +155,11 @@ public class InvalidActivity extends AppCompatActivity {
     private void setupViewCallbacks() {
         final View rootView = findViewById(R.id.root_view);
         rootView.setOnApplyWindowInsetsListener((v, insets) -> insets.consumeSystemWindowInsets());
+        mResetButton.setOnClickListener(v -> {
+            mState = STATE_NORMAL;
+            updateViewsByState();
+            mItems.clear();
+        });
     }
     private void setActionButton(@DrawableRes int iconRes, @StringRes int textRes) {
         mActionButton.setCompoundDrawablesWithIntrinsicBounds(iconRes, 0, 0, 0);
@@ -283,7 +288,7 @@ public class InvalidActivity extends AppCompatActivity {
         }
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new AlertDialog.Builder(getActivity())
+            return new AlertDialog.Builder(getActivity(), R.style.MyAlertDialogTheme)
                     .setTitle(R.string.dialog_confirm_clean_title)
                     .setMessage(getString(R.string.dialog_confirm_clean_message, mCount))
                     .setPositiveButton(android.R.string.yes, (dialog, which) -> {

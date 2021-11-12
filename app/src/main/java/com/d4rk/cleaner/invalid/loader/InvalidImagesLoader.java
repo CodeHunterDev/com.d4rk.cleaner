@@ -13,7 +13,7 @@ public class InvalidImagesLoader extends AsyncTaskLoader < List < MediaItem >> {
     }
     @Override
     public List < MediaItem > loadInBackground() {
-        Stream < MediaItem > stream = MediaStoreUtils.getAllImages(getContext().getContentResolver())
+        Stream< MediaItem > stream = MediaStoreUtils.getAllImages(getContext().getContentResolver())
                 .filter(item -> {
                     try {
                         final BitmapFactory.Options opts = new BitmapFactory.Options();

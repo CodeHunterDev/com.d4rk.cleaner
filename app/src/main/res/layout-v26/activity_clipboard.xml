@@ -210,9 +210,10 @@
                     android:text="@string/clipboard_shortcut_create_clean"
                     app:rippleColor="@color/colorAccent"
                     android:textColor="@color/colorAccent"
-                    style="?attr/materialButtonOutlinedStyle"/>
+                    style="@style/Widget.Material3.Button.ElevatedButton"/>
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnShortcutContent"
+                    style="@style/Widget.Material3.Button.ElevatedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -220,8 +221,7 @@
                     android:paddingEnd="16dp"
                     android:text="@string/clipboard_shortcut_create_content"
                     android:textColor="@color/colorAccent"
-                    app:rippleColor="@color/colorAccent"
-                    style="?attr/materialButtonOutlinedStyle"/>
+                    app:rippleColor="@color/colorAccent" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -298,7 +298,7 @@
             android:text="@string/assistant_open_settings"
             android:textColor="@color/colorAccent"
             app:rippleColor="@color/colorAccent"
-            style="?attr/materialButtonOutlinedStyle"/>
+            style="@style/Widget.Material3.Button.ElevatedButton"/>
         <RadioGroup
             android:id="@+id/ratioGroupAssistant"
             android:layout_width="match_parent"
@@ -419,7 +419,7 @@
                         android:text="@string/save"
                         android:textColor="@color/colorAccent"
                         app:rippleColor="@color/colorAccent"
-                        style="?attr/materialButtonOutlinedStyle"/>
+                        style="@style/Widget.Material3.Button.ElevatedButton"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

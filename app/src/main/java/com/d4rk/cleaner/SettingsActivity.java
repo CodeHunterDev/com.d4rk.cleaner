@@ -12,6 +12,8 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import java.util.Arrays;
+import java.util.ResourceBundle;
+
 public class SettingsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener,
         Preference.SummaryProvider < androidx.preference.ListPreference > {
     @Override
@@ -31,8 +33,7 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
         if (key != null && sharedPreferences != null)
             if (key.equals(darkModeString)) {
                 final String[] darkModeValues = getResources().getStringArray(R.array.theme_values);
-                String pref = PreferenceManager.getDefaultSharedPreferences(this)
-                        .getString(getString(R.string.theme), getString(R.string.default_theme_switcher));
+                String pref = PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.theme), getString(R.string.default_theme_switcher));
                 if (pref.equals(darkModeValues[0]))
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
                 if (pref.equals(darkModeValues[1]))
@@ -66,7 +67,7 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                 boolean checked = ((CheckBoxPreference) preference).isChecked();
                 if (!checked) {
                     String[] filtersFiles = getResources().getStringArray(R.array.aggressive_filter_folders);
-                    AlertDialog alertDialog = new AlertDialog.Builder(requireContext()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme).create();
                     alertDialog.setTitle(getString(R.string.aggressive_filter_what_title));
                     alertDialog.setMessage(getString(R.string.adds_the_following)+" "+ Arrays.toString(filtersFiles));
                     alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK",
@@ -79,7 +80,7 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                 boolean checked = ((CheckBoxPreference) preference).isChecked();
                 if (!checked) {
                     String[] filtersFiles = getResources().getStringArray(R.array.true_aggressive_filter_folders);
-                    AlertDialog alertDialog = new AlertDialog.Builder(requireContext()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme).create();
                     alertDialog.setTitle(getString(R.string.aggressive_filter_what_title));
                     alertDialog.setMessage(getString(R.string.adds_the_following)+" "+ Arrays.toString(filtersFiles));
                     alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK",

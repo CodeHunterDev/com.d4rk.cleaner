@@ -79,7 +79,11 @@ private fun ClipboardManager.getClipContent(context: Context): String {
 }
 private fun ClipboardManager.doClean() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-        clearPrimaryClip()
+        try {
+            clearPrimaryClip()
+        } catch (e: Exception) {
+            setPrimaryClip(ClipData.newPlainText("text", ""))
+        }
     } else {
         setPrimaryClip(ClipData.newPlainText("text", ""))
     }

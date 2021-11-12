@@ -5,7 +5,6 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'com.google.android.gms.oss-licenses-plugin'
-apply plugin: 'de.timfreiheit.resourceplaceholders.plugin'
 android {
     compileSdkVersion 31
     defaultConfig {
@@ -13,7 +12,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 46
-        versionName '5.0_r2'
+        versionName '6.0_r1'
         vectorDrawables.useSupportLibrary true
         archivesBaseName = "com.d4rk.cleaner-v${versionName}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -38,16 +37,10 @@ android {
     lintOptions {
         abortOnError false
     }
-    configurations {
-        compile.exclude group: "org.apache.httpcomponents", module: "httpclient"
-    }
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
     }
-}
-resourcePlaceholders {
-    files = ['xml/shortcuts.xml']
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -76,11 +69,9 @@ dependencies {
     implementation 'org.jetbrains:annotations:22.0.0'
     implementation 'net.sourceforge.streamsupport:android-retrostreams:1.7.4'
     implementation 'net.sourceforge.streamsupport:android-retrofuture:1.7.4'
+    implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.work:work-testing:2.7.0'
     androidTestImplementation 'androidx.test:runner:1.4.1-alpha03'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4-alpha03'
-}
-configurations {
-    compile.exclude group: 'com.google.zxing'
 }

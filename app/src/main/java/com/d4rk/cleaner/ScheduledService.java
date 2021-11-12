@@ -49,7 +49,7 @@ public class ScheduledService extends JobIntentService {
         final String CHANNEL_ID = "VERBOSE_NOTIFICATION";
         final int NOTIFICATION_ID = 1;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            int importance = NotificationManager.IMPORTANCE_HIGH;
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel channel =
                     new NotificationChannel(CHANNEL_ID, VERBOSE_NOTIFICATION_CHANNEL_NAME, importance);
             channel.setDescription(VERBOSE_NOTIFICATION_CHANNEL_DESCRIPTION);
@@ -64,7 +64,7 @@ public class ScheduledService extends JobIntentService {
                 .setContentTitle(NOTIFICATION_TITLE)
                 .setContentText(message)
                 .setAutoCancel(true)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setVibrate(new long[0]);
         NotificationManagerCompat.from(context).notify(NOTIFICATION_ID, builder.build());
     }
