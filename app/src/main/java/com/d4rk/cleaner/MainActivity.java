@@ -21,15 +21,14 @@ import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
@@ -49,6 +48,7 @@ import com.google.android.play.core.tasks.Task;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.Objects;
+import dev.shreyaspatil.MaterialDialog.MaterialDialog;
 public class MainActivity extends AppCompatActivity {
     public static SharedPreferences prefs;
     DrawerLayout drawerLayout;
@@ -76,9 +76,6 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(() -> mButton.setVisibility(View.GONE), 10000);
         setUpToolbar();
         navigationView = findViewById(R.id.navigation_view);
-        /*
-         * Dynamic launcher shortcut.
-         */
         @SuppressLint("RestrictedApi") ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(context, "atm_shortcut")
                 .setShortLabel(getString(R.string.atmegame))
                 .setLongLabel(getString(R.string.long_shortcut_atmegame))
@@ -86,9 +83,6 @@ public class MainActivity extends AppCompatActivity {
                 .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.atmegame.com/?utm_source=D4Cleaner&utm_medium=D4Cleaner")))
                 .build();
         ShortcutManagerCompat.pushDynamicShortcut(context, shortcut);
-        /*
-         * Navigation drawer items.
-         */
         navigationView.setNavigationItemSelectedListener(MenuItem -> {
             int id = MenuItem.getItemId();
             if (id == R.id.nav_drawer_settings) {
@@ -142,16 +136,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "In App Rating failed...", Toast.LENGTH_LONG).show();
         }
     }
-    @Override public void onStart() {
-        super.onStart();
-        int orientation = getResources().getConfiguration().orientation;
-        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            View view = binding.frameLayout;
-            ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-            layoutParams.width = view.getHeight();
-            view.setLayoutParams(layoutParams);
-        }
-    }
     public final void analyze(View view) {
         requestWriteExternalPermission();
         if (!FileScanner.isRunning) {
@@ -163,23 +147,40 @@ public class MainActivity extends AppCompatActivity {
         else arrangeForAnalyze();
     }
     private void arrangeForClean() {
-        binding.frameLayout.setVisibility(View.VISIBLE);
-        binding.fileScrollView.setVisibility(View.GONE);
+        int orientation = getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            binding.frameLayout.setVisibility(View.VISIBLE);
+            binding.fileScrollView.setVisibility(View.GONE);
+        }
     }
     private void arrangeForAnalyze() {
-        binding.frameLayout.setVisibility(View.GONE);
-        binding.fileScrollView.setVisibility(View.VISIBLE);
+        int orientation = getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            binding.frameLayout.setVisibility(View.GONE);
+            binding.fileScrollView.setVisibility(View.VISIBLE);
+        }
     }
     public final void clean(View view) {
         requestWriteExternalPermission();
         if (!FileScanner.isRunning) {
-            if (!prefs.getBoolean("one_click", false))
-            new AlertDialog.Builder(this, R.style.MyAlertDialogTheme)
-                    .setTitle(R.string.are_you_sure_deletion_title)
-                    .setMessage(R.string.are_you_sure_deletion)
-                    .setPositiveButton(R.string.main_clean, (dialog, whichButton) -> new Thread(()-> scan(true)).start())
-                    .setNegativeButton(R.string.whitelist_cancel_button, (dialog, whichButton) -> dialog.dismiss()).show();
-            else new Thread(()-> scan(true)).start();
+            if (prefs.getBoolean("one_click", false))
+            {
+                new Thread(()-> scan(true)).start();
+            } else {
+                MaterialDialog mDialog = new MaterialDialog.Builder(this)
+                        .setTitle(getString(R.string.are_you_sure_deletion_title))
+                        .setAnimation(R.raw.delete)
+                        .setMessage(getString(R.string.are_you_sure_deletion))
+                        .setCancelable(false)
+                        .setPositiveButton(getString(R.string.main_clean), (dialogInterface, which) -> {
+                            dialogInterface.dismiss();
+                            new Thread(()-> scan(true)).start();
+                        })
+                        .setNegativeButton(getString(R.string.whitelist_cancel_button), (dialogInterface, which) -> dialogInterface.dismiss())
+                        .build();
+                mDialog.getAnimationView().setScaleType(ImageView.ScaleType.FIT_CENTER);
+                mDialog.show();
+            }
         }
     }
     private void clearClipboard() {
@@ -196,9 +197,6 @@ public class MainActivity extends AppCompatActivity {
             runOnUiThread(()->Toast.makeText(this, "Failed to clear clipboard", Toast.LENGTH_SHORT).show());
         }
     }
-    /*
-     * Open link button.
-     */
     public final void adflylink(View view) {
         Intent openURL = new Intent(android.content.Intent.ACTION_VIEW);
         openURL.setData(Uri.parse("http://anthargo.com/9cUM"));
@@ -213,11 +211,6 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
     }
-    /**
-     * Searches entire device, adds all files to a list, then a for each loop filters
-     * out files for deletion. Repeats the process as long as it keeps finding files to clean,
-     * unless nothing is found to begin with
-     */
     @SuppressLint("SetTextI18n")
     private void scan(boolean delete) {
         Looper.prepare();
@@ -260,11 +253,6 @@ public class MainActivity extends AppCompatActivity {
         });
         Looper.loop();
     }
-    /**
-     * Convenience method to quickly create a textview
-     * @param text - text of textview
-     * @return - created textview
-     */
     private synchronized TextView printTextView(String text, int color) {
         TextView textView = new TextView(MainActivity.this);
         textView.setTextColor(color);
@@ -284,11 +272,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return format.format(length) + " B";
     }
-    /**
-     * Increments amount removed, then creates a text view to add to the scroll view.
-     * If there is any error while deleting, turns text view of path red
-     * @param file file to delete
-     */
     public synchronized TextView displayDeletion(File file) {
         TextView textView = printTextView(file.getAbsolutePath(), getResources().getColor(R.color.colorAccent));
         runOnUiThread(() -> binding.fileListView.addView(textView));
@@ -300,10 +283,6 @@ public class MainActivity extends AppCompatActivity {
         runOnUiThread(() -> binding.fileListView.addView(textView));
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
     }
-    /*
-     * Removes all views present in fileListView (linear view), and sets found and removed
-     * files to 0
-     */
     private synchronized void reset() {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         runOnUiThread(() -> {
@@ -312,9 +291,6 @@ public class MainActivity extends AppCompatActivity {
             binding.scanProgress.setMax(1);
         });
     }
-    /*
-     * Request device storage permission.
-     */
     public final void requestWriteExternalPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             ActivityCompat.requestPermissions(this,
@@ -355,9 +331,6 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
     }
-    /*
-     * Handles the whether the user grants permission. Launches new fragment asking the user to give file permission.
-     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -366,9 +339,6 @@ public class MainActivity extends AppCompatActivity {
                 grantResults[0] != PackageManager.PERMISSION_GRANTED)
             prompt();
     }
-    /*
-     * Launches the PromptActivity if app doesn't have storage permission.
-     */
     public final void prompt() {
         Intent intent = new Intent(this, PromptActivity.class);
         startActivity(intent);

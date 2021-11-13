@@ -10,5 +10,29 @@
         <item name="android:statusBarColor">@color/colorStatusBar</item>
         <item name="android:navigationBarColor">@color/colorNavigationBar</item>
         <item name="android:dialogCornerRadius">21dp</item>
+        <item name="material_dialog_background">#1C1B1F</item>
+        <item name="material_dialog_title_text_color">#FFFFFF</item>
+        <item name="material_dialog_message_text_color">#E5E1E4</item>
+        <item name="material_dialog_positive_button_color">@color/colorAccent</item>
+        <item name="material_dialog_positive_button_text_color">#1C1B1F</item>
+        <item name="material_dialog_negative_button_text_color">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeNoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/colorDayNightMode</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorDayNightMode</item>
+        <item name="android:dialogCornerRadius">21dp</item>
+        <item name="material_dialog_background">#1C1B1F</item>
+        <item name="material_dialog_title_text_color">#FFFFFF</item>
+        <item name="material_dialog_message_text_color">#E5E1E4</item>
+        <item name="material_dialog_positive_button_color">@color/colorAccent</item>
+        <item name="material_dialog_positive_button_text_color">#1C1B1F</item>
+        <item name="material_dialog_negative_button_text_color">@color/colorAccent</item>
     </style>
 </resources>

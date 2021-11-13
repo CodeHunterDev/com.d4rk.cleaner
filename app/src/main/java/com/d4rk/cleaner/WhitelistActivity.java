@@ -1,7 +1,5 @@
 package com.d4rk.cleaner;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -44,9 +42,6 @@ public class WhitelistActivity extends AppCompatActivity {
                 button.setOnClickListener(v -> removePath(path, button));
                 button.setPadding(50,50,50,50);
                 layout.setMargins(0,20,0,20);
-                GradientDrawable drawable = (GradientDrawable) button.getBackground();
-                drawable.setColor(Color.GRAY);
-                drawable.setAlpha(30);
                 runOnUiThread(()->binding.pathsLayout.addView(button,layout));
             }
         } if (whiteList == null || whiteList.isEmpty()) {
@@ -78,7 +73,7 @@ public class WhitelistActivity extends AppCompatActivity {
     ActivityResultLauncher<Uri> mGetContent = registerForActivityResult(new ActivityResultContracts.OpenDocumentTree(),
             uri -> {
                 if (uri != null) {
-                    whiteList.add(uri.getPath().substring(uri.getPath().indexOf(":")+1)); // TODO create file from uri, then just add its path once sd card support is finished
+                    whiteList.add(uri.getPath().substring(uri.getPath().indexOf(":")+1));
                     MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
                     loadViews();
                 }
