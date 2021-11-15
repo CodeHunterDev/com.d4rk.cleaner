@@ -71,7 +71,7 @@ fun Context.createCleanShortcut() {
 fun Context.createContentShortcut() {
     createShortcut(
         "content",
-        R.string.clipboard_content_short, R.string.clipboard_content,
+        R.string.content, R.string.clipboard_content,
         R.drawable.ic_clipboard_widget, ACTION_CONTENT
     )
 }

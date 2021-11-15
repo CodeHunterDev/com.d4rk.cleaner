@@ -80,7 +80,7 @@ class ClipboardActivity : AppCompatActivity() {
     private fun setUpService() {
         fun updateServiceStatus(started: Boolean) {
             if (started) {
-                binding.textServiceStatus.text = getString(R.string.clipboard_status )
+                binding.textServiceStatus.text = getString(R.string.clipboard_status)
                     .format(getString(R.string.clipboard_status_running))
                 binding.btnServiceStart.text = getString(R.string.clipboard_status_stopped)
             } else {

@@ -130,14 +130,14 @@ class CleanService : Service(), ClipboardManager.OnPrimaryClipChangedListener {
         )
         .addAction(
             R.mipmap.ic_shortcut_clean_clipboard,
-            getString(R.string.main_clean),
+            getString(R.string.clean),
             pendingActivityIntent(
                 IntentActivity.activityIntent(this, ACTION_CLEAN)
             )
         )
         .addAction(
             R.drawable.ic_drawer_clipboard,
-            getString(R.string.clipboard_content_short),
+            getString(R.string.content),
             pendingActivityIntent(
                 IntentActivity.activityIntent(this, ACTION_CONTENT)
             )

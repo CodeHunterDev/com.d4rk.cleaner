@@ -237,7 +237,7 @@ public class InvalidActivity extends AppCompatActivity {
             }
             case STATE_CHOOSING: {
                 mAdapter.submitList(new ArrayList < > (mItems));
-                setActionButton(R.drawable.ic_trash, R.string.main_clean);
+                setActionButton(R.drawable.ic_trash, R.string.clean);
                 break;
             }
             case STATE_CLEANING: {
@@ -288,8 +288,8 @@ public class InvalidActivity extends AppCompatActivity {
         }
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new AlertDialog.Builder(getActivity(), R.style.MyAlertDialogTheme)
-                    .setTitle(R.string.dialog_confirm_clean_title)
+            return new AlertDialog.Builder(getActivity())
+                    .setTitle(R.string.clean_confirm_title)
                     .setMessage(getString(R.string.dialog_confirm_clean_message, mCount))
                     .setPositiveButton(android.R.string.yes, (dialog, which) -> {
                         final InvalidActivity activity = (InvalidActivity) getActivity();

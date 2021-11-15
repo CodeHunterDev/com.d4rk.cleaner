@@ -17,7 +17,7 @@ import java.util.HashSet;
 import java.util.List;
 import dev.shreyaspatil.MaterialDialog.MaterialDialog;
 public class WhitelistActivity extends AppCompatActivity {
-    private static List<String> whiteList;
+    private static List < String > whiteList;
     ActivityWhitelistBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +34,19 @@ public class WhitelistActivity extends AppCompatActivity {
         LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         layout.setMargins(0, 20, 0, 20);
         if (whiteList != null) {
-            for (String path : whiteList) {
+            for (String path: whiteList) {
                 Button button = new Button(this);
                 button.setText(path);
                 button.setTextSize(18);
                 button.setAllCaps(false);
+                button.setBackgroundResource(R.drawable.whitelist_card);
                 button.setOnClickListener(v -> removePath(path, button));
-                button.setPadding(50,50,50,50);
-                layout.setMargins(0,20,0,20);
-                runOnUiThread(()->binding.pathsLayout.addView(button,layout));
+                button.setPadding(50, 50, 50, 50);
+                layout.setMargins(0, 20, 0, 20);
+                runOnUiThread(() -> binding.pathsLayout.addView(button, layout));
             }
-        } if (whiteList == null || whiteList.isEmpty()) {
+        }
+        if (whiteList == null || whiteList.isEmpty()) {
             TextView textView = new TextView(this);
             textView.setText(R.string.whitelist_empty);
             textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
@@ -54,35 +56,37 @@ public class WhitelistActivity extends AppCompatActivity {
     }
     void removePath(String path, Button button) {
         MaterialDialog mDialog = new MaterialDialog.Builder(this)
-                .setTitle(getString(R.string.whitelist_clear))
+                .setTitle(getString(R.string.remove_question))
                 .setMessage(path)
+                .setAnimation(R.raw.whitelist)
                 .setCancelable(false)
-                .setPositiveButton(getString(R.string.whitelist_clear), (dialogInterface, which) -> {
+                .setPositiveButton(getString(R.string.clean), (dialogInterface, which) -> {
                     dialogInterface.dismiss();
                     whiteList.remove(path);
-                    MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
+                    MainActivity.prefs.edit().putStringSet("whitelist", new HashSet < > (whiteList)).apply();
                     binding.pathsLayout.removeView(button);
                 })
-                .setNegativeButton(getString(R.string.whitelist_cancel_button), (dialogInterface, which) -> dialogInterface.dismiss())
+                .setNegativeButton(getString(R.string.cancel), (dialogInterface, which) -> dialogInterface.dismiss())
                 .build();
         mDialog.show();
     }
     public final void addToWhiteList(View view) {
         mGetContent.launch(Uri.fromFile(Environment.getDataDirectory()));
     }
-    ActivityResultLauncher<Uri> mGetContent = registerForActivityResult(new ActivityResultContracts.OpenDocumentTree(),
+    ActivityResultLauncher < Uri > mGetContent = registerForActivityResult(new ActivityResultContracts.OpenDocumentTree(),
             uri -> {
                 if (uri != null) {
-                    whiteList.add(uri.getPath().substring(uri.getPath().indexOf(":")+1));
-                    MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
+                    whiteList.add(uri.getPath().substring(uri.getPath().indexOf(":") + 1));
+                    MainActivity.prefs.edit().putStringSet("whitelist", new HashSet < > (whiteList)).apply();
                     loadViews();
                 }
             });
-    public static synchronized List<String> getWhiteList(SharedPreferences prefs) {
+    public static synchronized List < String > getWhiteList(SharedPreferences prefs) {
         if (whiteList == null) {
-            whiteList = new ArrayList<>(prefs.getStringSet("whitelist",new HashSet<>()));
+            whiteList = new ArrayList < > (prefs.getStringSet("whitelist", new HashSet < > ()));
             whiteList.remove("[");
             whiteList.remove("]");
+            whiteList.remove("[]");
         }
         return whiteList;
     }

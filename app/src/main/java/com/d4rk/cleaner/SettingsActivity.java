@@ -12,8 +12,6 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import java.util.Arrays;
-import java.util.ResourceBundle;
-
 public class SettingsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener,
         Preference.SummaryProvider < androidx.preference.ListPreference > {
     @Override
@@ -68,8 +66,8 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                 if (!checked) {
                     String[] filtersFiles = getResources().getStringArray(R.array.aggressive_filter_folders);
                     AlertDialog alertDialog = new AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme).create();
-                    alertDialog.setTitle(getString(R.string.aggressive_filter_what_title));
-                    alertDialog.setMessage(getString(R.string.adds_the_following)+" "+ Arrays.toString(filtersFiles));
+                    alertDialog.setTitle(getString(R.string.warning));
+                    alertDialog.setMessage(getString(R.string.adds_the_following) + " " + Arrays.toString(filtersFiles));
                     alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK",
                             (dialog, which) -> dialog.dismiss());
                     alertDialog.show();
@@ -81,8 +79,8 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                 if (!checked) {
                     String[] filtersFiles = getResources().getStringArray(R.array.true_aggressive_filter_folders);
                     AlertDialog alertDialog = new AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme).create();
-                    alertDialog.setTitle(getString(R.string.aggressive_filter_what_title));
-                    alertDialog.setMessage(getString(R.string.adds_the_following)+" "+ Arrays.toString(filtersFiles));
+                    alertDialog.setTitle(getString(R.string.warning));
+                    alertDialog.setMessage(getString(R.string.adds_the_following) + " " + Arrays.toString(filtersFiles));
                     alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK",
                             (dialog, which) -> dialog.dismiss());
                     alertDialog.show();
@@ -92,9 +90,9 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
             findPreference("dailyclean").setOnPreferenceChangeListener((preference, newValue) -> {
                 boolean checked = ((CheckBoxPreference) preference).isChecked();
                 if (!checked) {
-                    CleanReciver.scheduleAlarm(requireContext().getApplicationContext());
+                    CleanReceiver.scheduleAlarm(requireContext().getApplicationContext());
                 } else {
-                    CleanReciver.cancelAlarm(requireContext().getApplicationContext());
+                    CleanReceiver.cancelAlarm(requireContext().getApplicationContext());
                 }
                 return true;
             });

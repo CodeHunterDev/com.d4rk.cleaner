@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList(prefs);
         getReviewInfo();
-        mButton = findViewById(R.id.button);
+        mButton = findViewById(R.id.ratebutton);
         mButton.setOnClickListener(view -> startReviewFlow());
         new Handler().postDelayed(() -> mButton.setVisibility(View.GONE), 10000);
         setUpToolbar();
@@ -107,9 +107,9 @@ public class MainActivity extends AppCompatActivity {
             }
             if (id == R.id.nav_drawer_share) {
                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
+                sharingIntent.setType("Check this app");
                 String shareBody = "https://play.google.com/store/apps/details?id=com.d4rk.cleaner";
-                sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Try right now!");
+                sharingIntent.putExtra(Intent.EXTRA_SUBJECT, R.string.try_right_now);
                 sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
                 startActivity(Intent.createChooser(sharingIntent, "Share using..."));
             }
@@ -118,28 +118,28 @@ public class MainActivity extends AppCompatActivity {
     }
     void getReviewInfo() {
         reviewManager = ReviewManagerFactory.create(this);
-        Task<ReviewInfo> manager = reviewManager.requestReviewFlow();
+        Task < ReviewInfo > manager = reviewManager.requestReviewFlow();
         manager.addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 reviewlnfo = task.getResult();
             } else {
-                Toast.makeText(this, "In App ReviewFlow failed to start.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.review_failed, Toast.LENGTH_SHORT).show();
             }
         });
     }
     void startReviewFlow() {
         if (reviewlnfo != null) {
-            Task<Void> flow = reviewManager.launchReviewFlow(this, reviewlnfo);
-            flow.addOnCompleteListener(task -> Toast.makeText(getApplicationContext(), "In App Rating complete.", Toast.LENGTH_SHORT).show());
+            Task < Void > flow = reviewManager.launchReviewFlow(this, reviewlnfo);
+            flow.addOnCompleteListener(task -> Toast.makeText(getApplicationContext(), R.string.review_complete, Toast.LENGTH_SHORT).show());
         } else {
 
-            Toast.makeText(this, "In App Rating failed...", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.review_failed, Toast.LENGTH_LONG).show();
         }
     }
     public final void analyze(View view) {
         requestWriteExternalPermission();
         if (!FileScanner.isRunning) {
-            new Thread(()-> scan(false)).start();
+            new Thread(() -> scan(false)).start();
         }
     }
     private void arrangeViews(boolean isDelete) {
@@ -163,20 +163,19 @@ public class MainActivity extends AppCompatActivity {
     public final void clean(View view) {
         requestWriteExternalPermission();
         if (!FileScanner.isRunning) {
-            if (prefs.getBoolean("one_click", false))
-            {
-                new Thread(()-> scan(true)).start();
+            if (prefs.getBoolean("one_click", false)) {
+                new Thread(() -> scan(true)).start();
             } else {
                 MaterialDialog mDialog = new MaterialDialog.Builder(this)
-                        .setTitle(getString(R.string.are_you_sure_deletion_title))
+                        .setTitle(getString(R.string.clean_confirm_title))
                         .setAnimation(R.raw.delete)
                         .setMessage(getString(R.string.are_you_sure_deletion))
                         .setCancelable(false)
-                        .setPositiveButton(getString(R.string.main_clean), (dialogInterface, which) -> {
+                        .setPositiveButton(getString(R.string.clean), (dialogInterface, which) -> {
                             dialogInterface.dismiss();
-                            new Thread(()-> scan(true)).start();
+                            new Thread(() -> scan(true)).start();
                         })
-                        .setNegativeButton(getString(R.string.whitelist_cancel_button), (dialogInterface, which) -> dialogInterface.dismiss())
+                        .setNegativeButton(getString(R.string.cancel), (dialogInterface, which) -> dialogInterface.dismiss())
                         .build();
                 mDialog.getAnimationView().setScaleType(ImageView.ScaleType.FIT_CENTER);
                 mDialog.show();
@@ -194,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
                 clipService.setPrimaryClip(clipData);
             }
         } catch (NullPointerException e) {
-            runOnUiThread(()->Toast.makeText(this, "Failed to clear clipboard", Toast.LENGTH_SHORT).show());
+            runOnUiThread(() -> Toast.makeText(this, R.string.clipboard_clean_failed, Toast.LENGTH_SHORT).show());
         }
     }
     public final void adflylink(View view) {
@@ -211,16 +210,15 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
     }
-    @SuppressLint("SetTextI18n")
     private void scan(boolean delete) {
         Looper.prepare();
-        runOnUiThread(()-> {
+        runOnUiThread(() -> {
             findViewById(R.id.cleanBtn).setEnabled(!FileScanner.isRunning);
             findViewById(R.id.analyzeBtn).setEnabled(!FileScanner.isRunning);
         });
         reset();
-        if (prefs.getBoolean("clipboard",false)) clearClipboard();
-        runOnUiThread(()-> {
+        if (prefs.getBoolean("clipboard", false)) clearClipboard();
+        runOnUiThread(() -> {
             arrangeViews(delete);
             binding.statusTextView.setText(getString(R.string.main_status_running));
         });
@@ -244,10 +242,10 @@ public class MainActivity extends AppCompatActivity {
             else
                 binding.statusTextView.setText(getString(R.string.main_found) + " " + convertSize(kilobytesTotal));
             binding.scanProgress.setProgress(binding.scanProgress.getMax());
-            binding.scanTextView.setText("100%");
+            binding.scanTextView.setText(R.string.main_progress_100);
         });
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
-        runOnUiThread(()-> {
+        runOnUiThread(() -> {
             findViewById(R.id.cleanBtn).setEnabled(!FileScanner.isRunning);
             findViewById(R.id.analyzeBtn).setEnabled(!FileScanner.isRunning);
         });
@@ -278,10 +276,11 @@ public class MainActivity extends AppCompatActivity {
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
         return textView;
     }
-    public synchronized void displayText(String text) {
+    public synchronized TextView displayText(String text) {
         TextView textView = printTextView(text, (ContextCompat.getColor(context, R.color.colorGoogleYellow)));
         runOnUiThread(() -> binding.fileListView.addView(textView));
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
+        return textView;
     }
     private synchronized void reset() {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -298,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
                             Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE
                     }, 1);
             if (!Environment.isExternalStorageManager()) {
-                Toast.makeText(this, "Permission needed!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.permission_needed, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
                 Uri uri = Uri.fromParts("package", getPackageName(), null);
                 intent.setData(uri);

@@ -2,7 +2,7 @@
 <androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:title="@string/settings_string"
+    android:title="@string/settings"
     android:key="settings">
     <androidx.preference.PreferenceCategory
         android:title="@string/filters_string"
@@ -62,8 +62,7 @@
             android:key="clipboard"
             android:persistent="true"
             android:icon="@drawable/ic_settings_clipboard"
-            android:summary="@string/samsung_not_work"
-            android:title="@string/clear_clipboard" />
+            android:title="@string/clipboard_clean" />
         <androidx.preference.CheckBoxPreference
             android:defaultValue="true"
             android:key="auto_white"

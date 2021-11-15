@@ -13,7 +13,6 @@
         <item>mobvista</item>
         <item>ifont</item>
         <item>OSSLog</item>
-        <item>.thumbnails</item>
         <item>UnityAdsVideoCache</item>
         <item>blueWAplus</item>
         <item>XiaoYing</item>
@@ -34,8 +33,6 @@
     <string-array name="aggressive_filter_files">
         <item>.nomedia</item>
         <item>.csv</item>
-        <item>.thumb[0–9]</item>
-        <item>thumbs?.db</item>
         <item>splashad</item>
     </string-array>
     <string-array name="true_aggressive_filter_files">

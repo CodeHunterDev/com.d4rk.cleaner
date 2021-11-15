@@ -5,8 +5,8 @@
     <color name="colorDayNightMode">#1C1B1F</color>
     <color name="colorGiHub">@android:color/white</color>
     <color name="colorSplashScreenText">#616161</color>
-    <color name="colorAlertDialogBackground">#424242</color>
     <color name="colorIconClean">#424242</color>
     <color name="colorNavigationBar">#1C1B1F</color>
     <color name="colorStatusBar">#26272F</color>
+    <color name="colorWhitelistCard">#566587</color>
 </resources>

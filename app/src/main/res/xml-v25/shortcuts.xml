@@ -3,7 +3,7 @@
         android:shortcutId="settings"
         android:enabled="true"
         android:icon="@mipmap/ic_shortcut_settings"
-        android:shortcutShortLabel="@string/settings_string">
+        android:shortcutShortLabel="@string/settings">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.d4rk.cleaner"
@@ -26,7 +26,7 @@
         android:icon="@mipmap/ic_clipboard_cleaner"
         android:shortcutId="content"
         android:shortcutLongLabel="@string/clipboard_content"
-        android:shortcutShortLabel="@string/clipboard_content_short">
+        android:shortcutShortLabel="@string/content">
         <intent
             android:action="com.d4rk.cleaner.clipboard.CONTENT"
             android:targetClass="com.d4rk.cleaner.clipboard.IntentActivity"

@@ -45,7 +45,7 @@ public class ScheduledService extends JobIntentService {
     static void makeStatusNotification(String message, Context context) {
         final CharSequence VERBOSE_NOTIFICATION_CHANNEL_NAME = "Verbose WorkManager Notifications";
         final String VERBOSE_NOTIFICATION_CHANNEL_DESCRIPTION = "Shows notifications whenever work finishes";
-        final CharSequence NOTIFICATION_TITLE = context.getString(R.string.service_notif_title);
+        final CharSequence NOTIFICATION_TITLE = context.getString(R.string.service_channel_name);
         final String CHANNEL_ID = "VERBOSE_NOTIFICATION";
         final int NOTIFICATION_ID = 1;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
