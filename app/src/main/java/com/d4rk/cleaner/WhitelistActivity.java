@@ -86,7 +86,6 @@ public class WhitelistActivity extends AppCompatActivity {
             whiteList = new ArrayList < > (prefs.getStringSet("whitelist", new HashSet < > ()));
             whiteList.remove("[");
             whiteList.remove("]");
-            whiteList.remove("[]");
         }
         return whiteList;
     }

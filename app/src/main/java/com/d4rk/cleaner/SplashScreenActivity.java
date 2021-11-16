@@ -13,8 +13,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         final String[] darkModeValues = getResources().getStringArray(R.array.theme_values);
-        String pref = PreferenceManager.getDefaultSharedPreferences(this)
-                .getString(getString(R.string.theme), getString(R.string.default_theme_switcher));
+        String pref = PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.theme), getString(R.string.default_theme_switcher));
         if (pref.equals(darkModeValues[0]))
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         if (pref.equals(darkModeValues[1]))

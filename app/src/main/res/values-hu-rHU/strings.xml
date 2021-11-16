@@ -122,4 +122,6 @@
     <string name="progress_text_cleaning">Tisztítás…</string>
     <string name="are_you_sure_deletion">biztos vagy ebben? A törölt fájlok a tisztítási folyamat után nem állíthatók vissza.</string>
     <string name="invalid_media_cleaner_clean_tooltip">Ellenőrizze és döntse el, hogy mely érvénytelen médiafájlokat szeretné megtisztítani.</string>
+    <string name="clean">Tiszta!</string>
+    <string name="invalid_no_result">Nincs eredmény…</string>
 </resources>

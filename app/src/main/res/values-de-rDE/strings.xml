@@ -122,4 +122,6 @@
     <string name="progress_text_cleaning">Reinigung…</string>
     <string name="are_you_sure_deletion">Bist du sicher? Gelöschte Dateien können nach dem Bereinigungsprozess nicht wiederhergestellt werden.</string>
     <string name="invalid_media_cleaner_clean_tooltip">Überprüfen und entscheiden Sie, welche ungültigen Mediendateien Sie bereinigen möchten.</string>
+    <string name="clean">Sauber!</string>
+    <string name="invalid_no_result">Kein Ergebnis…</string>
 </resources>

@@ -122,4 +122,6 @@
     <string name="progress_text_cleaning">Temizlik…</string>
     <string name="are_you_sure_deletion">Emin misin? Silinen dosyalar temizleme işleminden sonra geri alınamaz.</string>
     <string name="invalid_media_cleaner_clean_tooltip">Hangi geçersiz medya dosyalarını temizlemek istediğinizi kontrol edin ve karar verin.</string>
+    <string name="clean">Temizlik!</string>
+    <string name="invalid_no_result">Sonuç yok…</string>
 </resources>

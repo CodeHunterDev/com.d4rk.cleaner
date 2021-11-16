@@ -122,4 +122,6 @@
     <string name="progress_text_cleaning">Очистка…</string>
     <string name="are_you_sure_deletion">Вы уверены? Удаленные файлы не могут быть восстановлены после чистого процесса.</string>
     <string name="invalid_media_cleaner_clean_tooltip">Проверьте и решите, какие недействительные файлы мультимедиа вы хотите очистить.</string>
+    <string name="clean">Уборка!</string>
+    <string name="invalid_no_result">Безрезультатно…</string>
 </resources>

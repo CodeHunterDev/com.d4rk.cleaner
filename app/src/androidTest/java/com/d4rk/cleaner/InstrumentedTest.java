@@ -17,6 +17,7 @@ import java.io.IOException;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
+@SuppressWarnings("ResultOfMethodCallIgnored")
 @RunWith(AndroidJUnit4.class)
 public class InstrumentedTest {
     private FileScanner fs;
@@ -86,10 +87,7 @@ public class InstrumentedTest {
         File file = new File(Environment.getExternalStorageDirectory().toString()
                 + "/" + name);
         try {
-            boolean fileCreated = file.createNewFile();
-            if (!fileCreated) {
-                throw new IOException("Unable to create file at specified path. It already exists.");
-            }
+            file.createNewFile();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,14 +1,11 @@
 <resources
-    xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" translatable="false">Cleaner</string>
     <string name="app_d4rk" translatable="false">D4rK!</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="warning">Warning!</string>
     <string name="copyright" translatable="false">Copyright ©2021 ~ D4rK</string>
     <string name="atmegame" translatable="false">Atmegame!</string>
-    <string name="double_check_title">Double checker.</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans.</string>
-    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">6.0_release1</string>
+    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">6.0_release2</string>
     <string name="miscellaneous_firebase" translatable="false">Firebase.</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_gamejolt" translatable="false">GameJolt.</string>
@@ -17,25 +14,29 @@
     <string name="default_theme_switcher" translatable="false">MODE_NIGHT_FOLLOW_SYSTEM</string>
     <string name="main_progress_0" translatable="false">0%</string>
     <string name="main_progress_100" translatable="false">100%</string>
-    <string name="permission_needed">Permission needed!</string>
     <string name="daily_sum" translatable="false">Automatically runs daily, without you having to open the app.</string>
-    <string name="invalid_media_cleaner">Invalid Media Cleaner!</string>
     <string name="action_stop" translatable="false">Stop.</string>
-    <string name="invalid_media_cleaner_clean_tooltip">Check and decide what invalid media files you want to clean.</string>
-    <string name="invalid_no_result" translatable="false">No result…</string>
-    <string name="clean_confirm_title">Confirm cleaning?</string>
     <string name="dialog_confirm_clean_message" translatable="false" tools:ignore="PluralsCandidate">Do you want to remove %d selected item(s) from MediaStore? This operation cannot be reverted.</string>
-    <string name="dialog_finished_clean_title">Finished.</string>
     <string name="dialog_finished_clean_message" translatable="false" tools:ignore="PluralsCandidate">%d item(s) have been removed from MediaStore.</string>
     <string name="about_changelog">Changelog!</string>
     <string name="about_changelog_description">All detailed changes added over time to each versions.</string>
     <string name="main_status">Status: Idle…</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="invalid_no_result">No result…</string>
+    <string name="invalid_media_cleaner">Invalid Media Cleaner!</string>
+    <string name="invalid_media_cleaner_clean_tooltip">Check and decide what invalid media files you want to clean.</string>
     <string name="assistant_title">System Assistant App</string>
+    <string name="clean_confirm_title">Confirm cleaning?</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="warning">Warning!</string>
     <string name="assistant_content">Set this app as the system assistant app &amp; use it by long-pressing the home button or swiping from the bottom corners.</string>
     <string name="main_status_running">Status: Running.</string>
     <string name="title_activity_prompt">Prompt Activity!</string>
     <string name="service_channel_name">Clipboard Cleaner notification channel!</string>
     <string name="service_notif_title">Your clipboard is under the protection!</string>
+    <string name="double_check_title">Double checker.</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans.</string>
+    <string name="dialog_finished_clean_title">Finished.</string>
     <string name="daily_title">Daily Clean.</string>
     <string name="main_found">Found: </string>
     <string name="main_freed">Freed: </string>
@@ -55,7 +56,7 @@
     <string name="progress_text_cleaning">Cleaning…</string>
     <string name="rate_on_google_play">Rate us on Google Play!!!</string>
     <string name="rate_on_google_play_tooltip">Click here to rate our app! This message will disappear after 10 seconds.</string>
-    <string name="clean" translatable="false">Clean!</string>
+    <string name="clean">Clean!</string>
     <string name="analyze">Analyze!</string>
     <string name="analyze_tooltip">Analyze what files you can clean without deleting then.</string>
     <string name="settings">Settings!</string>
@@ -155,6 +156,14 @@
     3. Done! You can go now XD<br>
     ]]></string>
     <string name="changelog" translatable="false">D4rK Cleaner - Changelog:\n
+    <br> </br>
+		<b>Version 6.0_r2:\n</b>
+    <br> </br>
+			•Fixed whitelist;\n
+    <br> </br>
+			•Removed unused permissions;\n
+    <br> </br>
+			•Improved strings &amp; translations.\n
     <br> </br>
 \n
     <br> </br>

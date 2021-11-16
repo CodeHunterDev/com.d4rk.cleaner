@@ -12,18 +12,15 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import java.util.Arrays;
-public class SettingsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener,
-        Preference.SummaryProvider < androidx.preference.ListPreference > {
+public class SettingsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener, Preference.SummaryProvider < androidx.preference.ListPreference > {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         getSupportFragmentManager().beginTransaction().replace(R.id.layout, new MyPreferenceFragment()).commit();
         ActionBar supportActionBar = getSupportActionBar();
-        if (supportActionBar != null)
-            supportActionBar.setDisplayHomeAsUpEnabled(true);
-        PreferenceManager.getDefaultSharedPreferences(this)
-                .registerOnSharedPreferenceChangeListener(this);
+        if (supportActionBar != null) supportActionBar.setDisplayHomeAsUpEnabled(true);
+        PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
     }
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
@@ -50,12 +47,6 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                 return preference.getEntry();
         return null;
     }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        PreferenceManager.getDefaultSharedPreferences(this)
-                .unregisterOnSharedPreferenceChangeListener(this);
-    }
     public static class MyPreferenceFragment extends PreferenceFragmentCompat {
         @Override
         public void onCreate(final Bundle savedInstanceState) {
@@ -68,8 +59,7 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                     AlertDialog alertDialog = new AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme).create();
                     alertDialog.setTitle(getString(R.string.warning));
                     alertDialog.setMessage(getString(R.string.adds_the_following) + " " + Arrays.toString(filtersFiles));
-                    alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK",
-                            (dialog, which) -> dialog.dismiss());
+                    alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK!", (dialog, which) -> dialog.dismiss());
                     alertDialog.show();
                 }
                 return true;
@@ -81,8 +71,7 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                     AlertDialog alertDialog = new AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme).create();
                     alertDialog.setTitle(getString(R.string.warning));
                     alertDialog.setMessage(getString(R.string.adds_the_following) + " " + Arrays.toString(filtersFiles));
-                    alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK",
-                            (dialog, which) -> dialog.dismiss());
+                    alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK!", (dialog, which) -> dialog.dismiss());
                     alertDialog.show();
                 }
                 return true;

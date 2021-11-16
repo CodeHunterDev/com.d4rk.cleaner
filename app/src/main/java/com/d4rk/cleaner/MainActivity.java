@@ -276,11 +276,10 @@ public class MainActivity extends AppCompatActivity {
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
         return textView;
     }
-    public synchronized TextView displayText(String text) {
+    public synchronized void displayText(String text) {
         TextView textView = printTextView(text, (ContextCompat.getColor(context, R.color.colorGoogleYellow)));
         runOnUiThread(() -> binding.fileListView.addView(textView));
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
-        return textView;
     }
     private synchronized void reset() {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);

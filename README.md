@@ -76,7 +76,7 @@ Upcoming major features and there development stage:
 
 ## Screenshots:
 
-<img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/6-screenshot_all.png">
+<img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/7-screenshot_all.jpg">
 
 <details>
   <summary>Special Thanks</summary>

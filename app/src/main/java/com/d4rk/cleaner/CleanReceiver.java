@@ -1,4 +1,5 @@
 package com.d4rk.cleaner;
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -16,22 +17,28 @@ public class CleanReceiver extends BroadcastReceiver {
             scheduleAlarm(ctxt);
         }
     }
+    @SuppressLint("UnspecifiedImmutableFlag")
     public static void scheduleAlarm(Context ctxt) {
-        AlarmManager mgr =
-                (AlarmManager) ctxt.getSystemService(Context.ALARM_SERVICE);
+        AlarmManager mgr = (AlarmManager) ctxt.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(ctxt, CleanReceiver.class);
-        PendingIntent pendingintent;
-        pendingintent = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
-        mgr.setRepeating(AlarmManager.ELAPSED_REALTIME,
-                SystemClock.elapsedRealtime() + INITIAL_DELAY,
-                PERIOD, pendingintent);
+        PendingIntent pi;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
+        mgr.setRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + INITIAL_DELAY, PERIOD, pi);
     }
+    @SuppressLint("UnspecifiedImmutableFlag")
     public static void cancelAlarm(Context ctxt) {
-        AlarmManager mgr =
-                (AlarmManager) ctxt.getSystemService(Context.ALARM_SERVICE);
+        AlarmManager mgr = (AlarmManager) ctxt.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(ctxt, CleanReceiver.class);
-        PendingIntent pendingintent;
-        pendingintent = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
-        mgr.cancel(pendingintent);
+        PendingIntent pi;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
+        }
+        mgr.cancel(pi);
     }
 }

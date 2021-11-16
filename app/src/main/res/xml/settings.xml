@@ -77,7 +77,7 @@
         <androidx.preference.ListPreference
             app:useSimpleSummaryProvider="true"
             android:key="@string/theme"
-            android:defaultValue="@string/default_theme_switcher"
+            android:defaultValue="@string-array/default_theme_switcher"
             android:title="@string/theme"
             android:dialogTitle="@string/theme"
             android:icon="@drawable/ic_themes"
@@ -91,7 +91,6 @@
             android:summary="@string/miscellaneous_one_click_clean_description"
             android:title="@string/miscellaneous_one_click_clean"/>
         <androidx.preference.CheckBoxPreference
-            app:iconSpaceReserved="false"
             android:defaultValue="false"
             android:key="dailyclean"
             android:persistent="true"

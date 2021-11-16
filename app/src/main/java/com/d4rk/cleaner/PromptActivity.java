@@ -17,7 +17,7 @@ public class PromptActivity extends AppCompatActivity {
             System.exit(0);
         });
     }
-    ActivityResultLauncher<Intent> resultLauncher = registerForActivityResult(
+    final ActivityResultLauncher<Intent> resultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
                 if (result.getResultCode() == Activity.RESULT_OK) {

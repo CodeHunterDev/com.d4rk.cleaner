@@ -52,16 +52,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b941eef-a1e4-4487-a6c7-75b72088b281" name="Default Changelist" comment="Update 6.0_r1">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/CleanReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/whitelist_card.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/files.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-v26/activity_whitelist.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_whitelist.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/whitelist.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-night-v27/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/FUNDING.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/custom.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/custom.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
@@ -102,60 +97,41 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_17_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_19_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_19_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_protolite_well_known_types_18_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_protolite_well_known_types_18_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/com.d4rk.cleaner.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/com.d4rk.cleaner.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/release/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/output-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/d4rk/cleaner/InstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/d4rk/cleaner/InstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/CleanReciver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/CleanReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/CleanReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/FileScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/FileScanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/ScheduledService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/ScheduledService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/PromptActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/PromptActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/SettingsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/SplashScreenActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/SplashScreenActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/WhitelistActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/WhitelistActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/clipboard/CleanService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/clipboard/CleanService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/clipboard/ClipboardActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/clipboard/ClipboardActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/clipboard/Extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/clipboard/Extensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/invalid/ui/InvalidActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/cleaner/invalid/ui/InvalidActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_boost.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_boost.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/files.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-v26/activity_clipboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-v26/activity_clipboard.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-v26/activity_invalid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-v26/activity_invalid.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-v26/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-v26/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-v28/activity_whitelist.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_clipboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_clipboard.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_invalid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_invalid.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_prompt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_prompt.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/widget_content.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/widget_content.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/about_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/about_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/drawer_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/drawer_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_clipboard_cleaner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_clipboard_cleaner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launch_atmegame.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launch_atmegame.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_shortcut_clean_clipboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_shortcut_clean_clipboard.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_shortcut_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_shortcut_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-night-anydpi-v26/ic_clipboard_cleaner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-night-anydpi-v26/ic_clipboard_cleaner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-night-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-night-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-night-anydpi-v26/ic_shortcut_clean_clipboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-night-anydpi-v26/ic_shortcut_clean_clipboard.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-night-anydpi-v26/ic_shortcut_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-night-anydpi-v26/ic_shortcut_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/play/listings/en-US/graphics/feature-graphic/feature-graphic.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/play/listings/en-US/graphics/feature-graphic/feature-graphic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/play/listings/en-US/graphics/ic_launcher-playstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/play/listings/en-US/graphics/ic_launcher-playstore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/play/listings/en-US/graphics/phone-screenshots/1-screenshot_main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/play/listings/en-US/graphics/phone-screenshots/2-screenshot_freed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/play/listings/en-US/graphics/phone-screenshots/3-screenshot_whitelist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/play/listings/en-US/graphics/phone-screenshots/4-screenshot_splash_screen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/play/listings/en-US/graphics/phone-screenshots/5-screenshot_clipboard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/play/listings/en-US/graphics/phone-screenshots/6-screenshot_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_delete.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_plus.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_text_clean.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-de-rDE/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-de-rDE/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hu-rHU/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hu-rHU/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night-v23/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night-v23/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night-v28/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night-v28/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ro-rRO/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ro-rRO/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-tr-rTR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-tr-rTR/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v23/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v23/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v27/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v27/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml-v25/shortcuts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml-v25/shortcuts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/thanks_for_support.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/thanks_for_support.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -642,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636847831294</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Update 6.0_r1">
+      <created>1636968279045</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1636968279045</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -11,8 +11,8 @@ android {
         applicationId "com.d4rk.cleaner"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 46
-        versionName '6.0_r1'
+        versionCode 47
+        versionName '6.0_r2'
         vectorDrawables.useSupportLibrary true
         archivesBaseName = "com.d4rk.cleaner-v${versionName}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

@@ -11,9 +11,9 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 46,
-      "versionName": "6.0_r1",
-      "outputFile": "com.d4rk.cleaner-v6.0_r1-release.apk"
+      "versionCode": 47,
+      "versionName": "6.0_r2",
+      "outputFile": "com.d4rk.cleaner-v6.0_r2-release.apk"
     }
   ],
   "elementType": "File"

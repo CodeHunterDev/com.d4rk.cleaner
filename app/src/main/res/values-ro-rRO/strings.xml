@@ -23,7 +23,7 @@
     <string name="filters_corpse_files_description">Fișiere rămase din aplicațiile dezinstalate /eliminate.</string>
     <string name="filters_delete_apk_files">Ștergeți fișierele APK.</string>
     <string name="filters_delete_apk_files_description">Fișiere de instalare (.apk) pentru Android.</string>
-    <string name="filters_auto_whitelist">Lista albă a mașinii.</string>
+    <string name="filters_auto_whitelist">Lista albă automată.</string>
     <string name="filters_auto_whitelist_description">Detectați folderele care ar trebui protejate automat.</string>
     <string name="miscellaneous_string">Diverse:</string>
     <string name="miscellaneous_one_click_clean">Un singur clic curat.</string>
@@ -33,7 +33,7 @@
     <string name="whitelist_string">Listă albă!</string>
     <string name="whitelist_empty">Lista albă goală?</string>
     <string name="cancel">Anulare!</string>
-    <string name="save">Salva.</string>
+    <string name="save">Salvează.</string>
     <string name="prompt">Vă rugăm să adăugați permisiuni de acces la fișiere.</string>
     <string name="about_github_link">Link GitHub.</string>
     <string name="about_play_store">Magazin Google Play</string>
@@ -44,7 +44,7 @@
     <string name="about_deviantart_description">Un mic artist într-o lume mare.</string>
     <string name="about_app_version">Versiunea aplicației:</string>
     <string name="about_special_thanks">Multumiri speciale:</string>
-    <string name="clipboard_cleaner_main_description">Clipboard Cleaner este aici pentru a împiedica utilizarea clipboard-ului dvs., pentru a vă asigura parola copiată</string>
+    <string name="clipboard_cleaner_main_description">Clipboard Cleaner este aici pentru a împiedica utilizarea clipboard-ului dvs., pentru a vă asigura parola copiată în acesta</string>
     <string name="content">Conţinut!</string>
     <string name="clipboard_cleaned">Clipboard-ul a fost curățat.</string>
     <string name="clipboard_clean_failed">Curățarea clipboardului a eșuat.</string>
@@ -122,4 +122,6 @@
     <string name="progress_text_cleaning">Se curata…</string>
     <string name="are_you_sure_deletion">Esti sigur? Fișierele șterse nu pot fi restaurate după procesul de curățare.</string>
     <string name="invalid_media_cleaner_clean_tooltip">Verificați și decideți ce fișiere media nevalide doriți să curățați.</string>
+    <string name="clean">Curățare!</string>
+    <string name="invalid_no_result">Nici un rezultat…</string>
 </resources>
