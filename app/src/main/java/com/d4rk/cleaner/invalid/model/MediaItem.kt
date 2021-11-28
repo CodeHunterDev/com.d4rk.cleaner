@@ -1,82 +1,89 @@
-package com.d4rk.cleaner.invalid.model;
-import android.database.Cursor;
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.provider.MediaStore.Images.ImageColumns;
-import java.util.Date;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-public class MediaItem implements Parcelable {
-    public static MediaItem fromCursor(@NonNull Cursor cur) {
-        final MediaItem item = new MediaItem();
-        int index;
-        if ((index = cur.getColumnIndex(ImageColumns._ID)) != -1) {
-            item.id = cur.getLong(index);
-        }
-        if ((index = cur.getColumnIndex(ImageColumns.DATA)) != -1) {
-            item.path = cur.getString(index);
-        }
-        if ((index = cur.getColumnIndex(ImageColumns.DISPLAY_NAME)) != -1) {
-            item.displayName = cur.getString(index);
-        }
-        if ((index = cur.getColumnIndex(ImageColumns.DISPLAY_NAME)) != -1) {
-            item.addTime = new Date(cur.getLong(index));
-        }
-        return item;
-    }
-    public long id;
-    public String path;
-    public String displayName;
-    public Date addTime;
-    public boolean isChecked;
-    public MediaItem() {}
-    private MediaItem(Parcel in ) {
-        id = in .readLong();
-        path = in .readString();
-        displayName = in .readString();
-        long addTimeLong = in .readLong();
+package com.d4rk.cleaner.invalid.model
+import android.database.Cursor
+import android.os.Parcelable
+import android.os.Parcel
+import android.provider.MediaStore.Images.ImageColumns
+import android.os.Parcelable.Creator
+import java.util.*
+class MediaItem : Parcelable {
+    @JvmField
+    var id: Long = 0
+    @JvmField
+    var path: String? = null
+    @JvmField
+    var displayName: String? = null
+    var addTime: Date? = null
+    @JvmField
+    var isChecked = false
+    constructor()
+    private constructor(`in`: Parcel) {
+        id = `in`.readLong()
+        path = `in`.readString()
+        displayName = `in`.readString()
+        val addTimeLong = `in`.readLong()
         if (addTimeLong > 0) {
-            addTime = new Date(addTimeLong);
+            addTime = Date(addTimeLong)
         }
-        isChecked = in .readByte() != 0;
+        isChecked = `in`.readByte().toInt() != 0
     }
-    @Override
-    public boolean equals(@Nullable Object obj) {
-        if (obj == null) return false;
-        if (!(obj instanceof MediaItem)) return false;
-        final MediaItem other = (MediaItem) obj;
-        return other.id == this.id;
+    override fun equals(other: Any?): Boolean {
+        if (other == null) return false
+        if (other !is MediaItem) return false
+        return other.id == id
     }
-    @NonNull
-    @Override
-    public String toString() {
+    override fun toString(): String {
         return "MediaItem[id=" + id + ", " +
                 "path=" + path + ", " +
                 "displayName=" + displayName + ", " +
                 "addTime=" + addTime + ", " +
                 "isChecked=" + isChecked +
-                "]";
+                "]"
     }
-    @Override
-    public int describeContents() {
-        return 0;
+    override fun describeContents(): Int {
+        return 0
     }
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeLong(id);
-        dest.writeString(path);
-        dest.writeString(displayName);
-        dest.writeLong(addTime != null ? addTime.getTime() : 0);
-        dest.writeByte(isChecked ? (byte) 1 : (byte) 0);
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        dest.writeLong(id)
+        dest.writeString(path)
+        dest.writeString(displayName)
+        dest.writeLong(if (addTime != null) addTime!!.time else 0)
+        dest.writeByte(if (isChecked) 1.toByte() else 0.toByte())
     }
-    public static final Creator < MediaItem > CREATOR = new Creator < MediaItem > () {
-        @Override
-        public MediaItem createFromParcel(Parcel in ) {
-            return new MediaItem( in );
+    override fun hashCode(): Int {
+        var result = id.hashCode()
+        result = 31 * result + (path?.hashCode() ?: 0)
+        result = 31 * result + (displayName?.hashCode() ?: 0)
+        result = 31 * result + (addTime?.hashCode() ?: 0)
+        result = 31 * result + isChecked.hashCode()
+        return result
+    }
+    companion object {
+        @JvmStatic
+        fun fromCursor(cur: Cursor): MediaItem {
+            val item = MediaItem()
+            var index: Int
+            if (cur.getColumnIndex(ImageColumns._ID).also { index = it } != -1) {
+                item.id = cur.getLong(index)
+            }
+            if (cur.getColumnIndex(ImageColumns.DATA).also { index = it } != -1) {
+                item.path = cur.getString(index)
+            }
+            if (cur.getColumnIndex(ImageColumns.DISPLAY_NAME).also { index = it } != -1) {
+                item.displayName = cur.getString(index)
+            }
+            if (cur.getColumnIndex(ImageColumns.DISPLAY_NAME).also { index = it } != -1) {
+                item.addTime = Date(cur.getLong(index))
+            }
+            return item
         }
-        @Override
-        public MediaItem[] newArray(int size) {
-            return new MediaItem[size];
+        @JvmField
+        val CREATOR: Creator<MediaItem?> = object : Creator<MediaItem?> {
+            override fun createFromParcel(`in`: Parcel): MediaItem {
+                return MediaItem(`in`)
+            }
+            override fun newArray(size: Int): Array<MediaItem?> {
+                return arrayOfNulls(size)
+            }
         }
-    };
+    }
 }

@@ -35,7 +35,7 @@
         android:summary="@string/app_d4rk">
     <intent
         android:action="android.intent.action.VIEW"
-        android:data="https://developers.google.com/profile/u/113550389053875890031"/>
+        android:data="https://developers.google.com/profile/u/D4rK7355608"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
         android:title="@string/app_d4rk"

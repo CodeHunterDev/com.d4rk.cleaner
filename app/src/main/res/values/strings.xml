@@ -1,6 +1,12 @@
 <resources
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+
+    <string name="settings_notification_name" translatable="false">Daily Cleaner Notification</string>
+    <string name="settings_notification_sum" translatable="false">Shows notification of how much data was cleaned daily</string>
+
+
     <string name="app_name" translatable="false">Cleaner</string>
     <string name="app_d4rk" translatable="false">D4rK!</string>
     <string name="copyright" translatable="false">Copyright ©2021 ~ D4rK</string>

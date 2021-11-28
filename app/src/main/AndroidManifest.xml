@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
     <uses-permission
         android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage"/>
@@ -24,6 +26,8 @@
         android:supportsRtl="true"
         android:appCategory="productivity"
         android:theme="@style/AppTheme"
+        android:banner="@drawable/banner"
+        android:logo="@drawable/ic_app"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="o">
         <meta-data
@@ -36,7 +40,11 @@
         <activity
             android:name=".ChangelogActivity"
             android:label="@string/about_changelog"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ChangelogActivity"/>
+        </activity>
         <activity
             android:name=".PromptActivity"
             android:label="@string/title_activity_prompt"
@@ -71,7 +79,7 @@
             android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/AppThemeNoActionBar"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".clipboard.ClipboardActivity"
             android:exported="true"
