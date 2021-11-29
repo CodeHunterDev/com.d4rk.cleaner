@@ -61,8 +61,7 @@ class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeListener, 
                     }
                     true
                 }
-            findPreference<Preference>("true_aggressive")!!.onPreferenceChangeListener =
-                Preference.OnPreferenceChangeListener { preference: Preference, _: Any? ->
+            findPreference<Preference>("true_aggressive")!!.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { preference: Preference, _: Any? ->
                     val checked = (preference as CheckBoxPreference).isChecked
                     if (!checked) {
                         val filtersFiles =

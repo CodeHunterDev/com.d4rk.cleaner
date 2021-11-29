@@ -9,7 +9,7 @@ import androidx.core.app.JobIntentService
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.preference.PreferenceManager
-import com.d4rk.cleaner.MainActivity.convertSize
+import com.d4rk.cleaner.MainActivity.Companion.convertSize
 class ScheduledService : JobIntentService() {
     public override fun onHandleWork(i: Intent) {
         try {

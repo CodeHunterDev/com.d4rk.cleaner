@@ -3,7 +3,6 @@ import android.database.Cursor
 import android.os.Parcelable
 import android.os.Parcel
 import android.provider.MediaStore.Images.ImageColumns
-import android.os.Parcelable.Creator
 import java.util.*
 class MediaItem : Parcelable {
     @JvmField
@@ -75,15 +74,6 @@ class MediaItem : Parcelable {
                 item.addTime = Date(cur.getLong(index))
             }
             return item
-        }
-        @JvmField
-        val CREATOR: Creator<MediaItem?> = object : Creator<MediaItem?> {
-            override fun createFromParcel(`in`: Parcel): MediaItem {
-                return MediaItem(`in`)
-            }
-            override fun newArray(size: Int): Array<MediaItem?> {
-                return arrayOfNulls(size)
-            }
         }
     }
 }
