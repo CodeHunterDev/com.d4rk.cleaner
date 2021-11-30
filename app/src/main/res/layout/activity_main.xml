@@ -163,8 +163,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/rate_on_google_play"
                 app:icon="@drawable/ic_play_prism"
-                app:iconTint="@color/colorGiHub"
-                android:textColor="@color/colorGiHub"
+                app:iconTint="@color/colorGitHub"
+                android:textColor="@color/colorGitHub"
                 app:layout_gravity="center">
             </com.google.android.material.button.MaterialButton>
         </androidx.gridlayout.widget.GridLayout>

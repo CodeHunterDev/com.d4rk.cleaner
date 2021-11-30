@@ -1,4 +1,5 @@
-<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+<shortcuts
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
         android:shortcutId="settings"
         android:enabled="true"

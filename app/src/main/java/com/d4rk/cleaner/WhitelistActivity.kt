@@ -40,14 +40,12 @@ class WhitelistActivity : AppCompatActivity() {
             button.setBackgroundResource(R.drawable.whitelist_card)
             button.setOnClickListener { removePath(path, button) }
             button.setPadding(50, 50, 50, 50)
-            layout.setMargins(0, 20, 0, 20)
             runOnUiThread { binding!!.pathsLayout.addView(button, layout) }
         }
         if (whiteList.isEmpty()) {
             val textView = TextView(this)
             textView.setText(R.string.whitelist_empty)
             textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
-            textView.textSize = 18f
             runOnUiThread { binding!!.pathsLayout.addView(textView, layout) }
         }
     }

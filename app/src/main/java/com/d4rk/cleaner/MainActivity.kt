@@ -22,7 +22,6 @@ import android.widget.ImageView
 import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -48,7 +47,6 @@ class MainActivity : AppCompatActivity() {
     private var navigationView: NavigationView? = null
     val context: MainActivity = this
     private var binding: ActivityMainBinding? = null
-    @RequiresApi(api = Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -60,8 +58,7 @@ class MainActivity : AppCompatActivity() {
         prefs = PreferenceManager.getDefaultSharedPreferences(this)
         setUpToolbar()
         navigationView = findViewById(R.id.navigation_view)
-        @SuppressLint("RestrictedApi") val shortcut =
-            ShortcutInfoCompat.Builder(context, "atm_shortcut")
+        @SuppressLint("RestrictedApi") val shortcut = ShortcutInfoCompat.Builder(context, "atm_shortcut")
                 .setShortLabel(getString(R.string.atmegame))
                 .setLongLabel(getString(R.string.long_shortcut_atmegame))
                 .setIcon(IconCompat.createFromIcon(Icon.createWithResource(context, R.mipmap.ic_launch_atmegame)))
@@ -161,27 +158,23 @@ class MainActivity : AppCompatActivity() {
             }
         } catch (e: NullPointerException) {
             runOnUiThread {
-                Toast.makeText(
-                    this,
-                    R.string.clipboard_clean_failed,
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this, R.string.clipboard_clean_failed, Toast.LENGTH_SHORT).show()
             }
         }
-    }
-    fun adflylink() {
-        val openURL = Intent(Intent.ACTION_VIEW)
-        openURL.data = Uri.parse("http://anthargo.com/9cUM")
-        startActivity(openURL)
     }
     private fun setUpToolbar() {
         drawerLayout = findViewById(R.id.drawer_layout)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
-        actionBarDrawerToggle =
-            ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name)
+        actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.empty, R.string.empty)
         actionBarDrawerToggle!!.syncState()
     }
+    fun adflylink(view: View) {
+        val openURL = Intent(Intent.ACTION_VIEW)
+        openURL.data = Uri.parse("http://anthargo.com/9cUM")
+        startActivity(openURL)
+    }
+    @SuppressLint("SetTextI18n")
     private fun scan(delete: Boolean) {
         Looper.prepare()
         runOnUiThread {
@@ -214,9 +207,7 @@ class MainActivity : AppCompatActivity() {
         }
         val kilobytesTotal = fs.startScan()
         runOnUiThread {
-            if (delete) binding!!.statusTextView.text =
-                getString(R.string.main_freed) + " " + convertSize(kilobytesTotal) else binding!!.statusTextView.text =
-                getString(R.string.main_found) + " " + convertSize(kilobytesTotal)
+            if (delete) binding!!.statusTextView.text = getString(R.string.main_freed) + " " + convertSize(kilobytesTotal) else binding!!.statusTextView.text = getString(R.string.main_found) + " " + convertSize(kilobytesTotal)
             binding!!.scanProgress.progress = binding!!.scanProgress.max
             binding!!.scanTextView.setText(R.string.main_progress_100)
         }
@@ -235,14 +226,13 @@ class MainActivity : AppCompatActivity() {
         return textView
     }
     fun displayDeletion(file: File): TextView {
-        val textView = printTextView(file.absolutePath, resources.getColor(R.color.colorAccent))
+        val textView = printTextView(file.absolutePath, ContextCompat.getColor(context, R.color.colorAccent))
         runOnUiThread { binding!!.fileListView.addView(textView) }
         binding!!.fileScrollView.post { binding!!.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN) }
         return textView
     }
     fun displayText(text: String) {
-        val textView =
-            printTextView(text, ContextCompat.getColor(context, R.color.colorGoogleYellow))
+        val textView = printTextView(text, ContextCompat.getColor(context, R.color.colorGoogleYellow))
         runOnUiThread { binding!!.fileListView.addView(textView) }
         binding!!.fileScrollView.post { binding!!.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN) }
     }
@@ -283,7 +273,6 @@ class MainActivity : AppCompatActivity() {
             )
         }
     }
-    @get:RequiresApi(api = Build.VERSION_CODES.M)
     private val isAccessGranted: Boolean
         get() = try {
             val packageManager = packageManager

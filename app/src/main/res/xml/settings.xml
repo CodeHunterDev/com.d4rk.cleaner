@@ -105,5 +105,6 @@
             android:summary="@string/miscellaneous_firebase_description"
             android:title="@string/miscellaneous_firebase"/>
     </androidx.preference.PreferenceCategory>
-    <PreferenceCategory android:title="@string/copyright"/>
+    <PreferenceCategory
+        android:title="@string/copyright"/>
 </androidx.preference.PreferenceScreen>

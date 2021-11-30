@@ -10,10 +10,10 @@ android {
     compileSdkVersion 31
     defaultConfig {
         applicationId "com.d4rk.cleaner"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 31
-        versionCode 47
-        versionName '6.0_r2'
+        versionCode 48
+        versionName '6.1_r1'
         vectorDrawables.useSupportLibrary true
         archivesBaseName = "com.d4rk.cleaner-v${versionName}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -44,7 +44,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation platform('com.google.firebase:firebase-bom:29.0.0')
-    implementation 'com.airbnb.android:lottie:4.2.1'
+    implementation 'com.airbnb.android:lottie:4.2.2'
     implementation 'com.google.firebase:firebase-analytics:20.0.0'
     implementation 'com.google.firebase:firebase-perf:20.0.3'
     implementation 'com.google.firebase:firebase-crashlytics:18.2.4'

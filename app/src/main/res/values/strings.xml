@@ -2,10 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-
     <string name="settings_notification_name" translatable="false">Daily Cleaner Notification</string>
+    <string name="empty" translatable="false"/>
     <string name="settings_notification_sum" translatable="false">Shows notification of how much data was cleaned daily</string>
-
+    <string name="app_description" translatable="false">The last Android Cleaner you will ever need with Google inspired material design made by D4rK to be more simplistic and easy to use!</string>
 
     <string name="app_name" translatable="false">Cleaner</string>
     <string name="app_d4rk" translatable="false">D4rK!</string>
@@ -162,6 +162,22 @@
     3. Done! You can go now XD<br>
     ]]></string>
     <string name="changelog" translatable="false">D4rK Cleaner - Changelog:\n
+    <br> </br>
+\n
+    <br> </br>
+		<b>Version 6.1_r1:\n</b>
+    <br> </br>
+			•Kotlin Migration to Main parts;\n
+    <br> </br>
+			•Replaced Android stuff with AndroidX stuff;\n
+    <br> </br>
+			•New target API with some code improvements;\n
+    <br> </br>
+			•Added missing permissions;\n
+    <br> </br>
+			•Improved strings &amp; translations.\n
+    <br> </br>
+\n
     <br> </br>
 		<b>Version 6.0_r2:\n</b>
     <br> </br>
