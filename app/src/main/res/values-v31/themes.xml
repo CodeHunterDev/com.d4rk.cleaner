@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppTheme" parent="Theme.Material3.DayNight">
-        <item name="colorPrimary">@android:color/system_accent1_100</item>
-        <item name="colorPrimaryDark">@android:color/system_accent1_200</item>
-        <item name="colorAccent">@android:color/system_accent1_100</item>
-        <item name="android:colorBackground">@android:color/system_neutral1_50</item>
-        <item name="colorOnPrimaryContainer">@android:color/system_accent1_800</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/colorNavigationBar</item>
         <item name="android:dialogCornerRadius">21dp</item>
         <item name="material_dialog_background">#FFFFFF</item>
         <item name="material_dialog_title_text_color">#000000</item>
         <item name="material_dialog_message_text_color">#5F5F5F</item>
-        <item name="material_dialog_positive_button_color">@android:color/system_accent1_100</item>
+        <item name="material_dialog_positive_button_color">@color/colorAccent</item>
         <item name="material_dialog_positive_button_text_color">#FFFFFF</item>
-        <item name="material_dialog_negative_button_text_color">@android:color/system_accent1_100</item>
+        <item name="material_dialog_negative_button_text_color">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@android:color/transparent</item>
     </style>
     <style name="AppThemeNoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@android:color/system_accent1_100</item>
-        <item name="colorPrimaryDark">@android:color/system_accent1_200</item>
-        <item name="colorOnPrimaryContainer">@android:color/system_accent1_800</item>
-        <item name="colorAccent">@android:color/system_accent1_100</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">@color/colorDayNightMode</item>
@@ -35,8 +36,8 @@
         <item name="material_dialog_background">#FFFFFF</item>
         <item name="material_dialog_title_text_color">#000000</item>
         <item name="material_dialog_message_text_color">#5F5F5F</item>
-        <item name="material_dialog_positive_button_color">@android:color/system_accent1_100</item>
+        <item name="material_dialog_positive_button_color">@color/colorAccent</item>
         <item name="material_dialog_positive_button_text_color">#FFFFFF</item>
-        <item name="material_dialog_negative_button_text_color">@android:color/system_accent1_100</item>
+        <item name="material_dialog_negative_button_text_color">@color/colorAccent</item>
     </style>
 </resources>
