@@ -72,7 +72,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="32dp"
                     android:importantForAccessibility="no"
-                    app:srcCompat="@drawable/files" />
+                    app:srcCompat="@drawable/ic_images" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/progress_view"

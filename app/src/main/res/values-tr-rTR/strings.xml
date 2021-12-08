@@ -102,10 +102,6 @@
     <string name="permission_needed">İzin gerekli!</string>
     <string name="clean_confirm_title">Temizleme onaylansın mı?</string>
     <string name="try_right_now">Hemen şimdi deneyin!</string>
-    <string name="review_failed">Uygulama İçi İnceleme başlatılamadı…</string>
-    <string name="review_complete">Uygulama Derecelendirmesi tamamlandı!!!</string>
-    <string name="rate_on_google_play">Google Play\'de bize oy verin!!!</string>
-    <string name="rate_on_google_play_tooltip">Uygulamamızı değerlendirmek için buraya tıklayın! Bu mesaj 10 saniye sonra kaybolacaktır.</string>
     <string name="analyze_tooltip">Hangi dosyaları silmeden temizleyebileceğinizi analiz edin.</string>
     <string name="add_to_whitelist">Beyaz listeye ekle…</string>
     <string name="add_to_whitelist_tooltip">Bir sonraki taramada hariç tutulmasını istediğiniz dosyaları/klasörleri eklemek için burayı tıklayın.</string>

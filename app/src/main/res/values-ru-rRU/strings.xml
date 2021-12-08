@@ -102,10 +102,6 @@
     <string name="permission_needed">Требуется разрешение!</string>
     <string name="clean_confirm_title">Подтвердить очистку?</string>
     <string name="try_right_now">Попробуйте прямо сейчас!</string>
-    <string name="review_failed">Не удалось запустить In App Review…</string>
-    <string name="review_complete">В рейтинге приложений полный!!!</string>
-    <string name="rate_on_google_play">Оцените нас в Google Play !!!</string>
-    <string name="rate_on_google_play_tooltip">Нажмите здесь, чтобы оценить наше приложение! Это сообщение исчезнет через 10 секунд.</string>
     <string name="analyze_tooltip">Проанализируйте, какие файлы вы можете очистить, не удаляя потом.</string>
     <string name="add_to_whitelist">Добавить в белый список…</string>
     <string name="add_to_whitelist_tooltip">Щелкните здесь, чтобы добавить файлы / папки, которые нужно исключить при следующем сканировании.</string>

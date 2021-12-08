@@ -102,10 +102,6 @@
     <string name="permission_needed">Permisie necesara!</string>
     <string name="clean_confirm_title">Confirmați curățarea?</string>
     <string name="try_right_now">Încercați chiar acum!</string>
-    <string name="review_failed">Recenzia aplicației nu a putut începe…</string>
-    <string name="review_complete">Evaluare în aplicație finalizată!!!</string>
-    <string name="rate_on_google_play">Evaluează-ne pe Google Play!!!</string>
-    <string name="rate_on_google_play_tooltip">Faceți clic aici pentru a evalua aplicația noastră! Acest mesaj va dispărea după 10 secunde.</string>
     <string name="analyze_tooltip">Analizați apoi ce fișiere puteți curăța fără a le șterge.</string>
     <string name="add_to_whitelist">Adăugați la lista de excluderi…</string>
     <string name="add_to_whitelist_tooltip">Faceți clic aici pentru a adăuga fișiere/directoare pe care doriți să le excludeți la următoarea scanare.</string>

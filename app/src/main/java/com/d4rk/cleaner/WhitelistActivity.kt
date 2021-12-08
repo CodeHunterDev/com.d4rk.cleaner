@@ -32,21 +32,23 @@ class WhitelistActivity : AppCompatActivity() {
             ViewGroup.LayoutParams.MATCH_PARENT
         )
         layout.setMargins(0, 20, 0, 20)
-        for (path in whiteList) {
-            val button = Button(this)
-            button.text = path
-            button.textSize = 18f
-            button.isAllCaps = false
-            button.setBackgroundResource(R.drawable.whitelist_card)
-            button.setOnClickListener { removePath(path, button) }
-            button.setPadding(50, 50, 50, 50)
-            runOnUiThread { binding!!.pathsLayout.addView(button, layout) }
-        }
         if (whiteList.isEmpty()) {
             val textView = TextView(this)
             textView.setText(R.string.whitelist_empty)
             textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
+            textView.textSize = 18f
             runOnUiThread { binding!!.pathsLayout.addView(textView, layout) }
+        } else {
+            for (path in whiteList) {
+                val button = Button(this)
+                button.text = path
+                button.textSize = 18f
+                button.isAllCaps = false
+                button.setBackgroundResource(R.drawable.whitelist_card)
+                button.setOnClickListener { removePath(path, button) }
+                button.setPadding(50, 50, 50, 50)
+                runOnUiThread { binding!!.pathsLayout.addView(button, layout) }
+            }
         }
     }
     private fun removePath(path: String?, button: Button?) {

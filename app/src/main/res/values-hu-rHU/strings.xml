@@ -102,10 +102,6 @@
     <string name="permission_needed">Engedély szükséges!</string>
     <string name="clean_confirm_title">A tisztítás megerősítése?</string>
     <string name="try_right_now">Próbáld ki azonnal!</string>
-    <string name="review_failed">Nem sikerült elindítani az alkalmazás felülvizsgálatát…</string>
-    <string name="review_complete">Az alkalmazás értékelése kész!!!</string>
-    <string name="rate_on_google_play">Értékeljen minket a Google Playen!!!</string>
-    <string name="rate_on_google_play_tooltip">Kattintson ide alkalmazásunk értékeléséhez! Ez az üzenet 10 másodperc múlva eltűnik.</string>
     <string name="analyze_tooltip">Elemezze, mely fájlokat tudja törölni törlés nélkül.</string>
     <string name="add_to_whitelist">Hozzáadás az engedélyezőlistához…</string>
     <string name="add_to_whitelist_tooltip">Kattintson ide fájlok/mappák hozzáadásához, amelyeket ki szeretne zárni a következő vizsgálat során.</string>

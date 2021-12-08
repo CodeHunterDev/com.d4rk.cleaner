@@ -19,7 +19,7 @@
         tools:ignore="ScopedStorage"/>
     <queries>
         <intent>
-            <action android:name="android.intent.action.MAIN" />
+            <action android:name="android.intent.action.MAIN"/>
         </intent>
     </queries>
     <application

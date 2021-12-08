@@ -102,10 +102,6 @@
     <string name="permission_needed">Erlaubnis erforderlich!</string>
     <string name="clean_confirm_title">Reinigung bestätigen?</string>
     <string name="try_right_now">Versuchen Sie es jetzt!</string>
-    <string name="review_failed">Uygulama İçi İnceleme başlatılamadı…</string>
-    <string name="review_complete">In App-Bewertung abgeschlossen!!!</string>
-    <string name="rate_on_google_play">Bewerten Sie uns bei Google Play!!!</string>
-    <string name="rate_on_google_play_tooltip">Klicken Sie hier, um unsere App zu bewerten! Diese Meldung verschwindet nach 10 Sekunden.</string>
     <string name="analyze_tooltip">Analysieren Sie, welche Dateien Sie bereinigen können, ohne sie dann zu löschen.</string>
     <string name="add_to_whitelist">Zur Whitelist hinzufügen…</string>
     <string name="add_to_whitelist_tooltip">Klicken Sie hier, um Dateien/Ordner hinzuzufügen, die beim nächsten Scan ausgeschlossen werden sollen.</string>
