@@ -1,5 +1,8 @@
 # Version 6.1_r1:
-- Removed In App Review (it will be back in next update);
+- Bug fixes;
+- Added Material-You compatibility (API 31+); 
+- Replaced ChangelogActivity with Dialog;
+- Removed In App Review;
 - Removed unused resources;
 - New banner added;
 - Kotlin Migration to Main parts;

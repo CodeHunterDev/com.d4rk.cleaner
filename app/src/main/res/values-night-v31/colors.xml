@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorAccent">@android:color/system_accent1_100</color>
-    <color name="colorWhitelistCard">#A8C0F3</color>
+    <color name="colorBackground">@android:color/system_neutral2_900</color>
+    <color name="colorWhitelistCard">@android:color/system_accent1_700</color>
 </resources>

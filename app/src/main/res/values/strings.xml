@@ -155,13 +155,17 @@
     2. <b>Choose actually invalid media files</b> and click "Clean." button.<br>
     3. Done! You can go now XD<br>
     ]]></string>
-    <string name="changelog" translatable="false">D4rK Cleaner - Changelog:\n
-    <br> </br>
-\n
+    <string name="changelog" translatable="false">
     <br> </br>
 		<b>Version 6.1_r1:\n</b>
     <br> </br>
-			•Removed In App Review (it will be back in next update);\n
+			•Bug fixes;\n
+    <br> </br>
+			•Added Material-You compatibility (API 31+);\n
+    <br> </br>
+			•Replaced ChangelogActivity with Dialog;\n
+    <br> </br>
+			•Removed In App Review;\n
     <br> </br>
 			•Removed unused resources;\n
     <br> </br>
@@ -171,7 +175,7 @@
     <br> </br>
 			•Replaced Android stuff with AndroidX stuff;\n
     <br> </br>
-			•New target API with some code improvements;\n
+			•New target API;\n
     <br> </br>
 			•Added missing permissions;\n
     <br> </br>
@@ -217,7 +221,7 @@
     <br> </br>
 		<b>Version 5.0_r1:\n</b>
     <br> </br>
-			•Crash, optimizations &amp; bug fixes here and there;\n
+			•Optimizations &amp; bug fixes here and there;\n
     <br> </br>
 			•Some AndroidX stuff added;\n
     <br> </br>

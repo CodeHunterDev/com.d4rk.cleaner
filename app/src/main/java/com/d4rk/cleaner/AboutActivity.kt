@@ -1,4 +1,5 @@
 package com.d4rk.cleaner
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
@@ -6,6 +7,7 @@ import android.content.Intent
 import android.net.Uri
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 class AboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,17 +36,24 @@ class AboutActivity : AppCompatActivity() {
         if (id == R.id.open_source_libraries) {
             startActivity(Intent(this, OssLicensesMenuActivity::class.java))
         }
+        if (id == R.id.changelog) {
+            val alertDialog = AlertDialog.Builder(this)
+            alertDialog.setTitle(R.string.about_changelog)
+            alertDialog.setMessage(R.string.changelog)
+            alertDialog.setPositiveButton("Cool!") { dialog: DialogInterface, _: Int -> dialog.dismiss() }
+            alertDialog.show()
+        }
         if (id == R.id.privacy_policy) {
             val newIntent = Intent(
                 Intent.ACTION_VIEW,
-                Uri.parse("https://ghcdn.rawgit.org/D4rK7355608/com.d4rk.cleaner/master/privacy_policy.html")
+                Uri.parse("https://bit.ly/d4rkcleanerpolicy")
             )
             startActivity(newIntent)
         }
         if (id == R.id.about_license) {
             val newIntent = Intent(
                 Intent.ACTION_VIEW,
-                Uri.parse("https://www.gnu.org/licenses/gpl-3.0.en.html")
+                Uri.parse("https://bit.ly/GPL-3_0")
             )
             startActivity(newIntent)
         }

@@ -59,40 +59,40 @@ class MainActivity : AppCompatActivity() {
         setUpToolbar()
         navigationView = findViewById(R.id.navigation_view)
         @SuppressLint("RestrictedApi") val shortcut = ShortcutInfoCompat.Builder(context, "atm_shortcut")
-                .setShortLabel(getString(R.string.atmegame))
-                .setLongLabel(getString(R.string.long_shortcut_atmegame))
-                .setIcon(IconCompat.createFromIcon(Icon.createWithResource(context, R.mipmap.ic_launch_atmegame)))
-                .setIntent(Intent(Intent.ACTION_VIEW, Uri.parse("https://www.atmegame.com/?utm_source=D4Cleaner&utm_medium=D4Cleaner")))
-                .build()
+            .setShortLabel(getString(R.string.atmegame))
+            .setLongLabel(getString(R.string.long_shortcut_atmegame))
+            .setIcon(IconCompat.createFromIcon(Icon.createWithResource(context, R.mipmap.ic_launch_atmegame)))
+            .setIntent(Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/d4rkcleaneratm")))
+            .build()
         ShortcutManagerCompat.pushDynamicShortcut(context, shortcut)
         val navigationView: NavigationView = findViewById(R.id.navigation_view)
         navigationView.setNavigationItemSelectedListener { MenuItem: MenuItem ->
             val id = MenuItem.itemId
             if (id == R.id.nav_drawer_settings) {
-                startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
+                startActivity(Intent(this, SettingsActivity::class.java))
             }
             if (id == R.id.nav_drawer_whitelist) {
-                startActivity(Intent(this@MainActivity, WhitelistActivity::class.java))
+                startActivity(Intent(this, WhitelistActivity::class.java))
             }
             if (id == R.id.nav_drawer_clipboard_cleaner) {
-                startActivity(Intent(this@MainActivity, ClipboardActivity::class.java))
+                startActivity(Intent(this, ClipboardActivity::class.java))
             }
             if (id == R.id.nav_drawer_invalid_media_cleaner) {
-                startActivity(Intent(this@MainActivity, InvalidActivity::class.java))
+                startActivity(Intent(this, InvalidActivity::class.java))
             }
             if (id == R.id.nav_drawer_about) {
-                startActivity(Intent(this@MainActivity, AboutActivity::class.java))
+                startActivity(Intent(this, AboutActivity::class.java))
             }
             if (id == R.id.nav_drawer_atmegame) {
                 val openURL = Intent(Intent.ACTION_VIEW)
                 openURL.data =
-                    Uri.parse("https://www.atmegame.com/?utm_source=D4Cleaner&utm_medium=D4Cleaner")
+                    Uri.parse("https://bit.ly/d4rkcleaneratm")
                 startActivity(openURL)
             }
             if (id == R.id.nav_drawer_share) {
                 val sharingIntent = Intent(Intent.ACTION_SEND)
                 sharingIntent.type = "Check this app"
-                val shareBody = "https://play.google.com/store/apps/details?id=com.d4rk.cleaner"
+                val shareBody = "https://bit.ly/d4rkcleaner"
                 sharingIntent.putExtra(Intent.EXTRA_SUBJECT, R.string.try_right_now)
                 sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
                 startActivity(Intent.createChooser(sharingIntent, "Share using..."))
@@ -135,8 +135,7 @@ class MainActivity : AppCompatActivity() {
                     .setAnimation(R.raw.delete)
                     .setMessage(getString(R.string.are_you_sure_deletion))
                     .setCancelable(false)
-                    .setPositiveButton(getString(R.string.clean)) { dialogInterface: DialogInterface, _: Int ->
-                        dialogInterface.dismiss()
+                    .setPositiveButton(getString(R.string.clean)) { dialogInterface: DialogInterface, _: Int -> dialogInterface.dismiss()
                         Thread { scan(true) }.start()
                     }
                     .setNegativeButton(getString(R.string.cancel)) { dialogInterface: DialogInterface, _: Int -> dialogInterface.dismiss() }

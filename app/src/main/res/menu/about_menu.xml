@@ -17,4 +17,9 @@
         android:orderInCategory="200"
         android:title="@string/about_license"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/changelog"
+        android:orderInCategory="200"
+        android:title="@string/about_changelog"
+        app:showAsAction="never"/>
 </menu>

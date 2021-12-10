@@ -8,14 +8,15 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/colorNavigationBar</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:dialogCornerRadius">21dp</item>
-        <item name="material_dialog_background">#FFFFFF</item>
+        <item name="material_dialog_background">@android:color/system_neutral1_50</item>
         <item name="material_dialog_title_text_color">#000000</item>
         <item name="material_dialog_message_text_color">#5F5F5F</item>
         <item name="material_dialog_positive_button_color">@color/colorAccent</item>
-        <item name="material_dialog_positive_button_text_color">#FFFFFF</item>
+        <item name="material_dialog_positive_button_text_color">@android:color/system_neutral1_50</item>
         <item name="material_dialog_negative_button_text_color">@color/colorAccent</item>
+        <item name="android:colorBackground">@android:color/system_neutral1_50</item>
         <item name="actionBarStyle">@style/MyActionBar</item>
     </style>
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
@@ -27,17 +28,18 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/colorDayNightMode</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@color/colorDayNightMode</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:dialogCornerRadius">21dp</item>
-        <item name="material_dialog_background">#FFFFFF</item>
+        <item name="material_dialog_background">@android:color/system_neutral1_50</item>
         <item name="material_dialog_title_text_color">#000000</item>
         <item name="material_dialog_message_text_color">#5F5F5F</item>
         <item name="material_dialog_positive_button_color">@color/colorAccent</item>
-        <item name="material_dialog_positive_button_text_color">#FFFFFF</item>
+        <item name="material_dialog_positive_button_text_color">@android:color/system_neutral1_50</item>
         <item name="material_dialog_negative_button_text_color">@color/colorAccent</item>
+        <item name="android:colorBackground">@android:color/system_neutral1_50</item>
     </style>
 </resources>

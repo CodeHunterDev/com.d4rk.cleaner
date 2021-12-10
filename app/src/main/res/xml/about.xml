@@ -9,7 +9,7 @@
         android:key="github_link">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://github.com/D4rK7355608/com.d4rk.cleaner"/>
+            android:data="https://bit.ly/d4rkcleanergithub"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
         android:title="@string/about_play_store"
@@ -20,17 +20,12 @@
             android:data="https://play.google.com/store/apps/dev?id=5390214922640123642&amp;hl=en&amp;gl=US"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
-        android:title="@string/about_changelog"
-        android:key="changelog"
-        android:icon="@drawable/ic_changelog"
-        android:summary="@string/about_changelog_description"/>
-    <androidx.preference.Preference
         android:title="@string/about_developer"
         android:icon="@drawable/ic_dev"
         android:summary="@string/app_d4rk">
     <intent
         android:action="android.intent.action.VIEW"
-        android:data="https://developers.google.com/profile/u/D4rK7355608"/>
+        android:data="https://bit.ly/D4rKDev"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
         android:title="@string/app_d4rk"
@@ -39,7 +34,7 @@
         android:summary="@string/about_d4rk_description">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://www.youtube.com/channel/UCLDi-rmSRry0pNL-oVvGJAw"/>
+            android:data="https://bit.ly/D4rKYouTube"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
         android:title="@string/about_desene_animate"
@@ -48,7 +43,7 @@
         android:summary="@string/about_desene_animate_description">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://www.youtube.com/channel/UCgtHCg34rrDvdkjjjPW2jhQ"/>
+            android:data="https://bit.ly/DeseneAnimateYouTube"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
         android:title="@string/about_gamejolt"
@@ -57,7 +52,7 @@
         android:summary="@string/about_gamejolt_description">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://gamejolt.com/@D4rK_S-A-D"/>
+            android:data="https://bit.ly/D4rK-S-A-D"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
         android:title="@string/about_deviantart"
