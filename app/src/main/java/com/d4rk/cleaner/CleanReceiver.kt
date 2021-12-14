@@ -14,7 +14,8 @@ class CleanReceiver: BroadcastReceiver() {
                 const val PERIOD = 86400000
                 private
                 const val INITIAL_DELAY = 3600000
-                @JvmStatic fun scheduleAlarm(context: Context) {
+                @JvmStatic
+                fun scheduleAlarm(context: Context) {
                         val mgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
                         val i = Intent(context, CleanReceiver::class.java)
                         val pi: PendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
