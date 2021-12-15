@@ -17,7 +17,7 @@
         android:key="play_store">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://play.google.com/store/apps/dev?id=5390214922640123642&amp;hl=en&amp;gl=US"/>
+            android:data="https://bit.ly/d4rkcleaner"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
         android:title="@string/about_developer"
