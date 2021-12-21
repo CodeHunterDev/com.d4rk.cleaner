@@ -7,7 +7,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/D4rK7355608/com.d4rk.cleaner)
 ![Pull requests](https://img.shields.io/github/issues-pr/D4rK7355608/com.d4rk.cleaner?label=Pull%20requests)
 ![GitHub license](https://img.shields.io/github/license/D4rK7355608/com.d4rk.cleaner?label=License)
-![code-grade](https://www.code-inspector.com/project/26544/status/svg)
+![code-grade](https://api.codiga.io/project/26544/status/svg)
 
 ## D4rK Cleaner
 
