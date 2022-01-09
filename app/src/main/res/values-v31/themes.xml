@@ -16,7 +16,7 @@
         <item name="material_dialog_positive_button_color">@color/colorAccent</item>
         <item name="material_dialog_positive_button_text_color">@android:color/system_neutral1_50</item>
         <item name="material_dialog_negative_button_text_color">@color/colorAccent</item>
-        <item name="android:colorBackground">@android:color/system_neutral1_50</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
         <item name="actionBarStyle">@style/MyActionBar</item>
     </style>
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
@@ -34,12 +34,18 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:dialogCornerRadius">21dp</item>
-        <item name="material_dialog_background">@android:color/system_neutral1_50</item>
+        <item name="material_dialog_background">@color/colorBackground</item>
         <item name="material_dialog_title_text_color">#000000</item>
         <item name="material_dialog_message_text_color">#5F5F5F</item>
         <item name="material_dialog_positive_button_color">@color/colorAccent</item>
-        <item name="material_dialog_positive_button_text_color">@android:color/system_neutral1_50</item>
+        <item name="material_dialog_positive_button_text_color">@color/colorBackground</item>
         <item name="material_dialog_negative_button_text_color">@color/colorAccent</item>
-        <item name="android:colorBackground">@android:color/system_neutral1_50</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+    </style>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/colorBackground</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_screen</item>
+        <item name="postSplashScreenTheme">@style/AppThemeNoActionBar</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/colorBackground</item>
     </style>
 </resources>

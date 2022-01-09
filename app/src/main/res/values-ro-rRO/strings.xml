@@ -1,6 +1,5 @@
 <resources xmlns:ns0="http://schemas.android.com/tools">
     <string name="about_changelog">Jurnal de schimbări!</string>
-    <string name="about_changelog_description">Toate modificările detaliate adăugate în timp la fiecare versiune.</string>
     <string name="main_status">Stare: Inactiv…</string>
     <string name="assistant_title">Aplicație Asistent Sistem</string>
     <string name="assistant_content">Setați această aplicație ca aplicație asistent de sistem.</string>
@@ -29,7 +28,6 @@
     <string name="miscellaneous_one_click_clean">Un singur clic curat.</string>
     <string name="miscellaneous_one_click_clean_description">Nu există meniu de dialog atunci când faceți clic pe butonul de curățare.</string>
     <string name="miscellaneous_about">Despre.</string>
-    <string name="miscellaneous_firebase_description">Ajută-mă să îmbunătățesc aplicația folosind jurnalele Firebase.</string>
     <string name="whitelist_string">Listă albă!</string>
     <string name="whitelist_empty">Lista albă goală?</string>
     <string name="cancel">Anulare!</string>

@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.d4rk.cleaner.databinding.ActivityWhitelistBinding
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
-import java.util.*
 class WhitelistActivity : AppCompatActivity() {
     private var binding: ActivityWhitelistBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {

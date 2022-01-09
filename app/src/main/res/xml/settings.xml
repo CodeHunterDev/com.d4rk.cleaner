@@ -97,13 +97,6 @@
             android:icon="@drawable/ic_auto_delete"
             android:summary="@string/daily_sum"
             android:title="@string/daily_title"/>
-        <androidx.preference.CheckBoxPreference
-            android:defaultValue="true"
-            android:key="firebase"
-            android:icon="@drawable/ic_firebase"
-            android:persistent="true"
-            android:summary="@string/miscellaneous_firebase_description"
-            android:title="@string/miscellaneous_firebase"/>
     </androidx.preference.PreferenceCategory>
     <PreferenceCategory
         android:title="@string/copyright"/>

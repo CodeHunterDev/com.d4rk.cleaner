@@ -1,6 +1,5 @@
 <resources xmlns:ns0="http://schemas.android.com/tools">
     <string name="about_changelog">Değişiklik günlüğü!</string>
-    <string name="about_changelog_description">Her sürüme zaman içinde eklenen tüm ayrıntılı değişiklikler.</string>
     <string name="main_status">Durum: Boşta…</string>
     <string name="assistant_title">Sistem Asistanı Uygulaması</string>
     <string name="assistant_content">Bu uygulamayı sistem yardımcısı uygulaması olarak ayarla</string>
@@ -29,7 +28,6 @@
     <string name="miscellaneous_one_click_clean">Tek tıkla temiz.</string>
     <string name="miscellaneous_one_click_clean_description">Temiz düğmesine tıklandığında diyalog menüsü yok.</string>
     <string name="miscellaneous_about">Hakkında.</string>
-    <string name="miscellaneous_firebase_description">Firebase günlüklerini kullanarak uygulamayı geliştirmeme yardımcı olun.</string>
     <string name="whitelist_string">Beyaz liste!</string>
     <string name="whitelist_empty">Boş beyaz liste?</string>
     <string name="cancel">İptal!</string>

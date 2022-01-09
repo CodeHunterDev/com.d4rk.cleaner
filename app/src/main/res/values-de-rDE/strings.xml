@@ -1,6 +1,5 @@
 <resources xmlns:ns0="http://schemas.android.com/tools">
     <string name="about_changelog">Änderungsprotokoll!</string>
-    <string name="about_changelog_description">Alle detaillierten Änderungen, die im Laufe der Zeit zu jeder Version hinzugefügt wurden.</string>
     <string name="main_status">Status Leerlauf…</string>
     <string name="assistant_title">Systemassistent-App</string>
     <string name="assistant_content">Diese App als Systemassistent-App festlegen</string>
@@ -29,7 +28,6 @@
     <string name="miscellaneous_one_click_clean">Ein Klick sauber.</string>
     <string name="miscellaneous_one_click_clean_description">Kein Dialogmenü beim Klicken auf die Schaltfläche zum Reinigen.</string>
     <string name="miscellaneous_about">Über.</string>
-    <string name="miscellaneous_firebase_description">Helfen Sie mir, die App mithilfe von Firebase-Protokollen zu verbessern.</string>
     <string name="whitelist_string">Weiße Liste!</string>
     <string name="whitelist_empty">Leere Whitelist?</string>
     <string name="cancel">Stornieren!</string>

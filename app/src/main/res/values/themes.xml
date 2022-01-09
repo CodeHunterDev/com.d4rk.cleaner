@@ -7,7 +7,7 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">@color/colorStatusBar</item>
-        <item name="android:navigationBarColor">@color/colorNavigationBar</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
         <item name="material_dialog_background">#FFFFFF</item>
         <item name="material_dialog_title_text_color">#000000</item>
         <item name="material_dialog_message_text_color">#5F5F5F</item>
@@ -51,5 +51,9 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorPrimary">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorAccent</item>
+    </style>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_screen</item>
+        <item name="postSplashScreenTheme">@style/AppThemeNoActionBar</item>
     </style>
 </resources>

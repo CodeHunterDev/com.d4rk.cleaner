@@ -24,12 +24,14 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.preference.PreferenceManager
 import com.d4rk.cleaner.clipboard.ClipboardActivity
@@ -40,7 +42,6 @@ import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
 import java.io.File
 import java.text.DecimalFormat
-import java.util.*
 class MainActivity : AppCompatActivity() {
     private var drawerLayout: DrawerLayout? = null
     private var actionBarDrawerToggle: ActionBarDrawerToggle? = null
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val splashScreen = installSplashScreen()
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
@@ -57,7 +59,12 @@ class MainActivity : AppCompatActivity() {
         WhitelistActivity.getWhiteList(prefs)
         prefs = PreferenceManager.getDefaultSharedPreferences(this)
         setUpToolbar()
-        navigationView = findViewById(R.id.navigation_view)
+        val darkModeValues = resources.getStringArray(R.array.theme_values)
+        val pref = PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.theme), getString(R.string.default_theme_switcher))
+        if (pref == darkModeValues[0]) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        if (pref == darkModeValues[1]) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        if (pref == darkModeValues[2]) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        if (pref == darkModeValues[3]) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
         @SuppressLint("RestrictedApi") val shortcut = ShortcutInfoCompat.Builder(context, "atm_shortcut")
             .setShortLabel(getString(R.string.atmegame))
             .setLongLabel(getString(R.string.long_shortcut_atmegame))
@@ -65,6 +72,7 @@ class MainActivity : AppCompatActivity() {
             .setIntent(Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/d4rkcleaneratm")))
             .build()
         ShortcutManagerCompat.pushDynamicShortcut(context, shortcut)
+        navigationView = findViewById(R.id.navigation_view)
         val navigationView: NavigationView = findViewById(R.id.navigation_view)
         navigationView.setNavigationItemSelectedListener { MenuItem: MenuItem ->
             val id = MenuItem.itemId
@@ -165,15 +173,15 @@ class MainActivity : AppCompatActivity() {
         drawerLayout = findViewById(R.id.drawer_layout)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayShowTitleEnabled(false)
         actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.empty, R.string.empty)
         actionBarDrawerToggle!!.syncState()
     }
     fun adflylink(view: View) {
         val openURL = Intent(Intent.ACTION_VIEW)
-        openURL.data = Uri.parse("http://anthargo.com/9cUM")
+        openURL.data = Uri.parse("https://bit.ly/cleanersupport")
         startActivity(openURL)
     }
-    @SuppressLint("SetTextI18n")
     private fun scan(delete: Boolean) {
         Looper.prepare()
         runOnUiThread {

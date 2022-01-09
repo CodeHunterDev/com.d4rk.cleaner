@@ -11,7 +11,7 @@
     <color name="colorGitHub">#0F0C0D</color>
     <color name="colorSplashScreenText">#DFDFDF</color>
     <color name="colorIconClean">#EDEDED</color>
-    <color name="colorNavigationBar">#FEFBFE</color>
+    <color name="colorBackground">#FEFBFE</color>
     <color name="colorStatusBar">#F0F1FC</color>
     <color name="colorWhitelistCard">#A8C0F3</color>
 </resources>

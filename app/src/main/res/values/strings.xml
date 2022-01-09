@@ -9,8 +9,7 @@
     <string name="copyright" translatable="false">Copyright ©2021 ~ D4rK</string>
     <string name="atmegame" translatable="false">Atmegame!</string>
     <string name="empty" translatable="false"/>
-    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">6.0_release2</string>
-    <string name="miscellaneous_firebase" translatable="false">Firebase.</string>
+    <string name="about_app_version_code" translatable="false" tools:ignore="Typos">6.1_release2</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_gamejolt" translatable="false">GameJolt.</string>
     <string name="about_desene_animate" translatable="false">Desene Animate!</string>
@@ -23,7 +22,6 @@
     <string name="dialog_confirm_clean_message" translatable="false" tools:ignore="PluralsCandidate">Do you want to remove %d selected item(s) from MediaStore? This operation cannot be reverted.</string>
     <string name="dialog_finished_clean_message" translatable="false" tools:ignore="PluralsCandidate">%d item(s) have been removed from MediaStore.</string>
     <string name="about_changelog">Changelog!</string>
-    <string name="about_changelog_description">All detailed changes added over time to each versions.</string>
     <string name="main_status">Status: Idle…</string>
     <string name="permission_needed">Permission needed!</string>
     <string name="invalid_no_result">No result…</string>
@@ -77,7 +75,6 @@
     <string name="miscellaneous_one_click_clean">One click clean.</string>
     <string name="miscellaneous_one_click_clean_description">No dialog menu when clicking clean button.</string>
     <string name="miscellaneous_about">About.</string>
-    <string name="miscellaneous_firebase_description">Help me to improve app using Firebase logs.</string>
     <string name="whitelist_string">Whitelist!</string>
     <string name="whitelist_empty">Empty whitelist?</string>
     <string name="cancel">Cancel!</string>
@@ -157,6 +154,18 @@
     ]]></string>
     <string name="changelog" translatable="false">
     <br> </br>
+		<b>Version 6.1_r2:\n</b>
+    <br> </br>
+			•Updated privacy policy link;\n
+    <br> </br>
+			•Firebase additions;\n
+    <br> </br>
+			•Updated target SDK;\n
+    <br> </br>
+			•Migrated old splash screen to new one.\n
+    <br> </br>
+\n
+    <br> </br>
 		<b>Version 6.1_r1:\n</b>
     <br> </br>
 			•Bug fixes;\n
@@ -174,8 +183,6 @@
 			•Kotlin Migration to Main parts;\n
     <br> </br>
 			•Replaced Android stuff with AndroidX stuff;\n
-    <br> </br>
-			•New target API;\n
     <br> </br>
 			•Added missing permissions;\n
     <br> </br>

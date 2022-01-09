@@ -46,7 +46,7 @@ class AboutActivity : AppCompatActivity() {
         if (id == R.id.privacy_policy) {
             val newIntent = Intent(
                 Intent.ACTION_VIEW,
-                Uri.parse("https://bit.ly/d4rkcleanerpolicy")
+                Uri.parse("https://bit.ly/d4rkcleanerprivacypolicy")
             )
             startActivity(newIntent)
         }

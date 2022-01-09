@@ -1,6 +1,5 @@
 <resources xmlns:ns0="http://schemas.android.com/tools">
     <string name="about_changelog">Változási napló!</string>
-    <string name="about_changelog_description">A részletes módosítások idővel hozzáadódtak az egyes verziókhoz.</string>
     <string name="main_status">Állapot: tétlen…</string>
     <string name="assistant_title">System Assistant alkalmazás</string>
     <string name="assistant_content">Állítsa be ezt az alkalmazást rendszersegéd -alkalmazásként</string>
@@ -29,7 +28,6 @@
     <string name="miscellaneous_one_click_clean">Egy kattintás tiszta.</string>
     <string name="miscellaneous_one_click_clean_description">Nincs párbeszédpanel a Tiszta gombra kattintva.</string>
     <string name="miscellaneous_about">Ról ről.</string>
-    <string name="miscellaneous_firebase_description">Segítsen fejleszteni az alkalmazást a Firebase naplók használatával.</string>
     <string name="whitelist_string">Engedélyezőlista!</string>
     <string name="whitelist_empty">Üres fehér lista?</string>
     <string name="cancel">Megszünteti!</string>

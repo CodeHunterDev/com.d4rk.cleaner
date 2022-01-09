@@ -55,15 +55,19 @@ Known bugs:
 
 __D4rK Cleaner is 100% free, open source inspired by LTE Cleaner by TheRedSpy15, ad free, and deletes everything it claims to!__
 
-Features:
-- Cleans empty folders;
-- Cleans clipboard; 
-- Cleans logs;
-- Cleans temporary files;
-- Cleans caches;
-- Cleans advertisement folders;
-- Cleans invalid media files;
-- Make whitelists;
+## Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.cleaner/master/CHANGELOG.md)!
+
+Cleans:
+- Empty folders;
+- Clipboard; 
+- Logs;
+- Temporary files;
+- Caches;
+- Advertisement folders;
+- Invalid media files;
+  
+Bonus:
+- Make easy whitelists;
 - Customizable cleans
 - Changeable themes .
 
@@ -89,6 +93,6 @@ Upcoming major features and there development stage:
 
 </details>
 
-__Privacy Policy:__ https://ghcdn.rawgit.org/D4rK7355608/com.d4rk.cleaner/master/app/src/main/play/privacy_policy.html
+__Privacy Policy__ [here](https://bit.ly/d4rkcleanerprivacypolicy).
 
 ![license](https://imgur.com/QQlcEVT.png)

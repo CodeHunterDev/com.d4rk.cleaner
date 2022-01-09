@@ -1,3 +1,9 @@
+# Version 6.1_r2:
+- Updated privacy policy link;
+- Firebase additions;
+- Migrated old splash screen to new one;
+- Updated target SDK.
+
 # Version 6.1_r1:
 - Bug fixes;
 - Added Material-You compatibility (API 31+); 

@@ -1,6 +1,5 @@
 <resources xmlns:ns0="http://schemas.android.com/tools">
     <string name="about_changelog">Журнал изменений!</string>
-    <string name="about_changelog_description">Все подробные изменения добавлялись со временем к каждой версии.</string>
     <string name="main_status">Статус: бездействует…</string>
     <string name="assistant_title">Системный помощник</string>
     <string name="assistant_content">Установите это приложение как приложение для системного помощника</string>
@@ -29,7 +28,6 @@
     <string name="miscellaneous_one_click_clean">Очистить в один клик.</string>
     <string name="miscellaneous_one_click_clean_description">Нет диалогового меню при нажатии кнопки очистки.</string>
     <string name="miscellaneous_about">О.</string>
-    <string name="miscellaneous_firebase_description">Помогите мне улучшить приложение с помощью журналов Firebase.</string>
     <string name="whitelist_string">В белый список!</string>
     <string name="whitelist_empty">Пустой белый список?</string>
     <string name="cancel">Отмена!</string>
