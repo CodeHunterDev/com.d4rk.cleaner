@@ -37,6 +37,10 @@ import androidx.preference.PreferenceManager
 import com.d4rk.cleaner.clipboard.ClipboardActivity
 import com.d4rk.cleaner.databinding.ActivityMainBinding
 import com.d4rk.cleaner.invalid.ui.InvalidActivity
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.admanager.AdManagerAdRequest
 import com.google.android.material.navigation.NavigationView
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
@@ -52,6 +56,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val splashScreen = installSplashScreen()
         setContentView(R.layout.activity_main)
+        MobileAds.initialize(this) {}
+        val adView = AdView(this)
+        adView.adSize = AdSize.BANNER
+        adView.adUnitId = "ca-app-pub-5294151573817700/7844185090"
+        val mAdView = findViewById<AdView>(R.id.adView)
+        val adRequest = AdManagerAdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
         binding!!.cleanBtn.setOnClickListener { clean() }
@@ -177,7 +188,7 @@ class MainActivity : AppCompatActivity() {
         actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.empty, R.string.empty)
         actionBarDrawerToggle!!.syncState()
     }
-    fun adflylink(view: View) {
+    fun adflylink(View:View) {
         val openURL = Intent(Intent.ACTION_VIEW)
         openURL.data = Uri.parse("https://bit.ly/cleanersupport")
         startActivity(openURL)
@@ -257,16 +268,8 @@ class MainActivity : AppCompatActivity() {
                 this, arrayOf(
                     Manifest.permission.WRITE_EXTERNAL_STORAGE,
                     Manifest.permission.READ_EXTERNAL_STORAGE,
-                    Manifest.permission.MANAGE_EXTERNAL_STORAGE
                 ), 1
             )
-            if (!Environment.isExternalStorageManager()) {
-                Toast.makeText(this, R.string.permission_needed, Toast.LENGTH_LONG).show()
-                val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
-                val uri = Uri.fromParts("package", packageName, null)
-                intent.data = uri
-                startActivity(intent)
-            }
             if (!isAccessGranted) {
                 val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
                 startActivity(intent)

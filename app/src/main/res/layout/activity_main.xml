@@ -104,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
-                android:orientation="vertical" />
+                android:orientation="vertical"/>
         </ScrollView>
         <TextView
             android:id="@+id/statusTextView"
@@ -136,7 +136,7 @@
                 app:icon="@drawable/ic_broom"
                 app:iconTint="@color/colorGoogleYellow"
                 android:textColor="@color/colorGoogleYellow"
-                android:text="@string/clean" />
+                android:text="@string/clean"/>
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.Material3.Button.UnelevatedButton"
                 android:layout_width="wrap_content"
@@ -150,8 +150,16 @@
                 android:textColor="@color/colorAndroidGreen"
                 android:text="@string/analyze"
                 android:minWidth="0dp"
-                app:backgroundTint="@android:color/transparent" />
+                app:backgroundTint="@android:color/transparent"/>
         </androidx.gridlayout.widget.GridLayout>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-5294151573817700/7844185090">
+        </com.google.android.gms.ads.AdView>
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"

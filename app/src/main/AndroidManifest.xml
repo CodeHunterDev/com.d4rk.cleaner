@@ -3,17 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="auto"
     package="com.d4rk.cleaner">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage"/>
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission"/>
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
-        tools:ignore="ProtectedPermissions" />
+        tools:ignore="ProtectedPermissions"/>
     <queries>
         <intent>
             <action android:name="android.intent.action.MAIN"/>
@@ -38,6 +39,15 @@
         <meta-data
             android:name="firebase_performance_logcat_enabled"
             android:value="true"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5294151573817700~3549716864"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:value="true"
+            android:name="ADMOB_ALLOW_LOCATION_FOR_ADS"/>
         <activity
             android:name=".AboutActivity"
             android:label="@string/miscellaneous_about"
@@ -63,6 +73,7 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:exported="true"
+            android:hardwareAccelerated="true"
             android:theme="@style/Theme.App.Starting"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>

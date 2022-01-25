@@ -1,21 +1,15 @@
 package com.d4rk.cleaner.invalid.ui;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-import static android.Manifest.permission.MANAGE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.Settings;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -171,17 +165,7 @@ public class InvalidActivity extends AppCompatActivity {
                             requestPermissions(new String[] {
                                     READ_EXTERNAL_STORAGE,
                                     WRITE_EXTERNAL_STORAGE,
-                                    MANAGE_EXTERNAL_STORAGE
                             }, 1);
-                        }
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                            if (!Environment.isExternalStorageManager()) {
-                                Toast.makeText(this, "Permission needed!", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
-                                Uri uri = Uri.fromParts("package", getPackageName(), null);
-                                intent.setData(uri);
-                                startActivity(intent);
-                            }
                         return;
                     }
                 }

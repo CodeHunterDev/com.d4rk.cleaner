@@ -15,7 +15,30 @@
 - ║║║║╩╣╚╣═╣║║║║║╩╣
 - ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-# The last Android Cleaner you will ever need with Google inspired material design made by D4rK to be more simplistic and easy to use!
+# The last Android Cleaner you will ever need with Google Material-You inspired design! 😄
+
+There are simply way too many apps out there that claim to speed up your device.
+In reality, they don't do anything. 😟
+D4rK Cleaner only aims to clean your phone by removing safe to delete files, which not only frees up a lot of space, but also improve your privacy. Since D4rK Cleaner removes .log files, which well, log what you do, cleans your clipboard to prevent apps hack your passwords and many more! 😃
+
+# Optimize & Clean! 🧹
+- Speed up your phone and clean junk safely;
+- Will help you delete all empty folders and subfolders on your device. Also you can select folder to delete all empty folders and subfolders only inside of it;
+- Clipboard Cleaner is a utility to clear the data leave behind copy and paste;
+- D4rK Cleaner removes .log files, which well, log what you do. This means you will have more privacy;
+- Temporary files are files which your device will use for a short period of time;
+- Will delete caches as much as possible because due to limitations in Android 6.0 and newer D4rK Cleaner is not able to clean internal cache on Android 6.0 and newer. However, cleaning of external cache should work properly on all versions of Android;
+- Daily cleans help you to clean automatically your device without to have to open the app! Turn on this feature and set your filters in settings and you're done;
+- Cleans advertisement folders witch have lot of data about ads you watched like banners etc.
+- "Corpse" files are files remain for uninstalled apps;
+- Invalid Media Cleaner aims to clean invalid images from your device;
+- Aggressive & True Aggressive filters actually can clean all data from your device. So, be careful...
+
+# Bonus! ❤️
+- Change your theme to dark or light! Or let D4rK Cleaner to adapt to your device;
+- Advanced Clipboard Cleaner it gives you ways to check and clean your clipboard;
+- Auto whitelist protect some important files and folders to be cleaned from your device;
+- One click clean removes "Are you sure?" clean pop-up.
 
 [<img src="https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/img/badges/google_play_store.png"
 alt="Get it on Google Play"
@@ -36,12 +59,6 @@ height="90">](https://www.deviantart.com/d4rk7355608)
 alt="PayPall"
 height="90">](https://gamejolt.com/@D4rK_S-A-D)
 
-You're tired of the abundance of phone cleaners on the Google Play Store? Tired of them being extremely shady? Tired of them doing nothing? Tired of ads and ads and ads over ads on your screen? Tired of having to pay for nothing? Me too. But D4rK Cleaner is here to solve this issues!
-
-There are simply way too many apps out there that claim to speed up your device. In reality, they don't do anything. D4rK Cleaner only aims to clean your phone by removing safe to delete files, which not only frees up a lot of space, but also improve your privacy and of course your device speed. Since D4rK Cleaner removes .log files, which well, log what you do and many more.
-
-Bugs can be reported here.
-
 ## Opening Issues :warning:
 
 > Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk. You can ask for help at [Stack Overflow](https://stackoverflow.com/questions/tagged/android).
@@ -49,29 +66,12 @@ Bugs can be reported here.
 
 - Create an Android/general issue/bug.
 
-Known bugs:
-- Clean process stops if theme is switched.
-- Rare moments when "Clean" button not working after using split screen.
-
 __D4rK Cleaner is 100% free, open source inspired by LTE Cleaner by TheRedSpy15, ad free, and deletes everything it claims to!__
 
 ## Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.cleaner/master/CHANGELOG.md)!
 
-Cleans:
-- Empty folders;
-- Clipboard; 
-- Logs;
-- Temporary files;
-- Caches;
-- Advertisement folders;
-- Invalid media files;
-  
-Bonus:
-- Make easy whitelists;
-- Customizable cleans
-- Changeable themes .
 
-Upcoming major features and there development stage:
+## Upcoming major features and there development stage:
 | Feature name         | Description                                  | Status        |
 | -------------------- | -------------------------------------------- | ------------- |
 | Hidden cache cleaner | Cleans hidden cache like CCleaner            | In developing |
@@ -92,6 +92,11 @@ Upcoming major features and there development stage:
 - YoYo & Auroșu Roșu for some translations.
 
 </details>
+
+# Feedback:
+If you have any suggested features or improvement, please leave a comment. In case something is not working correctly please let me know. When posting low rating please describe what is wrong to give the possibility to fix that issue.
+
+Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app.
 
 __Privacy Policy__ [here](https://bit.ly/d4rkcleanerprivacypolicy).
 
