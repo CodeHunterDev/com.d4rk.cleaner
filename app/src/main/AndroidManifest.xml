@@ -36,18 +36,19 @@
         android:supportsRtl="true"
         android:appCategory="productivity"
         tools:targetApi="o">
-        <meta-data
-            android:name="firebase_performance_logcat_enabled"
-            android:value="true"/>
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5294151573817700~3549716864"/>
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
-        <meta-data
-            android:value="true"
-            android:name="ADMOB_ALLOW_LOCATION_FOR_ADS"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:theme="@style/Theme.App.Starting">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity>
         <activity
             android:name=".AboutActivity"
             android:label="@string/miscellaneous_about"
@@ -69,21 +70,6 @@
             android:exported="true"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme"/>
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:exported="true"
-            android:hardwareAccelerated="true"
-            android:theme="@style/Theme.App.Starting"
-            tools:ignore="LockedOrientationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-            <meta-data
-                android:name="android.app.shortcuts"
-                android:resource="@xml/shortcuts"/>
-        </activity>
         <activity
             android:name=".clipboard.ClipboardActivity"
             android:exported="true"
@@ -111,6 +97,25 @@
                 <action android:name="android.intent.action.ASSIST"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent"/>
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5294151573817700~3549716864"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:value="true"
+            android:name="ADMOB_ALLOW_LOCATION_FOR_ADS"/>
         <receiver android:name=".CleanReceiver"
             android:exported="false">
             <intent-filter>

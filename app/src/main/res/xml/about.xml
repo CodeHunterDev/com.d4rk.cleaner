@@ -46,6 +46,15 @@
             android:data="https://bit.ly/DeseneAnimateYouTube"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
+        android:title="@string/about_twitter"
+        android:key="twitter"
+        android:icon="@drawable/ic_twitter"
+        android:summary="@string/about_twitter_description">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://bit.ly/twitterd4rk"/>
+    </androidx.preference.Preference>
+    <androidx.preference.Preference
         android:title="@string/about_gamejolt"
         android:key="gamejolt"
         android:icon="@drawable/ic_gamejolt"

@@ -62,7 +62,7 @@
             android:key="clipboard"
             android:persistent="true"
             android:icon="@drawable/ic_settings_clipboard"
-            android:title="@string/clipboard_clean" />
+            android:title="@string/clipboard_clean"/>
         <androidx.preference.CheckBoxPreference
             android:defaultValue="true"
             android:key="auto_white"
@@ -97,6 +97,17 @@
             android:icon="@drawable/ic_auto_delete"
             android:summary="@string/daily_sum"
             android:title="@string/daily_title"/>
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory
+        android:title="Experimental"
+        android:icon="@drawable/ic_experimental">
+        <androidx.preference.CheckBoxPreference
+            android:defaultValue="true"
+            android:key="buttonpositions"
+            android:persistent="true"
+            android:icon="@drawable/ic_buttonpositions"
+            android:summary="Move buttons to left or right. Set your preferred option. (Require restart)"
+            android:title="Set main screen button positions."/>
     </androidx.preference.PreferenceCategory>
     <PreferenceCategory
         android:title="@string/copyright"/>

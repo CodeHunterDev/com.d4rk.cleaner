@@ -118,4 +118,9 @@
     <string name="invalid_media_cleaner_clean_tooltip">Проверьте и решите, какие недействительные файлы мультимедиа вы хотите очистить.</string>
     <string name="clean">Уборка!</string>
     <string name="invalid_no_result">Безрезультатно…</string>
+    <string name="about_twitter_description">Мой официальный профиль Twitter.</string>
+    <string name="settings_notification_sum">Показывает уведомление о том, сколько данных очищалось ежедневно.</string>
+    <string name="app_description">Последний очиститель Android, который вам когда-либо понадобится, с дизайном материалов, вдохновленным Google, созданный D4rK, чтобы быть более простым и простым в использовании!</string>
+    <string name="daily_sum">Автоматически запускается ежедневно, без необходимости открывать приложение.</string>
+    <string name="button_positions">Эта функция все еще находится в разработке, поэтому будьте осторожны. Если вы обнаружите какую-либо ошибку, сообщите об этом немедленно, чтобы ее исправили и перенесли из экспериментальной стадии.</string>
 </resources>

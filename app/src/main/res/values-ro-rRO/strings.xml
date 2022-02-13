@@ -118,4 +118,9 @@
     <string name="invalid_media_cleaner_clean_tooltip">Verificați și decideți ce fișiere media nevalide doriți să curățați.</string>
     <string name="clean">Curățare!</string>
     <string name="invalid_no_result">Nici un rezultat…</string>
+    <string name="about_twitter_description">Profilul meu oficial de Twitter.</string>
+    <string name="settings_notification_sum">Afișează o notificare despre câte date au fost curățate zilnic.</string>
+    <string name="app_description">Ultimul Android Cleaner de care veți avea nevoie vreodată, cu un design de materiale inspirat de Google, realizat de D4rK, pentru a fi mai simplist și ușor de utilizat!</string>
+    <string name="daily_sum">Se rulează automat zilnic, fără a fi nevoie să deschideți aplicația.</string>
+    <string name="button_positions">Această caracteristică este încă în curs de dezvoltare, așa că aveți grijă. Dacă întâlniți vreo eroare, raportați-o imediat pentru a fi remediată și mutată din etapa experimentală.</string>
 </resources>

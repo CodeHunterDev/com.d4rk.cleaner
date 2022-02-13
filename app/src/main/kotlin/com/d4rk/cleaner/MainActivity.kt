@@ -2,9 +2,9 @@ package com.d4rk.cleaner
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.AppOpsManager
-import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Intent
+import android.content.ClipboardManager
+import android.content.ClipData
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.content.res.Configuration
@@ -18,10 +18,10 @@ import android.os.Looper
 import android.provider.Settings
 import android.view.MenuItem
 import android.view.View
-import android.widget.ImageView
-import android.widget.ScrollView
-import android.widget.TextView
 import android.widget.Toast
+import android.widget.TextView
+import android.widget.ScrollView
+import android.widget.ImageView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -32,15 +32,15 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.core.view.children
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.preference.PreferenceManager
 import com.d4rk.cleaner.clipboard.ClipboardActivity
 import com.d4rk.cleaner.databinding.ActivityMainBinding
 import com.d4rk.cleaner.invalid.ui.InvalidActivity
-import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.admanager.AdManagerAdRequest
 import com.google.android.material.navigation.NavigationView
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
@@ -51,22 +51,52 @@ class MainActivity : AppCompatActivity() {
     private var actionBarDrawerToggle: ActionBarDrawerToggle? = null
     private var navigationView: NavigationView? = null
     val context: MainActivity = this
+    private var isButtonPositionFlipped = false
     private var binding: ActivityMainBinding? = null
+    private lateinit var adView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val splashScreen = installSplashScreen()
         setContentView(R.layout.activity_main)
-        MobileAds.initialize(this) {}
-        val adView = AdView(this)
-        adView.adSize = AdSize.BANNER
-        adView.adUnitId = "ca-app-pub-5294151573817700/7844185090"
-        val mAdView = findViewById<AdView>(R.id.adView)
-        val adRequest = AdManagerAdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
+        adView = findViewById<View>(R.id.adView) as AdView
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+        isButtonPositionFlipped = false
+        adView.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+                super.onAdLoaded()
+                val toastMessage = "ad loaded"
+                Toast.makeText(applicationContext, toastMessage, Toast.LENGTH_LONG).show()
+            }
+            override fun onAdOpened() {
+                super.onAdOpened()
+                val toastMessage = "ad is open"
+                Toast.makeText(applicationContext, toastMessage, Toast.LENGTH_LONG).show()
+            }
+            override fun onAdClicked() {
+                super.onAdClicked()
+                val toastMessage = "ad is clicked"
+                Toast.makeText(applicationContext, toastMessage, Toast.LENGTH_LONG).show()
+            }
+            override fun onAdClosed() {
+                super.onAdClosed()
+                val toastMessage = "ad is closed"
+                Toast.makeText(applicationContext, toastMessage, Toast.LENGTH_LONG).show()
+            }
+            override fun onAdImpression() {
+                super.onAdImpression()
+                val toastMessage = "ad impression"
+                Toast.makeText(applicationContext, toastMessage, Toast.LENGTH_LONG).show()
+            }
+        }
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
-        binding!!.cleanBtn.setOnClickListener { clean() }
-        binding!!.analyzeBtn.setOnClickListener { analyze() }
+        binding!!.cleanBtn.setOnClickListener {
+            clean()
+        }
+        binding!!.analyzeBtn.setOnClickListener {
+            analyze()
+        }
         WhitelistActivity.getWhiteList(prefs)
         prefs = PreferenceManager.getDefaultSharedPreferences(this)
         setUpToolbar()
@@ -76,12 +106,7 @@ class MainActivity : AppCompatActivity() {
         if (pref == darkModeValues[1]) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         if (pref == darkModeValues[2]) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         if (pref == darkModeValues[3]) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
-        @SuppressLint("RestrictedApi") val shortcut = ShortcutInfoCompat.Builder(context, "atm_shortcut")
-            .setShortLabel(getString(R.string.atmegame))
-            .setLongLabel(getString(R.string.long_shortcut_atmegame))
-            .setIcon(IconCompat.createFromIcon(Icon.createWithResource(context, R.mipmap.ic_launch_atmegame)))
-            .setIntent(Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/d4rkcleaneratm")))
-            .build()
+        @SuppressLint("RestrictedApi") val shortcut = ShortcutInfoCompat.Builder(context, "atm_shortcut").setShortLabel(getString(R.string.atmegame)).setLongLabel(getString(R.string.long_shortcut_atmegame)).setIcon(IconCompat.createFromIcon(Icon.createWithResource(context, R.mipmap.ic_launch_atmegame))).setIntent(Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/d4rkcleaneratm")))  .build()
         ShortcutManagerCompat.pushDynamicShortcut(context, shortcut)
         navigationView = findViewById(R.id.navigation_view)
         val navigationView: NavigationView = findViewById(R.id.navigation_view)
@@ -104,8 +129,7 @@ class MainActivity : AppCompatActivity() {
             }
             if (id == R.id.nav_drawer_atmegame) {
                 val openURL = Intent(Intent.ACTION_VIEW)
-                openURL.data =
-                    Uri.parse("https://bit.ly/d4rkcleaneratm")
+                openURL.data = Uri.parse("https://bit.ly/d4rkcleaneratm")
                 startActivity(openURL)
             }
             if (id == R.id.nav_drawer_share) {
@@ -119,6 +143,29 @@ class MainActivity : AppCompatActivity() {
             false
         }
     }
+    override fun onResume() {
+        super.onResume()
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val shouldFlipButtonPosition = sharedPreferences.getBoolean("buttonpositions", false)
+        val isButtonPositionFlipped = false
+        if (isButtonPositionFlipped != shouldFlipButtonPosition) {
+            findViewById<androidx.gridlayout.widget.GridLayout>(R.id.theParentLinearLayout).apply {
+                val children = children.toList()
+                removeAllViews()
+                for (child in children.asReversed()) {
+                    addView(child)
+                }
+            }
+        }
+    }
+    override fun onPause() {
+        adView.pause()
+        super.onPause()
+    }
+    override fun onDestroy() {
+        adView.destroy()
+        super.onDestroy()
+    }
     fun analyze() {
         requestWriteExternalPermission()
         if (!FileScanner.isRunning) {
@@ -126,20 +173,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun arrangeViews(isDelete: Boolean) {
-        if (isDelete) arrangeForClean() else arrangeForAnalyze()
-    }
-    private fun arrangeForClean() {
         val orientation = resources.configuration.orientation
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            binding!!.frameLayout.visibility = View.VISIBLE
-            binding!!.fileScrollView.visibility = View.GONE
-        }
-    }
-    private fun arrangeForAnalyze() {
-        val orientation = resources.configuration.orientation
-        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            binding!!.frameLayout.visibility = View.GONE
-            binding!!.fileScrollView.visibility = View.VISIBLE
+            if (isDelete) {
+                binding!!.frameLayout.visibility = View.VISIBLE
+                binding!!.fileScrollView.visibility = View.GONE
+            } else {
+                binding!!.frameLayout.visibility = View.GONE
+                binding!!.fileScrollView.visibility = View.VISIBLE
+            }
         }
     }
     fun clean() {
@@ -149,12 +191,7 @@ class MainActivity : AppCompatActivity() {
             if (prefs!!.getBoolean("one_click", false)) {
                 Thread { scan(true) }.start()
             } else {
-                val mDialog = MaterialDialog.Builder(this)
-                    .setTitle(getString(R.string.clean_confirm_title))
-                    .setAnimation(R.raw.delete)
-                    .setMessage(getString(R.string.are_you_sure_deletion))
-                    .setCancelable(false)
-                    .setPositiveButton(getString(R.string.clean)) { dialogInterface: DialogInterface, _: Int -> dialogInterface.dismiss()
+                val mDialog = MaterialDialog.Builder(this).setTitle(getString(R.string.clean_confirm_title)).setAnimation(R.raw.delete).setMessage(getString(R.string.are_you_sure_deletion)).setCancelable(false).setPositiveButton(getString(R.string.clean)) { dialogInterface: DialogInterface, _: Int -> dialogInterface.dismiss()
                         Thread { scan(true) }.start()
                     }
                     .setNegativeButton(getString(R.string.cancel)) { dialogInterface: DialogInterface, _: Int -> dialogInterface.dismiss() }
@@ -206,19 +243,7 @@ class MainActivity : AppCompatActivity() {
             binding!!.statusTextView.text = getString(R.string.main_status_running)
         }
         val path = Environment.getExternalStorageDirectory()
-        val fs = FileScanner(path, this)
-            .setEmptyDir(prefs!!.getBoolean("empty", false))
-            .setAutoWhite(prefs!!.getBoolean("auto_white", true))
-            .setDelete(delete)
-            .setCorpse(prefs!!.getBoolean("corpse", false))
-            .setGUI(binding)
-            .setContext(this)
-            .setUpFilters(
-                prefs!!.getBoolean("generic", true),
-                prefs!!.getBoolean("aggressive", false),
-                prefs!!.getBoolean("true_aggressive", false),
-                prefs!!.getBoolean("apk", false)
-            )
+        val fs = FileScanner(path, this).setEmptyDir(prefs!!.getBoolean("empty", false)).setAutoWhite(prefs!!.getBoolean("auto_white", true)).setDelete(delete).setCorpse(prefs!!.getBoolean("corpse", false)).setGUI(binding).setContext(this).setUpFilters(prefs!!.getBoolean("generic", true), prefs!!.getBoolean("aggressive", false), prefs!!.getBoolean("true_aggressive", false), prefs!!.getBoolean("apk", false))
         if (path.listFiles() == null) {
             val textView = printTextView(getString(R.string.clipboard_clean_failed), Color.RED)
             runOnUiThread { binding!!.fileListView.addView(textView) }
@@ -264,23 +289,16 @@ class MainActivity : AppCompatActivity() {
     }
     private fun requestWriteExternalPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            ActivityCompat.requestPermissions(
-                this, arrayOf(
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                    Manifest.permission.READ_EXTERNAL_STORAGE,
-                ), 1
-            )
+            ActivityCompat.requestPermissions(this, arrayOf(
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            ), 1)
             if (!isAccessGranted) {
                 val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
                 startActivity(intent)
             }
         } else {
-            ActivityCompat.requestPermissions(
-                this, arrayOf(
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                    Manifest.permission.READ_EXTERNAL_STORAGE
-                ), 1
-            )
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE), 1)
         }
     }
     private val isAccessGranted: Boolean
@@ -288,19 +306,12 @@ class MainActivity : AppCompatActivity() {
             val packageManager = packageManager
             val applicationInfo = packageManager.getApplicationInfo(packageName, 0)
             val appOpsManager = getSystemService(APP_OPS_SERVICE) as AppOpsManager
-            val mode: Int = appOpsManager.checkOpNoThrow(
-                AppOpsManager.OPSTR_GET_USAGE_STATS,
-                applicationInfo.uid, applicationInfo.packageName
-            )
+            val mode: Int = appOpsManager.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS, applicationInfo.uid, applicationInfo.packageName)
             mode == AppOpsManager.MODE_ALLOWED
         } catch (e: PackageManager.NameNotFoundException) {
             false
         }
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<String>,
-        grantResults: IntArray
-    ) {
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == 1 && grantResults.isNotEmpty() && grantResults[0] != PackageManager.PERMISSION_GRANTED) prompt()
     }

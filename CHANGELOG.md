@@ -1,3 +1,19 @@
+# Version 6.1_r5:
+- Added experimental category in settings;
+- Adaptive Material-You shortcuts;
+- Under the hood improvements.
+
+# Version 6.1_r4:
+- Added Material-You for Android 12+ devices;
+- Migrated splash screen;
+- Removed MANAGE_EXTERNAL_STORAGE (Blame Gologolo);
+- Bug fixes;
+- A lot of under the hood improvements;
+- Many more, check changelog!
+
+# Version 6.1_r3:
+- Ded.
+
 # Version 6.1_r2:
 - Updated privacy policy link;
 - Firebase additions;

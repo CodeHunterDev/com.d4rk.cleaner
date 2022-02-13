@@ -50,7 +50,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="32dp"
                     android:importantForAccessibility="no"
-                    app:srcCompat="@drawable/ic_invalid_media_folder" />
+                    app:srcCompat="@drawable/ic_invalid_media_folder"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
@@ -72,7 +72,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="32dp"
                     android:importantForAccessibility="no"
-                    app:srcCompat="@drawable/ic_images" />
+                    app:srcCompat="@drawable/ic_images"/>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/progress_view"
@@ -115,9 +115,8 @@
                 android:text="@string/action_scan"
                 android:textColor="@color/colorAccent"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:drawableLeft="@drawable/ic_image_search"
-                app:drawableTint="@color/colorAccent"
-                tools:ignore="RtlHardcoded,TextContrastCheck,UsingOnClickInXml"/>
+                android:drawableStart="@drawable/ic_image_search"
+                app:drawableTint="@color/colorAccent"/>
             <View
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -135,8 +134,7 @@
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/ic_refresh"
                 android:visibility="gone"
-                tools:visibility="visible"
-                tools:ignore="UnusedAttribute"/>
+                tools:visibility="visible"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

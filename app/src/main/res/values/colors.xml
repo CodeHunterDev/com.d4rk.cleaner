@@ -2,7 +2,6 @@
 <resources>
     <color name="colorPrimary">@android:color/transparent</color>
     <color name="colorDayNightMode">#FEFBFE</color>
-    <color name="colorShortcuts">#F5F5F5</color>
     <color name="colorGoogleYellow">#F4B400</color>
     <color name="colorGoogleGreen">#0F9D58</color>
     <color name="colorGoogleRed">#DB4437</color>
@@ -14,4 +13,6 @@
     <color name="colorBackground">#FEFBFE</color>
     <color name="colorStatusBar">#F0F1FC</color>
     <color name="colorWhitelistCard">#A8C0F3</color>
+    <color name="colorShortcutBackground">#F5F5F5</color>
+    <color name="colorShortcutForeground">@color/colorAccent</color>
 </resources>

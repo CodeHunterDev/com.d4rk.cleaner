@@ -118,4 +118,9 @@
     <string name="invalid_media_cleaner_clean_tooltip">Hangi geçersiz medya dosyalarını temizlemek istediğinizi kontrol edin ve karar verin.</string>
     <string name="clean">Temizlik!</string>
     <string name="invalid_no_result">Sonuç yok…</string>
+    <string name="about_twitter_description">Resmi Twitter profilim.</string>
+    <string name="settings_notification_sum">Günlük ne kadar verinin temizlendiğine ilişkin bildirimi gösterir.</string>
+    <string name="app_description">Daha basit ve kullanımı kolay olması için D4rK tarafından yapılan Google\'dan ilham alan malzeme tasarımıyla ihtiyaç duyacağınız son Android Temizleyici!</string>
+    <string name="daily_sum">Uygulamayı açmanıza gerek kalmadan her gün otomatik olarak çalışır.</string>
+    <string name="button_positions">Bu özellik hala geliştirilme aşamasındadır, bu yüzden dikkatli olun. Herhangi bir hatayla karşılaşırsanız, derhal düzeltilmesini ve deneysel aşamadan taşınmasını bildirin.</string>
 </resources>

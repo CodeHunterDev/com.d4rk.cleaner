@@ -118,4 +118,9 @@
     <string name="invalid_media_cleaner_clean_tooltip">Überprüfen und entscheiden Sie, welche ungültigen Mediendateien Sie bereinigen möchten.</string>
     <string name="clean">Sauber!</string>
     <string name="invalid_no_result">Kein Ergebnis…</string>
+    <string name="about_twitter_description">Mein offizielles Twitter-Profil.</string>
+    <string name="settings_notification_sum">Zeigt eine Benachrichtigung darüber an, wie viele Daten täglich bereinigt wurden.</string>
+    <string name="app_description">Der letzte Android Cleaner, den Sie jemals brauchen werden, mit von Google inspiriertem Materialdesign von D4rK, um einfacher und benutzerfreundlicher zu sein!</string>
+    <string name="daily_sum">Läuft automatisch täglich, ohne dass Sie die App öffnen müssen.</string>
+    <string name="button_positions">Diese Funktion befindet sich noch in der Entwicklung, seien Sie also vorsichtig. Wenn Sie auf einen Fehler stoßen, melden Sie ihn sofort, um ihn zu beheben und aus der experimentellen Phase zu entfernen.</string>
 </resources>

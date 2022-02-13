@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorAccent">#8AB4F8</color>
-    <color name="colorShortcuts">#2D2D2D</color>
     <color name="colorDayNightMode">#1C1B1F</color>
     <color name="colorGitHub">@android:color/white</color>
     <color name="colorSplashScreenText">#616161</color>
@@ -9,4 +8,5 @@
     <color name="colorBackground">#1C1B1F</color>
     <color name="colorStatusBar">#26272F</color>
     <color name="colorWhitelistCard">#566587</color>
+    <color name="colorShortcutBackground">#2D2D2D</color>
 </resources>

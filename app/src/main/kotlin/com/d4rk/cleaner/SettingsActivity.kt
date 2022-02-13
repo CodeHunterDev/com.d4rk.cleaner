@@ -6,11 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.preference.CheckBoxPreference
-import androidx.preference.ListPreference
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.PreferenceManager
+import androidx.preference.*
 import com.d4rk.cleaner.CleanReceiver.Companion.cancelAlarm
 import com.d4rk.cleaner.CleanReceiver.Companion.scheduleAlarm
 class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeListener, Preference.SummaryProvider<ListPreference> {
@@ -42,18 +38,6 @@ class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeListener, 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setHasOptionsMenu(true)
-            findPreference<Preference>("aggressive")!!.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { preference: Preference, _: Any? ->
-                    val checked = (preference as CheckBoxPreference).isChecked
-                    if (!checked) {
-                        val filtersFiles = resources.getStringArray(R.array.aggressive_filter_folders)
-                        val alertDialog = AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme).create()
-                        alertDialog.setTitle(getString(R.string.warning))
-                        alertDialog.setMessage(getString(R.string.adds_the_following) + " " + filtersFiles.contentToString())
-                        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK!") { dialog: DialogInterface, _: Int -> dialog.dismiss() }
-                        alertDialog.show()
-                    }
-                    true
-                }
             findPreference<Preference>("true_aggressive")!!.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { preference: Preference, _: Any? ->
                     val checked = (preference as CheckBoxPreference).isChecked
                     if (!checked) {
@@ -66,8 +50,18 @@ class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeListener, 
                     }
                     true
                 }
-            findPreference<Preference>("dailyclean")!!.onPreferenceChangeListener =
-                Preference.OnPreferenceChangeListener { preference: Preference, _: Any? ->
+            findPreference<Preference>("buttonpositions")!!.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { preference: Preference, _: Any? ->
+                val checked = (preference as CheckBoxPreference).isChecked
+                if (!checked) {
+                    val alertDialog = AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme).create()
+                    alertDialog.setTitle(getString(R.string.warning))
+                    alertDialog.setMessage(getString(R.string.button_positions))
+                    alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "OK!") { dialog: DialogInterface, _: Int -> dialog.dismiss() }
+                    alertDialog.show()
+                }
+                true
+            }
+            findPreference<Preference>("dailyclean")!!.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { preference: Preference, _: Any? ->
                     val checked = (preference as CheckBoxPreference).isChecked
                     if (!checked) {
                         scheduleAlarm(requireContext().applicationContext)

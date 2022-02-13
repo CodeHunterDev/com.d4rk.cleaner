@@ -118,4 +118,9 @@
     <string name="invalid_media_cleaner_clean_tooltip">Ellenőrizze és döntse el, hogy mely érvénytelen médiafájlokat szeretné megtisztítani.</string>
     <string name="clean">Tiszta!</string>
     <string name="invalid_no_result">Nincs eredmény…</string>
+    <string name="about_twitter_description">Mein offizielles Twitter-Profil.</string>
+    <string name="settings_notification_sum">Értesítést jelenít meg arról, hogy mennyi adatot tisztítottak naponta.</string>
+    <string name="app_description">Az utolsó Android Cleaner, amelyre valaha szüksége lesz a Google által ihletett D4rK anyagkialakítással, hogy egyszerűbb és könnyen használhatóbb legyen!</string>
+    <string name="daily_sum">Naponta automatikusan fut, anélkül, hogy meg kellene nyitnia az alkalmazást.</string>
+    <string name="button_positions">Ez a funkció még fejlesztés alatt áll, ezért legyen óvatos. Ha bármilyen hibát észlel, azonnal jelentse azt, hogy kijavítsuk, és áthelyezzük a kísérleti szakaszból.</string>
 </resources>

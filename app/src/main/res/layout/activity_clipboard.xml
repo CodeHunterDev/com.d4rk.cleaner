@@ -88,7 +88,7 @@
                     android:layout_margin="16dp"
                     android:text="@string/clipboard_service_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
                 <RadioGroup
                     android:id="@+id/groupServiceOptions"
                     android:layout_width="match_parent"
@@ -149,8 +149,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                tools:ignore="UseCompoundDrawables">
+                android:orientation="vertical">
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -160,14 +159,14 @@
                     android:paddingBottom="8dp"
                     android:text="@string/clipboard_widget_title"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"/>
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:text="@string/clipboard_widget_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -181,8 +180,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                tools:ignore="UseCompoundDrawables">
+                android:orientation="vertical">
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -221,7 +219,7 @@
                     android:paddingEnd="16dp"
                     android:text="@string/clipboard_shortcut_create_content"
                     android:textColor="@color/colorAccent"
-                    app:rippleColor="@color/colorAccent" />
+                    app:rippleColor="@color/colorAccent"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -236,8 +234,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                tools:ignore="UseCompoundDrawables">
+                android:orientation="vertical">
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -269,8 +266,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="UseCompoundDrawables">
+        android:orientation="vertical">
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -280,14 +276,14 @@
             android:paddingBottom="8dp"
             android:text="@string/assistant_title"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"/>
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:text="@string/assistant_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textSize="16sp" />
+            android:textSize="16sp"/>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnOpenAssistantSettings"
             android:layout_width="wrap_content"
@@ -308,12 +304,12 @@
                 android:id="@+id/ratioAssistantClean"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/clipboard_clean" />
+                android:text="@string/clipboard_clean"/>
             <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/ratioAssistantContent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/clipboard_content" />
+                android:text="@string/clipboard_content"/>
         </RadioGroup>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

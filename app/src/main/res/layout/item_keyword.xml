@@ -23,6 +23,5 @@
         android:layout_marginStart="8dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:srcCompat="@drawable/ic_minus"
-        app:tint="?colorControlNormal"
-        tools:ignore="ContentDescription"/>
+        app:tint="?colorControlNormal"/>
 </LinearLayout>

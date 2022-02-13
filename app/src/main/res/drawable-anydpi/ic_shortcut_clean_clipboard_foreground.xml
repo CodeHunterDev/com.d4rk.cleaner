@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="432dp" android:height="432dp" android:viewportWidth="432" android:viewportHeight="432"
+    tools:ignore="VectorRaster">
+    <path android:fillColor="@color/colorShortcutForeground" android:pathData="M253.7 206.6h-9.4v-75.5c0-10.4-8.5-18.9-18.9-18.9h-18.9c-10.4 0-18.9 8.5-18.9 18.9v75.5h-9.4c-26 0-47.2 21.1-47.2 47.2v66h169.8v-66c0.1-26.1-21-47.2-47.1-47.2zm-47.1-75.5h18.9v75.5h-18.9v-75.5zM282 300.9h-18.9v-28.3c0-5.2-4.2-9.4-9.4-9.4s-9.4 4.2-9.4 9.4v28.3h-18.9v-28.3c0-5.2-4.2-9.4-9.4-9.4s-9.4 4.2-9.4 9.4v28.3h-18.9v-28.3c0-5.2-4.2-9.4-9.4-9.4s-9.4 4.2-9.4 9.4v28.3H150v-47.2c0-15.6 12.7-28.3 28.3-28.3h75.5c15.6 0 28.3 12.7 28.3 28.3v47.2z"/>
+</vector>
