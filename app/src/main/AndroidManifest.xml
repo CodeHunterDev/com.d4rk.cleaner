@@ -4,6 +4,7 @@
     android:installLocation="auto"
     package="com.d4rk.cleaner">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
@@ -28,6 +29,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:theme="@style/AppTheme"
         android:banner="@drawable/banner"
+        android:hardwareAccelerated="true"
         android:logo="@drawable/ic_app"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
@@ -71,6 +73,18 @@
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme"/>
         <activity
+            android:name=".empty.ProgramActivity"
+            android:label="@string/settings"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".empty.ProgramOldActivity"
+            android:label="@string/settings"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
             android:name=".clipboard.ClipboardActivity"
             android:exported="true"
             android:label="@string/navigation_drawer_clipboard_cleaner">
@@ -107,9 +121,6 @@
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true"/>
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5294151573817700~3549716864"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
@@ -177,5 +188,8 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5294151573817700~3549716864"/>
     </application>
 </manifest>

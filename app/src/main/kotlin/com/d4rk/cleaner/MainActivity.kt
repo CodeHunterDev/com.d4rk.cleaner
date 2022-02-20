@@ -2,9 +2,9 @@ package com.d4rk.cleaner
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.AppOpsManager
-import android.content.Intent
-import android.content.ClipboardManager
 import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.content.res.Configuration
@@ -18,10 +18,10 @@ import android.os.Looper
 import android.provider.Settings
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
-import android.widget.TextView
-import android.widget.ScrollView
 import android.widget.ImageView
+import android.widget.ScrollView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -38,9 +38,10 @@ import androidx.preference.PreferenceManager
 import com.d4rk.cleaner.clipboard.ClipboardActivity
 import com.d4rk.cleaner.databinding.ActivityMainBinding
 import com.d4rk.cleaner.invalid.ui.InvalidActivity
-import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.navigation.NavigationView
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
@@ -51,44 +52,21 @@ class MainActivity : AppCompatActivity() {
     private var actionBarDrawerToggle: ActionBarDrawerToggle? = null
     private var navigationView: NavigationView? = null
     val context: MainActivity = this
+    private lateinit var mAdView : AdView
     private var isButtonPositionFlipped = false
     private var binding: ActivityMainBinding? = null
-    private lateinit var adView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val splashScreen = installSplashScreen()
         setContentView(R.layout.activity_main)
-        adView = findViewById<View>(R.id.adView) as AdView
-        val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
         isButtonPositionFlipped = false
-        adView.adListener = object : AdListener() {
-            override fun onAdLoaded() {
-                super.onAdLoaded()
-                val toastMessage = "ad loaded"
-                Toast.makeText(applicationContext, toastMessage, Toast.LENGTH_LONG).show()
-            }
-            override fun onAdOpened() {
-                super.onAdOpened()
-                val toastMessage = "ad is open"
-                Toast.makeText(applicationContext, toastMessage, Toast.LENGTH_LONG).show()
-            }
-            override fun onAdClicked() {
-                super.onAdClicked()
-                val toastMessage = "ad is clicked"
-                Toast.makeText(applicationContext, toastMessage, Toast.LENGTH_LONG).show()
-            }
-            override fun onAdClosed() {
-                super.onAdClosed()
-                val toastMessage = "ad is closed"
-                Toast.makeText(applicationContext, toastMessage, Toast.LENGTH_LONG).show()
-            }
-            override fun onAdImpression() {
-                super.onAdImpression()
-                val toastMessage = "ad impression"
-                Toast.makeText(applicationContext, toastMessage, Toast.LENGTH_LONG).show()
-            }
-        }
+        MobileAds.initialize(this) {}
+        val adView = AdView(this)
+        adView.adSize = AdSize.BANNER
+        adView.adUnitId = "ca-app-pub-5294151573817700/7844185090"
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
         binding!!.cleanBtn.setOnClickListener {
@@ -157,14 +135,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-    override fun onPause() {
-        adView.pause()
-        super.onPause()
-    }
-    override fun onDestroy() {
-        adView.destroy()
-        super.onDestroy()
     }
     fun analyze() {
         requestWriteExternalPermission()

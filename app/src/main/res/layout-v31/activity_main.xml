@@ -157,8 +157,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-5294151573817700/7844185090">
-        </com.google.android.gms.ads.AdView>
+            ads:adUnitId="ca-app-pub-5294151573817700/7844185090"/>
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"

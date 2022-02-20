@@ -13,8 +13,8 @@ android {
         applicationId "com.d4rk.cleaner"
         minSdkVersion 23
         targetSdkVersion 32
-        versionCode 55
-        versionName '6.1_r5'
+        versionCode 56
+        versionName '7.0_r1'
         vectorDrawables.useSupportLibrary true
         archivesBaseName = "com.d4rk.cleaner-v${versionName}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -35,10 +35,6 @@ android {
     }
     buildFeatures {
         viewBinding true
-        dataBinding true
-    }
-    lintOptions {
-        abortOnError false
     }
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
@@ -58,8 +54,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'androidx.preference:preference-ktx:1.2.0'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0-alpha01'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0-alpha01'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0-alpha02'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0-alpha02'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
     implementation 'net.sourceforge.streamsupport:android-retrostreams:1.7.4'
@@ -67,6 +63,6 @@ dependencies {
     implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.work:work-testing:2.7.1'
-    androidTestImplementation 'androidx.test:runner:1.4.1-alpha03'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4-alpha03'
+    androidTestImplementation 'androidx.test:runner:1.5.0-alpha01'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4-alpha04'
 }

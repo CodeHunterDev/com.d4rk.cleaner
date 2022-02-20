@@ -10,6 +10,57 @@
     <string name="copyright" translatable="false">Copyright ©2021 ~ D4rK</string>
     <string name="atmegame" translatable="false">Atmegame!</string>
     <string name="empty" translatable="false"/>
+
+    <string name="button_clean" translatable="false">CLEAN</string>
+    <string name="button_default" translatable="false">DEFAULT</string>
+    <string name="button_saf" translatable="false">TRY SAF</string>
+    <string name="button_select" translatable="false">SELECT</string>
+    <string name="common_google_play_services_unknown_issue" translatable="false">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="consent_agree" translatable="false">By agreeing, you confirm that you would like a personalized ad experience.</string>
+    <string name="consent_no" translatable="false">NO, THANK YOU</string>
+    <string name="consent_understand" translatable="false">I understand that I will still see ads, but they may not be as relevant to my interests.</string>
+    <string name="consent_yes" translatable="false">YES, I AGREE</string>
+    <string name="dialog_message" translatable="false">Are you sure you want to leave the app?</string>
+    <string name="dialog_no" translatable="false">NO</string>
+    <string name="dialog_yes" translatable="false">YES</string>
+    <string name="interstitialId" translatable="false">ca-app-pub-7124948529897131/8974891991</string>
+    <string name="menu_consent" translatable="false">Ads</string>
+    <string name="menu_policy" translatable="false">Privacy Policy</string>
+    <string name="s1" translatable="false">Save image</string>
+    <string name="s2" translatable="false">Allow Ad to store image in Picture gallery?</string>
+    <string name="s3" translatable="false">Accept</string>
+    <string name="s4" translatable="false">Decline</string>
+    <string name="s5" translatable="false">Create calendar event</string>
+    <string name="s6" translatable="false">Allow Ad to create a calendar event?</string>
+    <string name="s7" translatable="false">Test Ad</string>
+    <string name="search_menu_title" translatable="false">Search</string>
+    <string name="status_bar_notification_info_overflow" translatable="false">999+</string>
+    <string name="text_ads" translatable="false">Ads</string>
+    <string name="text_afc" translatable="false">Download Auto Folder Cleaner to easily schedule automatic folder deletion.</string>
+    <string name="text_bfc" translatable="false">Download Big File Cleaner to easily find and remove big files on your device.</string>
+    <string name="text_cleared" translatable="false">Deleted %d folders!</string>
+    <string name="text_consent" translatable="false">&lt;h2&gt;Personalize Your Ad Experience&lt;/h2&gt;This app personalizes your advertising experience using AdMob. AdMob and its &lt;a href=\'https://support.google.com/admob/answer/9012903\'&gt;partners&lt;/a&gt; may collect and process personal data such as device identifiers, location data, and other demographic and interest data to provide advertising experience tailored to you. By consenting to this improved ad experience, you\'ll see ads that AdMob and its partners believe are more relevant to you. &lt;a href=\'https://policies.google.com/technologies/partner-sites?gl=uk\'&gt;Learn more.&lt;/a&gt;</string>
+    <string name="text_deleted" translatable="false">Deleted: </string>
+    <string name="text_dfc" translatable="false">Download Duplicate File Cleaner to easily find and remove duplicate files on your device.</string>
+    <string name="text_info" translatable="false">Select path and click CLEAN to delete all empty folders and subfolders!</string>
+    <string name="text_information" translatable="false">Information</string>
+    <string name="text_missing" translatable="false">Folder missing!</string>
+    <string name="text_more" translatable="false">More</string>
+    <string name="text_no_empy_subfolders" translatable="false">No empty subfolders!</string>
+    <string name="text_no_folder" translatable="false">Folder not found!</string>
+    <string name="text_path" translatable="false">Path</string>
+    <string name="text_path_info" translatable="false">Click the button SELECT and allow access to the folder you want to scan!</string>
+    <string name="text_permission_granted" translatable="false">Permission granted!</string>
+    <string name="text_permission_not_granted" translatable="false">Permission not granted!</string>
+    <string name="text_saf" translatable="false">SAF (Storage Access Framework) is a new method of accessing the storage of your device. In future versions of Android (11 and higher) Google is blocking the old way and this is the only supported way for now. You can try it now. It\'s a bit slower but you gain folder picker, external storage support and future technology support.</string>
+    <string name="text_saf_title" translatable="false">Using SAF</string>
+    <string name="text_working" translatable="false">Working… This may take some time…</string>
+    <string name="text_working_count" translatable="false">Working… Scanning folders… %d/%d</string>
+    <string name="toast_bad_folder_path" translatable="false">First SELECT a folder!</string>
+    <string name="toast_no_folder" translatable="false">No folder selected!</string>
+
+
+
     <string name="about_app_version_code" translatable="false" tools:ignore="Typos">6.1_release5</string>
     <string name="about_supporters" translatable="false">UnderPenis69/UnderBenis96, Sonerie C8chilu\' dă Haur a.k.a Băiatu\' Pocnitoare (fostă petardă de elită pă vremea lu\' Ștefan cel Mare), Wiss Kill, YoYo, Auroșu Roșu.</string>
     <string name="about_gamejolt" translatable="false">GameJolt.</string>
