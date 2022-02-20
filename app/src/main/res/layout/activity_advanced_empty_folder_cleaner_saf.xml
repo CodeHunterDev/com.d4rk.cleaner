@@ -7,19 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:keepScreenOn="true">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_alignParentTop="true"
-        app:popupTheme="@style/AppTheme">
-        <TextView
-            android:textSize="24sp"
-            android:layout_gravity="center"
-            android:id="@+id/my_toolbar_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </androidx.appcompat.widget.Toolbar>
     <ScrollView
         android:scrollbarStyle="outsideOverlay"
         android:id="@+id/scrollView"
@@ -53,7 +40,7 @@
                         android:text="@string/text_path"/>
                     <TextView
                         android:textSize="14sp"
-                        android:id="@+id/et_path"
+                        android:id="@+id/etPath"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -64,13 +51,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp">
                         <Button
-                            android:id="@+id/b_default"
+                            android:id="@+id/bDefault"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/button_select"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/b_clean"
+                            android:id="@+id/buttonAdvancedEmptyFolderCleanerClean"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -94,13 +81,13 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorAccent"
-                        android:id="@+id/tv_count"
+                        android:id="@+id/advancedEmptyFolderCleanerCount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/text_information"/>
                     <TextView
                         android:textSize="14sp"
-                        android:id="@+id/tv_status"
+                        android:id="@+id/advancedEmptyFolderCleanerStatus"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"

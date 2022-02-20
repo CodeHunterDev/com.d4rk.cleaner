@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.d4rk.cleaner.R
 import java.io.File
-class ProgramOldActivity : AppCompatActivity() {
+class AdvancedEmptyFolderCleanerActivity : AppCompatActivity() {
     var b_clean: Button? = null
     private var b_default: Button? = null
     private var bottomPadding = 0
@@ -34,7 +34,7 @@ class ProgramOldActivity : AppCompatActivity() {
     var tv_status: TextView? = null
     public override fun onCreate(bundle: Bundle?) {
         super.onCreate(bundle)
-        setContentView(R.layout.activity_program_old)
+        setContentView(R.layout.activity_advanced_empty_folder)
         if (true && checkSelfPermission("android.permission.WRITE_EXTERNAL_STORAGE") != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(arrayOf("android.permission.WRITE_EXTERNAL_STORAGE"), 1000)
         }
@@ -44,14 +44,14 @@ class ProgramOldActivity : AppCompatActivity() {
         topPadding = scrollView!!.paddingTop
         leftPadding = scrollView!!.paddingLeft
         rightPadding = scrollView!!.paddingRight
-        et_path = findViewById<View>(R.id.et_path) as EditText
+        et_path = findViewById<View>(R.id.etPath) as EditText
         val absolutePath = Environment.getExternalStorageDirectory().absolutePath
         currentLocation = absolutePath
         et_path!!.setText(absolutePath)
-        b_clean = findViewById<View>(R.id.b_clean) as Button
-        b_default = findViewById<View>(R.id.b_default) as Button
-        tv_status = findViewById<View>(R.id.tv_status) as TextView
-        tv_count = findViewById<View>(R.id.tv_count) as TextView
+        b_clean = findViewById<View>(R.id.buttonAdvancedEmptyFolderCleanerClean) as Button
+        b_default = findViewById<View>(R.id.bDefault) as Button
+        tv_status = findViewById<View>(R.id.advancedEmptyFolderCleanerStatus) as TextView
+        tv_count = findViewById<View>(R.id.advancedEmptyFolderCleanerCount) as TextView
         b_default!!.setOnClickListener {
             currentLocation = Environment.getExternalStorageDirectory().absolutePath
             et_path!!.setText(currentLocation)
@@ -61,7 +61,7 @@ class ProgramOldActivity : AppCompatActivity() {
             foldersCount = 0
             currentStatus = ""
             tv_status!!.text = currentStatus
-            val programOldActivity = this@ProgramOldActivity
+            val programOldActivity = this@AdvancedEmptyFolderCleanerActivity
             programOldActivity.currentLocation = programOldActivity.et_path!!.text.toString()
             if (File(currentLocation).exists()) {
                 b_clean!!.isEnabled = false
@@ -70,12 +70,12 @@ class ProgramOldActivity : AppCompatActivity() {
             }
             hideKeyboard()
         }
-        (findViewById<View>(R.id.card_saf) as CardView).visibility = View.VISIBLE
-        (findViewById<View>(R.id.b_saf) as Button).setOnClickListener {
-            this@ProgramOldActivity.startActivity(
+        (findViewById<View>(R.id.advancedEmptyFolderCleanerCardSAF) as CardView).visibility = View.VISIBLE
+        (findViewById<View>(R.id.buttonAdvancedEmptyFolderCleanerSAF) as Button).setOnClickListener {
+            this@AdvancedEmptyFolderCleanerActivity.startActivity(
                 Intent(
-                    this@ProgramOldActivity.applicationContext,
-                    ProgramActivity::class.java
+                    this@AdvancedEmptyFolderCleanerActivity.applicationContext,
+                    AdvancedEmptyFolderCleanerSAFActivity::class.java
                 )
             )
             finish()
@@ -137,7 +137,7 @@ class ProgramOldActivity : AppCompatActivity() {
         } else {
             runOnUiThread {
                 Toast.makeText(
-                    this@ProgramOldActivity,
+                    this@AdvancedEmptyFolderCleanerActivity,
                     R.string.text_no_folder,
                     Toast.LENGTH_SHORT
                 ).show()
@@ -148,7 +148,7 @@ class ProgramOldActivity : AppCompatActivity() {
         fun doInBackground(): Void? {
             do {
                 isFinished = true
-                val programOldActivity = this@ProgramOldActivity
+                val programOldActivity = this@AdvancedEmptyFolderCleanerActivity
                 programOldActivity.deleteFolders(programOldActivity.currentLocation)
             } while (!isFinished)
             return null
@@ -163,15 +163,15 @@ class ProgramOldActivity : AppCompatActivity() {
             }
             if (currentStatus == "") {
                 tv_count!!.text =
-                    this@ProgramOldActivity.getString(R.string.text_information)
+                    this@AdvancedEmptyFolderCleanerActivity.getString(R.string.text_information)
                 tv_status!!.setText(R.string.text_no_empy_subfolders)
                 return
             }
             val textView = tv_status
-            val programOldActivity = this@ProgramOldActivity
+            val programOldActivity = this@AdvancedEmptyFolderCleanerActivity
             textView!!.text = programOldActivity.convertHtml(programOldActivity.currentStatus)
             val textView2 = tv_count
-            val programOldActivity2 = this@ProgramOldActivity
+            val programOldActivity2 = this@AdvancedEmptyFolderCleanerActivity
             textView2!!.text = programOldActivity2.getString(
                 R.string.text_cleared,
                 Integer.valueOf(programOldActivity2.foldersCount)

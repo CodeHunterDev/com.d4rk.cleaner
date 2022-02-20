@@ -20,6 +20,11 @@
             android:title="@string/invalid_media_cleaner">
         </item>
         <item
+            android:id="@+id/nav_drawer_advanced_empty_cleaner"
+            android:icon="@drawable/ic_delete_empty_folder"
+            android:title="Advanced Empty Folder Cleaner">
+        </item>
+        <item
             android:id="@+id/nav_drawer_atmegame"
             android:icon="@drawable/ic_drawer_games"
             android:title="@string/atmegame">

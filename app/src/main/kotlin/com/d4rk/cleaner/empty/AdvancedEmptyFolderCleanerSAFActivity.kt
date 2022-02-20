@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.documentfile.provider.DocumentFile
 import com.d4rk.cleaner.R
-class ProgramActivity : AppCompatActivity() {
+class AdvancedEmptyFolderCleanerSAFActivity : AppCompatActivity() {
     private var alreadyRed = ""
     var b_clean: Button? = null
     var b_default: Button? = null
@@ -36,20 +36,20 @@ class ProgramActivity : AppCompatActivity() {
     var tv_status: TextView? = null
     public override fun onCreate(bundle: Bundle?) {
         super.onCreate(bundle)
-        setContentView(R.layout.activity_program)
+        setContentView(R.layout.activity_advanced_empty_folder_cleaner_saf)
         val scrollView2 = findViewById<View>(R.id.scrollView) as ScrollView
         scrollView = scrollView2
         bottomPadding = scrollView2.paddingBottom
         topPadding = scrollView!!.paddingTop
         leftPadding = scrollView!!.paddingLeft
         rightPadding = scrollView!!.paddingRight
-        et_path = findViewById<View>(R.id.et_path) as TextView
-        b_clean = findViewById<View>(R.id.b_clean) as Button
-        b_default = findViewById<View>(R.id.b_default) as Button
-        tv_status = findViewById<View>(R.id.tv_status) as TextView
-        tv_count = findViewById<View>(R.id.tv_count) as TextView
+        et_path = findViewById<View>(R.id.etPath) as TextView
+        b_clean = findViewById<View>(R.id.buttonAdvancedEmptyFolderCleanerClean) as Button
+        b_default = findViewById<View>(R.id.bDefault) as Button
+        tv_status = findViewById<View>(R.id.advancedEmptyFolderCleanerStatus) as TextView
+        tv_count = findViewById<View>(R.id.advancedEmptyFolderCleanerCount) as TextView
         b_default!!.setOnClickListener {
-            this@ProgramActivity.startActivityForResult(
+            this@AdvancedEmptyFolderCleanerSAFActivity.startActivityForResult(
                 Intent("android.intent.action.OPEN_DOCUMENT_TREE"),
                 1000
             )
@@ -61,7 +61,7 @@ class ProgramActivity : AppCompatActivity() {
                 currentProgressMemory = 0
                 foldersCount = 0
                 currentStatus = ""
-                tv_count!!.text = this@ProgramActivity.getString(R.string.text_information)
+                tv_count!!.text = this@AdvancedEmptyFolderCleanerSAFActivity.getString(R.string.text_information)
                 tv_status!!.text = currentStatus
                 if (pickedDir!!.exists()) {
                     b_clean!!.isEnabled = false
@@ -71,7 +71,7 @@ class ProgramActivity : AppCompatActivity() {
                 tv_status!!.setText(R.string.text_missing)
                 return@setOnClickListener
             }
-            Toast.makeText(this@ProgramActivity, R.string.toast_bad_folder_path, Toast.LENGTH_SHORT)
+            Toast.makeText(this@AdvancedEmptyFolderCleanerSAFActivity, R.string.toast_bad_folder_path, Toast.LENGTH_SHORT)
                 .show()
         }
     }
@@ -147,7 +147,7 @@ class ProgramActivity : AppCompatActivity() {
     }
     private abstract inner class GetFilesJob : AsyncTask<Void?, Void?, Void?>() {
         fun doInBackground(vararg voidArr: Void): Void? {
-            val programActivity = this@ProgramActivity
+            val programActivity = this@AdvancedEmptyFolderCleanerSAFActivity
             programActivity.getFilesCount(programActivity.pickedDir)
             return null
         }
@@ -162,7 +162,7 @@ class ProgramActivity : AppCompatActivity() {
         fun doInBackground(vararg voidArr: Void): Void? {
             do {
                 isFinished = true
-                val programActivity = this@ProgramActivity
+                val programActivity = this@AdvancedEmptyFolderCleanerSAFActivity
                 programActivity.deleteFolders(programActivity.pickedDir)
             } while (!isFinished)
             return null
@@ -173,7 +173,7 @@ class ProgramActivity : AppCompatActivity() {
         fun onProgressUpdate(vararg voidArr: Void) {
             super.onProgressUpdate(*voidArr)
             val textView = tv_status
-            val programActivity = this@ProgramActivity
+            val programActivity = this@AdvancedEmptyFolderCleanerSAFActivity
             textView!!.text = programActivity.getString(
                 R.string.text_working_count,
                 programActivity.currentProgressMemory,
@@ -186,14 +186,14 @@ class ProgramActivity : AppCompatActivity() {
             b_default!!.isEnabled = true
             if (isFinished) {
                 if (currentStatus == "") {
-                    tv_count!!.text = this@ProgramActivity.getString(R.string.text_information)
+                    tv_count!!.text = this@AdvancedEmptyFolderCleanerSAFActivity.getString(R.string.text_information)
                     tv_status!!.setText(R.string.text_no_empy_subfolders)
                 } else {
                     val textView = tv_status
-                    val programActivity = this@ProgramActivity
+                    val programActivity = this@AdvancedEmptyFolderCleanerSAFActivity
                     textView!!.text = programActivity.convertHtml(programActivity.currentStatus)
                     val textView2 = tv_count
-                    val programActivity2 = this@ProgramActivity
+                    val programActivity2 = this@AdvancedEmptyFolderCleanerSAFActivity
                     textView2!!.text =
                         programActivity2.getString(
                             R.string.text_cleared,

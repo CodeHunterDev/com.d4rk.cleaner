@@ -36,6 +36,8 @@
     <string name="search_menu_title" translatable="false">Search</string>
     <string name="status_bar_notification_info_overflow" translatable="false">999+</string>
     <string name="text_ads" translatable="false">Ads</string>
+    <string name="advanced_empty_folder_title" translatable="false">Advanced Empty Folder Cleaner!</string>
+    <string name="advanced_empty_folder_saf_title" translatable="false">SAF Empty Folder Cleaner!</string>
     <string name="text_afc" translatable="false">Download Auto Folder Cleaner to easily schedule automatic folder deletion.</string>
     <string name="text_bfc" translatable="false">Download Big File Cleaner to easily find and remove big files on your device.</string>
     <string name="text_cleared" translatable="false">Deleted %d folders!</string>

@@ -37,6 +37,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.preference.PreferenceManager
 import com.d4rk.cleaner.clipboard.ClipboardActivity
 import com.d4rk.cleaner.databinding.ActivityMainBinding
+import com.d4rk.cleaner.empty.AdvancedEmptyFolderCleanerActivity
 import com.d4rk.cleaner.invalid.ui.InvalidActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
@@ -101,6 +102,9 @@ class MainActivity : AppCompatActivity() {
             }
             if (id == R.id.nav_drawer_invalid_media_cleaner) {
                 startActivity(Intent(this, InvalidActivity::class.java))
+            }
+            if (id == R.id.nav_drawer_advanced_empty_cleaner) {
+                startActivity(Intent(this, AdvancedEmptyFolderCleanerActivity::class.java))
             }
             if (id == R.id.nav_drawer_about) {
                 startActivity(Intent(this, AboutActivity::class.java))
