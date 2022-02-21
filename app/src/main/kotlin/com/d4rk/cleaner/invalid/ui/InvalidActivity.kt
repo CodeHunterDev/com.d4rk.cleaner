@@ -69,7 +69,7 @@ class InvalidActivity : AppCompatActivity() {
         }
         if (savedInstanceState != null) {
             mState = savedInstanceState.getInt(EXTRA_STATE)
-            var items: ArrayList<MediaItem> = savedInstanceState.getParcelableArrayList(
+            val items: ArrayList<MediaItem> = savedInstanceState.getParcelableArrayList(
                 EXTRA_ITEMS
             )!!
             mItems = items
@@ -290,12 +290,9 @@ class InvalidActivity : AppCompatActivity() {
         private const val STATE_SCANNING = 1
         private const val STATE_CHOOSING = 2
         private const val STATE_CLEANING = 3
-        private val FIRST_STEP_VISIBILITY =
-            intArrayOf(View.VISIBLE, View.GONE, View.GONE, View.GONE)
-        private val PROGRESS_VISIBILITY =
-            intArrayOf(View.GONE, View.VISIBLE, View.GONE, View.VISIBLE)
+        private val FIRST_STEP_VISIBILITY = intArrayOf(View.VISIBLE, View.GONE, View.GONE, View.GONE)
+        private val PROGRESS_VISIBILITY = intArrayOf(View.GONE, View.VISIBLE, View.GONE, View.VISIBLE)
         private val LIST_VISIBILITY = intArrayOf(View.GONE, View.GONE, View.VISIBLE, View.GONE)
-        private val RESET_BUTTON_VISIBILITY =
-            intArrayOf(View.GONE, View.GONE, View.VISIBLE, View.GONE)
+        private val RESET_BUTTON_VISIBILITY = intArrayOf(View.GONE, View.GONE, View.VISIBLE, View.GONE)
     }
 }

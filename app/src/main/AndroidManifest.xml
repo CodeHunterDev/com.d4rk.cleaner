@@ -74,7 +74,7 @@
             android:theme="@style/AppTheme"/>
         <activity
             android:name=".empty.AdvancedEmptyFolderCleanerSAFActivity"
-            android:lael="@string/advanced_empty_folder_saf_title"
+            android:label="@string/advanced_empty_folder_saf_title"
             android:exported="true"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme"/>

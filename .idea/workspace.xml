@@ -52,13 +52,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b941eef-a1e4-4487-a6c7-75b72088b281" name="Default Changelist" comment="Update 7.0_r1">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/com.d4rk.cleaner.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/com.d4rk.cleaner.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/d4rk/cleaner/empty/AdvancedEmptyFolderCleanerActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/d4rk/cleaner/empty/AdvancedEmptyFolderCleanerActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/d4rk/cleaner/empty/AdvancedEmptyFolderCleanerSAFActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/d4rk/cleaner/empty/AdvancedEmptyFolderCleanerSAFActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced_empty_folder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced_empty_folder.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced_empty_folder_cleaner_saf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_advanced_empty_folder_cleaner_saf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/d4rk/cleaner/invalid/ui/InvalidActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/d4rk/cleaner/invalid/ui/InvalidActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,13 +264,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607346530273</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Update 1.1_r7">
-      <created>1609939997582</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1609939997582</updated>
     </task>
     <task id="LOCAL-00009" summary="Update 1.1_r8">
       <created>1610105600240</created>
@@ -609,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645363859214</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Update 7.0_r1">
+      <created>1645421036895</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1645421036896</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
