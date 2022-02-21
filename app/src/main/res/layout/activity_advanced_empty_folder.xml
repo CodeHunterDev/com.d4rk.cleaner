@@ -39,7 +39,7 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/etPath"
+                        android:id="@+id/advancedEmptyFolderCleanerPath"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -52,7 +52,7 @@
                         android:layout_marginTop="20dp"
                         android:orientation="horizontal">
                         <com.google.android.material.button.MaterialButton
-                            android:id="@+id/bDefault"
+                            android:id="@+id/buttonDefault"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"

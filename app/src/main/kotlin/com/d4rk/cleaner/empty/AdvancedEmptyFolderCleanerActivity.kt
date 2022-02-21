@@ -1,8 +1,6 @@
 package com.d4rk.cleaner.empty
-import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
@@ -11,12 +9,17 @@ import android.text.Html
 import android.text.Spanned
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.*
+import android.widget.TextView
+import android.widget.EditText
+import android.widget.Button
+import android.widget.Toast
+import android.widget.ScrollView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.d4rk.cleaner.R
 import java.io.File
+
 class AdvancedEmptyFolderCleanerActivity : AppCompatActivity() {
     var b_clean: Button? = null
     private var b_default: Button? = null
@@ -44,12 +47,12 @@ class AdvancedEmptyFolderCleanerActivity : AppCompatActivity() {
         topPadding = scrollView!!.paddingTop
         leftPadding = scrollView!!.paddingLeft
         rightPadding = scrollView!!.paddingRight
-        et_path = findViewById<View>(R.id.etPath) as EditText
+        et_path = findViewById<View>(R.id.advancedEmptyFolderCleanerPath) as EditText
         val absolutePath = Environment.getExternalStorageDirectory().absolutePath
         currentLocation = absolutePath
         et_path!!.setText(absolutePath)
         b_clean = findViewById<View>(R.id.buttonAdvancedEmptyFolderCleanerClean) as Button
-        b_default = findViewById<View>(R.id.bDefault) as Button
+        b_default = findViewById<View>(R.id.buttonDefault) as Button
         tv_status = findViewById<View>(R.id.advancedEmptyFolderCleanerStatus) as TextView
         tv_count = findViewById<View>(R.id.advancedEmptyFolderCleanerCount) as TextView
         b_default!!.setOnClickListener {
@@ -72,33 +75,10 @@ class AdvancedEmptyFolderCleanerActivity : AppCompatActivity() {
         }
         (findViewById<View>(R.id.advancedEmptyFolderCleanerCardSAF) as CardView).visibility = View.VISIBLE
         (findViewById<View>(R.id.buttonAdvancedEmptyFolderCleanerSAF) as Button).setOnClickListener {
-            this@AdvancedEmptyFolderCleanerActivity.startActivity(
-                Intent(
-                    this@AdvancedEmptyFolderCleanerActivity.applicationContext,
-                    AdvancedEmptyFolderCleanerSAFActivity::class.java
-                )
-            )
+            this@AdvancedEmptyFolderCleanerActivity.startActivity(Intent(this@AdvancedEmptyFolderCleanerActivity.applicationContext, AdvancedEmptyFolderCleanerSAFActivity::class.java))
             finish()
         }
         return
-
-    }
-    fun downloadNow(str: String) {
-        try {
-            startActivity(
-                Intent(
-                    "android.intent.action.VIEW",
-                    Uri.parse("market://details?id=$str")
-                )
-            )
-        } catch (unused: ActivityNotFoundException) {
-            startActivity(
-                Intent(
-                    "android.intent.action.VIEW",
-                    Uri.parse("http://play.google.com/store/apps/details?id=$str")
-                )
-            )
-        }
     }
     override fun onRequestPermissionsResult(i: Int, strArr: Array<String>, iArr: IntArray) {
         super.onRequestPermissionsResult(i, strArr, iArr)

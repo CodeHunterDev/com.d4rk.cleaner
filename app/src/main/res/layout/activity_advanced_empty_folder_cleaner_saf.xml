@@ -15,32 +15,32 @@
         android:clipToPadding="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/my_toolbar"
         android:layout_alignParentBottom="true">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="4dp"
+                app:strokeWidth="0dp"
+                app:cardCornerRadius="21dp"
                 app:cardElevation="4dp">
                 <LinearLayout
                     android:orientation="vertical"
                     android:padding="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorAccent"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/text_path"/>
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:textSize="14sp"
-                        android:id="@+id/etPath"
+                        android:id="@+id/advancedEmptyFolderCleanerPath"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -50,34 +50,35 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp">
-                        <Button
-                            android:id="@+id/bDefault"
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonDefault"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/button_select"
                             android:layout_weight="1"/>
-                        <Button
+                        <com.google.android.material.button.MaterialButton
                             android:id="@+id/buttonAdvancedEmptyFolderCleanerClean"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
                             android:text="@string/button_clean"
                             android:layout_weight="1"/>
                     </LinearLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:cardCornerRadius="4dp"
+                app:strokeWidth="0dp"
+                app:cardCornerRadius="21dp"
                 app:cardElevation="4dp">
                 <LinearLayout
                     android:orientation="vertical"
                     android:padding="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorAccent"
@@ -85,7 +86,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/text_information"/>
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:textSize="14sp"
                         android:id="@+id/advancedEmptyFolderCleanerStatus"
                         android:layout_width="match_parent"
@@ -93,12 +94,7 @@
                         android:layout_marginTop="10dp"
                         android:text="@string/text_info"/>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </ScrollView>
-    <View
-        android:id="@+id/toolbar_shadow"
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_below="@+id/my_toolbar"/>
 </RelativeLayout>

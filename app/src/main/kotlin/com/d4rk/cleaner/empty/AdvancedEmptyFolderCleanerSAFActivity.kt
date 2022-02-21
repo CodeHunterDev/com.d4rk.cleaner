@@ -43,9 +43,9 @@ class AdvancedEmptyFolderCleanerSAFActivity : AppCompatActivity() {
         topPadding = scrollView!!.paddingTop
         leftPadding = scrollView!!.paddingLeft
         rightPadding = scrollView!!.paddingRight
-        et_path = findViewById<View>(R.id.etPath) as TextView
+        et_path = findViewById<View>(R.id.advancedEmptyFolderCleanerPath) as TextView
         b_clean = findViewById<View>(R.id.buttonAdvancedEmptyFolderCleanerClean) as Button
-        b_default = findViewById<View>(R.id.bDefault) as Button
+        b_default = findViewById<View>(R.id.buttonDefault) as Button
         tv_status = findViewById<View>(R.id.advancedEmptyFolderCleanerStatus) as TextView
         tv_count = findViewById<View>(R.id.advancedEmptyFolderCleanerCount) as TextView
         b_default!!.setOnClickListener {
@@ -90,12 +90,7 @@ class AdvancedEmptyFolderCleanerSAFActivity : AppCompatActivity() {
             )
             currentLocation = pickedDir!!.uri.path
             et_path!!.text = data.path!!.replace(":", "/").replace("/tree", "")
-            b_clean!!.setBackgroundColor(
-                ContextCompat.getColor(
-                    applicationContext,
-                    R.color.colorAccent
-                )
-            )
+            b_clean!!.setBackgroundColor(ContextCompat.getColor(applicationContext, R.color.colorAccent))
             return
         }
         Toast.makeText(this, R.string.toast_no_folder, Toast.LENGTH_SHORT).show()
@@ -115,16 +110,8 @@ class AdvancedEmptyFolderCleanerSAFActivity : AppCompatActivity() {
                 for (documentFile2 in listFiles) {
                     if (documentFile2.isDirectory) {
                         deleteFolders(documentFile2)
-                        if (!alreadyRed.contains(
-                                """
-        ${documentFile2.uri.path}
-        """.trimIndent()
-                            )
-                        ) {
-                            alreadyRed += """
-                                ${documentFile2.uri.path}
-                                
-                                """.trimIndent()
+                        if (!alreadyRed.contains(""" ${documentFile2.uri.path} """.trimIndent())) {
+                            alreadyRed += """  ${documentFile2.uri.path} """.trimIndent()
                             currentProgressMemory++
                         }
                     }

@@ -43,7 +43,7 @@ android {
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation platform('com.google.firebase:firebase-bom:29.0.4')
+    implementation platform('com.google.firebase:firebase-bom:29.1.0')
     implementation 'com.airbnb.android:lottie:4.2.2'
     implementation 'com.google.android.gms:play-services-ads:20.5.0'
     implementation 'com.google.firebase:firebase-analytics:20.1.0'
